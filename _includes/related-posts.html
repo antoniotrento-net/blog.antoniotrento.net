@@ -28,11 +28,9 @@
           {%- assign shown = shown | append: post.url | append: "|" -%}
           {%- assign count = count | plus: 1 -%}
     <div class="group bg-white dark:bg-neutral-900 rounded-[2rem] overflow-hidden border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl transition-all duration-300">
-      {%- if post.image -%}
-      <a href="{{ post.url | relative_url }}" class="block h-44 overflow-hidden">
-        <img src="{{ post.image | relative_url }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="{{ post.title }}">
+      <a href="{{ post.url | relative_url }}" class="block aspect-[3/2] overflow-hidden">
+        {% include post-thumb.html post=post %}
       </a>
-      {%- endif -%}
       <div class="p-6">
         <h5 class="text-lg font-bold mb-3 group-hover:text-brand-blue transition-colors"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
         <p class="text-gray-500 dark:text-gray-400 mb-4 text-sm line-clamp-3">{{ post.description | default: post.excerpt | strip_html | truncatewords: 18 }}</p>

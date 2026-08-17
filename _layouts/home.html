@@ -3,55 +3,72 @@ layout: default
 ---
 {%- assign lang = page.lang | default: site.default_lang -%}
 {%- assign posts = site.posts | where: "lang", lang -%}
+{%- assign pillars = site.data.pillars[lang] -%}
 
 <!-- Hero -->
-<section class="pt-40 pb-16 px-6 bg-white dark:bg-neutral-950 transition-colors">
-  <div class="max-w-5xl mx-auto text-center reveal">
-    <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">{{ page.heading | default: page.title }}</h1>
+<section class="pt-40 pb-14 px-6 bg-white dark:bg-neutral-950 transition-colors">
+  <div class="max-w-4xl mx-auto reveal">
+    <p class="text-sm font-bold uppercase tracking-widest text-brand-blue mb-4">Blog · Antonio Trento</p>
+    <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-[1.05]">{{ page.heading | default: page.title }}</h1>
     {% if page.description %}
-    <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">{{ page.description }}</p>
+    <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl">{{ page.description }}</p>
     {% endif %}
   </div>
 </section>
 
-<!-- Pillar hubs -->
-{%- assign pillars = site.data.pillars[lang] -%}
+<!-- Pillar / guide (strip minimale) -->
 {%- if pillars -%}
-<section class="px-6 pb-8">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+<section class="px-6 pb-6">
+  <div class="max-w-4xl mx-auto flex flex-wrap gap-3">
     {%- for pair in pillars -%}
       {%- assign pill = pair[1] -%}
-      <a href="{{ pill.url | relative_url }}" class="group p-6 rounded-[2rem] border border-gray-100 dark:border-white/5 bg-brand-surface dark:bg-neutral-900 hover:shadow-xl transition-all reveal">
-        <h3 class="text-lg font-black mb-2 group-hover:text-brand-blue transition-colors">{{ pill.title }}</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">{{ pill.summary }}</p>
+      <a href="{{ pill.url | relative_url }}"
+        class="group inline-flex items-center gap-2 px-4 py-2 rounded-pill border border-gray-200 dark:border-white/10 text-sm font-bold hover:border-brand-blue/50 hover:text-brand-blue transition-colors">
+        {{ pill.title }}
+        <i class="fas fa-arrow-right text-xs opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
       </a>
     {%- endfor -%}
   </div>
 </section>
 {%- endif -%}
 
-<!-- Post grid -->
-<section class="px-6 py-16 bg-white dark:bg-neutral-950 transition-colors min-h-[40vh]">
-  <div class="max-w-6xl mx-auto">
+<!-- Lista editoriale -->
+<section class="px-6 py-10 bg-white dark:bg-neutral-950 transition-colors min-h-[40vh]">
+  <div class="max-w-4xl mx-auto">
     {% if posts.size > 0 %}
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="divide-y divide-gray-200 dark:divide-white/10">
       {%- for post in posts -%}
-      <article class="group bg-gray-50 dark:bg-neutral-900 rounded-[2rem] overflow-hidden border border-gray-100 dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 reveal flex flex-col">
-        {%- if post.image -%}
-        <a href="{{ post.url | relative_url }}" class="block h-52 overflow-hidden">
-          <img src="{{ post.image | relative_url }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="{{ post.title }}">
-        </a>
-        {%- endif -%}
-        <div class="p-7 flex flex-col flex-grow">
-          <div class="mb-3 text-sm text-brand-blue font-bold">{{ post.date | date: "%-d %B %Y" }}</div>
-          <h2 class="text-xl font-bold mb-3 group-hover:text-brand-blue transition-colors">
+      <article class="group py-10 first:pt-0 grid md:grid-cols-[1fr_240px] gap-6 md:gap-10 items-center reveal">
+
+        <!-- Testo -->
+        <div class="order-2 md:order-1">
+          <div class="flex items-center gap-3 mb-3 text-xs font-bold uppercase tracking-widest">
+            <span class="text-gray-400">{{ post.date | date: "%-d %B %Y" }}</span>
+            {%- if post.pillar -%}
+              {%- assign pll = site.data.pillars[lang][post.pillar] -%}
+              <span class="text-gray-300 dark:text-white/20">/</span>
+              <a href="{% if pll %}{{ pll.url | relative_url }}{% else %}#{% endif %}" class="text-brand-blue hover:underline">{{ post.pillar | replace: '-', ' ' }}</a>
+            {%- endif -%}
+          </div>
+          <h2 class="text-2xl md:text-4xl font-black tracking-tight leading-tight mb-3 group-hover:text-brand-blue transition-colors">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </h2>
-          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 flex-grow text-sm">{{ post.description | default: post.excerpt | strip_html | truncate: 130 }}</p>
-          <a href="{{ post.url | relative_url }}" class="mt-auto inline-flex items-center gap-2 font-bold text-brand-blue hover:text-brand-black dark:hover:text-white transition-colors">
-            {% if lang == 'it' %}Leggi l'articolo{% else %}Read the article{% endif %} <i class="fas fa-arrow-right text-sm"></i>
+          <p class="text-gray-500 dark:text-gray-400 text-base md:text-lg leading-relaxed line-clamp-2 mb-4">
+            {{ post.description | default: post.excerpt | strip_html | truncate: 170 }}
+          </p>
+          <a href="{{ post.url | relative_url }}" class="inline-flex items-center gap-2 font-bold text-brand-black dark:text-white group-hover:text-brand-blue transition-colors">
+            {% if lang == 'it' %}Leggi l'articolo{% else %}Read the article{% endif %}
+            <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
           </a>
         </div>
+
+        <!-- Miniatura -->
+        <a href="{{ post.url | relative_url }}" class="order-1 md:order-2 block">
+          <div class="aspect-[3/2] rounded-2xl overflow-hidden shadow-sm ring-1 ring-black/5 dark:ring-white/10">
+            {% include post-thumb.html post=post %}
+          </div>
+        </a>
+
       </article>
       {%- endfor -%}
     </div>
