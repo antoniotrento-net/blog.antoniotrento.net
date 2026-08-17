@@ -107,6 +107,8 @@ Immagina di aprirlo dal telefono, in macchina, alle 8 del mattino. La prima sche
 
 Sotto, scorrendo, trovi il dettaglio: le vendite per canale (negozio, web, agenti), i primi dieci prodotti, i primi dieci clienti, e la cassa prevista delle prossime settimane. Ma il punto è la prima schermata: **in venti secondi sai se dormire tranquillo o alzare il telefono**. Questo è il prodotto. Non «i dati». La *decisione*.
 
+Nota una cosa che sembra banale e non lo è: **niente da compilare**. Non c'è un file da aprire, un foglio da aggiornare, una persona da chiamare. Il cruscotto è già pronto quando lo apri, perché durante la notte ha già fatto il lavoro. È questa la differenza tra qualcosa che usi ogni giorno e qualcosa che «dovresti guardare più spesso» e non guardi mai. E i colori non sono decorazione: sono un linguaggio. Verde vuol dire «non pensarci»; giallo vuol dire «tienilo d'occhio»; rosso vuol dire «oggi qualcuno se ne deve occupare». Un titolare non deve *leggere* il cruscotto, deve *guardarlo* e capire in un colpo d'occhio dove serve la sua attenzione.
+
 E c'è una cosa che una schermata così fa e un file non farà mai: **ti avvisa senza che tu chieda**. L'inerzia dei fogli è che devi ricordarti di guardarli. Un cruscotto vero ti manda la notifica quando ieri è stato anomalo, così il problema lo vedi il martedì e non a fine mese. Se vuoi vedere che aspetto ha, in pratica, un lavoro fatto in questo modo, dai un'occhiata ai [progetti nel portfolio](https://antoniotrento.net/portfolio/): non sono slide, sono cose che girano.
 
 ## Le quattro domande che un cruscotto deve saper rispondere
@@ -120,6 +122,24 @@ Prima di riempire una schermata di grafici, c'è una domanda a monte: **quali de
 
 Tutto il resto — le venti metriche che ti infila il template — è rumore finché non risponde a una di queste quattro. È lo stesso errore di chi ottimizza la metrica sbagliata: la dashboard è tutta verde e il conto in banca è rosso, perché stai guardando le visite invece del margine. Meglio **quattro numeri che decidi** che quaranta grafici che guardi e basta.
 
+## Le fonti, una per una: cosa si collega (e cosa fa penare)
+
+«Ma i miei dati si riescono a collegare?» Quasi sempre sì, ma con gradi di difficoltà molto diversi. Vale la pena sapere in anticipo dove sarà facile e dove si sudano le camicie, perché è lì che va il tempo (e il budget).
+
+- **Gestionale / ERP** — di solito il pezzo centrale. Se ha una API o un database interrogabile, ottimo; altrimenti si lavora con un export notturno. La difficoltà vera non è tecnica, è semantica: capire *come* quel gestionale chiama le cose, dove finiscono i resi, come tratta gli omaggi e le note di credito.
+- **E-commerce** — di norma il più gentile: Shopify, WooCommerce e i B2B seri hanno API pulite. L'attenzione va ai doppioni (l'ordine online che rientra anche nel gestionale) per non contare due volte la stessa vendita.
+- **Banca / incassi** — spesso il più ostico. Tra estratti in formati diversi, PSD2 e riconciliazioni, collegare la cassa reale richiede pazienza. Ma è anche la fonte che ti dice la verità più scomoda: quanto di ciò che fatturi hai davvero incassato.
+- **Piattaforme ads** — API disponibili, ma con definizioni tutte loro (una «conversione» per Meta non è una vendita per te). Vanno agganciate con criterio, altrimenti mescoli mele e arance.
+- **Fogli Excel** — si collegano, a patto che smettano di essere il posto dove *si aggiustano* i numeri e diventino una fonte controllata, con una struttura fissa. Un foglio libero che cambia colonne ogni mese non è una fonte: è un problema che si ripresenta.
+
+Il messaggio per te è semplice: prima di innamorarti della schermata, la domanda giusta al fornitore è «come colleghi *le mie* fonti e cosa fai quando una di queste cambia?». Se la risposta è vaga, il progetto sarà vago.
+
+## Il numero unico: perché le definizioni si firmano
+
+Torno un attimo sul pezzo più noioso, perché è quello che fa la differenza tra un cruscotto e una discussione infinita. Prendi la parola «fatturato». L'amministrazione intende l'imponibile fiscale. Il commerciale intende il valore degli ordini firmati, IVA inclusa, resi esclusi. Il magazzino ragiona a valore di quello che è uscito. Sono tre numeri diversi per la stessa parola, e finché restano nelle teste, ogni riunione è un piccolo processo.
+
+La soluzione non è un software: è una **decisione, messa per iscritto e firmata**. «Nel nostro cruscotto, vendita = fattura emessa, IVA esclusa, reso scalato alla data dell'ordine.» Fine. Da quel momento c'è un solo numero, e chi non è d'accordo discute la definizione, non il grafico. Questo è il motivo per cui un cruscotto serio parte dalle definizioni e non dai colori: senza il numero unico, la dashboard più bella del mondo diventa solo un modo più costoso di litigare. È lo stesso principio che porta tante aziende a scoprire di [ottimizzare la metrica sbagliata](https://antoniotrento.net/portfolio/) — verde sullo schermo, rosso in banca — perché non hanno mai deciso cosa misuravano davvero.
+
 ## Chi costruisce i dati sotto e chi disegna l'interfaccia (se sono due fornitori, fallisce)
 
 Qui c'è il punto che quasi nessuno ti dice, ed è il motivo per cui tanti progetti di *dashboard vendite pmi* finiscono in un cassetto. Un cruscotto vero è fatto di due strati:
@@ -127,7 +147,7 @@ Qui c'è il punto che quasi nessuno ti dice, ed è il motivo per cui tanti proge
 1. **Lo strato dei dati** — prendere i numeri da sei fonti, pulirli, mettere d'accordo le definizioni («vendita = fattura emessa, IVA esclusa, reso scalato alla data dell'ordine»), tenerli aggiornati ogni notte, e accorgersi quando una fonte cambia.
 2. **Lo strato dell'interfaccia** — la schermata che si apre in venti secondi, gli allarmi, il colore giusto, la cosa che funziona anche dal telefono.
 
-Quando questi due strati li fanno **due fornitori diversi**, succede la cosa peggiore del mondo dei progetti: si incolpano a vicenda. «Il numero è sbagliato» → «no, i dati che mi passano loro sono sbagliati» → «no, è la dashboard che li mostra male». E tu, in mezzo, paghi due fatture per un cruscotto che non usi.
+Quando questi due strati li fanno **due fornitori diversi**, succede la cosa peggiore del mondo dei progetti: si incolpano a vicenda. «Il numero è sbagliato» → «no, i dati che mi passano loro sono sbagliati» → «no, è la dashboard che li mostra male». E tu, in mezzo, paghi due fatture per un cruscotto che non usi. Il fornitore dei dati ti dà ragione, quello dell'interfaccia pure, e intanto passano i mesi: ognuno ha sistemato «la sua parte», ma la sua parte non è il tuo prodotto. Il prodotto è la catena intera — dal numero grezzo nel gestionale alla freccia colorata sul tuo telefono — e una catena ha senso solo se qualcuno risponde di tutta la catena.
 
 Il motivo per cui insisto su qualcuno che fa **dati + backend + interfaccia** insieme non è un vezzo commerciale: è che le definizioni dei dati e il modo in cui li mostri sono la *stessa* decisione. Chi disegna la schermata deve sapere cos'è una vendita; chi pulisce i dati deve sapere cosa vedrà il titolare alle 8 del mattino. Se li spezzi, spezzi il prodotto. È lo stesso identico motivo per cui [assumere un data analyst da solo non sistema le fonti](https://antoniotrento.net/portfolio/): la persona brava annega nella pulizia dei dati e non arriva mai a costruire qualcosa che si usa.
 
@@ -266,4 +286,4 @@ Si aggiorna il collegamento a quella fonte, non si butta il cruscotto. È un alt
 
 Non ti manca un software in più. Ti manca **un cruscotto aziendale** costruito come prodotto: poche metriche che contano, sempre fresche, sui *tuoi* dati messi finalmente d'accordo, con qualcuno che tiene insieme lo strato dei dati e quello dell'interfaccia. È la differenza tra decidere sul passato e decidere su ieri.
 
-Se ti sei riconosciuto nel lunedì mattina di apertura — la domanda semplice, i venti minuti, i tre numeri diversi — quel costo lo stai già pagando, solo che non è su nessuna fattura. Se vuoi capire come sarebbe risolverlo sul serio, guarda i [progetti che ho costruito](https://antoniotrento.net/portfolio/) o [scrivimi due righe](https://antoniotrento.net/contatti/): partiamo dai tuoi numeri, non da una demo.
+Se vuoi andare più a fondo su un pezzo specifico di questo filone — i report che arrivano in ritardo, i KPI che non tornano tra reparti, il consolidato di più sedi — li ho raccolti nella [guida ai cruscotti e ai prodotti dati]({{ '/it/pillar/prodotti-dati/' | relative_url }}). E se ti sei riconosciuto nel lunedì mattina di apertura — la domanda semplice, i venti minuti, i tre numeri diversi — quel costo lo stai già pagando, solo che non è su nessuna fattura: è nelle ore, negli errori e nelle decisioni prese al buio. Se vuoi capire come sarebbe risolverlo sul serio, guarda i [progetti che ho costruito](https://antoniotrento.net/portfolio/) o [scrivimi due righe](https://antoniotrento.net/contatti/): partiamo dai tuoi numeri, non da una demo.
