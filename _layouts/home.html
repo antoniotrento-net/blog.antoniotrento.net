@@ -3,7 +3,6 @@ layout: default
 ---
 {%- assign lang = page.lang | default: site.default_lang -%}
 {%- assign posts = site.posts | where: "lang", lang -%}
-{%- assign pillars = site.data.pillars[lang] -%}
 
 <!-- Hero -->
 <section class="pt-40 pb-14 px-6 bg-white dark:bg-neutral-950 transition-colors">
@@ -16,31 +15,44 @@ layout: default
   </div>
 </section>
 
-<!-- Pillar / guide (strip minimale) -->
-{%- if pillars -%}
-<section class="px-6 pb-6">
-  <div class="max-w-4xl mx-auto flex flex-wrap gap-3">
-    {%- for pair in pillars -%}
-      {%- assign pill = pair[1] -%}
-      <a href="{{ pill.url | relative_url }}"
-        class="group inline-flex items-center gap-2 px-4 py-2 rounded-pill border border-gray-200 dark:border-white/10 text-sm font-bold hover:border-brand-blue/50 hover:text-brand-blue transition-colors">
-        {{ pill.title }}
-        <i class="fas fa-arrow-right text-xs opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-      </a>
+<!-- Directory tematica: sezioni -> pillar -->
+<section class="px-6 py-10 bg-brand-surface dark:bg-neutral-900/40 transition-colors">
+  <div class="max-w-6xl mx-auto space-y-14">
+    {%- for section in site.data.sections -%}
+      {%- if lang == 'it' -%}{%- assign sinfo = section.it -%}{%- else -%}{%- assign sinfo = section.en -%}{%- endif -%}
+      <div class="reveal">
+        <div class="mb-6 max-w-3xl">
+          <h2 class="text-2xl md:text-3xl font-black tracking-tight mb-2">{{ sinfo.title }}</h2>
+          <p class="text-gray-500 dark:text-gray-400">{{ sinfo.summary }}</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {%- for pair in site.data.pillars[lang] -%}
+            {%- assign pill = pair[1] -%}
+            {%- if pill.section == section.key -%}
+            <a href="{{ pill.url | relative_url }}"
+              class="group p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-100 dark:border-white/10 hover:border-brand-blue/40 hover:shadow-lg transition-all">
+              <h3 class="font-bold mb-1 group-hover:text-brand-blue transition-colors flex items-center gap-2">
+                {{ pill.title }}
+                <i class="fas fa-arrow-right text-xs opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
+              </h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{{ pill.summary }}</p>
+            </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
     {%- endfor -%}
   </div>
 </section>
-{%- endif -%}
 
-<!-- Lista editoriale -->
-<section class="px-6 py-10 bg-white dark:bg-neutral-950 transition-colors min-h-[40vh]">
+<!-- Ultimi articoli (lista editoriale) -->
+<section class="px-6 py-16 bg-white dark:bg-neutral-950 transition-colors min-h-[30vh]">
   <div class="max-w-4xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-black tracking-tight mb-10">{% if lang == 'it' %}Ultimi articoli{% else %}Latest articles{% endif %}</h2>
     {% if posts.size > 0 %}
     <div class="divide-y divide-gray-200 dark:divide-white/10">
       {%- for post in posts -%}
       <article class="group py-10 first:pt-0 grid md:grid-cols-[1fr_240px] gap-6 md:gap-10 items-center reveal">
-
-        <!-- Testo -->
         <div class="order-2 md:order-1">
           <div class="flex items-center gap-3 mb-3 text-xs font-bold uppercase tracking-widest">
             <span class="text-gray-400">{{ post.date | date: "%-d %B %Y" }}</span>
@@ -50,9 +62,9 @@ layout: default
               <a href="{% if pll %}{{ pll.url | relative_url }}{% else %}#{% endif %}" class="text-brand-blue hover:underline">{{ post.pillar | replace: '-', ' ' }}</a>
             {%- endif -%}
           </div>
-          <h2 class="text-2xl md:text-4xl font-black tracking-tight leading-tight mb-3 group-hover:text-brand-blue transition-colors">
+          <h3 class="text-2xl md:text-4xl font-black tracking-tight leading-tight mb-3 group-hover:text-brand-blue transition-colors">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h2>
+          </h3>
           <p class="text-gray-500 dark:text-gray-400 text-base md:text-lg leading-relaxed line-clamp-2 mb-4">
             {{ post.description | default: post.excerpt | strip_html | truncate: 170 }}
           </p>
@@ -61,14 +73,11 @@ layout: default
             <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
           </a>
         </div>
-
-        <!-- Miniatura -->
         <a href="{{ post.url | relative_url }}" class="order-1 md:order-2 block">
           <div class="aspect-[3/2] rounded-2xl overflow-hidden shadow-sm ring-1 ring-black/5 dark:ring-white/10">
             {% include post-thumb.html post=post %}
           </div>
         </a>
-
       </article>
       {%- endfor -%}
     </div>

@@ -1,34 +1,222 @@
-# ============================================================
-#  PILLAR / HUB tematici (link building interno).
-#  Un post entra in una pillar via front matter:  pillar: prodotti-dati
-#  Le chiavi sono le stesse in IT/EN (così il language switch tiene il cluster).
-#  I 3 cluster rispecchiano i 3 piani editoriali. Estendibili / opzionali:
-#  se un post non ha `pillar`, il blocco pillar semplicemente non compare.
-# ============================================================
-it:
-  prodotti-dati:
-    title: "Cruscotti e prodotti dati per PMI"
-    url: "/it/pillar/prodotti-dati/"
-    summary: "Numeri sparsi in sei software, report in ritardo, decisioni a naso. Come avere UN cruscotto e prodotti dati che il titolare apre davvero."
-  stack-sovrano:
-    title: "Stack AI sovrano: Docker, n8n, RAG, agenti"
-    url: "/it/pillar/stack-sovrano/"
-    summary: "Architetture self-hosted che tengono i dati in casa: automazione, RAG e agenti in produzione senza vendor lock-in."
-  pmi-ops:
-    title: "AI e automazione per le operazioni PMI"
-    url: "/it/pillar/pmi-ops/"
-    summary: "ChatGPT sui clienti, SaaS che non parlano, caos operativo: risposte concrete, dati sotto controllo dell'azienda."
-
-en:
-  prodotti-dati:
-    title: "Dashboards and data products for SMEs"
-    url: "/en/pillar/data-products/"
-    summary: "Numbers scattered across six tools, late reports, gut-feel decisions. How to get ONE dashboard and data products the owner actually opens."
-  stack-sovrano:
-    title: "Sovereign AI stack: Docker, n8n, RAG, agents"
-    url: "/en/pillar/sovereign-stack/"
-    summary: "Self-hosted architectures that keep data in-house: automation, RAG and agents in production, no vendor lock-in."
-  pmi-ops:
-    title: "AI and automation for SME operations"
-    url: "/en/pillar/sme-ops/"
-    summary: "ChatGPT on client data, SaaS that don't talk, operational chaos: concrete answers with data under the company's control."
+{
+  "it": {
+    "prodotti-dati": {
+      "section": "software-su-misura",
+      "title": "Cruscotti, KPI e decisioni sui dati",
+      "url": "/it/pillar/prodotti-dati/",
+      "summary": "Numeri sparsi in sei software, report in ritardo, decisioni a naso: come avere UN cruscotto e prodotti dati che il titolare apre davvero."
+    },
+    "app-interne": {
+      "section": "software-su-misura",
+      "title": "App interne, operations e magazzino",
+      "url": "/it/pillar/app-interne/",
+      "summary": "Copia-incolla, Excel e WhatsApp che tengono in piedi i processi: le app interne usabili che tolgono il caos senza software da multinazionale."
+    },
+    "portali-b2b": {
+      "section": "software-su-misura",
+      "title": "Portali, B2B e aree riservate",
+      "url": "/it/pillar/portali-b2b/",
+      "summary": "Listini, ordini, aree clienti e dossier: i portali self-service che fanno ricavo invece di un altro PDF via email."
+    },
+    "prenotazioni-agenda": {
+      "section": "software-su-misura",
+      "title": "Agenda, prenotazioni e servizi a tempo",
+      "url": "/it/pillar/prenotazioni-agenda/",
+      "summary": "No-show, overbooking e calendari condivisi: chi vende tempo ha bisogno di uno scheduling che fattura, non di un Google Calendar."
+    },
+    "web-prodotto": {
+      "section": "software-su-misura",
+      "title": "Web, UX e prodotto che converte",
+      "url": "/it/pillar/web-prodotto/",
+      "summary": "Siti belli che al secondo click si rompono e demo che non si fatturano: il frontend serio, legato a un backend vero, che chiude il flusso."
+    },
+    "documenti-flussi": {
+      "section": "software-su-misura",
+      "title": "Documenti, pratiche e flussi amministrativi",
+      "url": "/it/pillar/documenti-flussi/",
+      "summary": "Pratiche ferme in una casella, PDF che nessuno trova, preventivi che non tornano in fattura: i flussi che fanno muovere i dossier."
+    },
+    "comprare-software": {
+      "section": "software-su-misura",
+      "title": "Comprare e gestire software su misura",
+      "url": "/it/pillar/comprare-software/",
+      "summary": "Cosa stai comprando davvero quando firmi uno sviluppo: MVP onesti, no-code che si blocca, manutenzione, e come non farti fregare."
+    },
+    "stack-sovrano": {
+      "section": "stack-sovrano-ai",
+      "title": "Stack sovrano & DevOps",
+      "url": "/it/pillar/stack-sovrano/",
+      "summary": "Docker, reverse proxy, backup, secret e n8n in produzione: l'ecosistema self-hosted che tiene i dati in casa e non ti tradisce alle 3 di notte."
+    },
+    "rag-documenti": {
+      "section": "stack-sovrano-ai",
+      "title": "RAG e documenti italiani",
+      "url": "/it/pillar/rag-documenti/",
+      "summary": "FatturaPA, contratti, OCR e vector DB: come interrogare 10.000 documenti italiani con citazioni corrette, senza Pinecone e senza cloud."
+    },
+    "agenti-esecuzione": {
+      "section": "stack-sovrano-ai",
+      "title": "Agenti che eseguono (MCP, tool, guardrail)",
+      "url": "/it/pillar/agenti-esecuzione/",
+      "summary": "MCP, tool calling, kill switch, human-in-the-loop ed eval: agenti che non chiacchierano ma eseguono, con confini chiari e niente disastri."
+    },
+    "modelli-costi-privacy": {
+      "section": "stack-sovrano-ai",
+      "title": "Modelli, costi e privacy",
+      "url": "/it/pillar/modelli-costi-privacy/",
+      "summary": "vLLM vs Ollama, TCO reale, GDPR e AI Act: quando il cloud LLM ti costa i clienti e quando conviene comunque, con numeri."
+    },
+    "integrazioni-dati": {
+      "section": "stack-sovrano-ai",
+      "title": "Integrazioni e dati legacy",
+      "url": "/it/pillar/integrazioni-dati/",
+      "summary": "IMAP/PEC, Salesforce, Oracle, voce e fonti sporche: collegare mondi che non si parlano senza fare danni in produzione."
+    },
+    "chatgpt-azienda": {
+      "section": "ai-automazione-pmi",
+      "title": "ChatGPT in azienda: rischi, legalità, alternativa",
+      "url": "/it/pillar/chatgpt-azienda/",
+      "summary": "I dipendenti incollano i clienti su ChatGPT: cosa rischi in Italia, cosa dice la legge e come dare un'alternativa interna usabile."
+    },
+    "automazione-da-dove": {
+      "section": "ai-automazione-pmi",
+      "title": "Automazione PMI: da dove partire",
+      "url": "/it/pillar/automazione-pmi/",
+      "summary": "n8n vs Zapier, chatbot che non converte, integrazione gestionale: da dove parte davvero una PMI senza comprare quattro software nuovi."
+    },
+    "documenti-fatture-ai": {
+      "section": "ai-automazione-pmi",
+      "title": "Documenti, fatture e knowledge con l'AI",
+      "url": "/it/pillar/documenti-fatture-ai/",
+      "summary": "Estrarre dati dai PDF, l'XML della FatturaPA, knowledge base e ricerca nei contratti: dove l'AI aiuta e dove combina pasticci."
+    },
+    "compliance-privacy": {
+      "section": "ai-automazione-pmi",
+      "title": "Privacy, AI Act e compliance pratici",
+      "url": "/it/pillar/compliance-privacy/",
+      "summary": "AI Act, prompt injection, privacy policy e dati Italia vs USA: la compliance spiegata a un titolare, con la checklist da stampare."
+    },
+    "comprare-ai": {
+      "section": "ai-automazione-pmi",
+      "title": "Comprare AI: integratori, costi, aspettative",
+      "url": "/it/pillar/comprare-ai/",
+      "summary": "Quanto costa un agente, come scegliere l'integratore, quando NON automatizzare e come misurare il ROI dopo 90 giorni."
+    },
+    "integrazioni-selfhosted": {
+      "section": "ai-automazione-pmi",
+      "title": "Integrazioni gestionali & self-hosted",
+      "url": "/it/pillar/integrazioni-selfhosted/",
+      "summary": "TeamSystem/Zucchetti, backup ransomware, VPS o NAS, WhatsApp e voce: integrare ciò che hai e decidere cosa sta in casa."
+    }
+  },
+  "en": {
+    "prodotti-dati": {
+      "section": "software-su-misura",
+      "title": "Dashboards, KPIs & data decisions",
+      "url": "/en/pillar/data-products/",
+      "summary": "Numbers scattered across six tools, late reports, gut-feel calls: how to get ONE dashboard and data products the owner actually opens."
+    },
+    "app-interne": {
+      "section": "software-su-misura",
+      "title": "Internal apps, operations & inventory",
+      "url": "/en/pillar/internal-apps/",
+      "summary": "Copy-paste, Excel and WhatsApp holding processes together: usable internal apps that remove the chaos without enterprise software."
+    },
+    "portali-b2b": {
+      "section": "software-su-misura",
+      "title": "Portals, B2B & client areas",
+      "url": "/en/pillar/b2b-portals/",
+      "summary": "Price lists, orders, client areas and dossiers: self-service portals that generate revenue instead of one more PDF over email."
+    },
+    "prenotazioni-agenda": {
+      "section": "software-su-misura",
+      "title": "Booking, scheduling & time-based services",
+      "url": "/en/pillar/booking-scheduling/",
+      "summary": "No-shows, overbooking and shared calendars: if you sell time you need scheduling that bills, not a shared Google Calendar."
+    },
+    "web-prodotto": {
+      "section": "software-su-misura",
+      "title": "Web, UX & products that convert",
+      "url": "/en/pillar/web-ux-product/",
+      "summary": "Pretty sites that break on the second click and demos that don't bill: serious frontend, tied to a real backend, that closes the flow."
+    },
+    "documenti-flussi": {
+      "section": "software-su-misura",
+      "title": "Documents, cases & admin workflows",
+      "url": "/en/pillar/documents-workflows/",
+      "summary": "Cases stuck in an inbox, PDFs nobody finds, quotes that don't match the invoice: the workflows that make dossiers move."
+    },
+    "comprare-software": {
+      "section": "software-su-misura",
+      "title": "Buying & running custom software",
+      "url": "/en/pillar/buying-custom-software/",
+      "summary": "What you're actually buying when you sign a build: honest MVPs, no-code walls, maintenance, and how not to get burned."
+    },
+    "stack-sovrano": {
+      "section": "stack-sovrano-ai",
+      "title": "Sovereign stack & DevOps",
+      "url": "/en/pillar/sovereign-stack/",
+      "summary": "Docker, reverse proxy, backups, secrets and n8n in production: the self-hosted ecosystem that keeps data in-house and won't betray you at 3am."
+    },
+    "rag-documenti": {
+      "section": "stack-sovrano-ai",
+      "title": "RAG & Italian documents",
+      "url": "/en/pillar/rag-documents/",
+      "summary": "FatturaPA, contracts, OCR and vector DBs: how to query 10,000 Italian documents with correct citations, no Pinecone and no cloud."
+    },
+    "agenti-esecuzione": {
+      "section": "stack-sovrano-ai",
+      "title": "Agents that act (MCP, tools, guardrails)",
+      "url": "/en/pillar/agents-that-act/",
+      "summary": "MCP, tool calling, kill switches, human-in-the-loop and eval: agents that act instead of chatting, with clear limits and no disasters."
+    },
+    "modelli-costi-privacy": {
+      "section": "stack-sovrano-ai",
+      "title": "Models, cost & privacy",
+      "url": "/en/pillar/models-cost-privacy/",
+      "summary": "vLLM vs Ollama, real TCO, GDPR and the AI Act: when a cloud LLM costs you clients and when it wins anyway, with numbers."
+    },
+    "integrazioni-dati": {
+      "section": "stack-sovrano-ai",
+      "title": "Integrations & legacy data",
+      "url": "/en/pillar/integrations-legacy-data/",
+      "summary": "IMAP/PEC, Salesforce, Oracle, voice and messy sources: connecting worlds that don't talk without breaking production."
+    },
+    "chatgpt-azienda": {
+      "section": "ai-automazione-pmi",
+      "title": "ChatGPT at work: risk, legality, alternative",
+      "url": "/en/pillar/chatgpt-at-work/",
+      "summary": "Employees paste client data into ChatGPT: what you risk in Italy, what the law says and how to give a usable internal alternative."
+    },
+    "automazione-da-dove": {
+      "section": "ai-automazione-pmi",
+      "title": "SME automation: where to start",
+      "url": "/en/pillar/sme-automation/",
+      "summary": "n8n vs Zapier, chatbots that don't convert, ERP integration: where an SME actually starts without buying four new tools."
+    },
+    "documenti-fatture-ai": {
+      "section": "ai-automazione-pmi",
+      "title": "Documents, invoices & knowledge with AI",
+      "url": "/en/pillar/documents-invoices-ai/",
+      "summary": "Extracting data from PDFs, the FatturaPA XML, knowledge bases and contract search: where AI helps and where it makes a mess."
+    },
+    "compliance-privacy": {
+      "section": "ai-automazione-pmi",
+      "title": "Privacy, AI Act & practical compliance",
+      "url": "/en/pillar/privacy-ai-act/",
+      "summary": "AI Act, prompt injection, privacy policy and Italy vs US data: compliance explained to an owner, with a printable checklist."
+    },
+    "comprare-ai": {
+      "section": "ai-automazione-pmi",
+      "title": "Buying AI: integrators, cost, expectations",
+      "url": "/en/pillar/buying-ai/",
+      "summary": "How much an agent costs, how to pick an integrator, when NOT to automate and how to measure ROI after 90 days."
+    },
+    "integrazioni-selfhosted": {
+      "section": "ai-automazione-pmi",
+      "title": "ERP integrations & self-hosting",
+      "url": "/en/pillar/erp-integrations-selfhosted/",
+      "summary": "TeamSystem/Zucchetti, ransomware backups, VPS or NAS, WhatsApp and voice: integrating what you have and deciding what stays in-house."
+    }
+  }
+}

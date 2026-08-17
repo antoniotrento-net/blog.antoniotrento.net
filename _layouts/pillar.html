@@ -5,8 +5,10 @@ layout: default
 {%- assign cluster = site.posts | where: "lang", lang | where: "pillar", page.pillar_key -%}
 
 <section class="pt-40 pb-16 px-6 bg-white dark:bg-neutral-950 transition-colors">
+  {%- assign sec = site.data.sections | where: "key", page.section | first -%}
+  {%- if lang == 'it' -%}{%- assign sname = sec.it.title -%}{%- else -%}{%- assign sname = sec.en.title -%}{%- endif -%}
   <div class="max-w-4xl mx-auto text-center reveal">
-    <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-4">{% if lang == 'it' %}Guida{% else %}Guide{% endif %}</p>
+    <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-4">{{ sname | default: 'Guida' }}</p>
     <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">{{ page.title }}</h1>
     {% if page.description %}<p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">{{ page.description }}</p>{% endif %}
   </div>

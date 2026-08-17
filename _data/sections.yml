@@ -1,0 +1,35 @@
+[
+  {
+    "key": "software-su-misura",
+    "it": {
+      "title": "Software su misura",
+      "summary": "Prodotti digitali end-to-end per chi compra: dati, backend, interfaccia e AI che risolvono un problema che costa soldi."
+    },
+    "en": {
+      "title": "Custom software",
+      "summary": "End-to-end digital products for buyers: data, backend, interface and AI that fix a problem costing real money."
+    }
+  },
+  {
+    "key": "stack-sovrano-ai",
+    "it": {
+      "title": "Stack AI sovrano",
+      "summary": "Architetture self-hosted che tengono i dati in casa: Docker, n8n, RAG, agenti e integrazioni in produzione, senza vendor lock-in."
+    },
+    "en": {
+      "title": "Sovereign AI stack",
+      "summary": "Self-hosted architectures that keep data in-house: Docker, n8n, RAG, agents and integrations in production, no vendor lock-in."
+    }
+  },
+  {
+    "key": "ai-automazione-pmi",
+    "it": {
+      "title": "AI e automazione per PMI",
+      "summary": "Risposte concrete alle domande che un titolare cerca su Google: rischi, costi, compliance e automazioni con i dati sotto controllo."
+    },
+    "en": {
+      "title": "AI & automation for SMEs",
+      "summary": "Concrete answers to what an owner searches on Google: risk, cost, compliance and automation with data under control."
+    }
+  }
+]
