@@ -1,0 +1,113 @@
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- if lang == 'it' -%}
+  {%- assign nav_items = site.data.navigation_it -%}
+  {%- assign home_url = '/it/' -%}
+{%- else -%}
+  {%- assign nav_items = site.data.navigation_en -%}
+  {%- assign home_url = '/en/' -%}
+{%- endif -%}
+
+<nav class="fixed w-full z-50 transition-all duration-300 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md" id="navbar">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+    <a href="{{ home_url | relative_url }}" class="flex items-center hover:scale-105 transition-transform shrink-0">
+      <img src="{{ '/assets/images/logo/logo-light.png' | relative_url }}" alt="{{ site.title }}" class="h-9 w-auto dark:hidden">
+      <img src="{{ '/assets/images/logo/logo-dark.png' | relative_url }}" alt="{{ site.title }}" class="h-9 w-auto hidden dark:block">
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-7">
+      {% for item in nav_items %}
+        {% if item.url contains '://' %}{% assign item_href = item.url %}{% else %}{% assign item_href = item.url | relative_url %}{% endif %}
+        {% if item.main %}
+        <a href="{{ item_href }}"
+          class="text-sm font-bold px-4 py-2 rounded-pill bg-brand-black dark:bg-white text-white dark:text-brand-black hover:bg-brand-blue dark:hover:bg-brand-blue dark:hover:text-white transition-colors">
+          {{ item.title }} <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+        </a>
+        {% else %}
+        {% assign is_active = false %}
+        {% if page.url == item.url %}{% assign is_active = true %}{% endif %}
+        <a href="{{ item_href }}"
+          class="text-sm font-bold uppercase tracking-wide transition-colors relative group {% if is_active %}text-brand-blue{% else %}hover:text-brand-blue{% endif %}">
+          {{ item.title }}
+          <span class="absolute -bottom-1 left-0 h-0.5 bg-brand-blue transition-all group-hover:w-full {% if is_active %}w-full{% else %}w-0{% endif %}"></span>
+        </a>
+        {% endif %}
+      {% endfor %}
+
+      <!-- Theme Toggle -->
+      <button onclick="toggleTheme()"
+        class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-white/20 transition-colors"
+        aria-label="Toggle Theme">
+        <i class="fas fa-moon dark:hidden"></i>
+        <i class="fas fa-sun hidden dark:block text-brand-yellow"></i>
+      </button>
+
+      <!-- Language Switcher -->
+      <div class="flex items-center gap-2 text-sm font-bold uppercase tracking-wide">
+        {% if lang == 'it' %}
+        <span class="text-brand-blue">IT</span>
+        <span class="text-gray-400">|</span>
+        <a href="{{ page.alt_url | default: page.url | replace: '/it/', '/en/' | relative_url }}"
+          class="text-gray-500 hover:text-brand-black dark:hover:text-white transition-colors">EN</a>
+        {% else %}
+        <a href="{{ page.alt_url | default: page.url | replace: '/en/', '/it/' | relative_url }}"
+          class="text-gray-500 hover:text-brand-black dark:hover:text-white transition-colors">IT</a>
+        <span class="text-gray-400">|</span>
+        <span class="text-brand-blue">EN</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-2xl" onclick="toggleMobileMenu()" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu"
+  class="fixed inset-0 bg-white dark:bg-neutral-950 z-[60] transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-6">
+  <button class="absolute top-6 right-6 text-3xl" onclick="toggleMobileMenu()" aria-label="Chiudi">
+    <i class="fas fa-times"></i>
+  </button>
+
+  {% for item in nav_items %}
+    {% if item.url contains '://' %}{% assign item_href = item.url %}{% else %}{% assign item_href = item.url | relative_url %}{% endif %}
+    {% if item.main %}
+    <a href="{{ item_href }}" class="text-2xl font-black px-6 py-3 rounded-pill bg-brand-black dark:bg-white text-white dark:text-brand-black" onclick="toggleMobileMenu()">{{ item.title }}</a>
+    {% else %}
+    <a href="{{ item_href }}" class="text-3xl font-black hover:text-brand-blue transition-colors" onclick="toggleMobileMenu()">{{ item.title }}</a>
+    {% endif %}
+  {% endfor %}
+
+  <div class="flex items-center gap-4 mt-6 text-xl font-bold uppercase tracking-wide">
+    {% if lang == 'it' %}
+    <span class="text-brand-blue border-b-2 border-brand-blue">Italiano</span>
+    <a href="{{ page.alt_url | default: page.url | replace: '/it/', '/en/' | relative_url }}" class="text-gray-500" onclick="toggleMobileMenu()">English</a>
+    {% else %}
+    <a href="{{ page.alt_url | default: page.url | replace: '/en/', '/it/' | relative_url }}" class="text-gray-500" onclick="toggleMobileMenu()">Italiano</a>
+    <span class="text-brand-blue border-b-2 border-brand-blue">English</span>
+    {% endif %}
+    <button onclick="toggleTheme()" class="ml-4 w-10 h-10 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center" aria-label="Toggle Theme">
+      <i class="fas fa-moon dark:hidden"></i>
+      <i class="fas fa-sun hidden dark:block text-brand-yellow"></i>
+    </button>
+  </div>
+</div>
+
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const isOpen = !menu.classList.contains('translate-x-full');
+    if (isOpen) {
+      menu.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+    } else {
+      menu.classList.remove('translate-x-full');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+</script>

@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- assign posts = site.posts | where: "lang", lang -%}
+
+<!-- Hero -->
+<section class="pt-40 pb-16 px-6 bg-white dark:bg-neutral-950 transition-colors">
+  <div class="max-w-5xl mx-auto text-center reveal">
+    <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">{{ page.heading | default: page.title }}</h1>
+    {% if page.description %}
+    <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">{{ page.description }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Pillar hubs -->
+{%- assign pillars = site.data.pillars[lang] -%}
+{%- if pillars -%}
+<section class="px-6 pb-8">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+    {%- for pair in pillars -%}
+      {%- assign pill = pair[1] -%}
+      <a href="{{ pill.url | relative_url }}" class="group p-6 rounded-[2rem] border border-gray-100 dark:border-white/5 bg-brand-surface dark:bg-neutral-900 hover:shadow-xl transition-all reveal">
+        <h3 class="text-lg font-black mb-2 group-hover:text-brand-blue transition-colors">{{ pill.title }}</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">{{ pill.summary }}</p>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
+
+<!-- Post grid -->
+<section class="px-6 py-16 bg-white dark:bg-neutral-950 transition-colors min-h-[40vh]">
+  <div class="max-w-6xl mx-auto">
+    {% if posts.size > 0 %}
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {%- for post in posts -%}
+      <article class="group bg-gray-50 dark:bg-neutral-900 rounded-[2rem] overflow-hidden border border-gray-100 dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300 reveal flex flex-col">
+        {%- if post.image -%}
+        <a href="{{ post.url | relative_url }}" class="block h-52 overflow-hidden">
+          <img src="{{ post.image | relative_url }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="{{ post.title }}">
+        </a>
+        {%- endif -%}
+        <div class="p-7 flex flex-col flex-grow">
+          <div class="mb-3 text-sm text-brand-blue font-bold">{{ post.date | date: "%-d %B %Y" }}</div>
+          <h2 class="text-xl font-bold mb-3 group-hover:text-brand-blue transition-colors">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 flex-grow text-sm">{{ post.description | default: post.excerpt | strip_html | truncate: 130 }}</p>
+          <a href="{{ post.url | relative_url }}" class="mt-auto inline-flex items-center gap-2 font-bold text-brand-blue hover:text-brand-black dark:hover:text-white transition-colors">
+            {% if lang == 'it' %}Leggi l'articolo{% else %}Read the article{% endif %} <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+      </article>
+      {%- endfor -%}
+    </div>
+    {% else %}
+    <p class="text-center text-gray-400 py-20">{% if lang == 'it' %}Presto i primi articoli.{% else %}First articles coming soon.{% endif %}</p>
+    {% endif %}
+  </div>
+</section>

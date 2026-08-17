@@ -1,0 +1,46 @@
+{%- comment -%}
+  Link building interno, tutto opzionale (modello "misto").
+  Front matter del post:
+    pillar:   prodotti-dati            # 1 chiave in _data/pillars.yml
+    services: [portfolio, contatti]    # N chiavi in _data/site_links.yml (→ antoniotrento.net)
+  Se i campi mancano, non viene renderizzato nulla.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.default_lang -%}
+
+{%- if page.pillar -%}
+  {%- assign pillar = site.data.pillars[lang][page.pillar] -%}
+  {%- if pillar -%}
+  <aside class="not-prose my-12 p-6 md:p-8 rounded-[2rem] border border-brand-blue/20 bg-brand-blue/5 dark:bg-brand-blue/10">
+    <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-2">
+      {% if lang == 'it' %}Fa parte della guida{% else %}Part of the guide{% endif %}
+    </p>
+    <a href="{{ pillar.url | relative_url }}" class="group block">
+      <h3 class="text-xl md:text-2xl font-black mb-2 group-hover:text-brand-blue transition-colors">{{ pillar.title }}</h3>
+      <p class="text-gray-600 dark:text-gray-400 text-sm">{{ pillar.summary }}</p>
+      <span class="inline-flex items-center gap-2 mt-3 font-bold text-brand-blue">
+        {% if lang == 'it' %}Apri la guida completa{% else %}Open the full guide{% endif %}
+        <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+      </span>
+    </a>
+  </aside>
+  {%- endif -%}
+{%- endif -%}
+
+{%- if page.services and page.services.size > 0 -%}
+  <div class="not-prose my-12">
+    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
+      {% if lang == 'it' %}Approfondisci su antoniotrento.net{% else %}More on antoniotrento.net{% endif %}
+    </p>
+    <div class="flex flex-wrap gap-3">
+      {%- for key in page.services -%}
+        {%- assign s = site.data.site_links[lang][key] -%}
+        {%- if s -%}
+        <a href="{{ s.url }}"
+          class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 font-bold text-sm hover:border-brand-blue/40 hover:text-brand-blue transition-colors">
+          <i class="{{ s.icon }}"></i> {{ s.label }}
+        </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}

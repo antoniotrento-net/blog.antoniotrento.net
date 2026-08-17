@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{%- assign lang = page.lang | default: site.default_lang -%}
+
+<article class="pt-32 pb-20 px-6 bg-white dark:bg-neutral-950 transition-colors min-h-screen">
+  <div class="max-w-3xl mx-auto">
+
+    <!-- Breadcrumb / back to blog -->
+    {%- if lang == 'it' -%}{%- assign back_url = '/it/' | relative_url -%}{%- else -%}{%- assign back_url = '/en/' | relative_url -%}{%- endif -%}
+    <a href="{{ back_url }}" class="inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-brand-blue transition-colors mb-8">
+      <i class="fas fa-arrow-left text-xs"></i> {% if lang == 'it' %}Tutti gli articoli{% else %}All articles{% endif %}
+    </a>
+
+    <!-- Header -->
+    <header class="mb-10 reveal">
+      {%- if page.pillar -%}
+        {%- assign pillar = site.data.pillars[lang][page.pillar] -%}
+        {%- if pillar -%}
+        <a href="{{ pillar.url | relative_url }}" class="inline-block mb-4 text-xs font-bold uppercase tracking-widest text-brand-blue hover:underline">{{ pillar.title }}</a>
+        {%- endif -%}
+      {%- endif -%}
+      <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-6 leading-tight">{{ page.title }}</h1>
+      <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+        <span class="font-medium">{{ page.date | date: "%-d %B %Y" }}</span>
+        <span>•</span>
+        <span class="font-medium">{{ page.author | default: site.author.name }}</span>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    {% if page.image %}
+    <div class="mb-12 rounded-[2rem] overflow-hidden shadow-2xl reveal delay-100">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-auto object-cover">
+    </div>
+    {% endif %}
+
+    <!-- Content -->
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      {{ content }}
+    </div>
+
+    <!-- Link building interno (pillar + servizi sul sito principale) -->
+    {% include internal-links.html %}
+
+    <!-- CTA marketing -->
+    {% include post-cta.html %}
+
+    <!-- Correlati -->
+    <div class="mt-20 pt-10 border-t border-gray-200 dark:border-white/10">
+      {% include related-posts.html %}
+    </div>
+
+  </div>
+</article>
+
+{% include popup-down.html %}

@@ -1,0 +1,64 @@
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- if lang == 'it' -%}{%- assign p = site.popup.it -%}{%- else -%}{%- assign p = site.popup.en -%}{%- endif -%}
+
+<!-- Marketing popup → sito principale -->
+<div id="cta-popup"
+  class="hidden fixed bottom-6 right-6 max-w-sm w-[calc(100%-3rem)] bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 rounded-2xl shadow-2xl z-50 transform translate-y-10 opacity-0 transition-all duration-500">
+  <button id="cta-close-btn" aria-label="Chiudi"
+    class="absolute top-3 right-3 text-gray-400 hover:text-brand-black dark:hover:text-white transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+    <i class="fas fa-times"></i>
+  </button>
+  <div class="p-6">
+    <div class="w-10 h-10 rounded-full bg-brand-blue/10 flex items-center justify-center mb-4 text-brand-blue text-lg">
+      <i class="fas fa-robot"></i>
+    </div>
+    <h4 class="text-lg font-bold mb-2 text-brand-black dark:text-white">{{ p.title }}</h4>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">{{ p.body }}</p>
+    <a href="{{ p.url }}"
+      class="block w-full py-3 rounded-xl bg-brand-black dark:bg-white text-white dark:text-brand-black font-bold text-center hover:bg-brand-blue dark:hover:bg-brand-blue dark:hover:text-white transition-colors">
+      {{ p.button }}
+    </a>
+  </div>
+</div>
+
+<script>
+(function () {
+  if (window.__ctaPopupInit) return;
+  window.__ctaPopupInit = true;
+  document.addEventListener("DOMContentLoaded", function () {
+    var cta = document.getElementById("cta-popup");
+    var closeBtn = document.getElementById("cta-close-btn");
+    if (!cta || !closeBtn) return;
+    var isDismissed = localStorage.getItem('cta_popup_closed') === 'true';
+    var shown = false, pageReadyMs = Date.now();
+    var MIN_TIME_MS = 8000, SCROLL_THRESHOLD = 55;
+
+    function showPopup() {
+      if (shown || isDismissed) return;
+      shown = true;
+      cta.classList.remove('hidden');
+      requestAnimationFrame(function () { requestAnimationFrame(function () {
+        cta.classList.remove('translate-y-10', 'opacity-0');
+      }); });
+    }
+    function hidePopup() {
+      isDismissed = true;
+      localStorage.setItem('cta_popup_closed', 'true');
+      cta.classList.add('translate-y-10', 'opacity-0');
+      setTimeout(function () { cta.classList.add('hidden'); }, 500);
+    }
+    if (!isDismissed) {
+      window.addEventListener("scroll", function onScroll() {
+        if (isDismissed || shown) { window.removeEventListener("scroll", onScroll); return; }
+        var docHeight = document.documentElement.scrollHeight;
+        var scrollPercent = ((window.scrollY + window.innerHeight) / docHeight) * 100;
+        if (scrollPercent > SCROLL_THRESHOLD && (Date.now() - pageReadyMs) > MIN_TIME_MS) {
+          showPopup(); window.removeEventListener("scroll", onScroll);
+        }
+      }, { passive: true });
+    }
+    closeBtn.addEventListener("click", hidePopup);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && shown) hidePopup(); });
+  });
+}());
+</script>

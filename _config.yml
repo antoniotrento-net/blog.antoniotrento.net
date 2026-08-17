@@ -1,0 +1,96 @@
+# ============================================================
+#  blog.antoniotrento.net — Jekyll (GitHub Pages)
+#  Grafica: ereditata da antoniotrento.net (Google-brand palette)
+#  Multilingua: pattern IT/EN (cartelle /it/ e /en/, filtro per `lang`)
+# ============================================================
+
+title: "Blog — Antonio Trento"
+description: "Integrazione sistemi, intelligenza artificiale e automazione per PMI. Casi, architetture e strategie — non tutorial astratti."
+# --- ANTEPRIMA su GitHub Pages (project page, sotto-cartella) ---
+# Quando colleghi il dominio reale, ripristina:
+#   url: "https://blog.antoniotrento.net"
+#   baseurl: ""
+# e ricrea il file CNAME con "blog.antoniotrento.net".
+url: "https://antoniotrento-net.github.io"
+baseurl: "/blog.antoniotrento.net"
+
+# Sito principale a cui il blog è agganciato (link building + marketing).
+main_site: "https://antoniotrento.net"
+
+author:
+  name: "Antonio Trento"
+  email: "info@antoniotrento.net"
+  bio: "System Architect & AI Integrator"
+
+# Lingue gestite. La prima è la default (x-default punta a /it/).
+languages: ["it", "en"]
+default_lang: "it"
+
+og_image: "/assets/images/logo/logo-light.png"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# I post vivono tutti in _posts/ con `lang: it|en` nel front matter.
+# Layout di default per i post (la lingua resta obbligatoria per post).
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+social:
+  linkedin: "https://www.linkedin.com/in/antoniotrento"
+  github: "https://github.com/antoniotrento"
+  twitter: "https://twitter.com/antoniotrento"
+  instagram: "https://www.instagram.com/antoniotrento"
+
+# ---- Marketing: popup a scomparsa (testi per lingua) → sito principale ----
+popup:
+  it:
+    title: "L'AI è già un vantaggio della concorrenza."
+    body: "Se un processo ti costa ore, clienti o margine, probabilmente si può costruire. Parliamone."
+    button: "Prenota una call"
+    url: "https://antoniotrento.net/contatti/"
+  en:
+    title: "AI is already your competitor's edge."
+    body: "If a process costs you hours, clients or margin, it can probably be built. Let's talk."
+    button: "Book a call"
+    url: "https://antoniotrento.net/contatti/"
+
+# ---- Marketing: CTA di fine articolo (testi per lingua) → sito principale ----
+post_cta:
+  it:
+    kicker: "Antonio Trento — System Architect & AI Integrator"
+    title: "Questo è il tuo problema?"
+    body: "Progetto e costruisco dati, backend, interfaccia e agenti AI end-to-end. Niente slide: sistemi che girano e restano tuoi."
+    primary_label: "Vedi il portfolio"
+    primary_url: "https://antoniotrento.net/portfolio/"
+    secondary_label: "Contattami"
+    secondary_url: "https://antoniotrento.net/contatti/"
+  en:
+    kicker: "Antonio Trento — System Architect & AI Integrator"
+    title: "Is this your problem?"
+    body: "I design and build data, backend, interface and AI agents end-to-end. No slides: systems that run and stay yours."
+    primary_label: "See the portfolio"
+    primary_url: "https://antoniotrento.net/portfolio/"
+    secondary_label: "Get in touch"
+    secondary_url: "https://antoniotrento.net/contatti/"
+
+permalink: "/:categories/:title/"
+markdown: kramdown
+highlighter: rouge
+
+include:
+  - assets
+  - robots.txt
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .gitignore

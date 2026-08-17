@@ -1,0 +1,12 @@
+# Blog navigation — English. `main` = link to the main site (highlighted).
+- title: "Blog"
+  url: "/en/"
+- title: "Guides"
+  url: "/en/pillar/data-products/"
+- title: "Portfolio"
+  url: "https://antoniotrento.net/portfolio/"
+- title: "Bio"
+  url: "https://antoniotrento.net/biografia/"
+- title: "antoniotrento.net"
+  url: "https://antoniotrento.net"
+  main: true

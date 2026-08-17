@@ -1,0 +1,34 @@
+# ============================================================
+#  PILLAR / HUB tematici (link building interno).
+#  Un post entra in una pillar via front matter:  pillar: prodotti-dati
+#  Le chiavi sono le stesse in IT/EN (così il language switch tiene il cluster).
+#  I 3 cluster rispecchiano i 3 piani editoriali. Estendibili / opzionali:
+#  se un post non ha `pillar`, il blocco pillar semplicemente non compare.
+# ============================================================
+it:
+  prodotti-dati:
+    title: "Cruscotti e prodotti dati per PMI"
+    url: "/it/pillar/prodotti-dati/"
+    summary: "Numeri sparsi in sei software, report in ritardo, decisioni a naso. Come avere UN cruscotto e prodotti dati che il titolare apre davvero."
+  stack-sovrano:
+    title: "Stack AI sovrano: Docker, n8n, RAG, agenti"
+    url: "/it/pillar/stack-sovrano/"
+    summary: "Architetture self-hosted che tengono i dati in casa: automazione, RAG e agenti in produzione senza vendor lock-in."
+  pmi-ops:
+    title: "AI e automazione per le operazioni PMI"
+    url: "/it/pillar/pmi-ops/"
+    summary: "ChatGPT sui clienti, SaaS che non parlano, caos operativo: risposte concrete, dati sotto controllo dell'azienda."
+
+en:
+  prodotti-dati:
+    title: "Dashboards and data products for SMEs"
+    url: "/en/pillar/data-products/"
+    summary: "Numbers scattered across six tools, late reports, gut-feel decisions. How to get ONE dashboard and data products the owner actually opens."
+  stack-sovrano:
+    title: "Sovereign AI stack: Docker, n8n, RAG, agents"
+    url: "/en/pillar/sovereign-stack/"
+    summary: "Self-hosted architectures that keep data in-house: automation, RAG and agents in production, no vendor lock-in."
+  pmi-ops:
+    title: "AI and automation for SME operations"
+    url: "/en/pillar/sme-ops/"
+    summary: "ChatGPT on client data, SaaS that don't talk, operational chaos: concrete answers with data under the company's control."

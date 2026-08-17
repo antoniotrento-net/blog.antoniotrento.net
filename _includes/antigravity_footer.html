@@ -1,0 +1,52 @@
+{%- assign lang = page.lang | default: site.default_lang -%}
+<footer class="bg-white dark:bg-neutral-950 border-t border-gray-200 dark:border-white/10 py-20 px-6 transition-colors">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12">
+
+    <div class="max-w-sm">
+      <a href="https://antoniotrento.net" class="inline-block mb-6 hover:opacity-80 transition-opacity">
+        <img src="{{ '/assets/images/logo/logo-light.png' | relative_url }}" alt="{{ site.title }}" class="h-12 w-auto dark:hidden">
+        <img src="{{ '/assets/images/logo/logo-dark.png' | relative_url }}" alt="{{ site.title }}" class="h-12 w-auto hidden dark:block">
+      </a>
+      <p class="text-gray-500 dark:text-gray-400 mb-6">
+        {% if lang == 'it' %}Integrazione sistemi, intelligenza artificiale e automazione. Ecosistemi digitali sovrani per PMI.{% else %}System integration, artificial intelligence and automation. Sovereign digital ecosystems for SMEs.{% endif %}
+      </p>
+      <div class="flex gap-4">
+        <a href="{{ site.social.linkedin }}" aria-label="LinkedIn"
+          class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center hover:bg-brand-black dark:hover:bg-white hover:text-white dark:hover:text-brand-black transition-colors"><i class="fab fa-linkedin-in"></i></a>
+        <a href="{{ site.social.github }}" aria-label="GitHub"
+          class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center hover:bg-brand-black dark:hover:bg-white hover:text-white dark:hover:text-brand-black transition-colors"><i class="fab fa-github"></i></a>
+        <a href="{{ site.social.twitter }}" aria-label="X"
+          class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center hover:bg-brand-black dark:hover:bg-white hover:text-white dark:hover:text-brand-black transition-colors"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-12 lg:gap-20 w-full lg:w-auto">
+      <div>
+        <h4 class="font-bold mb-4">{% if lang == 'it' %}Blog{% else %}Blog{% endif %}</h4>
+        <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+          <li><a href="{{ '/it/' | relative_url }}" class="hover:text-brand-black dark:hover:text-white transition-colors">Italiano</a></li>
+          <li><a href="{{ '/en/' | relative_url }}" class="hover:text-brand-black dark:hover:text-white transition-colors">English</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">{% if lang == 'it' %}Sito principale{% else %}Main site{% endif %}</h4>
+        <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+          <li><a href="https://antoniotrento.net/portfolio/" class="hover:text-brand-black dark:hover:text-white transition-colors">Portfolio</a></li>
+          <li><a href="https://antoniotrento.net/biografia/" class="hover:text-brand-black dark:hover:text-white transition-colors">{% if lang == 'it' %}Biografia{% else %}Bio{% endif %}</a></li>
+          <li><a href="https://antoniotrento.net/contatti/" class="hover:text-brand-black dark:hover:text-white transition-colors">{% if lang == 'it' %}Contatti{% else %}Contact{% endif %}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">{% if lang == 'it' %}Legale{% else %}Legal{% endif %}</h4>
+        <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+          <li><a href="https://antoniotrento.net/privacy-policy/" class="hover:text-brand-black dark:hover:text-white transition-colors">Privacy</a></li>
+          <li><a href="https://antoniotrento.net/cookie-policy/" class="hover:text-brand-black dark:hover:text-white transition-colors">Cookie</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-gray-200 dark:border-white/10 text-center text-gray-400 text-sm">
+    &copy; {{ 'now' | date: "%Y" }} Antonio Trento — <a href="https://antoniotrento.net" class="hover:text-brand-black dark:hover:text-white transition-colors">antoniotrento.net</a>
+  </div>
+</footer>

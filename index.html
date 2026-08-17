@@ -1,0 +1,26 @@
+---
+layout: null
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Blog — Antonio Trento</title>
+  <link rel="canonical" href="{{ '/it/' | absolute_url }}">
+  <meta name="robots" content="noindex, follow">
+  <!-- Redirect alla lingua del browser (default: IT), baseurl-safe -->
+  <script>
+    (function () {
+      var it = "{{ '/it/' | relative_url }}";
+      var en = "{{ '/en/' | relative_url }}";
+      var lang = (navigator.language || 'it').toLowerCase();
+      window.location.replace(lang.indexOf('en') === 0 ? en : it);
+    })();
+  </script>
+  <meta http-equiv="refresh" content="0; url={{ '/it/' | relative_url }}">
+</head>
+<body>
+  <p>Redirecting… <a href="{{ '/it/' | relative_url }}">Italiano</a> · <a href="{{ '/en/' | relative_url }}">English</a></p>
+</body>
+</html>

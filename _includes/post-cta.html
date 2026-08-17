@@ -1,0 +1,24 @@
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- if lang == 'it' -%}{%- assign c = site.post_cta.it -%}{%- else -%}{%- assign c = site.post_cta.en -%}{%- endif -%}
+
+<!-- CTA di fine articolo → sito principale -->
+<div class="my-20 relative rounded-[2.5rem] overflow-hidden bg-brand-black text-white shadow-2xl reveal">
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue/20 blur-[120px] rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brand-green/20 blur-[100px] rounded-full pointer-events-none"></div>
+
+  <div class="relative z-10 p-8 md:p-12 lg:p-16 text-center">
+    <p class="text-sm font-bold uppercase tracking-widest text-brand-blue mb-4">{{ c.kicker }}</p>
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6 tracking-tight">{{ c.title }}</h2>
+    <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">{{ c.body }}</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="{{ c.primary_url }}"
+        class="px-8 py-4 bg-white text-brand-black rounded-xl font-bold text-lg hover:bg-brand-blue hover:text-white transition-all shadow-lg hover:-translate-y-1">
+        {{ c.primary_label }}
+      </a>
+      <a href="{{ c.secondary_url }}"
+        class="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm">
+        {{ c.secondary_label }}
+      </a>
+    </div>
+  </div>
+</div>

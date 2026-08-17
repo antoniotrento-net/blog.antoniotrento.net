@@ -1,0 +1,53 @@
+{%- comment -%}
+  Correlati filtrati per lingua, solo filtri Liquid standard (niente `push`).
+  Ordine: prima stessa pillar (cluster), poi altri post della stessa lingua.
+  Override manuale: front matter `related: [/it/blog/slug/, ...]`.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- assign lang_posts = site.posts | where: "lang", lang -%}
+
+{%- if page.related -%}
+  {%- assign pool = "" | split: "" -%}
+  {%- for rel_url in page.related -%}
+    {%- assign rel_post = site.posts | where: "url", rel_url -%}
+    {%- assign pool = pool | concat: rel_post -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- assign cluster = lang_posts | where: "pillar", page.pillar -%}
+  {%- assign pool = cluster | concat: lang_posts -%}
+{%- endif -%}
+
+{%- comment -%} Dedup + esclusione post corrente, max 3 {%- endcomment -%}
+{%- assign shown = "" -%}
+{%- assign count = 0 -%}
+{%- capture cards -%}
+  {%- for post in pool -%}
+    {%- unless post.url == page.url -%}
+      {%- unless shown contains post.url -%}
+        {%- if count < 3 -%}
+          {%- assign shown = shown | append: post.url | append: "|" -%}
+          {%- assign count = count | plus: 1 -%}
+    <div class="group bg-white dark:bg-neutral-900 rounded-[2rem] overflow-hidden border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl transition-all duration-300">
+      {%- if post.image -%}
+      <a href="{{ post.url | relative_url }}" class="block h-44 overflow-hidden">
+        <img src="{{ post.image | relative_url }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="{{ post.title }}">
+      </a>
+      {%- endif -%}
+      <div class="p-6">
+        <h5 class="text-lg font-bold mb-3 group-hover:text-brand-blue transition-colors"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+        <p class="text-gray-500 dark:text-gray-400 mb-4 text-sm line-clamp-3">{{ post.description | default: post.excerpt | strip_html | truncatewords: 18 }}</p>
+        <a href="{{ post.url | relative_url }}" class="inline-block px-4 py-2 rounded-full bg-brand-black dark:bg-white text-white dark:text-brand-black text-sm font-bold hover:bg-brand-blue dark:hover:bg-brand-blue dark:hover:text-white transition-colors">{% if lang == 'it' %}Leggi{% else %}Read{% endif %}</a>
+      </div>
+    </div>
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- if count > 0 -%}
+<div class="related-posts">
+  <h3 class="text-2xl font-bold mb-8">{% if lang == 'it' %}Potrebbe interessarti anche{% else %}You might also like{% endif %}</h3>
+  <div class="grid md:grid-cols-3 gap-8">{{ cards }}</div>
+</div>
+{%- endif -%}

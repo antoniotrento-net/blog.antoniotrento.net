@@ -1,0 +1,40 @@
+# ============================================================
+#  Destinazioni sul SITO PRINCIPALE (antoniotrento.net).
+#  Un post può richiamarle via front matter:  services: [portfolio, contatti]
+#  Chiavi identiche in IT/EN → cambia solo l'etichetta mostrata.
+# ============================================================
+it:
+  portfolio:
+    label: "Portfolio progetti"
+    url: "https://antoniotrento.net/portfolio/"
+    icon: "fa-solid fa-diagram-project"
+  contatti:
+    label: "Prenota una call"
+    url: "https://antoniotrento.net/contatti/"
+    icon: "fa-solid fa-calendar-check"
+  biografia:
+    label: "Chi è Antonio Trento"
+    url: "https://antoniotrento.net/biografia/"
+    icon: "fa-solid fa-user"
+  home:
+    label: "antoniotrento.net"
+    url: "https://antoniotrento.net"
+    icon: "fa-solid fa-house"
+
+en:
+  portfolio:
+    label: "Project portfolio"
+    url: "https://antoniotrento.net/portfolio/"
+    icon: "fa-solid fa-diagram-project"
+  contatti:
+    label: "Book a call"
+    url: "https://antoniotrento.net/contatti/"
+    icon: "fa-solid fa-calendar-check"
+  biografia:
+    label: "About Antonio Trento"
+    url: "https://antoniotrento.net/biografia/"
+    icon: "fa-solid fa-user"
+  home:
+    label: "antoniotrento.net"
+    url: "https://antoniotrento.net"
+    icon: "fa-solid fa-house"
