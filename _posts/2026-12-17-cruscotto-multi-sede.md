@@ -35,7 +35,7 @@ Consolidare davvero vuol dire un'altra cosa. Vuol dire, prima, **mettere d'accor
 
 La differenza pratica è enorme. Il consolidamento a mano è lento (arriva a metà mese), fragile (dipende da chi lo fa e dai fogli che riceve), e falso (somma definizioni diverse). Un consolidamento vero è automatico (ogni notte), robusto (prende i dati alla fonte), e affidabile (stesse regole per tutti). E soprattutto ti permette di fare la cosa che i fogli sommati non permettono: **confrontare** le sedi tra loro, sapendo che stai confrontando mele con mele.
 
-Questo è anche il motivo per cui un cruscotto multi-sede non si «scarica da un template»: il template non conosce le tue tre definizioni divergenti, e non fa il lavoro politico di ridurle a una. È lo stesso principio del [cruscotto che il titolare apre davvero]({{ '/it/blog/cruscotto-aziendale-titolare/' | relative_url }}): sotto la schermata c'è un lavoro di definizioni e di fonti che nessuno strumento fa al posto tuo.
+Questo è anche il motivo per cui un cruscotto multi-sede non si «scarica da un template»: il template non conosce le tue tre definizioni divergenti, e non fa il lavoro politico di ridurle a una. È lo stesso principio del [cruscotto che il titolare apre davvero]({{ '/it/blog/cruscotto-aziendale-titolare/' | relative_url }}): sotto la schermata c'è un lavoro di definizioni e di fonti che nessuno strumento fa al posto tuo. Il multi-sede è un capitolo della più ampia [guida ai cruscotti e ai prodotti dati]({{ '/it/pillar/prodotti-dati/' | relative_url }}), a cui si applicano le stesse regole.
 
 ## Il vero potere è il confronto (e per questo fa paura)
 
@@ -199,4 +199,4 @@ No. Una volta costruito, il consolidamento è automatico e gli allarmi arrivano 
 
 Se hai più sedi e ogni fine mese sommi Excel per capire come va il gruppo, non ti manca un report più veloce: ti manca un **cruscotto multi-sede** con definizioni comuni, consolidato automatico dalla fonte e permessi per ruolo — dove il vero valore non è la somma delle filiali, ma il loro *confronto* onesto. È lo strumento che ti fa passare dal gestire tre aziende a naso al governare una rete con un metro solo: premiare chi merita, aiutare chi arranca, replicare ciò che funziona.
 
-Se vuoi capire come costruirlo sulla tua rete — dalle definizioni ai permessi alle due schermate — guarda i [progetti che ho realizzato](https://antoniotrento.net/portfolio/) o [scrivimi due righe](https://antoniotrento.net/contatti/): si parte dalle tue sedi e dai tuoi dati, non da un template di catena.
+Se vuoi capire come costruirlo sulla tua rete — dalle definizioni ai permessi alle due schermate — guarda i [progetti che ho realizzato]({{ site.main_site }}/portfolio/) o [scrivimi due righe]({{ site.main_site }}/contatti/): si parte dalle tue sedi e dai tuoi dati, non da un template di catena.

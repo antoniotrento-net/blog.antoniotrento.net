@@ -46,6 +46,6 @@ E c'è un pezzo che sembra noioso e invece è tutto: **le definizioni vanno scri
 
 Se sei un titolare o un direttore e ti riconosci in uno dei sintomi qui sopra, parti dall'articolo che descrive il *tuo* dolore — non serve leggerli in ordine. Se invece stai valutando un progetto e vuoi capire cosa stai comprando (e cosa è fuffa), ogni pezzo include stime di costo in euro, timeline oneste e la sezione «è per te se / non è per te se».
 
-Quando vuoi vedere come sarebbe risolverlo sul serio sui *tuoi* numeri, il punto di partenza è il [portfolio dei progetti](https://antoniotrento.net/portfolio/) o due righe in [contatti](https://antoniotrento.net/contatti/): partiamo dai dati che hai, non da una demo.
+Quando vuoi vedere come sarebbe risolverlo sul serio sui *tuoi* numeri, il punto di partenza è il [portfolio dei progetti]({{ site.main_site }}/portfolio/) o due righe in [contatti]({{ site.main_site }}/contatti/): partiamo dai dati che hai, non da una demo.
 
 Qui sotto trovi tutti gli articoli di questa guida.

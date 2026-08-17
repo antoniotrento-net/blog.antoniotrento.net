@@ -3,7 +3,7 @@
   <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12">
 
     <div class="max-w-sm">
-      <a href="https://antoniotrento.net" class="inline-block mb-6 hover:opacity-80 transition-opacity">
+      <a href="{{ site.main_site }}" class="inline-block mb-6 hover:opacity-80 transition-opacity">
         <img src="{{ '/assets/images/logo/logo-light.png' | relative_url }}" alt="{{ site.title }}" class="h-12 w-auto dark:hidden">
         <img src="{{ '/assets/images/logo/logo-dark.png' | relative_url }}" alt="{{ site.title }}" class="h-12 w-auto hidden dark:block">
       </a>
@@ -31,22 +31,22 @@
       <div>
         <h4 class="font-bold mb-4">{% if lang == 'it' %}Sito principale{% else %}Main site{% endif %}</h4>
         <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
-          <li><a href="https://antoniotrento.net/portfolio/" class="hover:text-brand-black dark:hover:text-white transition-colors">Portfolio</a></li>
-          <li><a href="https://antoniotrento.net/biografia/" class="hover:text-brand-black dark:hover:text-white transition-colors">{% if lang == 'it' %}Biografia{% else %}Bio{% endif %}</a></li>
-          <li><a href="https://antoniotrento.net/contatti/" class="hover:text-brand-black dark:hover:text-white transition-colors">{% if lang == 'it' %}Contatti{% else %}Contact{% endif %}</a></li>
+          <li><a href="{{ site.main_site }}/portfolio/" class="hover:text-brand-black dark:hover:text-white transition-colors">Portfolio</a></li>
+          <li><a href="{{ site.main_site }}/biografia/" class="hover:text-brand-black dark:hover:text-white transition-colors">{% if lang == 'it' %}Biografia{% else %}Bio{% endif %}</a></li>
+          <li><a href="{{ site.main_site }}/contatti/" class="hover:text-brand-black dark:hover:text-white transition-colors">{% if lang == 'it' %}Contatti{% else %}Contact{% endif %}</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-bold mb-4">{% if lang == 'it' %}Legale{% else %}Legal{% endif %}</h4>
         <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
-          <li><a href="https://antoniotrento.net/privacy-policy/" class="hover:text-brand-black dark:hover:text-white transition-colors">Privacy</a></li>
-          <li><a href="https://antoniotrento.net/cookie-policy/" class="hover:text-brand-black dark:hover:text-white transition-colors">Cookie</a></li>
+          <li><a href="{{ site.main_site }}/privacy-policy/" class="hover:text-brand-black dark:hover:text-white transition-colors">Privacy</a></li>
+          <li><a href="{{ site.main_site }}/cookie-policy/" class="hover:text-brand-black dark:hover:text-white transition-colors">Cookie</a></li>
         </ul>
       </div>
     </div>
   </div>
 
   <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-gray-200 dark:border-white/10 text-center text-gray-400 text-sm">
-    &copy; {{ 'now' | date: "%Y" }} Antonio Trento — <a href="https://antoniotrento.net" class="hover:text-brand-black dark:hover:text-white transition-colors">antoniotrento.net</a>
+    &copy; {{ 'now' | date: "%Y" }} Antonio Trento — <a href="{{ site.main_site }}" class="hover:text-brand-black dark:hover:text-white transition-colors">antoniotrento.net</a>
   </div>
 </footer>

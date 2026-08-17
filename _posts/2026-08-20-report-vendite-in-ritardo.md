@@ -81,7 +81,7 @@ Mettiamola in tabella, con numeri onesti dichiarati come stime, perché il confr
 | **Le fonti sporche** | le pulisce a mano, ogni volta | le regole di pulizia sono scritte nel codice |
 | **Rischio chiave** | dipendenza da una persona | manutenzione (chi tiene vivo il sistema) |
 
-Attenzione: non sto dicendo «mai assumere». Sto dicendo di farlo **nell'ordine giusto**. Prima costruisci il sistema che pulisce le fonti e produce i numeri da solo; *poi*, se serve, una persona lo presidia e ci ragiona sopra — e finalmente fa l'analista, non il compilatore. Assumere prima di avere il sistema è come assumere un autista per una macchina che non hai ancora comprato. È lo stesso discorso, ribaltato, di quando [assumere un data analyst non basta perché i KPI restano una rissa](https://antoniotrento.net/portfolio/): la persona da sola non sistema ciò che è rotto a monte.
+Attenzione: non sto dicendo «mai assumere». Sto dicendo di farlo **nell'ordine giusto**. Prima costruisci il sistema che pulisce le fonti e produce i numeri da solo; *poi*, se serve, una persona lo presidia e ci ragiona sopra — e finalmente fa l'analista, non il compilatore. Assumere prima di avere il sistema è come assumere un autista per una macchina che non hai ancora comprato. È lo stesso discorso, ribaltato, di quando [assumere un data analyst non basta perché i KPI restano una rissa]({{ '/it/blog/data-analyst-non-basta/' | relative_url }}): la persona da sola non sistema ciò che è rotto a monte.
 
 ## Il prodotto: aggiornamento e allarmi, non quaranta slide
 
@@ -234,4 +234,4 @@ In un sistema fatto bene, non ottieni un numero sbagliato: ottieni un avviso. La
 
 Se il tuo report vendite arriva sempre in ritardo, non ti manca una persona in più né un file più veloce: ti manca un **prodotto** che tiene insieme le fonti e ti dà i numeri del giorno prima da solo, con gli allarmi quando qualcosa cambia. Prima le definizioni firmate, poi la pipeline, poi la schermata — e la persona brava che oggi compila torna a fare l'unica cosa che vale davvero: decidere sul presente.
 
-Se vuoi capire come sarebbe sui tuoi numeri, guarda i [progetti che ho costruito](https://antoniotrento.net/portfolio/) o [scrivimi due righe](https://antoniotrento.net/contatti/): partiamo dalle tue fonti, non da una demo.
+Se vuoi capire come sarebbe sui tuoi numeri, guarda i [progetti che ho costruito]({{ site.main_site }}/portfolio/) o [scrivimi due righe]({{ site.main_site }}/contatti/): partiamo dalle tue fonti, non da una demo.

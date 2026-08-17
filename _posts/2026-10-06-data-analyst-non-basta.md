@@ -248,4 +248,4 @@ Può aiutare ai bordi (riassumere, raggruppare note, scrivere un commento leggib
 
 Se stai per assumere un data analyst per mettere ordine nei numeri, fermati un attimo: **il problema quasi mai è la mancanza di una persona, è la mancanza di un sistema**. Prima il tavolo delle definizioni, poi la pipeline che pulisce le fonti e applica le regole, poi il cruscotto con gli allarmi. Fatto questo, la persona giusta diventa preziosa — e resta, perché finalmente fa l'analista invece del compilatore.
 
-Se vuoi capire da dove partire sui *tuoi* numeri e le tue fonti, guarda i [progetti che ho costruito](https://antoniotrento.net/portfolio/) o [scrivimi due righe](https://antoniotrento.net/contatti/): si parte dalle definizioni e dalle fonti che hai, non da un annuncio di lavoro.
+Se vuoi capire da dove partire sui *tuoi* numeri e le tue fonti, guarda i [progetti che ho costruito]({{ site.main_site }}/portfolio/) o [scrivimi due righe]({{ site.main_site }}/contatti/): si parte dalle definizioni e dalle fonti che hai, non da un annuncio di lavoro.
