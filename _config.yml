@@ -14,6 +14,9 @@ description: "Integrazione sistemi, intelligenza artificiale e automazione per P
 url: "https://antoniotrento-net.github.io"
 baseurl: "/blog.antoniotrento.net"
 
+# Mostra anche i post con data futura (utile in anteprima e con calendario editoriale).
+future: true
+
 # Sito principale a cui il blog è agganciato (link building + marketing).
 main_site: "https://antoniotrento.net"
 
