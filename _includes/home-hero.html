@@ -1,0 +1,177 @@
+{%- comment -%}
+  Hero homepage blog: pieno schermo, copertine animate, orbs Google-brand, marquee.
+  Uso: {% include home-hero.html lang=lang posts=posts %}
+{%- endcomment -%}
+{%- assign lang = include.lang | default: page.lang | default: site.default_lang -%}
+{%- assign posts = site.posts | where: "lang", lang -%}
+{%- assign hero_posts = posts | where_exp: "post", "post.image" -%}
+{%- assign hparts = page.heading | split: ". " -%}
+{%- assign h1 = hparts[0] | append: "." -%}
+{%- assign h2 = hparts[1] -%}
+{%- unless h2 -%}{%- assign h1 = page.heading -%}{%- endunless -%}
+{%- if lang == 'it' -%}
+  {%- assign kicker = "Blog · Antonio Trento" -%}
+  {%- assign cta_read = "Ultimi articoli" -%}
+  {%- assign cta_guides = "Le guide" -%}
+  {%- assign live_label = "In pubblicazione" -%}
+  {%- assign scroll_label = "Scorri" -%}
+  {%- assign n_posts = posts.size -%}
+  {%- assign stat_posts = n_posts | append: " articoli" -%}
+  {%- assign stat_guides = "2 guide vive" -%}
+  {%- assign stat_lang = "IT + EN" -%}
+{%- else -%}
+  {%- assign kicker = "Blog · Antonio Trento" -%}
+  {%- assign cta_read = "Latest articles" -%}
+  {%- assign cta_guides = "The guides" -%}
+  {%- assign live_label = "Publishing now" -%}
+  {%- assign scroll_label = "Scroll" -%}
+  {%- assign n_posts = posts.size -%}
+  {%- assign stat_posts = n_posts | append: " articles" -%}
+  {%- assign stat_guides = "2 live guides" -%}
+  {%- assign stat_lang = "IT + EN" -%}
+{%- endif -%}
+
+<section id="blog-hero" class="relative min-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#07080a] text-white">
+
+  <!-- Atmosphere -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute -top-32 -left-24 w-[42rem] h-[42rem] rounded-full bg-brand-blue/30 blur-[120px] hero-blob"></div>
+    <div class="absolute top-1/3 -right-24 w-[36rem] h-[36rem] rounded-full bg-brand-red/20 blur-[110px] hero-blob hero-blob-delay"></div>
+    <div class="absolute -bottom-24 left-1/3 w-[28rem] h-[28rem] rounded-full bg-brand-yellow/20 blur-[100px] hero-blob hero-blob-delay-2"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-brand-green/15 blur-[80px] hero-blob"></div>
+    <div class="absolute inset-0 hero-grid opacity-[0.18]"></div>
+    <div class="absolute inset-0 hero-noise"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#07080a]"></div>
+  </div>
+
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-32 pb-8 lg:pt-36 lg:pb-10 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-8 items-center flex-1">
+
+    <!-- Copy -->
+    <div class="reveal active">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-md text-[11px] font-bold uppercase tracking-[0.22em] text-blue-300 mb-8">
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75 animate-ping"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
+        </span>
+        {{ live_label }}
+      </div>
+
+      <p class="text-sm font-bold uppercase tracking-[0.28em] text-white/50 mb-5">{{ kicker }}</p>
+
+      <h1 class="font-black tracking-[-0.05em] leading-[0.92] mb-7">
+        <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-[5.6rem] text-white">{{ h1 }}</span>
+        {%- if h2 -%}
+        <span class="block mt-2 text-5xl sm:text-6xl md:text-7xl lg:text-[5.6rem] text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-[#8ab4f8] to-brand-yellow hero-shimmer">{{ h2 }}</span>
+        {%- endif -%}
+      </h1>
+
+      {% if page.description %}
+      <p class="text-lg md:text-xl text-white/65 max-w-xl leading-relaxed font-light mb-10">{{ page.description }}</p>
+      {% endif %}
+
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="#ultimi"
+          class="px-7 py-4 rounded-full bg-white text-brand-black font-bold text-base hover:bg-brand-blue hover:text-white hover:scale-[1.03] transition-all duration-300 shadow-[0_20px_50px_-12px_rgba(66,133,244,0.55)]">
+          {{ cta_read }}
+        </a>
+        <a href="#guide"
+          class="px-7 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md font-bold text-base hover:border-white/60 hover:bg-white/10 transition-all flex items-center gap-2 group">
+          {{ cta_guides }}
+          <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
+        <div>
+          <div class="text-2xl font-black tabular-nums">{{ stat_posts }}</div>
+          <div class="text-white/40 text-xs uppercase tracking-widest mt-0.5">{% if lang == 'it' %}già online{% else %}live now{% endif %}</div>
+        </div>
+        <div class="w-px h-10 bg-white/15 hidden sm:block"></div>
+        <div>
+          <div class="text-2xl font-black">{{ stat_guides }}</div>
+          <div class="text-white/40 text-xs uppercase tracking-widest mt-0.5">{% if lang == 'it' %}cluster editoriali{% else %}editorial clusters{% endif %}</div>
+        </div>
+        <div class="w-px h-10 bg-white/15 hidden sm:block"></div>
+        <div>
+          <div class="text-2xl font-black">{{ stat_lang }}</div>
+          <div class="text-white/40 text-xs uppercase tracking-widest mt-0.5">{% if lang == 'it' %}stesso contenuto{% else %}same content{% endif %}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cover stack -->
+    <div class="relative h-[380px] sm:h-[460px] lg:h-[560px] reveal delay-200" style="perspective: 1400px;">
+      <div id="hero-stack" class="absolute inset-0 hero-stack-3d will-change-transform">
+        {%- for post in hero_posts limit: 4 -%}
+          {%- assign pos = forloop.index -%}
+          {%- case pos -%}
+            {%- when 1 -%}
+              {%- assign wrap = "left-[4%] top-[12%] w-[58%] z-10" -%}
+              {%- assign rot = "-rotate-[14deg]" -%}
+            {%- when 2 -%}
+              {%- assign wrap = "right-[2%] top-[6%] w-[56%] z-20" -%}
+              {%- assign rot = "rotate-[11deg]" -%}
+            {%- when 3 -%}
+              {%- assign wrap = "left-[18%] bottom-[4%] w-[64%] z-30" -%}
+              {%- assign rot = "-rotate-[3deg]" -%}
+            {%- else -%}
+              {%- assign wrap = "right-[8%] bottom-[18%] w-[42%] z-[15] hidden sm:block" -%}
+              {%- assign rot = "rotate-[7deg]" -%}
+          {%- endcase -%}
+          <div class="absolute {{ wrap }} hero-card-float">
+            <a href="{{ post.url | relative_url }}"
+              class="hero-card group relative block {{ rot }} rounded-[1.4rem] overflow-hidden ring-1 ring-white/20 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] hover:z-40 hover:rotate-0 hover:scale-[1.06] transition-transform duration-500 ease-out">
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}"
+                class="w-full aspect-[3/2] object-cover hero-kenburns">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4">
+                {%- if post.pillar -%}
+                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-300">{{ post.pillar | replace: '-', ' ' }}</span>
+                {%- endif -%}
+                <p class="text-sm font-bold leading-snug line-clamp-2 text-white mt-1">{{ post.title }}</p>
+              </div>
+            </a>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee -->
+  <div class="relative z-10 border-t border-white/10 overflow-hidden py-4 bg-black/20 backdrop-blur-sm">
+    <div class="hero-marquee flex w-max gap-10 whitespace-nowrap text-xs sm:text-sm font-bold uppercase tracking-[0.28em] text-white/45">
+      {%- for i in (1..2) -%}
+      <span class="flex items-center gap-10">
+        {%- if lang == 'it' -%}
+        <span>Cruscotti</span><span class="text-brand-blue">●</span>
+        <span>KPI</span><span class="text-brand-red">●</span>
+        <span>App interne</span><span class="text-brand-yellow">●</span>
+        <span>Field service</span><span class="text-brand-green">●</span>
+        <span>RAG</span><span class="text-brand-blue">●</span>
+        <span>n8n</span><span class="text-brand-red">●</span>
+        <span>Self-hosted</span><span class="text-brand-yellow">●</span>
+        <span>PMI</span><span class="text-brand-green">●</span>
+        <span>AI Act</span><span class="text-brand-blue">●</span>
+        <span>Stack sovrano</span><span class="text-brand-red">●</span>
+        {%- else -%}
+        <span>Dashboards</span><span class="text-brand-blue">●</span>
+        <span>KPIs</span><span class="text-brand-red">●</span>
+        <span>Internal apps</span><span class="text-brand-yellow">●</span>
+        <span>Field service</span><span class="text-brand-green">●</span>
+        <span>RAG</span><span class="text-brand-blue">●</span>
+        <span>n8n</span><span class="text-brand-red">●</span>
+        <span>Self-hosted</span><span class="text-brand-yellow">●</span>
+        <span>SMEs</span><span class="text-brand-green">●</span>
+        <span>AI Act</span><span class="text-brand-blue">●</span>
+        <span>Sovereign stack</span><span class="text-brand-red">●</span>
+        {%- endif -%}
+      </span>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <a href="#guide" class="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 hidden lg:flex flex-col items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors">
+    {{ scroll_label }}
+    <span class="w-px h-10 bg-gradient-to-b from-white/50 to-transparent hero-scroll-line"></span>
+  </a>
+</section>

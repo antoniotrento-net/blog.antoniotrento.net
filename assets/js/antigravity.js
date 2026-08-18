@@ -85,6 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
+  // --- Blog homepage hero: mild 3D tilt on the cover stack ---
+  const hero = document.getElementById('blog-hero');
+  const stack = document.getElementById('hero-stack');
+  if (hero && stack && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    hero.addEventListener('mousemove', (e) => {
+      const r = hero.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      stack.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 7}deg)`;
+    });
+    hero.addEventListener('mouseleave', () => {
+      stack.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    });
+  }
+
   // --- Form Handling (Mock) ---
 
   if (newsletterForm) {
