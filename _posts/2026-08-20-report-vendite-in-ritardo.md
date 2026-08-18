@@ -1,12 +1,13 @@
 ---
 lang: it
 permalink: /it/blog/report-vendite-in-ritardo/
-alt_url: /en/
+alt_url: /en/blog/late-sales-report/
 title: "Il report arriva il 20 del mese: come avere i numeri del giorno prima senza assumere un ufficio data"
 date: 2026-08-20 07:30:00 +0200
 author: "Antonio Trento"
 description: "Se il report vendite arriva sempre in ritardo, stai decidendo sul passato. Perché non è un problema di persone e come avere i numeri del giorno prima senza assumere un ufficio data."
 keywords: ["report vendite in ritardo", "reporting automatico aziendale", "data analyst esterno", "report mensile pmi", "kpi giornalieri"]
+image: /assets/images/posts/report-vendite-in-ritardo.jpg
 pillar: prodotti-dati
 related: [/it/blog/cruscotto-aziendale-titolare/]
 ---

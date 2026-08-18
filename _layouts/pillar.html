@@ -12,6 +12,11 @@ layout: default
     <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">{{ page.title }}</h1>
     {% if page.description %}<p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">{{ page.description }}</p>{% endif %}
   </div>
+  {% if page.image %}
+  <div class="max-w-4xl mx-auto mt-10 rounded-[2rem] overflow-hidden shadow-2xl reveal delay-100">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-auto object-cover">
+  </div>
+  {% endif %}
 </section>
 
 <!-- Intro / corpo pillar -->

@@ -1,12 +1,13 @@
 ---
 lang: it
 permalink: /it/blog/app-interna-aziendale-copia-incolla/
-alt_url: /en/
+alt_url: /en/blog/internal-app-copy-paste/
 title: "200 copia-incolla al giorno: il costo vero del «tanto lo fa Maria» (e l'app interna che Maria odierà se è fatta male)"
 date: 2026-09-01 07:30:00 +0200
 author: "Antonio Trento"
 description: "«Tanto lo fa Maria»: ma quanto ti costa davvero il copia-incolla quotidiano tra Excel, email e gestionale? E perché un'app interna fatta male peggiora le cose. Il calcolo in euro e come si fa bene."
 keywords: ["app interna aziendale copia incolla", "software gestionale su misura", "automazione data entry", "costo ore amministrative", "tool interno ux"]
+image: /assets/images/posts/app-interna-aziendale-copia-incolla.jpg
 pillar: app-interne
 related: [/it/blog/cruscotto-aziendale-titolare/]
 ---

@@ -6,6 +6,7 @@ pillar_key: app-interne
 section: software-su-misura
 title: "App interne, operations e magazzino"
 description: "Copia-incolla, Excel e WhatsApp che tengono in piedi i processi: le app interne usabili che tolgono il caos senza software da multinazionale."
+image: /assets/images/pillars/app-interne.jpg
 alt_url: /en/pillar/internal-apps/
 ---
 
@@ -22,7 +23,7 @@ Un'app interna fatta bene parte dall'idea opposta: **poche schermate, quelle che
 Ogni azienda arriva a questo tema da un dolore operativo diverso. I più comuni:
 
 - **«200 copia-incolla al giorno, tanto lo fa Maria»** — il costo vero delle ore amministrative sprecate, e l'app interna che Maria userà *se* è fatta bene. È il pezzo che apre la guida: [il costo del «tanto lo fa Maria»]({{ '/it/blog/app-interna-aziendale-copia-incolla/' | relative_url }}).
-- **«Il tecnico in strada perde due interventi al giorno»** — l'app sul telefono che fa in quattro tap ciò che oggi si perde tra telefonate e PDF: il field service.
+- **«Il tecnico in strada perde due interventi al giorno»** — l'app sul telefono che fa in quattro tap ciò che oggi si perde tra telefonate e PDF: [l'app per i tecnici sul campo]({{ '/it/blog/app-tecnici-sul-campo/' | relative_url }}).
 - **«Tre magazzini, un e-commerce, tre verità sul residuo»** — le giacenze disallineate che ti fanno vendere ciò che non c'è, e la disponibilità onesta in ogni canale.
 - **«Ferie e turni ancora su WhatsApp»** — l'app HR minima (richiesta, approvazione, calendario, saldo) senza un software da multinazionale.
 - **«40 ticket uguali al giorno»** — il customer care senza knowledge, e l'AI che se non ha una procedura da citare inventa il rimborso.

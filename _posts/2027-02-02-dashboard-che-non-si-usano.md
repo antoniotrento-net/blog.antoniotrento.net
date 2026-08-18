@@ -1,12 +1,13 @@
 ---
 lang: it
 permalink: /it/blog/dashboard-che-non-si-usano/
-alt_url: /en/
+alt_url: /en/blog/dashboards-nobody-uses/
 title: "Hai i dati. Non hai le domande. Il motivo per cui le dashboard non fanno fatturare"
 date: 2027-02-02 07:30:00 +0200
 author: "Antonio Trento"
 description: "Hai speso in dashboard e nessuno le apre? Il problema non sono i dati, sono le domande. Ecco perché il self-service BI fallisce e come trasformare i numeri in un prodotto che si usa davvero."
 keywords: ["dashboard che non si usano", "data product aziendale", "domande di business", "analyst che costruisce", "self service bi fallisce"]
+image: /assets/images/posts/dashboard-che-non-si-usano.jpg
 pillar: prodotti-dati
 related: [/it/blog/kpi-sbagliati-azienda/, /it/blog/data-analyst-non-basta/]
 ---

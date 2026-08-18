@@ -1,12 +1,13 @@
 ---
 lang: it
 permalink: /it/blog/data-analyst-non-basta/
-alt_url: /en/
+alt_url: /en/blog/hiring-a-data-analyst-is-not-enough/
 title: "Assumere un data analyst non sistema le fonti: perché i KPI restano una rissa (e serve una pipeline, non una persona sola)"
 date: 2026-10-06 07:30:00 +0200
 author: "Antonio Trento"
 description: "Stai per assumere un data analyst per mettere ordine nei numeri? Ecco perché una persona sola non basta se le fonti sono sporche, e cosa serve davvero prima di aprire una posizione."
 keywords: ["data analyst non basta", "pipeline dati aziendale", "fonti dati sporche", "kpi non allineati", "team data pmi"]
+image: /assets/images/posts/data-analyst-non-basta.jpg
 pillar: prodotti-dati
 related: [/it/blog/report-vendite-in-ritardo/, /it/blog/cruscotto-aziendale-titolare/]
 ---

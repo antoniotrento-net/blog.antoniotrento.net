@@ -6,6 +6,7 @@ pillar_key: prodotti-dati
 section: software-su-misura
 title: "Cruscotti, KPI e decisioni sui dati"
 description: "Numeri sparsi in sei software, report in ritardo, decisioni a naso: come avere UN cruscotto e prodotti dati che il titolare apre davvero."
+image: /assets/images/pillars/prodotti-dati.jpg
 alt_url: /en/pillar/data-products/
 ---
 
@@ -27,10 +28,10 @@ Ogni azienda arriva a questo tema da un sintomo diverso. Ecco i più comuni, e d
 
 - **«Il report arriva il 20 del mese»** — decidere a mese inoltrato è decidere sul passato. Il problema non è lo strumento, è la persona che compila a mano; e assumere un junior non sistema le fonti. Ne parliamo in [come avere i numeri del giorno prima senza assumere un ufficio data]({{ '/it/blog/report-vendite-in-ritardo/' | relative_url }}).
 - **«Decidiamo a naso perché i numeri sono in sei software»** — il caso classico, il costo dell'inerzia in euro e come si costruisce la schermata: è il [cruscotto per il titolare]({{ '/it/blog/cruscotto-aziendale-titolare/' | relative_url }}).
-- **«La dashboard è tutta verde ma il conto è in rosso»** — quando ottimizzi la metrica sbagliata: le vanity metrics, i KPI che ingannano, e come rifare le definizioni.
-- **«Tre filiali, tre Excel, non so quale punto vende»** — il consolidato di gruppo, i permessi per sede, le definizioni comuni che nessuno ha mai scritto.
-- **«Abbiamo le dashboard ma non le usa nessuno»** — perché il self-service BI è un mito e cosa serve davvero: le domande, non i grafici.
-- **«Assumo un data analyst?»** — perché una persona sola annega nella pulizia dei dati e non arriva mai al prodotto: serve un sistema, non solo headcount.
+- **«La dashboard è tutta verde ma il conto è in rosso»** — quando ottimizzi la metrica sbagliata: le vanity metrics, i KPI che ingannano, e come rifare le definizioni. Ne parliamo in [KPI sbagliati mentre la dashboard è verde]({{ '/it/blog/kpi-sbagliati-azienda/' | relative_url }}).
+- **«Tre filiali, tre Excel, non so quale punto vende»** — il consolidato di gruppo, i permessi per sede, le definizioni comuni che nessuno ha mai scritto: è il [cruscotto multi-sede]({{ '/it/blog/cruscotto-multi-sede/' | relative_url }}).
+- **«Abbiamo le dashboard ma non le usa nessuno»** — perché il self-service BI è un mito e cosa serve davvero: le domande, non i grafici. In [dashboard che non si usano]({{ '/it/blog/dashboard-che-non-si-usano/' | relative_url }}).
+- **«Assumo un data analyst?»** — perché una persona sola annega nella pulizia dei dati e non arriva mai al prodotto: serve un sistema, non solo headcount. In [assumere un data analyst non basta]({{ '/it/blog/data-analyst-non-basta/' | relative_url }}).
 
 Man mano che gli articoli escono, li trovi tutti elencati in fondo a questa pagina.
 
