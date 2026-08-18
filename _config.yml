@@ -6,13 +6,11 @@
 
 title: "Blog — Antonio Trento"
 description: "Integrazione sistemi, intelligenza artificiale e automazione per PMI. Casi, architetture e strategie — non tutorial astratti."
-# --- ANTEPRIMA su GitHub Pages (project page, sotto-cartella) ---
-# Quando colleghi il dominio reale, ripristina:
-#   url: "https://blog.antoniotrento.net"
-#   baseurl: ""
-# e ricrea il file CNAME con "blog.antoniotrento.net".
-url: "https://antoniotrento-net.github.io"
-baseurl: "/blog.antoniotrento.net"
+# --- PRODUZIONE: dominio custom blog.antoniotrento.net (root) ---
+# I link interni usano relative_url e gli esterni site.main_site: baseurl-safe.
+# Per tornare all'anteprima github.io: url github.io + baseurl "/blog.antoniotrento.net" + rimuovi CNAME.
+url: "https://blog.antoniotrento.net"
+baseurl: ""
 
 # Mostra anche i post con data futura (utile in anteprima e con calendario editoriale).
 future: true
