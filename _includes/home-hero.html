@@ -1,10 +1,9 @@
 {%- comment -%}
-  Hero homepage blog: pieno schermo, copertine animate, orbs Google-brand, marquee.
-  Uso: {% include home-hero.html lang=lang posts=posts %}
+  Hero homepage blog: pieno schermo, sistema vivo (niente copertine), orbs Google-brand, marquee.
+  Uso: {% include home-hero.html lang=lang %}
 {%- endcomment -%}
 {%- assign lang = include.lang | default: page.lang | default: site.default_lang -%}
 {%- assign posts = site.posts | where: "lang", lang -%}
-{%- assign hero_posts = posts | where_exp: "post", "post.image" -%}
 {%- assign hparts = page.heading | split: ". " -%}
 {%- assign h1 = hparts[0] | append: "." -%}
 {%- assign h2 = hparts[1] -%}
@@ -19,6 +18,19 @@
   {%- assign stat_posts = n_posts | append: " articoli" -%}
   {%- assign stat_guides = "2 guide vive" -%}
   {%- assign stat_lang = "IT + EN" -%}
+  {%- assign core_kicker = "Prodotto vivo" -%}
+  {%- assign core_metric = "Venduto ieri" -%}
+  {%- assign core_alert = "Prodotto X −40%" -%}
+  {%- assign core_foot = "Un cruscotto. I tuoi dati." -%}
+  {%- assign lab_month = "Mese" -%}
+  {%- assign lab_cash = "Cassa" -%}
+  {%- assign phone_kicker = "08:12 · titolare" -%}
+  {%- assign n1 = "Gestionale" -%}
+  {%- assign n2 = "Shop" -%}
+  {%- assign n3 = "Excel" -%}
+  {%- assign n4 = "Banca" -%}
+  {%- assign n5 = "Ads" -%}
+  {%- assign n6 = "Pipeline" -%}
 {%- else -%}
   {%- assign kicker = "Blog · Antonio Trento" -%}
   {%- assign cta_read = "Latest articles" -%}
@@ -29,6 +41,19 @@
   {%- assign stat_posts = n_posts | append: " articles" -%}
   {%- assign stat_guides = "2 live guides" -%}
   {%- assign stat_lang = "IT + EN" -%}
+  {%- assign core_kicker = "Live product" -%}
+  {%- assign core_metric = "Sold yesterday" -%}
+  {%- assign core_alert = "Product X −40%" -%}
+  {%- assign core_foot = "One dashboard. Your data." -%}
+  {%- assign lab_month = "Month" -%}
+  {%- assign lab_cash = "Cash" -%}
+  {%- assign phone_kicker = "08:12 · owner" -%}
+  {%- assign n1 = "ERP" -%}
+  {%- assign n2 = "Shop" -%}
+  {%- assign n3 = "Excel" -%}
+  {%- assign n4 = "Bank" -%}
+  {%- assign n5 = "Ads" -%}
+  {%- assign n6 = "Pipeline" -%}
 {%- endif -%}
 
 <section id="blog-hero" class="relative min-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#07080a] text-white">
@@ -99,40 +124,138 @@
       </div>
     </div>
 
-    <!-- Cover stack -->
-    <div class="relative h-[380px] sm:h-[460px] lg:h-[560px] reveal delay-200" style="perspective: 1400px;">
-      <div id="hero-stack" class="absolute inset-0 hero-stack-3d will-change-transform">
-        {%- for post in hero_posts limit: 4 -%}
-          {%- assign pos = forloop.index -%}
-          {%- case pos -%}
-            {%- when 1 -%}
-              {%- assign wrap = "left-[4%] top-[12%] w-[58%] z-10" -%}
-              {%- assign rot = "-rotate-[14deg]" -%}
-            {%- when 2 -%}
-              {%- assign wrap = "right-[2%] top-[6%] w-[56%] z-20" -%}
-              {%- assign rot = "rotate-[11deg]" -%}
-            {%- when 3 -%}
-              {%- assign wrap = "left-[18%] bottom-[4%] w-[64%] z-30" -%}
-              {%- assign rot = "-rotate-[3deg]" -%}
-            {%- else -%}
-              {%- assign wrap = "right-[8%] bottom-[18%] w-[42%] z-[15] hidden sm:block" -%}
-              {%- assign rot = "rotate-[7deg]" -%}
-          {%- endcase -%}
-          <div class="absolute {{ wrap }} hero-card-float">
-            <a href="{{ post.url | relative_url }}"
-              class="hero-card group relative block {{ rot }} rounded-[1.4rem] overflow-hidden ring-1 ring-white/20 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] hover:z-40 hover:rotate-0 hover:scale-[1.06] transition-transform duration-500 ease-out">
-              <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}"
-                class="w-full aspect-[3/2] object-cover hero-kenburns">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
-                {%- if post.pillar -%}
-                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-300">{{ post.pillar | replace: '-', ' ' }}</span>
-                {%- endif -%}
-                <p class="text-sm font-bold leading-snug line-clamp-2 text-white mt-1">{{ post.title }}</p>
-              </div>
-            </a>
+    <!-- System: six live sources collapse into one product the owner opens at 8am -->
+    <div class="relative h-[440px] sm:h-[540px] lg:h-[620px] reveal delay-200 select-none" style="perspective: 1800px;" aria-hidden="true">
+      <div id="hero-stage" class="absolute inset-0 hero-stack-3d will-change-transform" style="transform-style: preserve-3d;">
+
+        <div class="absolute left-1/2 top-[46%] w-[min(108%,38rem)] aspect-square pointer-events-none" style="transform: translate(-50%, -50%)">
+          <div class="absolute inset-0 rounded-full hero-aurora"></div>
+          <div class="absolute inset-[14%] rounded-full bg-[#07080a]"></div>
+        </div>
+
+        <div class="absolute left-1/2 top-[62%] w-72 h-24 rounded-[100%] bg-brand-blue/30 blur-3xl pointer-events-none" style="transform: translateX(-50%)"></div>
+
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 560 560" fill="none" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <filter id="heroGlow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="2.4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <circle cx="280" cy="268" r="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <circle cx="280" cy="268" r="178" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3 10"/>
+          <path id="hw1" class="hero-wire" stroke="#4285F4" d="M62 82 C140 150 210 220 280 268"/>
+          <path id="hw2" class="hero-wire" stroke="#EA4335" d="M250 32 C260 110 270 190 280 268"/>
+          <path id="hw3" class="hero-wire" stroke="#FBBC04" d="M498 78 C420 150 340 220 280 268"/>
+          <path id="hw4" class="hero-wire" stroke="#34A853" d="M52 292 C130 286 200 276 280 268"/>
+          <path id="hw5" class="hero-wire" stroke="#4285F4" d="M508 268 C430 268 350 268 280 268"/>
+          <path id="hw6" class="hero-wire" stroke="#EA4335" d="M78 468 C150 400 220 320 280 268"/>
+          <g filter="url(#heroGlow)" class="hero-packets">
+            <circle r="3.6" fill="#4285F4"><animateMotion dur="3.1s" repeatCount="indefinite"><mpath href="#hw1"/></animateMotion></circle>
+            <circle r="3.6" fill="#EA4335"><animateMotion dur="2.7s" begin="-0.8s" repeatCount="indefinite"><mpath href="#hw2"/></animateMotion></circle>
+            <circle r="3.6" fill="#FBBC04"><animateMotion dur="3.4s" begin="-1.4s" repeatCount="indefinite"><mpath href="#hw3"/></animateMotion></circle>
+            <circle r="3.6" fill="#34A853"><animateMotion dur="2.9s" begin="-0.4s" repeatCount="indefinite"><mpath href="#hw4"/></animateMotion></circle>
+            <circle r="3.6" fill="#4285F4"><animateMotion dur="3.6s" begin="-1.9s" repeatCount="indefinite"><mpath href="#hw5"/></animateMotion></circle>
+            <circle r="3.6" fill="#EA4335"><animateMotion dur="3.2s" begin="-1.1s" repeatCount="indefinite"><mpath href="#hw6"/></animateMotion></circle>
+          </g>
+        </svg>
+
+        <div class="absolute z-10" style="left:0;top:8%;transform:translateZ(28px)">
+          <div class="hero-float-a flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55 backdrop-blur-md ring-1 ring-white/15">
+            <span class="w-2 h-2 rounded-full bg-brand-blue shadow-[0_0_12px_#4285F4] hero-node-pulse"></span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/75">{{ n1 }}</span>
           </div>
-        {%- endfor -%}
+        </div>
+        <div class="absolute z-10 hidden sm:block" style="left:36%;top:0;transform:translateZ(20px)">
+          <div class="hero-float-b flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55 backdrop-blur-md ring-1 ring-white/15">
+            <span class="w-2 h-2 rounded-full bg-brand-red shadow-[0_0_12px_#EA4335] hero-node-pulse"></span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/75">{{ n2 }}</span>
+          </div>
+        </div>
+        <div class="absolute z-10" style="right:2%;top:8%;transform:translateZ(32px)">
+          <div class="hero-float-c flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55 backdrop-blur-md ring-1 ring-white/15">
+            <span class="w-2 h-2 rounded-full bg-brand-yellow shadow-[0_0_12px_#FBBC04] hero-node-pulse"></span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/75">{{ n3 }}</span>
+          </div>
+        </div>
+        <div class="absolute z-10" style="left:0;top:48%;transform:translateZ(24px)">
+          <div class="hero-float-b flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55 backdrop-blur-md ring-1 ring-white/15">
+            <span class="w-2 h-2 rounded-full bg-brand-green shadow-[0_0_12px_#34A853] hero-node-pulse"></span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/75">{{ n4 }}</span>
+          </div>
+        </div>
+        <div class="absolute z-10 hidden sm:block" style="right:0;top:42%;transform:translateZ(36px)">
+          <div class="hero-float-a flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55 backdrop-blur-md ring-1 ring-white/15">
+            <span class="w-2 h-2 rounded-full bg-brand-blue shadow-[0_0_12px_#4285F4] hero-node-pulse"></span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/75">{{ n5 }}</span>
+          </div>
+        </div>
+        <div class="absolute z-10" style="left:4%;bottom:10%;transform:translateZ(22px)">
+          <div class="hero-float-c flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55 backdrop-blur-md ring-1 ring-white/15">
+            <span class="w-2 h-2 rounded-full bg-brand-red shadow-[0_0_12px_#EA4335] hero-node-pulse"></span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/75">{{ n6 }}</span>
+          </div>
+        </div>
+
+        <div class="absolute left-1/2 top-[46%] z-20" style="transform: translate(-50%, -50%) translateZ(56px)">
+          <div class="hero-core relative w-[17.5rem] sm:w-[20rem] rounded-[2rem] p-6 bg-white/[0.08] backdrop-blur-2xl ring-1 ring-white/20 shadow-[0_40px_110px_-18px_rgba(66,133,244,0.6)]">
+            <div class="absolute -inset-px rounded-[2rem] hero-core-rim pointer-events-none"></div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-blue-300">{{ core_kicker }}</span>
+              <span class="flex items-center gap-1.5 text-[10px] font-bold text-brand-green uppercase tracking-widest">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse"></span> live
+              </span>
+            </div>
+            <p class="text-xs text-white/45 mb-1">{{ core_metric }}</p>
+            <div class="flex items-end gap-3 mb-1">
+              <span class="text-5xl font-black tracking-tight tabular-nums leading-none">42.8k</span>
+              <span class="mb-1 text-sm font-bold text-brand-green">+12%</span>
+            </div>
+            <svg class="w-full h-10 mb-4" viewBox="0 0 200 40" fill="none" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="heroSparkFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4285F4"/>
+                  <stop offset="100%" stop-color="#4285F4" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 28 C16 28 22 18 36 20 C52 22 58 8 74 10 C90 12 96 26 114 18 C130 11 138 6 154 8 C170 10 178 22 200 14 V40 H0 Z" fill="url(#heroSparkFill)" opacity="0.28"/>
+              <path class="hero-spark" d="M0 28 C16 28 22 18 36 20 C52 22 58 8 74 10 C90 12 96 26 114 18 C130 11 138 6 154 8 C170 10 178 22 200 14" stroke="#4285F4" stroke-width="2"/>
+            </svg>
+            <div class="grid grid-cols-3 gap-2 mb-4">
+              <div class="rounded-xl bg-black/35 p-2 ring-1 ring-white/10">
+                <div class="text-[9px] uppercase tracking-widest text-white/40">{{ lab_month }}</div>
+                <div class="text-sm font-black tabular-nums">+8%</div>
+              </div>
+              <div class="rounded-xl bg-black/35 p-2 ring-1 ring-white/10">
+                <div class="text-[9px] uppercase tracking-widest text-white/40">{{ lab_cash }}</div>
+                <div class="text-sm font-black tabular-nums text-brand-yellow">0.82</div>
+              </div>
+              <div class="rounded-xl bg-black/35 p-2 ring-1 ring-white/10">
+                <div class="text-[9px] uppercase tracking-widest text-white/40">20s</div>
+                <div class="text-sm font-black text-brand-green">ok</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 rounded-xl bg-brand-red/15 ring-1 ring-brand-red/35 px-3 py-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-red hero-node-pulse"></span>
+              <span class="text-[11px] font-bold text-red-200">{{ core_alert }}</span>
+            </div>
+            <p class="mt-4 text-[10px] uppercase tracking-[0.2em] text-white/35">{{ core_foot }}</p>
+          </div>
+        </div>
+
+        <div class="absolute right-0 bottom-[2%] z-30 hidden sm:block" style="transform: translateZ(72px) rotate(-8deg)">
+          <div class="hero-phone w-[7.6rem] rounded-[1.55rem] bg-[#0c0d10] ring-1 ring-white/20 shadow-[0_24px_50px_-12px_rgba(0,0,0,0.7)] p-2.5 overflow-hidden">
+            <div class="h-2.5 w-14 mx-auto mb-2 rounded-full bg-white/10"></div>
+            <div class="text-[8px] text-white/40 text-center mb-2 font-bold uppercase tracking-widest">{{ phone_kicker }}</div>
+            <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-2 mb-1.5">
+              <div class="text-[8px] text-white/40 mb-0.5">{{ core_metric }}</div>
+              <div class="text-lg font-black tabular-nums leading-none">42.8k</div>
+            </div>
+            <div class="rounded-xl bg-brand-red/80 px-2 py-1.5">
+              <div class="text-[8px] font-bold text-white leading-tight">{{ core_alert }}</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

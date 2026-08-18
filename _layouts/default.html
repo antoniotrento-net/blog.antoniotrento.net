@@ -73,13 +73,6 @@
         }
         .animate-float { animation: float 6s ease-in-out infinite; }
 
-        @keyframes heroKen {
-            0% { transform: scale(1) translate(0, 0); }
-            50% { transform: scale(1.08) translate(-1.5%, 1%); }
-            100% { transform: scale(1) translate(0, 0); }
-        }
-        .hero-kenburns { animation: heroKen 18s ease-in-out infinite; }
-
         @keyframes heroBlob {
             0%, 100% { transform: translate(0, 0) scale(1); }
             33% { transform: translate(4%, -6%) scale(1.08); }
@@ -123,14 +116,77 @@
             opacity: 0.18;
             mix-blend-mode: overlay;
         }
-        .hero-card-float { animation: float 7s ease-in-out infinite; }
-        .hero-card:nth-child(even) .hero-card-float { animation-delay: -3.5s; }
+        .hero-stack-3d { transform-style: preserve-3d; transition: transform 0.45s ease-out; }
+
+        @keyframes heroSpin {
+            to { transform: rotate(360deg); }
+        }
+        .hero-aurora {
+            background: conic-gradient(from 0deg, #4285F4, #EA4335, #FBBC04, #34A853, #4285F4);
+            filter: blur(22px);
+            opacity: 0.72;
+            animation: heroSpin 22s linear infinite;
+        }
+        .hero-wire {
+            fill: none;
+            stroke-width: 1.15;
+            stroke-opacity: 0.5;
+            stroke-dasharray: 5 11;
+            animation: heroDash 16s linear infinite;
+        }
+        @keyframes heroDash {
+            to { stroke-dashoffset: -220; }
+        }
+        .hero-spark {
+            stroke-linecap: round;
+            stroke-dasharray: 280;
+            animation: heroDraw 4.5s ease-in-out infinite alternate;
+        }
+        @keyframes heroDraw {
+            from { stroke-dashoffset: 280; }
+            to { stroke-dashoffset: 0; }
+        }
+        .hero-core { animation: heroCoreBreath 5.5s ease-in-out infinite; }
+        @keyframes heroCoreBreath {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-7px); }
+        }
+        .hero-core-rim {
+            box-shadow:
+                inset 0 0 0 1px rgba(255,255,255,0.16),
+                0 0 42px rgba(66,133,244,0.32);
+            animation: heroCoreGlow 5s ease-in-out infinite;
+        }
+        @keyframes heroCoreGlow {
+            0%, 100% {
+                box-shadow: inset 0 0 0 1px rgba(255,255,255,0.16), 0 0 42px rgba(66,133,244,0.32);
+            }
+            50% {
+                box-shadow: inset 0 0 0 1px rgba(234,67,53,0.35), 0 0 52px rgba(234,67,53,0.24);
+            }
+        }
+        .hero-node-pulse { animation: heroNodePulse 1.8s ease-in-out infinite; }
+        @keyframes heroNodePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.7); }
+        }
+        .hero-float-a { animation: heroFloat 6s ease-in-out infinite; }
+        .hero-float-b { animation: heroFloat 7.4s ease-in-out infinite; animation-delay: -2.2s; }
+        .hero-float-c { animation: heroFloat 5.2s ease-in-out infinite; animation-delay: -3.4s; }
+        .hero-phone { animation: heroFloat 8s ease-in-out infinite; animation-delay: -1s; }
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-9px); }
+        }
 
         @media (prefers-reduced-motion: reduce) {
-            .hero-kenburns, .hero-blob, .hero-marquee, .hero-shimmer, .hero-scroll-line,
-            .animate-float, .animate-float-delayed, .animate-ping, .hero-card-float {
+            .hero-blob, .hero-marquee, .hero-shimmer, .hero-scroll-line,
+            .animate-float, .animate-float-delayed, .animate-ping,
+            .hero-aurora, .hero-wire, .hero-spark, .hero-core, .hero-core-rim,
+            .hero-node-pulse, .hero-float-a, .hero-float-b, .hero-float-c, .hero-phone {
                 animation: none !important;
             }
+            .hero-packets { display: none; }
             .hero-stack-3d { transform: none !important; }
         }
 
