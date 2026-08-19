@@ -4,6 +4,9 @@
 {%- endcomment -%}
 {%- assign lang = include.lang | default: page.lang | default: site.default_lang -%}
 {%- assign posts = site.posts | where: "lang", lang -%}
+{%- assign live_guides = site.pages | where: "layout", "pillar" | where: "lang", lang | where_exp: "g", "g.image" -%}
+{%- assign n_posts = posts.size -%}
+{%- assign n_guides = live_guides.size -%}
 {%- assign hparts = page.heading | split: ". " -%}
 {%- assign h1 = hparts[0] | append: "." -%}
 {%- assign h2 = hparts[1] -%}
@@ -14,9 +17,9 @@
   {%- assign cta_guides = "Le guide" -%}
   {%- assign live_label = "In pubblicazione" -%}
   {%- assign scroll_label = "Scorri" -%}
-  {%- assign n_posts = posts.size -%}
   {%- assign stat_posts = n_posts | append: " articoli" -%}
-  {%- assign stat_guides = "2 guide vive" -%}
+  {%- if n_guides == 1 -%}{%- assign stat_guides = "1 guida viva" -%}
+  {%- else -%}{%- assign stat_guides = n_guides | append: " guide vive" -%}{%- endif -%}
   {%- assign stat_lang = "IT + EN" -%}
   {%- assign core_kicker = "Prodotto vivo" -%}
   {%- assign core_metric = "Venduto ieri" -%}
@@ -37,9 +40,9 @@
   {%- assign cta_guides = "The guides" -%}
   {%- assign live_label = "Publishing now" -%}
   {%- assign scroll_label = "Scroll" -%}
-  {%- assign n_posts = posts.size -%}
   {%- assign stat_posts = n_posts | append: " articles" -%}
-  {%- assign stat_guides = "2 live guides" -%}
+  {%- if n_guides == 1 -%}{%- assign stat_guides = "1 live guide" -%}
+  {%- else -%}{%- assign stat_guides = n_guides | append: " live guides" -%}{%- endif -%}
   {%- assign stat_lang = "IT + EN" -%}
   {%- assign core_kicker = "Live product" -%}
   {%- assign core_metric = "Sold yesterday" -%}
@@ -56,7 +59,7 @@
   {%- assign n6 = "Pipeline" -%}
 {%- endif -%}
 
-<section id="blog-hero" class="relative min-h-[100svh] lg:h-[100svh] lg:max-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#07080a] text-white">
+<section id="blog-hero" class="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-[#07080a] text-white">
 
   <!-- Atmosphere -->
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -69,7 +72,7 @@
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#07080a]"></div>
   </div>
 
-  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-32 pb-8 lg:pt-24 lg:pb-4 grid lg:grid-cols-[minmax(0,1.62fr)_minmax(0,0.68fr)] gap-12 lg:gap-4 items-center flex-1 min-h-0">
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-32 pb-16 lg:pt-28 lg:pb-20 grid lg:grid-cols-[1.28fr_1fr] gap-12 lg:gap-10 items-center flex-1">
 
     <!-- Copy -->
     <div class="relative z-20 min-w-0 reveal active">
@@ -125,9 +128,7 @@
     </div>
 
     <!-- System: six live sources collapse into one product the owner opens at 8am -->
-    <div class="relative h-[440px] sm:h-[540px] lg:h-full lg:min-h-0 overflow-hidden reveal delay-200 select-none" style="perspective: 1800px;" aria-hidden="true">
-      <div class="pointer-events-none absolute inset-y-0 left-0 w-24 z-30 hidden lg:block bg-gradient-to-r from-[#07080a] to-transparent"></div>
-      <div class="absolute inset-0 lg:translate-x-[24%] xl:translate-x-[28%] lg:scale-[1.08] origin-center">
+    <div class="relative h-[440px] sm:h-[520px] lg:h-[560px] reveal delay-200 select-none" style="perspective: 1800px;" aria-hidden="true">
       <div id="hero-stage" class="absolute inset-0 hero-stack-3d will-change-transform" style="transform-style: preserve-3d;">
 
         <div class="absolute left-1/2 top-[46%] w-[min(108%,38rem)] aspect-square pointer-events-none" style="transform: translate(-50%, -50%)">
@@ -259,44 +260,10 @@
           </div>
         </div>
       </div>
-      </div>
     </div>
   </div>
 
-  <!-- Marquee -->
-  <div class="relative z-10 border-t border-white/10 overflow-hidden py-4 bg-black/20 backdrop-blur-sm">
-    <div class="hero-marquee flex w-max gap-10 whitespace-nowrap text-xs sm:text-sm font-bold uppercase tracking-[0.28em] text-white/45">
-      {%- for i in (1..2) -%}
-      <span class="flex items-center gap-10">
-        {%- if lang == 'it' -%}
-        <span>Cruscotti</span><span class="text-brand-blue">●</span>
-        <span>KPI</span><span class="text-brand-red">●</span>
-        <span>App interne</span><span class="text-brand-yellow">●</span>
-        <span>Field service</span><span class="text-brand-green">●</span>
-        <span>RAG</span><span class="text-brand-blue">●</span>
-        <span>n8n</span><span class="text-brand-red">●</span>
-        <span>Self-hosted</span><span class="text-brand-yellow">●</span>
-        <span>PMI</span><span class="text-brand-green">●</span>
-        <span>AI Act</span><span class="text-brand-blue">●</span>
-        <span>Stack sovrano</span><span class="text-brand-red">●</span>
-        {%- else -%}
-        <span>Dashboards</span><span class="text-brand-blue">●</span>
-        <span>KPIs</span><span class="text-brand-red">●</span>
-        <span>Internal apps</span><span class="text-brand-yellow">●</span>
-        <span>Field service</span><span class="text-brand-green">●</span>
-        <span>RAG</span><span class="text-brand-blue">●</span>
-        <span>n8n</span><span class="text-brand-red">●</span>
-        <span>Self-hosted</span><span class="text-brand-yellow">●</span>
-        <span>SMEs</span><span class="text-brand-green">●</span>
-        <span>AI Act</span><span class="text-brand-blue">●</span>
-        <span>Sovereign stack</span><span class="text-brand-red">●</span>
-        {%- endif -%}
-      </span>
-      {%- endfor -%}
-    </div>
-  </div>
-
-  <a href="#guide" class="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 hidden lg:flex flex-col items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors">
+  <a href="#guide" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden lg:flex flex-col items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors">
     {{ scroll_label }}
     <span class="w-px h-10 bg-gradient-to-b from-white/50 to-transparent hero-scroll-line"></span>
   </a>
