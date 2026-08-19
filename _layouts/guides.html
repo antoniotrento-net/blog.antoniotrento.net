@@ -123,7 +123,7 @@ layout: default
         </div>
       </div>
 
-      <ul class="mt-8 w-full max-w-[26rem] grid grid-cols-2 gap-x-4 gap-y-3 text-xs leading-snug text-white/70">
+      <ul class="mt-8 w-full max-w-[22rem] space-y-2.5 text-sm text-white/70">
         {%- assign section_dots = "bg-brand-blue,bg-brand-red,bg-brand-yellow,bg-brand-green" | split: "," -%}
         {%- for section in site.data.sections -%}
           {%- if lang == 'it' -%}{%- assign sinfo = section.it -%}{%- else -%}{%- assign sinfo = section.en -%}{%- endif -%}
@@ -138,12 +138,10 @@ layout: default
             {%- endif -%}
           {%- endfor -%}
           {%- assign dot_i = forloop.index0 | modulo: 4 -%}
-          <li class="flex items-start gap-1.5 min-w-0">
-            <span class="w-1.5 h-1.5 rounded-full mt-[0.3rem] shrink-0 {{ section_dots[dot_i] }}"></span>
-            <span class="min-w-0">
-              <span class="block">{{ sinfo.title }}</span>
-              <span class="tabular-nums text-white/40">{{ n_sec_live }}/{{ n_sec_all }}</span>
-            </span>
+          <li class="flex items-center gap-2.5 min-w-0">
+            <span class="w-2 h-2 rounded-full shrink-0 {{ section_dots[dot_i] }}"></span>
+            <span class="min-w-0 flex-1">{{ sinfo.title }}</span>
+            <span class="tabular-nums text-white/40 shrink-0">{{ n_sec_live }}/{{ n_sec_all }}</span>
           </li>
         {%- endfor -%}
       </ul>
