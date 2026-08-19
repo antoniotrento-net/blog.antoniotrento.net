@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/sito-lento-errori-utenti/
+alt_url: /en/blog/slow-site-user-errors/
 title: "Il sito è bello e al secondo click si rompe: perché i clienti se ne vanno (e non è «un problema di hosting»)"
 date: 2026-08-29 07:30:00 +0200
 author: "Antonio Trento"

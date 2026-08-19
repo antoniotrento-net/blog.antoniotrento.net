@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/prodotto-llm-vs-chatbot/
+alt_url: /en/blog/llm-product-vs-chatbot/
 title: "Non ti serve «un modello». Ti serve un processo che produce un output che il cliente paga"
 date: 2026-08-28 07:30:00 +0200
 author: "Antonio Trento"

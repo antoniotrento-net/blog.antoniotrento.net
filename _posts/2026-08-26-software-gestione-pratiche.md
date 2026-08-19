@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/software-gestione-pratiche/
+alt_url: /en/blog/case-management-software/
 title: "Pratiche ferme tre settimane in una casella: il software che fa muovere i dossier (non un'altra email)"
 date: 2026-08-26 07:30:00 +0200
 author: "Antonio Trento"

@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/mvp-software-90-giorni/
+alt_url: /en/blog/90-day-software-mvp/
 title: "Vuoi un MVP in 90 giorni che non sia una slide: cosa si può (davvero) consegnare e cosa stai sognando"
 date: 2026-08-27 07:30:00 +0200
 author: "Antonio Trento"
