@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/lanciare-prodotto-ai-white-label/
+alt_url: /en/blog/launch-white-label-ai-product/
 title: "Vuoi vendere un prodotto AI ai tuoi clienti: da ChatGPT in demo a un software che si paga ogni mese"
 date: 2026-08-20 07:30:00 +0200
 author: "Antonio Trento"

@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/pipeline-commerciale-unica/
+alt_url: /en/blog/single-sales-pipeline/
 title: "I commerciali hanno il pipeline in testa: come avere UN numero (senza comprare un CRM da 400€ a utente e lasciarlo vuoto)"
 date: 2026-08-22 07:30:00 +0200
 author: "Antonio Trento"

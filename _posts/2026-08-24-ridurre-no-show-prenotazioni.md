@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/ridurre-no-show-prenotazioni/
+alt_url: /en/blog/reduce-booking-no-shows/
 title: "Prenotazioni, no-show e WhatsApp: il buco nel calendario che non vedi (e l'app che te lo fa fatturare)"
 date: 2026-08-24 07:30:00 +0200
 author: "Antonio Trento"

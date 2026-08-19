@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/poc-intelligenza-artificiale-fallito/
+alt_url: /en/blog/failed-ai-proof-of-concept/
 title: "Hai speso decine di migliaia in un PoC di AI finito in un cassetto. Come (non) rifarlo"
 date: 2026-08-23 07:30:00 +0200
 author: "Antonio Trento"

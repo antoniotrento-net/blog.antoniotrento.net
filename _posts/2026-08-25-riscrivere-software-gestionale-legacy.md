@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/riscrivere-software-gestionale-legacy/
+alt_url: /en/blog/rewrite-legacy-erp-software/
 title: "Il tuo software interno è un Access del 2008: quando conviene riscriverlo (e quando è un suicidio)"
 date: 2026-08-25 07:30:00 +0200
 author: "Antonio Trento"

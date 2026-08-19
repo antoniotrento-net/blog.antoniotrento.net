@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/sito-vetrina-vs-prodotto-digitale/
+alt_url: /en/blog/showcase-site-vs-digital-product/
 title: "L'agenzia ti ha consegnato il sito. Il «backend» è un Google Form. Perché non hai un prodotto (e i clienti se ne accorgono)"
 date: 2026-08-21 07:30:00 +0200
 author: "Antonio Trento"
