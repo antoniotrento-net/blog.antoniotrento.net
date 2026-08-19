@@ -1,7 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/gestione-soci-associazione-software/
-alt_url: /en/blog/membership-management-software/
+alt_url: /en/blog/association-management-software/
 title: "Soci, rinnovi, comunicazioni: l'associazione che vive di Excel e perde quote ogni anno"
 date: 2027-01-05 07:30:00 +0200
 author: "Antonio Trento"
