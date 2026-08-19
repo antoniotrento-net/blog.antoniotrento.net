@@ -7,6 +7,7 @@ date: 2026-12-31 07:30:00 +0200
 author: "Antonio Trento"
 description: "In your venue the receipt is there but the food cost isn't: between dining room, kitchen, inventory and accountant the margin is lost. Here is the recipe-deduction-invoice thread that tells you which dish loses — without replacing the till."
 keywords: ["local restaurant inventory software", "restaurant cost of goods sold", "kitchen stock", "till invoice integration", "food cost"]
+image: /assets/images/posts/software-locale-ristorazione-magazzino.jpg
 pillar: app-interne
 related: [/en/blog/misaligned-warehouse-stock/, /en/blog/owner-dashboard/]
 ---

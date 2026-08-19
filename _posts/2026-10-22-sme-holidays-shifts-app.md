@@ -7,6 +7,7 @@ date: 2026-10-22 07:30:00 +0200
 author: "Antonio Trento"
 description: "Holidays requested on WhatsApp, shifts on a spreadsheet, attendance by memory: the chaos costs overtime and arguments. Here's the minimum HR app an SME really needs — and what you DO NOT need."
 keywords: ["sme holidays shifts app", "small business attendance management", "shift replacements", "simple hr software", "leave request app"]
+image: /assets/images/posts/app-ferie-turni-pmi.jpg
 pillar: app-interne
 related: [/en/blog/internal-app-copy-paste/, /en/blog/field-technician-app/]
 ---

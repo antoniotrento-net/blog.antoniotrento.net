@@ -7,6 +7,7 @@ date: 2026-10-27 07:30:00 +0200
 author: "Antonio Trento"
 description: "Se il tuo customer care risponde 40 volte alle stesse domande copiando risposte vecchie, il problema non è la mancanza di AI: è la mancanza di una knowledge. Ecco come si costruisce, e perché l'AI senza citazione è pericolosa."
 keywords: ["customer care ticket ripetuti", "knowledge base assistenza", "ai helpdesk rischi", "software ticket pmi", "risposte standard clienti"]
+image: /assets/images/posts/customer-care-ticket-ripetuti.jpg
 pillar: app-interne
 related: [/it/blog/app-interna-aziendale-copia-incolla/, /it/blog/giacenze-magazzino-disallineate/]
 ---

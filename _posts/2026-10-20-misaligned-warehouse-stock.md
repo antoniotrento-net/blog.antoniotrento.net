@@ -7,6 +7,7 @@ date: 2026-10-20 07:30:00 +0200
 author: "Antonio Trento"
 description: "If the site, the ERP and the reps state three different stock levels, you sell what you don't have and block what is there. Here's how to build a single truth on stock, with honest availability in every channel."
 keywords: ["misaligned warehouse stock", "multichannel ecommerce stock", "wrong inventory levels", "sme warehouse software", "product availability"]
+image: /assets/images/posts/giacenze-magazzino-disallineate.jpg
 pillar: app-interne
 related: [/en/blog/field-technician-app/, /en/blog/internal-app-copy-paste/]
 ---

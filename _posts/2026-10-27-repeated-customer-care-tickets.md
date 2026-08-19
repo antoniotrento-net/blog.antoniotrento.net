@@ -7,6 +7,7 @@ date: 2026-10-27 07:30:00 +0200
 author: "Antonio Trento"
 description: "If your customer care answers the same questions 40 times by copying old answers, the problem isn't a lack of AI: it's a lack of a knowledge base. Here's how it's built, and why AI without citation is dangerous."
 keywords: ["repeated customer care tickets", "support knowledge base", "helpdesk ai risks", "sme ticket software", "standard customer answers"]
+image: /assets/images/posts/customer-care-ticket-ripetuti.jpg
 pillar: app-interne
 related: [/en/blog/internal-app-copy-paste/, /en/blog/misaligned-warehouse-stock/]
 ---

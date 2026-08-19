@@ -7,6 +7,7 @@ date: 2026-10-22 07:30:00 +0200
 author: "Antonio Trento"
 description: "Ferie richieste su WhatsApp, turni su un foglio, presenze a memoria: il caos costa straordinari e liti. Ecco l'app HR minima che serve davvero a una PMI — e cosa NON ti serve."
 keywords: ["app ferie turni pmi", "gestione presenze piccola impresa", "sostituzioni turni", "software hr semplice", "richiesta ferie app"]
+image: /assets/images/posts/app-ferie-turni-pmi.jpg
 pillar: app-interne
 related: [/it/blog/app-interna-aziendale-copia-incolla/, /it/blog/app-tecnici-sul-campo/]
 ---

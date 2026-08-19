@@ -7,6 +7,7 @@ date: 2026-12-31 07:30:00 +0200
 author: "Antonio Trento"
 description: "Nel tuo locale lo scontrino c'è ma il food cost no: tra sala, cucina, magazzino e commercialista il margine si perde. Ecco il filo ricetta-scarico-fattura che ti dice quale piatto perde — senza rifare la cassa."
 keywords: ["software locale ristorazione magazzino", "costo del venduto ristorante", "giacenze cucina", "integrazione cassa fatture", "food cost"]
+image: /assets/images/posts/software-locale-ristorazione-magazzino.jpg
 pillar: app-interne
 related: [/it/blog/giacenze-magazzino-disallineate/, /it/blog/cruscotto-aziendale-titolare/]
 ---

@@ -7,6 +7,7 @@ date: 2026-10-20 07:30:00 +0200
 author: "Antonio Trento"
 description: "Se il sito, il gestionale e i rappresentanti dicono tre giacenze diverse, vendi quello che non hai e blocchi quello che c'è. Ecco come si costruisce una verità unica sullo stock, con la disponibilità onesta in ogni canale."
 keywords: ["giacenze magazzino disallineate", "multimagazzino ecommerce", "scorte errate", "software magazzino pmi", "disponibilità prodotti"]
+image: /assets/images/posts/giacenze-magazzino-disallineate.jpg
 pillar: app-interne
 related: [/it/blog/app-tecnici-sul-campo/, /it/blog/app-interna-aziendale-copia-incolla/]
 ---

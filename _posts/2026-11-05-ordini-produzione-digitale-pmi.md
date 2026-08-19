@@ -7,6 +7,7 @@ date: 2026-11-05 07:30:00 +0200
 author: "Antonio Trento"
 description: "Se in officina si lavora su fogli di carta e in ufficio su un Excel, non sai se una commessa è in ritardo finché il cliente non chiama. Ecco l'avanzamento commessa digitale per la piccola manifattura — senza un SAP."
 keywords: ["ordini produzione digitale pmi", "mes piccola manifattura", "avanzamento commessa", "software officina", "ritardi produzione"]
+image: /assets/images/posts/ordini-produzione-digitale-pmi.jpg
 pillar: app-interne
 related: [/it/blog/giacenze-magazzino-disallineate/, /it/blog/app-interna-aziendale-copia-incolla/]
 ---

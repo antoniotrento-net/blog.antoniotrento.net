@@ -7,6 +7,7 @@ date: 2026-11-05 07:30:00 +0200
 author: "Antonio Trento"
 description: "If the workshop works on paper sheets and the office on an Excel, you don't know if an order is late until the customer calls. Here is digital order tracking for small manufacturing — without a SAP."
 keywords: ["sme digital production orders", "small manufacturing mes", "order tracking", "workshop software", "production delays"]
+image: /assets/images/posts/ordini-produzione-digitale-pmi.jpg
 pillar: app-interne
 related: [/en/blog/misaligned-warehouse-stock/, /en/blog/internal-app-copy-paste/]
 ---
