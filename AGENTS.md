@@ -1,9 +1,8 @@
 # Agenti — blog.antoniotrento.net
 
-Playbook produzione post (date, Drip publish, front matter, qualità):
+Indice (guide, CSV, Search Console, Drip): **`README.md`**
 
-**`_piano_editoriale/COME-SCRIVERE-I-POST.md`**
+Playbook post: **`_piano_editoriale/COME-SCRIVERE-I-POST.md`**
 
-Mappa SEO (azioni Search Console, noindex archivio): `_piano_editoriale/seo-mappa.md`.
-
-Regola breve: scrivere i file ≠ pubblicarli. `date:` e nome file = `date_file` in `_data/editorial_plan.yml`, non la data in cui stai scrivendo.
+Piani CSV in questo repo: `_piano_editoriale/piano-editoriale-2026-*.csv`
+Calendario: `_data/editorial_plan.yml` (`date_file`, non la data di scrittura).

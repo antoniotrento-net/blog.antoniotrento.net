@@ -8,7 +8,7 @@ Stato al 19 agosto 2026.
 
 ## Azioni tue (non le fa il codice)
 
-Farle in quest’ordine. Spuntale qui quando sono fatte.
+Farle in quest’ordine. Spuntale qui quando sono fatte. Copia anche in `README.md` (indice Claude).
 
 ### 1. Search Console — blog nuovo (subito, dopo il deploy Pages)
 
@@ -77,7 +77,7 @@ IT e EN dello stesso pezzo hanno la **stessa** data.
 
 I pezzi **già online** restano nel passato (tabella sopra). Quelli **ancora da scrivere** hanno date **future**: un pezzo al giorno, 20 agosto → 24 dicembre 2026. File in `_posts/` con data futura non vanno in sitemap (`future: false`). L’Action `.github/workflows/drip-publish.yml` ricostruisce il sito ogni mattina.
 
-I **tre** CSV stanno in `antoniotrento-net.github.io/_piano_editoriale/` e in `_data/editorial_plan.yml`.
+I **tre** CSV stanno in **`_piano_editoriale/` di questo repo** (blog), non nel sito principale. Calendario id/date: `_data/editorial_plan.yml`.
 
 | Serie | File | Pezzi | Finestra `date` | Online oggi |
 |---|---|---|---|---|

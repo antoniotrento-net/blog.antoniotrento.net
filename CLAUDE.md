@@ -1,11 +1,11 @@
 # Claude — blog.antoniotrento.net
 
-Prima di creare o modificare file in `_posts/`, leggi per intero:
+Indice di tutte le guide, CSV, Drip publish e **azioni Search Console** (blog nuovo + delistare la fattoria):
+
+**`README.md`**
+
+Prima di creare o modificare `_posts/`:
 
 **`_piano_editoriale/COME-SCRIVERE-I-POST.md`**
 
-Lì c’è: Drip publish (sveglia GitHub Actions, non “drift”), come copiare `date_file` dal piano, front matter IT/EN, copertine, qualità, checklist commit.
-
-Non datare i pezzi `planned` a oggi. Date future + `future: false` + Drip publish = un URL al giorno, non un dump.
-
-SEO / Search Console / archivio vecchio: `_piano_editoriale/seo-mappa.md`.
+Date = `date_file` in `_data/editorial_plan.yml`, non oggi. Prompt = CSV in `_piano_editoriale/` (questo repo).

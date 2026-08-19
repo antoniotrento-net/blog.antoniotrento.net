@@ -6,6 +6,7 @@ alwaysApply: true
 Prima di creare o toccare `_posts/*.md`, leggi `_piano_editoriale/COME-SCRIVERE-I-POST.md`.
 
 - `date:` e prefisso file = `date_file` in `_data/editorial_plan.yml`, non oggi.
+- CSV e guide: `_piano_editoriale/` in **questo** repo. Indice: `README.md`.
 - Drip publish (`.github/workflows/drip-publish.yml`) ricostruisce Pages ogni mattina: i file con data futura restano fuori dal sito (`future: false`).
 - IT+EN stesso pezzo = stessa data. Non datare pezzi diversi tutti a oggi.
 - `alt_url` solo se il twin esiste. Copertina unica: `assets/images/posts/{slug-it}.jpg`.

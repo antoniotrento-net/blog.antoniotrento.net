@@ -69,13 +69,15 @@ Drip:    il 18 settembre alle 07:30 chiede un rebuild.
 
 | Cosa | Dove |
 |---|---|
-| Calendario operativo (id, slug, date, date_file, status, pillar) | `blog.antoniotrento.net/_data/editorial_plan.yml` |
-| Prompt lunghi / keyword / immagine (CSV) | `antoniotrento-net.github.io/_piano_editoriale/` — tre file |
-| Serie A clienti | `piano-editoriale-2026-clienti.csv` |
-| Serie B stack | `piano-editoriale-2026-livello2-stack.csv` |
-| Serie C PMI ops | `piano-editoriale-2026-livello3-pmi-ops.csv` |
+| Calendario operativo (id, slug, date, date_file, status, pillar) | `_data/editorial_plan.yml` |
+| Prompt lunghi / keyword / immagine (CSV) **in questo repo** | `_piano_editoriale/*.csv` |
+| Serie A clienti | `_piano_editoriale/piano-editoriale-2026-clienti.csv` |
+| Serie B stack | `_piano_editoriale/piano-editoriale-2026-livello2-stack.csv` |
+| Serie C PMI ops | `_piano_editoriale/piano-editoriale-2026-livello3-pmi-ops.csv` |
 
-CSV: delimiter `;`, keyword in colonna `keyword_principale`. Il YAML è allineato al CSV.
+Indice per Claude (Search Console, dove sono le guide): `README.md` in root.
+
+CSV: delimiter `;`, keyword in colonna `keyword_principale`. Il YAML è allineato al CSV. Non usare i CSV nel repo padre `antoniotrento-net.github.io`.
 
 ### Campi YAML che ti servono
 
