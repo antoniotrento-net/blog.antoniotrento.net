@@ -1,6 +1,6 @@
 # Mappa SEO — blog.antoniotrento.net
 
-Fonte di verità. Non fidarti della memoria: se cambi una regola, aggiorna **questa** pagina.
+Fonte di verità SEO. Produzione articoli (date + **Drip publish**): **`COME-SCRIVERE-I-POST.md`** in questa cartella. Claude e gli altri agenti partono da lì.
 
 Stato al 19 agosto 2026.
 

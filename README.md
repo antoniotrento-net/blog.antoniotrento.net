@@ -32,7 +32,9 @@ _posts/                Articoli: YYYY-MM-DD-slug.md con `lang: it|en`
 
 ## Come si scrive un articolo
 
-Ogni post è un file in `_posts/` con front matter. Campi chiave:
+**Playbook obbligatorio (date, Drip publish, front matter, qualità):** [`_piano_editoriale/COME-SCRIVERE-I-POST.md`](_piano_editoriale/COME-SCRIVERE-I-POST.md)
+
+Non usare la data di oggi sui pezzi del piano futuro. Riassunto front matter:
 
 ```yaml
 ---
@@ -40,7 +42,7 @@ lang: it                                   # OBBLIGATORIO: it | en
 permalink: /it/blog/<slug>/                # OBBLIGATORIO: deve contenere /it/ o /en/
 alt_url: /en/blog/<slug-en>/               # link alla versione nell'altra lingua (switcher + hreflang)
 title: "..."
-date: 2026-08-19 07:30:00 +0200
+date: 2026-08-20 07:30:00 +0200            # = date_file del piano, NON oggi
 description: "..."                          # usata in card, meta, og
 keywords: ["...", "..."]
 image: /assets/images/posts/<file>.jpg     # opzionale (copertina)

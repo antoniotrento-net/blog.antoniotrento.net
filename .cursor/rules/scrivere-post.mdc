@@ -1,0 +1,13 @@
+---
+description: Come scrivere i post (date dal piano, Drip publish, no dump in sitemap)
+alwaysApply: true
+---
+
+Prima di creare o toccare `_posts/*.md`, leggi `_piano_editoriale/COME-SCRIVERE-I-POST.md`.
+
+- `date:` e prefisso file = `date_file` in `_data/editorial_plan.yml`, non oggi.
+- Drip publish (`.github/workflows/drip-publish.yml`) ricostruisce Pages ogni mattina: i file con data futura restano fuori dal sito (`future: false`).
+- IT+EN stesso pezzo = stessa data. Non datare pezzi diversi tutti a oggi.
+- `alt_url` solo se il twin esiste. Copertina unica: `assets/images/posts/{slug-it}.jpg`.
+- Non `git add -A` se un altro agente scrive in parallelo.
+- Non lanciare Drip publish a ogni articolo.
