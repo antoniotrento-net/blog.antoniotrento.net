@@ -25,13 +25,17 @@ Farle in quest’ordine. Spuntale qui quando sono fatte.
 - [ ] Non chiedere l’indicizzazione delle URL vecchie. Il `noindex` si prende da solo, in settimane
 - [ ] Non cancellare `/blog/` e non fare 301 di massa verso home o verso il blog nuovo
 
-### 3. Come pubblichi da ora
+### 3. Come pubblichi da ora (goccia-a-goccia)
 
-- Nome file `_posts/YYYY-MM-DD-slug.md` = `date:` nel front matter = giorno del **push**
-- 1–2 articoli al giorno, non 5–6. Il packing 19–23 agosto è calendario, non SEO
-- Serie **B** (stack) e **C** (PMI ops): non scaricarle questa settimana
-- IT e EN dello stesso pezzo: stessa data, `alt_url` solo se il twin esiste già
+Questa settimana **prepari i file**. Non devono andare tutti online. `future: false` + Action `drip-publish.yml` (rebuild ogni mattina): Google vede **una coppia IT+EN al giorno**, non 127 URL in un crawl.
+
+- Nome file `_posts/YYYY-MM-DD-slug.md` = `date:` = `date_file` nel piano (non il giorno in cui scrivi)
+- 1 pezzo al giorno nel calendario (IT+EN stessa data). Non 5–6
+- Serie A restante: 20 ago → 17 set 2026. Poi B (stack) 18 set → 5 nov. Poi C (PMI) 6 nov → 24 dic
+- Se il file non esiste ancora, quel giorno non esce niente. Nessun buco SEO: meglio un giorno vuoto che un pezzo-fattoria
+- `alt_url` solo se il twin esiste già
 - Guida stub → indicizzabile solo con corpo + `image:` + togliere `sitemap: false`
+- Dopo il primo push dell’Action: GitHub → Actions → **Drip publish** → Run workflow (una volta, per verificare)
 
 ### 4. Non toccare
 
@@ -71,31 +75,19 @@ IT e EN dello stesso pezzo hanno la **stessa** data.
 | 2026-08-06 | gestione-soci-associazione-software |
 | 2026-08-17 | dashboard-che-non-si-usano |
 
-Nuovo articolo: `date:` ≤ oggi. Se vuoi programmarlo, `date:` futura + `future: false` (resta fuori da sito e sitemap finché non passa il giorno **e** c’è un rebuild: GitHub Pages non pubblica da solo a mezzanotte, serve un push o un Action).
+I pezzi **già online** restano nel passato (tabella sopra). Quelli **ancora da scrivere** hanno date **future**: un pezzo al giorno, 20 agosto → 24 dicembre 2026. File in `_posts/` con data futura non vanno in sitemap (`future: false`). L’Action `.github/workflows/drip-publish.yml` ricostruisce il sito ogni mattina.
 
-I **tre** CSV stanno in `antoniotrento-net.github.io/_piano_editoriale/` e sono tutti in `_data/editorial_plan.yml`. Prima era aggiornata solo la serie A.
+I **tre** CSV stanno in `antoniotrento-net.github.io/_piano_editoriale/` e in `_data/editorial_plan.yml`.
 
 | Serie | File | Pezzi | Finestra `date` | Online oggi |
 |---|---|---|---|---|
-| A clienti | `piano-editoriale-2026-clienti.csv` | 49 | 20 gen → 17 ago (live) + 19–23 ago (da scrivere) | 20 coppie IT+EN |
-| B stack | `piano-editoriale-2026-livello2-stack.csv` | 49 | 21 gen → 1 ago, ogni 4 giorni | nessuno |
-| C PMI ops | `piano-editoriale-2026-livello3-pmi-ops.csv` | 49 | 23 gen → 3 ago, ogni 4 giorni | nessuno |
+| A clienti | `piano-editoriale-2026-clienti.csv` | 49 | 20 live nel passato; 29 drip 20 ago → 17 set | 20 coppie IT+EN |
+| B stack | `piano-editoriale-2026-livello2-stack.csv` | 49 | 18 set → 5 nov, 1 al giorno | nessuno |
+| C PMI ops | `piano-editoriale-2026-livello3-pmi-ops.csv` | 49 | 6 nov → 24 dic, 1 al giorno | nessuno |
 
-B e C **non** vanno scaricati su questa settimana: 98 URL in 5 giorni è il caso da evitare (contenuto scalato). Le date CSV sono calendario; il giorno reale di `date:` nel markdown è il giorno in cui fai push.
+Questa settimana: **scrivi** i file. `date:` e nome file = data del piano (futura), non oggi. Se usi la data di oggi su 30 file, escono tutti al prossimo build.
 
-`date_file` = prefisso del file markdown. Sui pezzi già online coincide con `date:`. Sui pezzi di questa settimana `date_file` = giorno di pubblicazione (19–23 agosto), da usare quando crei il file.
-
-### Questa settimana (ancora da scrivere / pubblicare)
-
-29 pezzi restanti della **serie A (clienti)**, in ordine di piano, 5–6 al giorno **nel calendario**. Non è un obbligo SEO: meglio `date:` = giorno in cui il pezzo va davvero online (anche 1–2 al giorno). Non pubblicare B o C in blocco insieme ad A.
-
-| Giorno | Keyword |
-|---|---|
-| 2026-08-19 | lanciare prodotto ai white label; sito vetrina vs prodotto digitale; pipeline commerciale unica; poc intelligenza artificiale fallito; ridurre no show prenotazioni; riscrivere software gestionale legacy |
-| 2026-08-20 | software gestione pratiche; mvp software 90 giorni; prodotto llm vs chatbot; sito lento errori utenti; ricerca documenti aziendali pdf; overbooking canali prenotazione |
-| 2026-08-21 | limiti no code azienda; costo non digitalizzare processi; lead che non vengono lavorati; software rinnovi scadenze clienti; abbandono prenotazione carrello; calendario professionale multi operatore |
-| 2026-08-22 | frontend per software house; prima di sviluppare un app; cosa include software su misura; manutenzione software dopo go live; dal preventivo alla fattura software; piattaforma formazione interna |
-| 2026-08-23 | white label software agenzia; rfi software come rispondere; passare da consulenza a prodotto; feature promessa non esiste; software studio professionale completo |
+`date_file` nel YAML è il prefisso da usare quando crei il markdown. Calendario keyword per keyword: `_data/editorial_plan.yml` (`status: planned`).
 
 ---
 
@@ -114,6 +106,7 @@ B e C **non** vanno scaricati su questa settimana: 98 URL in 5 giorni è il caso
 | 7 | JSON-LD `BlogPosting` + `BreadcrumbList` sui post; `CollectionPage` sulle guide vive; `WebSite` su home/indice | `_includes/seo.html` |
 | 8 | Canonical, og, twitter, x-default `/it/` | già c’era, restano |
 | 9 | Root `/` `noindex` + redirect | `index.html` |
+| 16 | Rebuild mattutino per i post datati nel futuro | `.github/workflows/drip-publish.yml` |
 
 ### Fatti sul sito principale
 
@@ -135,7 +128,7 @@ B e C **non** vanno scaricati su questa settimana: 98 URL in 5 giorni è il caso
 | A | Search Console + sitemap `https://blog.antoniotrento.net/sitemap.xml` | Lo fai tu, dopo che Pages ha buildato queste date |
 | B | Ispezione 4 URL: `/it/`, `/it/guide/`, un pillar vivo, un post | Non bombardare «richiedi indicizzazione» su 80 URL |
 | D | FAQPage JSON-LD | Serve `faq:` in front matter, non si estrae dal markdown in modo sicuro |
-| E | Rebuild goccia-a-goccia | Action cron se vorrai date future vere |
+| E | Rebuild goccia-a-goccia | Fatto: Action `drip-publish.yml`. Lanciala a mano una volta. |
 | F | Copertina + corpo su uno stub → togliere `sitemap: false` e l’assenza di `image:` lo fa indicizzare | Checklist sotto |
 
 ---
@@ -159,7 +152,7 @@ B e C **non** vanno scaricati su questa settimana: 98 URL in 5 giorni è il caso
 
 ## Più articoli nello stesso giorno
 
-Google **non** vieta 2–3 URL lo stesso giorno su un sito piccolo. Il rischio non è una penalità automatica: è **contenuto scalato** (stesso scheletro, stesso tono, keyword vicine) che non sale. 5–6 pezzi A nello stesso giorno è packing del calendario, non una regola SEO. Data ogni articolo il giorno in cui lo pubblichi davvero. Non scaricare B+C su questa settimana.
+Google **non** vieta 2 URL lo stesso giorno se sono IT+EN dello stesso pezzo (hreflang). Il rischio è **contenuto scalato**: 30 scheletri identici scritti in un weekend e datati tutti oggi. Preparare i file in blocco va bene. Farli uscire in blocco no. Un giorno senza pezzo è meglio di un pezzo-fattoria.
 
 ---
 

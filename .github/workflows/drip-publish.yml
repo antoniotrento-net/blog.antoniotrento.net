@@ -1,0 +1,41 @@
+# GitHub Pages non ricostruisce a mezzanotte. I post con date futura
+# restano fuori (future: false) finché non c’è un build nel giorno.
+# Questo workflow chiede un rebuild ogni mattina. Non pubblica file:
+# pubblica solo quelli la cui date: è già arrivata.
+name: Drip publish
+
+on:
+  schedule:
+    # 07:30 ora di Roma in estate (UTC+2)
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  pages: write
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request GitHub Pages build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
+
+      # I cron si spengono dopo ~60 giorni senza commit nel repo.
+      - name: Monthly keep-alive so the schedule does not die
+        if: github.event_name == 'schedule'
+        run: |
+          if [ "$(date -u +%d)" != "01" ]; then
+            echo "Not the 1st of the month; skip keep-alive"
+            exit 0
+          fi
+          git clone --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: keep drip-publish schedule alive"
+          git push
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

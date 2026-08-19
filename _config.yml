@@ -14,8 +14,7 @@ baseurl: ""
 
 # Mostra SOLO i post con data <= oggi. Nome file e front matter `date:`
 # devono coincidere. Un file con data futura resta fuori da sito e sitemap
-# finché non passa il giorno. GitHub Pages ricostruisce solo al push:
-# per uno goccia-a-goccia serve un commit (o un Action) nel giorno.
+# finché non passa il giorno. Rebuild mattutino: .github/workflows/drip-publish.yml
 future: false
 
 # Sito principale a cui il blog è agganciato (link building + marketing).
