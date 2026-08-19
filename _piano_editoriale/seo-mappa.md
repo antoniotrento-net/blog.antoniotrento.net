@@ -2,7 +2,40 @@
 
 Fonte di verità. Non fidarti della memoria: se cambi una regola, aggiorna **questa** pagina.
 
-Stato al 19 agosto 2026. Search Console **non** è ancora collegata (voluto).
+Stato al 19 agosto 2026.
+
+---
+
+## Azioni tue (non le fa il codice)
+
+Farle in quest’ordine. Spuntale qui quando sono fatte.
+
+### 1. Search Console — blog nuovo (subito, dopo il deploy Pages)
+
+- [ ] Aggiungi la proprietà **Prefisso URL** `https://blog.antoniotrento.net/`
+- [ ] Verifica (DNS o file HTML, come preferisci)
+- [ ] Invia la sitemap: `https://blog.antoniotrento.net/sitemap.xml`
+- [ ] Ispeziona **solo 4 URL**, non 80: `https://blog.antoniotrento.net/it/` · `/it/guide/` · un pillar vivo (`/it/pillar/prodotti-dati/` o app-interne o portali-b2b) · un post (es. `/it/blog/dashboard-che-non-si-usano/`)
+- [ ] Se l’ispezione dice «trovato ma non indicizzato», «richiedi indicizzazione» su quelle 4. Stop.
+
+### 2. Search Console — sito principale (stesso giro)
+
+- [ ] Proprietà `https://antoniotrento.net/`
+- [ ] Re-invia `https://antoniotrento.net/sitemap.xml` (ora **senza** i 256 post)
+- [ ] Non chiedere l’indicizzazione delle URL vecchie. Il `noindex` si prende da solo, in settimane
+- [ ] Non cancellare `/blog/` e non fare 301 di massa verso home o verso il blog nuovo
+
+### 3. Come pubblichi da ora
+
+- Nome file `_posts/YYYY-MM-DD-slug.md` = `date:` nel front matter = giorno del **push**
+- 1–2 articoli al giorno, non 5–6. Il packing 19–23 agosto è calendario, non SEO
+- Serie **B** (stack) e **C** (PMI ops): non scaricarle questa settimana
+- IT e EN dello stesso pezzo: stessa data, `alt_url` solo se il twin esiste già
+- Guida stub → indicizzabile solo con corpo + `image:` + togliere `sitemap: false`
+
+### 4. Non toccare
+
+Permalink dei post, `CNAME`, `robots.txt`, `url:` in `_config.yml`. Non `Disallow` l’archivio vecchio in robots.txt (Google deve leggere il noindex).
 
 ---
 
