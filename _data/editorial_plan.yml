@@ -6,7 +6,7 @@
     "keyword": "cruscotto aziendale titolare",
     "title": "Stai decidendo a naso perché i numeri sono in 6 software: quanto ti costa al mese (e come avere UN cruscotto che il titolare apre davvero)",
     "slug": "cruscotto-aziendale-titolare",
-    "date": "2026-08-18 07:30",
+    "date": "2026-01-20 07:30",
     "date_file": "2026-08-18",
     "source": "piano-editoriale-2026-clienti.csv#1",
     "status": "written"
@@ -18,10 +18,10 @@
     "keyword": "report vendite in ritardo",
     "title": "Il report arriva il 20 del mese: come avere i numeri del giorno prima senza assumere un ufficio data",
     "slug": "report-vendite-in-ritardo",
-    "date": "2026-08-20 07:30",
+    "date": "2026-01-31 07:30",
     "date_file": "2026-08-20",
     "source": "piano-editoriale-2026-clienti.csv#2",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A03",
@@ -30,8 +30,8 @@
     "keyword": "lanciare prodotto ai white label",
     "title": "Vuoi vendere un prodotto AI ai tuoi clienti: da ChatGPT in demo a un software che si paga ogni mese",
     "slug": "lanciare-prodotto-ai-white-label",
-    "date": "2026-08-25 07:30",
-    "date_file": "2026-08-25",
+    "date": "2026-08-19 07:30",
+    "date_file": "2026-08-19",
     "source": "piano-editoriale-2026-clienti.csv#3",
     "status": "planned"
   },
@@ -42,8 +42,8 @@
     "keyword": "sito vetrina vs prodotto digitale",
     "title": "L'agenzia ti ha consegnato il sito. Il 'backend' è un Google Form. Perché non hai un prodotto (e i clienti se ne accorgono)",
     "slug": "sito-vetrina-vs-prodotto-digitale",
-    "date": "2026-08-27 07:30",
-    "date_file": "2026-08-27",
+    "date": "2026-08-19 07:30",
+    "date_file": "2026-08-19",
     "source": "piano-editoriale-2026-clienti.csv#4",
     "status": "planned"
   },
@@ -54,10 +54,10 @@
     "keyword": "app interna aziendale copia incolla",
     "title": "200 copia-incolla al giorno: il costo vero del 'tanto lo fa Maria' (e l'app interna che Maria odierà se è fatta male)",
     "slug": "app-interna-aziendale-copia-incolla",
-    "date": "2026-09-01 07:30",
+    "date": "2026-02-11 07:30",
     "date_file": "2026-09-01",
     "source": "piano-editoriale-2026-clienti.csv#5",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A06",
@@ -66,10 +66,10 @@
     "keyword": "portale b2b clienti",
     "title": "Il cliente chiede un portale B2B e tu gli mandi un Excel: quanto fatturato stai lasciando sul tavolo",
     "slug": "portale-b2b-clienti",
-    "date": "2026-09-03 07:30",
+    "date": "2026-02-22 07:30",
     "date_file": "2026-09-03",
     "source": "piano-editoriale-2026-clienti.csv#6",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A07",
@@ -78,8 +78,8 @@
     "keyword": "pipeline commerciale unica",
     "title": "I commerciali hanno il pipeline in testa: come avere UN numero (senza comprare un CRM da 400€ a utente e lasciarlo vuoto)",
     "slug": "pipeline-commerciale-unica",
-    "date": "2026-09-08 07:30",
-    "date_file": "2026-09-08",
+    "date": "2026-08-19 07:30",
+    "date_file": "2026-08-19",
     "source": "piano-editoriale-2026-clienti.csv#7",
     "status": "planned"
   },
@@ -90,8 +90,8 @@
     "keyword": "poc intelligenza artificiale fallito",
     "title": "Hai speso decine di migliaia in un PoC di AI finito in un cassetto. Come (non) rifarlo",
     "slug": "poc-intelligenza-artificiale-fallito",
-    "date": "2026-09-10 07:30",
-    "date_file": "2026-09-10",
+    "date": "2026-08-19 07:30",
+    "date_file": "2026-08-19",
     "source": "piano-editoriale-2026-clienti.csv#8",
     "status": "planned"
   },
@@ -102,8 +102,8 @@
     "keyword": "ridurre no show prenotazioni",
     "title": "Prenotazioni, no-show e WhatsApp: il buco nel calendario che non vedi (e l'app che te lo fa fatturare)",
     "slug": "ridurre-no-show-prenotazioni",
-    "date": "2026-09-15 07:30",
-    "date_file": "2026-09-15",
+    "date": "2026-08-19 07:30",
+    "date_file": "2026-08-19",
     "source": "piano-editoriale-2026-clienti.csv#9",
     "status": "planned"
   },
@@ -114,10 +114,10 @@
     "keyword": "listini personalizzati b2b software",
     "title": "8.000 SKU e un prezzo diverso per ogni cliente: il listino PDF è una perdita di margine",
     "slug": "listini-personalizzati-b2b-software",
-    "date": "2026-09-17 07:30",
+    "date": "2026-03-05 07:30",
     "date_file": "2026-09-17",
     "source": "piano-editoriale-2026-clienti.csv#10",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A11",
@@ -126,8 +126,8 @@
     "keyword": "riscrivere software gestionale legacy",
     "title": "Il tuo software interno è un Access del 2008: quando conviene riscriverlo (e quando è un suicidio)",
     "slug": "riscrivere-software-gestionale-legacy",
-    "date": "2026-09-22 07:30",
-    "date_file": "2026-09-22",
+    "date": "2026-08-19 07:30",
+    "date_file": "2026-08-19",
     "source": "piano-editoriale-2026-clienti.csv#11",
     "status": "planned"
   },
@@ -138,10 +138,10 @@
     "keyword": "app tecnici sul campo",
     "title": "Il tecnico in giro perde due interventi al giorno: l'app sul telefono che (non) gli hai dato",
     "slug": "app-tecnici-sul-campo",
-    "date": "2026-09-24 07:30",
+    "date": "2026-03-16 07:30",
     "date_file": "2026-09-24",
     "source": "piano-editoriale-2026-clienti.csv#12",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A13",
@@ -150,8 +150,8 @@
     "keyword": "software gestione pratiche",
     "title": "Pratiche ferme tre settimane in una casella: il software che fa muovere i dossier (non un'altra email)",
     "slug": "software-gestione-pratiche",
-    "date": "2026-09-29 07:30",
-    "date_file": "2026-09-29",
+    "date": "2026-08-20 07:30",
+    "date_file": "2026-08-20",
     "source": "piano-editoriale-2026-clienti.csv#13",
     "status": "planned"
   },
@@ -162,8 +162,8 @@
     "keyword": "mvp software 90 giorni",
     "title": "Vuoi un MVP in 90 giorni che non sia una slide: cosa si può (davvero) consegnare e cosa stai sognando",
     "slug": "mvp-software-90-giorni",
-    "date": "2026-10-01 07:30",
-    "date_file": "2026-10-01",
+    "date": "2026-08-20 07:30",
+    "date_file": "2026-08-20",
     "source": "piano-editoriale-2026-clienti.csv#14",
     "status": "planned"
   },
@@ -174,10 +174,10 @@
     "keyword": "data analyst non basta",
     "title": "Assumere un data analyst non sistema le fonti: perché i KPI restano una rissa (e serve una pipeline, non una persona sola)",
     "slug": "data-analyst-non-basta",
-    "date": "2026-10-06 07:30",
+    "date": "2026-03-27 07:30",
     "date_file": "2026-10-06",
     "source": "piano-editoriale-2026-clienti.csv#15",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A16",
@@ -186,8 +186,8 @@
     "keyword": "prodotto llm vs chatbot",
     "title": "Non ti serve 'un modello'. Ti serve un processo che produce un output che il cliente paga",
     "slug": "prodotto-llm-vs-chatbot",
-    "date": "2026-10-08 07:30",
-    "date_file": "2026-10-08",
+    "date": "2026-08-20 07:30",
+    "date_file": "2026-08-20",
     "source": "piano-editoriale-2026-clienti.csv#16",
     "status": "planned"
   },
@@ -198,8 +198,8 @@
     "keyword": "sito lento errori utenti",
     "title": "Il sito è bello e al secondo click si rompe: perché i clienti se ne vanno (e non è 'un problema di hosting')",
     "slug": "sito-lento-errori-utenti",
-    "date": "2026-10-13 07:30",
-    "date_file": "2026-10-13",
+    "date": "2026-08-20 07:30",
+    "date_file": "2026-08-20",
     "source": "piano-editoriale-2026-clienti.csv#17",
     "status": "planned"
   },
@@ -210,7 +210,7 @@
     "keyword": "quanto abbiamo venduto ieri",
     "title": "Il titolare chiede 'quanto abbiamo venduto ieri' e in 10 minuti nessuno risponde: questo è il tuo vero software mancante",
     "slug": "quanto-abbiamo-venduto-ieri",
-    "date": "2026-10-15 07:30",
+    "date": "2026-04-07 07:30",
     "date_file": "2026-10-15",
     "source": "piano-editoriale-2026-clienti.csv#18",
     "status": "written"
@@ -222,10 +222,10 @@
     "keyword": "giacenze magazzino disallineate",
     "title": "Tre magazzini, un e-commerce, i rappresentanti: tre 'verità' sul residuo e ordini che non puoi evadere",
     "slug": "giacenze-magazzino-disallineate",
-    "date": "2026-10-20 07:30",
+    "date": "2026-04-18 07:30",
     "date_file": "2026-10-20",
     "source": "piano-editoriale-2026-clienti.csv#19",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A20",
@@ -234,10 +234,10 @@
     "keyword": "app ferie turni pmi",
     "title": "Ferie, turni e presenze ancora su WhatsApp: l'app HR minima che toglie il caos (senza un software da multinazionale)",
     "slug": "app-ferie-turni-pmi",
-    "date": "2026-10-22 07:30",
+    "date": "2026-04-29 07:30",
     "date_file": "2026-10-22",
     "source": "piano-editoriale-2026-clienti.csv#20",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A21",
@@ -246,10 +246,10 @@
     "keyword": "customer care ticket ripetuti",
     "title": "40 ticket uguali al giorno: il customer care che non ha una knowledge (e l'AI che copia le risposte sbagliate)",
     "slug": "customer-care-ticket-ripetuti",
-    "date": "2026-10-27 07:30",
+    "date": "2026-05-10 07:30",
     "date_file": "2026-10-27",
     "source": "piano-editoriale-2026-clienti.csv#21",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A22",
@@ -258,8 +258,8 @@
     "keyword": "ricerca documenti aziendali pdf",
     "title": "2.000 PDF in una cartella e zero ricerca: stai pagando l'affitto della conoscenza che non usi",
     "slug": "ricerca-documenti-aziendali-pdf",
-    "date": "2026-10-29 07:30",
-    "date_file": "2026-10-29",
+    "date": "2026-08-20 07:30",
+    "date_file": "2026-08-20",
     "source": "piano-editoriale-2026-clienti.csv#22",
     "status": "planned"
   },
@@ -270,8 +270,8 @@
     "keyword": "overbooking canali prenotazione",
     "title": "Overbooking e canali che non si parlano: l'ospitalità perde soldi tra Booking, sito e telefono",
     "slug": "overbooking-canali-prenotazione",
-    "date": "2026-11-03 07:30",
-    "date_file": "2026-11-03",
+    "date": "2026-08-20 07:30",
+    "date_file": "2026-08-20",
     "source": "piano-editoriale-2026-clienti.csv#23",
     "status": "planned"
   },
@@ -282,10 +282,10 @@
     "keyword": "ordini produzione digitale pmi",
     "title": "Ordini di produzione ancora su carta: la piccola manifattura che non sa se è in ritardo (finché il cliente chiama)",
     "slug": "ordini-produzione-digitale-pmi",
-    "date": "2026-11-05 07:30",
+    "date": "2026-05-21 07:30",
     "date_file": "2026-11-05",
     "source": "piano-editoriale-2026-clienti.csv#24",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A25",
@@ -294,10 +294,10 @@
     "keyword": "area riservata clienti su misura",
     "title": "Hai già i clienti: ti manca l'area riservata (corsi, file, rinnovi) e stai lasciando soldi a Teachable e compagnia",
     "slug": "area-riservata-clienti-su-misura",
-    "date": "2026-11-10 07:30",
+    "date": "2026-06-01 07:30",
     "date_file": "2026-11-10",
     "source": "piano-editoriale-2026-clienti.csv#25",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A26",
@@ -306,8 +306,8 @@
     "keyword": "limiti no code azienda",
     "title": "No-code ti porta all'80% e poi ti blocca: quando (e come) chiamare chi sviluppa sul serio",
     "slug": "limiti-no-code-azienda",
-    "date": "2026-11-12 07:30",
-    "date_file": "2026-11-12",
+    "date": "2026-08-21 07:30",
+    "date_file": "2026-08-21",
     "source": "piano-editoriale-2026-clienti.csv#26",
     "status": "planned"
   },
@@ -318,8 +318,8 @@
     "keyword": "costo non digitalizzare processi",
     "title": "Il costo di NON avere l'app: ore, errori, clienti persi - una stima che puoi fare lunedì mattina",
     "slug": "costo-non-digitalizzare-processi",
-    "date": "2026-11-17 07:30",
-    "date_file": "2026-11-17",
+    "date": "2026-08-21 07:30",
+    "date_file": "2026-08-21",
     "source": "piano-editoriale-2026-clienti.csv#27",
     "status": "planned"
   },
@@ -330,10 +330,10 @@
     "keyword": "pubblicare annunci immobiliari automatico",
     "title": "Schede immobile su 5 portali a mano: l'agenzia immobiliare che lavora per gli annunci, non per le visite",
     "slug": "pubblicare-annunci-immobiliari-automatico",
-    "date": "2026-11-19 07:30",
+    "date": "2026-06-12 07:30",
     "date_file": "2026-11-19",
     "source": "piano-editoriale-2026-clienti.csv#28",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A29",
@@ -342,8 +342,8 @@
     "keyword": "lead che non vengono lavorati",
     "title": "Lead che arrivano e muoiono in 48 ore: ti manca il cruscotto, non 'più ads'",
     "slug": "lead-che-non-vengono-lavorati",
-    "date": "2026-11-24 07:30",
-    "date_file": "2026-11-24",
+    "date": "2026-08-21 07:30",
+    "date_file": "2026-08-21",
     "source": "piano-editoriale-2026-clienti.csv#29",
     "status": "planned"
   },
@@ -354,10 +354,10 @@
     "keyword": "kpi sbagliati azienda",
     "title": "Stai ottimizzando la metrica sbagliata: il KPI che ti fa perdere soldi (mentre la dashboard è 'verde')",
     "slug": "kpi-sbagliati-azienda",
-    "date": "2026-11-26 07:30",
+    "date": "2026-06-23 07:30",
     "date_file": "2026-11-26",
     "source": "piano-editoriale-2026-clienti.csv#30",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A31",
@@ -366,8 +366,8 @@
     "keyword": "software rinnovi scadenze clienti",
     "title": "Rinnovi, scadenze e 'chi non ha pagato': il software che ti ricorda i soldi (non un altro foglio scadenziario)",
     "slug": "software-rinnovi-scadenze-clienti",
-    "date": "2026-12-01 07:30",
-    "date_file": "2026-12-01",
+    "date": "2026-08-21 07:30",
+    "date_file": "2026-08-21",
     "source": "piano-editoriale-2026-clienti.csv#31",
     "status": "planned"
   },
@@ -378,8 +378,8 @@
     "keyword": "abbandono prenotazione carrello",
     "title": "UX che fa abbandonare la prenotazione (o il carrello): non ti serve 'più traffico', ti serve un flusso che si chiude",
     "slug": "abbandono-prenotazione-carrello",
-    "date": "2026-12-03 07:30",
-    "date_file": "2026-12-03",
+    "date": "2026-08-21 07:30",
+    "date_file": "2026-08-21",
     "source": "piano-editoriale-2026-clienti.csv#32",
     "status": "planned"
   },
@@ -390,8 +390,8 @@
     "keyword": "calendario professionale multi operatore",
     "title": "Chi vende tempo (consulenti, cliniche, saloni): il calendario è il tuo ERP. Se è un Google Calendar condiviso, stai improvvisando",
     "slug": "calendario-professionale-multi-operatore",
-    "date": "2026-12-08 07:30",
-    "date_file": "2026-12-08",
+    "date": "2026-08-21 07:30",
+    "date_file": "2026-08-21",
     "source": "piano-editoriale-2026-clienti.csv#33",
     "status": "planned"
   },
@@ -402,8 +402,8 @@
     "keyword": "frontend per software house",
     "title": "Software house senza frontend: stai consegnando API e il cliente vede un deserto. Perché ti serve qualcuno che chiude il prodotto",
     "slug": "frontend-per-software-house",
-    "date": "2026-12-10 07:30",
-    "date_file": "2026-12-10",
+    "date": "2026-08-22 07:30",
+    "date_file": "2026-08-22",
     "source": "piano-editoriale-2026-clienti.csv#34",
     "status": "planned"
   },
@@ -414,8 +414,8 @@
     "keyword": "prima di sviluppare un app",
     "title": "Hai un'idea di app e stai per bruciare il budget sul prototipo sbagliato: le 8 domande prima di spendere",
     "slug": "prima-di-sviluppare-un-app",
-    "date": "2026-12-15 07:30",
-    "date_file": "2026-12-15",
+    "date": "2026-08-22 07:30",
+    "date_file": "2026-08-22",
     "source": "piano-editoriale-2026-clienti.csv#35",
     "status": "planned"
   },
@@ -426,10 +426,10 @@
     "keyword": "cruscotto multi sede",
     "title": "Multi-sede: 3 filiali, 3 Excel, un titolare che non sa quale punto vende. Il cruscotto di gruppo che manca",
     "slug": "cruscotto-multi-sede",
-    "date": "2026-12-17 07:30",
+    "date": "2026-07-04 07:30",
     "date_file": "2026-12-17",
     "source": "piano-editoriale-2026-clienti.csv#36",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A37",
@@ -438,8 +438,8 @@
     "keyword": "cosa include software su misura",
     "title": "Cosa stai comprando quando firmi uno sviluppo su misura (e cosa non è 'un sito da 3.000 euro')",
     "slug": "cosa-include-software-su-misura",
-    "date": "2026-12-22 07:30",
-    "date_file": "2026-12-22",
+    "date": "2026-08-22 07:30",
+    "date_file": "2026-08-22",
     "source": "piano-editoriale-2026-clienti.csv#37",
     "status": "planned"
   },
@@ -450,8 +450,8 @@
     "keyword": "manutenzione software dopo go live",
     "title": "Il progetto 'finito' che muore in sei mesi: manutenzione, piccole modifiche, e perché il fornitore sparisce",
     "slug": "manutenzione-software-dopo-go-live",
-    "date": "2026-12-24 07:30",
-    "date_file": "2026-12-24",
+    "date": "2026-08-22 07:30",
+    "date_file": "2026-08-22",
     "source": "piano-editoriale-2026-clienti.csv#38",
     "status": "planned"
   },
@@ -462,10 +462,10 @@
     "keyword": "portale dossier credito",
     "title": "Dossier di credito e pratiche che viaggiano per email: il portale che fa chiudere (invece di inseguire allegati)",
     "slug": "portale-dossier-credito",
-    "date": "2026-12-29 07:30",
+    "date": "2026-07-15 07:30",
     "date_file": "2026-12-29",
     "source": "piano-editoriale-2026-clienti.csv#39",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A40",
@@ -474,10 +474,10 @@
     "keyword": "software locale ristorazione magazzino",
     "title": "Comande, magazzino e fatture: il locale che perde margine tra sala e amministrazione",
     "slug": "software-locale-ristorazione-magazzino",
-    "date": "2026-12-31 07:30",
+    "date": "2026-07-26 07:30",
     "date_file": "2026-12-31",
     "source": "piano-editoriale-2026-clienti.csv#40",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A41",
@@ -486,10 +486,10 @@
     "keyword": "gestione soci associazione software",
     "title": "Soci, rinnovi, comunicazioni: l'associazione che vive di Excel e perde quote ogni anno",
     "slug": "gestione-soci-associazione-software",
-    "date": "2027-01-05 07:30",
+    "date": "2026-08-06 07:30",
     "date_file": "2027-01-05",
     "source": "piano-editoriale-2026-clienti.csv#41",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "A42",
@@ -498,8 +498,8 @@
     "keyword": "dal preventivo alla fattura software",
     "title": "Catalogo, preventivo, ordine, fattura: il buco tra commerciale e amministrazione che ti mangia il margine",
     "slug": "dal-preventivo-alla-fattura-software",
-    "date": "2027-01-07 07:30",
-    "date_file": "2027-01-07",
+    "date": "2026-08-22 07:30",
+    "date_file": "2026-08-22",
     "source": "piano-editoriale-2026-clienti.csv#42",
     "status": "planned"
   },
@@ -510,8 +510,8 @@
     "keyword": "piattaforma formazione interna",
     "title": "Formazione interna: i video e i PDF che nessuno trova (e i nuovi assunti che chiedono sempre le stesse cose)",
     "slug": "piattaforma-formazione-interna",
-    "date": "2027-01-12 07:30",
-    "date_file": "2027-01-12",
+    "date": "2026-08-22 07:30",
+    "date_file": "2026-08-22",
     "source": "piano-editoriale-2026-clienti.csv#43",
     "status": "planned"
   },
@@ -522,8 +522,8 @@
     "keyword": "white label software agenzia",
     "title": "White-label per la tua agenzia: vendi AI e software ai clienti senza rimontare tutto ogni volta",
     "slug": "white-label-software-agenzia",
-    "date": "2027-01-14 07:30",
-    "date_file": "2027-01-14",
+    "date": "2026-08-23 07:30",
+    "date_file": "2026-08-23",
     "source": "piano-editoriale-2026-clienti.csv#44",
     "status": "planned"
   },
@@ -534,8 +534,8 @@
     "keyword": "rfi software come rispondere",
     "title": "L'RFI del cliente grosso: cosa deve saper fare il tuo software (e come non firmare un suicidio in 40 pagine)",
     "slug": "rfi-software-come-rispondere",
-    "date": "2027-01-19 07:30",
-    "date_file": "2027-01-19",
+    "date": "2026-08-23 07:30",
+    "date_file": "2026-08-23",
     "source": "piano-editoriale-2026-clienti.csv#45",
     "status": "planned"
   },
@@ -546,8 +546,8 @@
     "keyword": "passare da consulenza a prodotto",
     "title": "Da vendere ore a vendere un prodotto: quando il freelancer (o la piccola software house) deve smettere di fatturare giornate",
     "slug": "passare-da-consulenza-a-prodotto",
-    "date": "2027-01-21 07:30",
-    "date_file": "2027-01-21",
+    "date": "2026-08-23 07:30",
+    "date_file": "2026-08-23",
     "source": "piano-editoriale-2026-clienti.csv#46",
     "status": "planned"
   },
@@ -558,8 +558,8 @@
     "keyword": "feature promessa non esiste",
     "title": "Il commerciale promette una feature che il software non ha: come chiudere il buco (processo + prodotto) prima che ti costi un cliente",
     "slug": "feature-promessa-non-esiste",
-    "date": "2027-01-26 07:30",
-    "date_file": "2027-01-26",
+    "date": "2026-08-23 07:30",
+    "date_file": "2026-08-23",
     "source": "piano-editoriale-2026-clienti.csv#47",
     "status": "planned"
   },
@@ -570,8 +570,8 @@
     "keyword": "software studio professionale completo",
     "title": "Area appuntamenti + pagamenti + fascicolo: lo studio (medico, tecnico, legale) che sembra un'azienda del 1998",
     "slug": "software-studio-professionale-completo",
-    "date": "2027-01-28 07:30",
-    "date_file": "2027-01-28",
+    "date": "2026-08-23 07:30",
+    "date_file": "2026-08-23",
     "source": "piano-editoriale-2026-clienti.csv#48",
     "status": "planned"
   },
@@ -582,10 +582,10 @@
     "keyword": "dashboard che non si usano",
     "title": "Hai i dati. Non hai le domande. Il motivo per cui le dashboard non fanno fatturare (e un analyst che costruisce prodotto sì)",
     "slug": "dashboard-che-non-si-usano",
-    "date": "2027-02-02 07:30",
+    "date": "2026-08-17 07:30",
     "date_file": "2027-02-02",
     "source": "piano-editoriale-2026-clienti.csv#49",
-    "status": "planned"
+    "status": "written"
   },
   {
     "id": "B01",
