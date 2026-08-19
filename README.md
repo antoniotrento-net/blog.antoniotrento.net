@@ -21,6 +21,7 @@ Palette Google-brand, Inter; cartelle `/it/` e `/en/`.
 | Puntatore automatico Claude Code | [`CLAUDE.md`](CLAUDE.md) | Letto da solo |
 | Puntatore altri agenti | [`AGENTS.md`](AGENTS.md) | Letto da solo |
 | Sveglia Pages (Drip publish) | [`.github/workflows/drip-publish.yml`](.github/workflows/drip-publish.yml) | Non lanciarla a ogni articolo |
+| Sitemap del blog | **Non è un file nel repo.** Plugin `jekyll-sitemap` in `_config.yml`. URL live: `https://blog.antoniotrento.net/sitemap.xml` | Search Console. Non copiare il `sitemap.xml` del sito principale |
 | Post live e in coda | `_posts/YYYY-MM-DD-slug.md` | `date:` futura = non ancora sul sito |
 
 CSV: delimiter `;`. Colonne: `titolo`, `keyword_principale`, `keyword_secondarie`, `descrizione`, `prompt_articolo`, `prompt_immagine`, dimensioni, `data_pubblicazione`. Allineati a `editorial_plan.yml`. **Fonte in questo repo**, non in `antoniotrento-net.github.io`.
@@ -35,7 +36,7 @@ Spuntale in [`_piano_editoriale/seo-mappa.md`](_piano_editoriale/seo-mappa.md) q
 
 1. Aggiungi proprietà **Prefisso URL** `https://blog.antoniotrento.net/`
 2. Verifica (DNS o file HTML)
-3. Invia sitemap: `https://blog.antoniotrento.net/sitemap.xml`
+3. Invia sitemap: `https://blog.antoniotrento.net/sitemap.xml` (generata al build, **non** c’è nel repo)
 4. Ispeziona **solo 4 URL**, non 80 e non tutto il piano:
    - `https://blog.antoniotrento.net/it/`
    - `https://blog.antoniotrento.net/it/guide/`
