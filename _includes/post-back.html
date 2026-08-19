@@ -17,7 +17,7 @@
 
 <nav class="flex flex-wrap items-center gap-x-5 gap-y-2 {{ include.class }}" aria-label="{% if lang == 'it' %}Navigazione articolo{% else %}Article navigation{% endif %}">
   {%- if pillar -%}
-  <a href="{{ pillar.url | relative_url }}" class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:underline">
+  <a href="{{ pillar.url | relative_url }}" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-blue hover:underline">
     <i class="fas fa-arrow-left text-xs"></i>
     {{ pillar.title }}
   </a>
