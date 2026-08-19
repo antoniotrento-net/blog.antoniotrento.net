@@ -12,10 +12,10 @@ description: "Integrazione sistemi, intelligenza artificiale e automazione per P
 url: "https://blog.antoniotrento.net"
 baseurl: ""
 
-# Mostra SOLO i post con data <= oggi. I file possono restare nel repo
-# con data futura (piano editoriale = nome file); non vanno in sitemap
-# finché la data in front matter non è passata. GitHub Pages ricostruisce
-# solo al push: per uno goccia-a-goccia serve un commit (o un Action) nel giorno.
+# Mostra SOLO i post con data <= oggi. Nome file e front matter `date:`
+# devono coincidere. Un file con data futura resta fuori da sito e sitemap
+# finché non passa il giorno. GitHub Pages ricostruisce solo al push:
+# per uno goccia-a-goccia serve un commit (o un Action) nel giorno.
 future: false
 
 # Sito principale a cui il blog è agganciato (link building + marketing).

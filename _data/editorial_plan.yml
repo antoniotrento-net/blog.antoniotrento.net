@@ -7,7 +7,7 @@
     "title": "Stai decidendo a naso perché i numeri sono in 6 software: quanto ti costa al mese (e come avere UN cruscotto che il titolare apre davvero)",
     "slug": "cruscotto-aziendale-titolare",
     "date": "2026-01-20 07:30",
-    "date_file": "2026-08-18",
+    "date_file": "2026-01-20",
     "source": "piano-editoriale-2026-clienti.csv#1",
     "status": "written"
   },
@@ -19,7 +19,7 @@
     "title": "Il report arriva il 20 del mese: come avere i numeri del giorno prima senza assumere un ufficio data",
     "slug": "report-vendite-in-ritardo",
     "date": "2026-01-31 07:30",
-    "date_file": "2026-08-20",
+    "date_file": "2026-01-31",
     "source": "piano-editoriale-2026-clienti.csv#2",
     "status": "written"
   },
@@ -55,7 +55,7 @@
     "title": "200 copia-incolla al giorno: il costo vero del 'tanto lo fa Maria' (e l'app interna che Maria odierà se è fatta male)",
     "slug": "app-interna-aziendale-copia-incolla",
     "date": "2026-02-11 07:30",
-    "date_file": "2026-09-01",
+    "date_file": "2026-02-11",
     "source": "piano-editoriale-2026-clienti.csv#5",
     "status": "written"
   },
@@ -67,7 +67,7 @@
     "title": "Il cliente chiede un portale B2B e tu gli mandi un Excel: quanto fatturato stai lasciando sul tavolo",
     "slug": "portale-b2b-clienti",
     "date": "2026-02-22 07:30",
-    "date_file": "2026-09-03",
+    "date_file": "2026-02-22",
     "source": "piano-editoriale-2026-clienti.csv#6",
     "status": "written"
   },
@@ -115,7 +115,7 @@
     "title": "8.000 SKU e un prezzo diverso per ogni cliente: il listino PDF è una perdita di margine",
     "slug": "listini-personalizzati-b2b-software",
     "date": "2026-03-05 07:30",
-    "date_file": "2026-09-17",
+    "date_file": "2026-03-05",
     "source": "piano-editoriale-2026-clienti.csv#10",
     "status": "written"
   },
@@ -139,7 +139,7 @@
     "title": "Il tecnico in giro perde due interventi al giorno: l'app sul telefono che (non) gli hai dato",
     "slug": "app-tecnici-sul-campo",
     "date": "2026-03-16 07:30",
-    "date_file": "2026-09-24",
+    "date_file": "2026-03-16",
     "source": "piano-editoriale-2026-clienti.csv#12",
     "status": "written"
   },
@@ -175,7 +175,7 @@
     "title": "Assumere un data analyst non sistema le fonti: perché i KPI restano una rissa (e serve una pipeline, non una persona sola)",
     "slug": "data-analyst-non-basta",
     "date": "2026-03-27 07:30",
-    "date_file": "2026-10-06",
+    "date_file": "2026-03-27",
     "source": "piano-editoriale-2026-clienti.csv#15",
     "status": "written"
   },
@@ -211,7 +211,7 @@
     "title": "Il titolare chiede 'quanto abbiamo venduto ieri' e in 10 minuti nessuno risponde: questo è il tuo vero software mancante",
     "slug": "quanto-abbiamo-venduto-ieri",
     "date": "2026-04-07 07:30",
-    "date_file": "2026-10-15",
+    "date_file": "2026-04-07",
     "source": "piano-editoriale-2026-clienti.csv#18",
     "status": "written"
   },
@@ -223,7 +223,7 @@
     "title": "Tre magazzini, un e-commerce, i rappresentanti: tre 'verità' sul residuo e ordini che non puoi evadere",
     "slug": "giacenze-magazzino-disallineate",
     "date": "2026-04-18 07:30",
-    "date_file": "2026-10-20",
+    "date_file": "2026-04-18",
     "source": "piano-editoriale-2026-clienti.csv#19",
     "status": "written"
   },
@@ -235,7 +235,7 @@
     "title": "Ferie, turni e presenze ancora su WhatsApp: l'app HR minima che toglie il caos (senza un software da multinazionale)",
     "slug": "app-ferie-turni-pmi",
     "date": "2026-04-29 07:30",
-    "date_file": "2026-10-22",
+    "date_file": "2026-04-29",
     "source": "piano-editoriale-2026-clienti.csv#20",
     "status": "written"
   },
@@ -247,7 +247,7 @@
     "title": "40 ticket uguali al giorno: il customer care che non ha una knowledge (e l'AI che copia le risposte sbagliate)",
     "slug": "customer-care-ticket-ripetuti",
     "date": "2026-05-10 07:30",
-    "date_file": "2026-10-27",
+    "date_file": "2026-05-10",
     "source": "piano-editoriale-2026-clienti.csv#21",
     "status": "written"
   },
@@ -283,7 +283,7 @@
     "title": "Ordini di produzione ancora su carta: la piccola manifattura che non sa se è in ritardo (finché il cliente chiama)",
     "slug": "ordini-produzione-digitale-pmi",
     "date": "2026-05-21 07:30",
-    "date_file": "2026-11-05",
+    "date_file": "2026-05-21",
     "source": "piano-editoriale-2026-clienti.csv#24",
     "status": "written"
   },
@@ -295,7 +295,7 @@
     "title": "Hai già i clienti: ti manca l'area riservata (corsi, file, rinnovi) e stai lasciando soldi a Teachable e compagnia",
     "slug": "area-riservata-clienti-su-misura",
     "date": "2026-06-01 07:30",
-    "date_file": "2026-11-10",
+    "date_file": "2026-06-01",
     "source": "piano-editoriale-2026-clienti.csv#25",
     "status": "written"
   },
@@ -331,7 +331,7 @@
     "title": "Schede immobile su 5 portali a mano: l'agenzia immobiliare che lavora per gli annunci, non per le visite",
     "slug": "pubblicare-annunci-immobiliari-automatico",
     "date": "2026-06-12 07:30",
-    "date_file": "2026-11-19",
+    "date_file": "2026-06-12",
     "source": "piano-editoriale-2026-clienti.csv#28",
     "status": "written"
   },
@@ -355,7 +355,7 @@
     "title": "Stai ottimizzando la metrica sbagliata: il KPI che ti fa perdere soldi (mentre la dashboard è 'verde')",
     "slug": "kpi-sbagliati-azienda",
     "date": "2026-06-23 07:30",
-    "date_file": "2026-11-26",
+    "date_file": "2026-06-23",
     "source": "piano-editoriale-2026-clienti.csv#30",
     "status": "written"
   },
@@ -427,7 +427,7 @@
     "title": "Multi-sede: 3 filiali, 3 Excel, un titolare che non sa quale punto vende. Il cruscotto di gruppo che manca",
     "slug": "cruscotto-multi-sede",
     "date": "2026-07-04 07:30",
-    "date_file": "2026-12-17",
+    "date_file": "2026-07-04",
     "source": "piano-editoriale-2026-clienti.csv#36",
     "status": "written"
   },
@@ -463,7 +463,7 @@
     "title": "Dossier di credito e pratiche che viaggiano per email: il portale che fa chiudere (invece di inseguire allegati)",
     "slug": "portale-dossier-credito",
     "date": "2026-07-15 07:30",
-    "date_file": "2026-12-29",
+    "date_file": "2026-07-15",
     "source": "piano-editoriale-2026-clienti.csv#39",
     "status": "written"
   },
@@ -475,7 +475,7 @@
     "title": "Comande, magazzino e fatture: il locale che perde margine tra sala e amministrazione",
     "slug": "software-locale-ristorazione-magazzino",
     "date": "2026-07-26 07:30",
-    "date_file": "2026-12-31",
+    "date_file": "2026-07-26",
     "source": "piano-editoriale-2026-clienti.csv#40",
     "status": "written"
   },
@@ -487,7 +487,7 @@
     "title": "Soci, rinnovi, comunicazioni: l'associazione che vive di Excel e perde quote ogni anno",
     "slug": "gestione-soci-associazione-software",
     "date": "2026-08-06 07:30",
-    "date_file": "2027-01-05",
+    "date_file": "2026-08-06",
     "source": "piano-editoriale-2026-clienti.csv#41",
     "status": "written"
   },
@@ -583,7 +583,7 @@
     "title": "Hai i dati. Non hai le domande. Il motivo per cui le dashboard non fanno fatturare (e un analyst che costruisce prodotto sì)",
     "slug": "dashboard-che-non-si-usano",
     "date": "2026-08-17 07:30",
-    "date_file": "2027-02-02",
+    "date_file": "2026-08-17",
     "source": "piano-editoriale-2026-clienti.csv#49",
     "status": "written"
   },

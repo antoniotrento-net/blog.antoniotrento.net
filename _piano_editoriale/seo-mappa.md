@@ -10,33 +10,33 @@ Stato al 19 agosto 2026. Search Console **non** è ancora collegata (voluto).
 
 Oggi è **19 agosto 2026**. Mettere i post a settembre–dicembre 2026 li lascerebbe di nuovo **nel futuro**. La finestra onesta è gennaio → metà agosto 2026.
 
-- **Nome file** = piano editoriale (non toccare, è il calendario).
-- **Front matter `date:`** = data visibile / sitemap / JSON-LD.
+- **Nome file** `_posts/YYYY-MM-DD-slug.md` e front matter `date:` devono coincidere.
+- **Permalink** = URL pubblico (non toccare: `/it/blog/slug/`). Jekyll non mette la data nell’URL.
 
-IT e EN dello stesso pezzo hanno la **stessa** data pubblicata.
+IT e EN dello stesso pezzo hanno la **stessa** data.
 
-| Piano (nome file) | Pubblicato | Slug IT |
-|---|---|---|
-| 2026-08-18 | 2026-01-20 | cruscotto-aziendale-titolare |
-| 2026-08-20 | 2026-01-31 | report-vendite-in-ritardo |
-| 2026-09-01 | 2026-02-11 | app-interna-aziendale-copia-incolla |
-| 2026-09-03 | 2026-02-22 | portale-b2b-clienti |
-| 2026-09-17 | 2026-03-05 | listini-personalizzati-b2b-software |
-| 2026-09-24 | 2026-03-16 | app-tecnici-sul-campo |
-| 2026-10-06 | 2026-03-27 | data-analyst-non-basta |
-| 2026-10-15 | 2026-04-07 | quanto-abbiamo-venduto-ieri |
-| 2026-10-20 | 2026-04-18 | giacenze-magazzino-disallineate |
-| 2026-10-22 | 2026-04-29 | app-ferie-turni-pmi |
-| 2026-10-27 | 2026-05-10 | customer-care-ticket-ripetuti |
-| 2026-11-05 | 2026-05-21 | ordini-produzione-digitale-pmi |
-| 2026-11-10 | 2026-06-01 | area-riservata-clienti-su-misura |
-| 2026-11-19 | 2026-06-12 | pubblicare-annunci-immobiliari-automatico |
-| 2026-11-26 | 2026-06-23 | kpi-sbagliati-azienda |
-| 2026-12-17 | 2026-07-04 | cruscotto-multi-sede |
-| 2026-12-29 | 2026-07-15 | portale-dossier-credito |
-| 2026-12-31 | 2026-07-26 | software-locale-ristorazione-magazzino |
-| 2027-01-05 | 2026-08-06 | gestione-soci-associazione-software |
-| 2027-02-02 | 2026-08-17 | dashboard-che-non-si-usano |
+| Data (file + `date:`) | Slug IT |
+|---|---|
+| 2026-01-20 | cruscotto-aziendale-titolare |
+| 2026-01-31 | report-vendite-in-ritardo |
+| 2026-02-11 | app-interna-aziendale-copia-incolla |
+| 2026-02-22 | portale-b2b-clienti |
+| 2026-03-05 | listini-personalizzati-b2b-software |
+| 2026-03-16 | app-tecnici-sul-campo |
+| 2026-03-27 | data-analyst-non-basta |
+| 2026-04-07 | quanto-abbiamo-venduto-ieri |
+| 2026-04-18 | giacenze-magazzino-disallineate |
+| 2026-04-29 | app-ferie-turni-pmi |
+| 2026-05-10 | customer-care-ticket-ripetuti |
+| 2026-05-21 | ordini-produzione-digitale-pmi |
+| 2026-06-01 | area-riservata-clienti-su-misura |
+| 2026-06-12 | pubblicare-annunci-immobiliari-automatico |
+| 2026-06-23 | kpi-sbagliati-azienda |
+| 2026-07-04 | cruscotto-multi-sede |
+| 2026-07-15 | portale-dossier-credito |
+| 2026-07-26 | software-locale-ristorazione-magazzino |
+| 2026-08-06 | gestione-soci-associazione-software |
+| 2026-08-17 | dashboard-che-non-si-usano |
 
 Nuovo articolo: `date:` ≤ oggi. Se vuoi programmarlo, `date:` futura + `future: false` (resta fuori da sito e sitemap finché non passa il giorno **e** c’è un rebuild: GitHub Pages non pubblica da solo a mezzanotte, serve un push o un Action).
 
@@ -50,7 +50,7 @@ I **tre** CSV stanno in `antoniotrento-net.github.io/_piano_editoriale/` e sono 
 
 B e C **non** vanno scaricati su questa settimana: 98 URL in 5 giorni è il caso da evitare (contenuto scalato). Le date CSV sono calendario; il giorno reale di `date:` nel markdown è il giorno in cui fai push.
 
-`date_file` sui pezzi già online resta il nome file originale (`2026-08-18-…`). Sui pezzi di questa settimana `date_file` = giorno di pubblicazione (19–23 agosto), da usare quando crei il file.
+`date_file` = prefisso del file markdown. Sui pezzi già online coincide con `date:`. Sui pezzi di questa settimana `date_file` = giorno di pubblicazione (19–23 agosto), da usare quando crei il file.
 
 ### Questa settimana (ancora da scrivere / pubblicare)
 
@@ -132,5 +132,6 @@ Google **non** vieta 2–3 URL lo stesso giorno su un sito piccolo. Il rischio n
 ## File da non toccare a caso
 
 - Permalink dei post (URL pubblici).
-- Nome file `_posts/YYYY-MM-DD-slug.md` (è il piano).
 - `CNAME`, `robots.txt`, `url:` in `_config.yml`.
+
+Nome file `_posts/YYYY-MM-DD-slug.md`: deve coincidere con `date:`. Non è l’URL.
