@@ -90,8 +90,10 @@ B e C **non** vanno scaricati su questa settimana: 98 URL in 5 giorni è il caso
 | 11 | Footer Blog stesso URL | `_includes/antigravity_footer.html` |
 | 12 | «Vedi tutti gli articoli» in home | `index.html` sezione `#blog` |
 | 13 | `relative_url` non spezza gli URL `https://` | `_includes/antigravity_nav.html` |
+| 14 | Home: 3 card fisse del blog nuovo (niente loop `site.posts`) | `antoniotrento-net.github.io/index.html` |
+| 15 | Archivio vecchio `noindex, follow` + fuori sitemap | post layout, `/blog/`, `sitemap.xml` |
 
-`/blog/` sul principale **resta online** (archivio vecchio). Non cancellarlo: ha URL già in giro. La nav non ci punta più.
+`/blog/` sul principale **resta online** (archivio). `noindex, follow`. Non cancellarlo: ha URL già in giro. La nav non ci punta più.
 
 ### Aperti (quando sei pronto)
 
@@ -99,7 +101,6 @@ B e C **non** vanno scaricati su questa settimana: 98 URL in 5 giorni è il caso
 |---|---|---|
 | A | Search Console + sitemap `https://blog.antoniotrento.net/sitemap.xml` | Lo fai tu, dopo che Pages ha buildato queste date |
 | B | Ispezione 4 URL: `/it/`, `/it/guide/`, un pillar vivo, un post | Non bombardare «richiedi indicizzazione» su 80 URL |
-| C | Teaser home del principale: ancora loop `site.posts limit:3` verso l’archivio `/blog/` | Piano i18n fase 1: sostituire con 3 card fisse del blog nuovo |
 | D | FAQPage JSON-LD | Serve `faq:` in front matter, non si estrae dal markdown in modo sicuro |
 | E | Rebuild goccia-a-goccia | Action cron se vorrai date future vere |
 | F | Copertina + corpo su uno stub → togliere `sitemap: false` e l’assenza di `image:` lo fa indicizzare | Checklist sotto |
