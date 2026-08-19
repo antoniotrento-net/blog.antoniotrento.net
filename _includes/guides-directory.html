@@ -1,0 +1,122 @@
+{%- comment -%}
+  Directory sezioni → pillar: card vive (copertina) + ghost stub.
+  Uso: {% include guides-directory.html lang=lang %}
+{%- endcomment -%}
+{%- assign lang = include.lang | default: page.lang | default: site.default_lang -%}
+{%- assign pillar_pages = site.pages | where: "layout", "pillar" | where: "lang", lang -%}
+{%- if lang == 'it' -%}
+  {%- assign soon_label = "Prossimamente" -%}
+  {%- assign live_badge = "Viva" -%}
+  {%- assign more_label = "Altre mappe in arrivo" -%}
+  {%- assign art_one = "1 articolo" -%}
+  {%- assign art_many = " articoli" -%}
+  {%- assign live_one = "1 mappa viva" -%}
+  {%- assign live_many = " mappe vive" -%}
+  {%- assign ghost_note = "Si accende da sola quando la copertina è pronta." -%}
+{%- else -%}
+  {%- assign soon_label = "Coming soon" -%}
+  {%- assign live_badge = "Live" -%}
+  {%- assign more_label = "More maps on the way" -%}
+  {%- assign art_one = "1 article" -%}
+  {%- assign art_many = " articles" -%}
+  {%- assign live_one = "1 live map" -%}
+  {%- assign live_many = " live maps" -%}
+  {%- assign ghost_note = "Lights up on its own when the cover is ready." -%}
+{%- endif -%}
+
+{%- for section in site.data.sections -%}
+  {%- assign section_i = forloop.index -%}
+  {%- if lang == 'it' -%}{%- assign sinfo = section.it -%}{%- else -%}{%- assign sinfo = section.en -%}{%- endif -%}
+  {%- assign n_live = 0 -%}
+  {%- assign n_stub = 0 -%}
+  {%- for pair in site.data.pillars[lang] -%}
+    {%- assign pmeta = pair[1] -%}
+    {%- if pmeta.section == section.key -%}
+      {%- assign pill = pillar_pages | where: "pillar_key", pair[0] | first -%}
+      {%- if pill.image -%}{%- assign n_live = n_live | plus: 1 -%}
+      {%- else -%}{%- assign n_stub = n_stub | plus: 1 -%}{%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if n_live == 1 -%}{%- assign live_stat = live_one -%}
+  {%- else -%}{%- assign live_stat = n_live | append: live_many -%}{%- endif -%}
+
+  <div class="reveal">
+    <div class="mb-8 max-w-3xl">
+      <div class="flex items-center gap-3 mb-3">
+        {%- if section_i == 1 -%}<span class="w-8 h-1 rounded-full bg-brand-blue"></span>
+        {%- elsif section_i == 2 -%}<span class="w-8 h-1 rounded-full bg-brand-red"></span>
+        {%- else -%}<span class="w-8 h-1 rounded-full bg-brand-yellow"></span>{%- endif -%}
+        <span class="text-xs font-bold uppercase tracking-[0.22em] text-gray-400">{{ live_stat }}</span>
+      </div>
+      <h2 class="text-2xl md:text-4xl font-black tracking-tight mb-2">{{ sinfo.title }}</h2>
+      <p class="text-gray-500 dark:text-gray-400 text-lg">{{ sinfo.summary }}</p>
+    </div>
+
+    {%- if n_live > 0 -%}
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+      {%- for pair in site.data.pillars[lang] -%}
+        {%- assign pkey = pair[0] -%}
+        {%- assign pmeta = pair[1] -%}
+        {%- if pmeta.section == section.key -%}
+          {%- assign pill = pillar_pages | where: "pillar_key", pkey | first -%}
+          {%- if pill.image -%}
+            {%- assign cluster = site.posts | where: "lang", lang | where: "pillar", pill.pillar_key -%}
+            {%- if cluster.size == 1 -%}{%- assign art_label = art_one -%}
+            {%- else -%}{%- assign art_label = cluster.size | append: art_many -%}{%- endif -%}
+            <a href="{{ pill.url | relative_url }}" class="group relative isolate rounded-[1.75rem] overflow-hidden bg-neutral-900 shadow-lg ring-1 ring-black/5 dark:ring-white/10 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img src="{{ pill.image | relative_url }}" alt="{{ pill.title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10"></div>
+              <div class="absolute inset-x-0 bottom-0 p-5 md:p-6 text-white">
+                <div class="flex items-center gap-2 mb-2.5 text-[11px] font-bold uppercase tracking-[0.18em]">
+                  <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-brand-green/20 text-brand-green">
+                    <span class="relative flex h-1.5 w-1.5">
+                      <span class="absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75 animate-ping"></span>
+                      <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-green"></span>
+                    </span>
+                    {{ live_badge }}
+                  </span>
+                  <span class="text-white/70">{{ art_label }}</span>
+                </div>
+                <h3 class="text-xl font-black tracking-tight leading-tight mb-1.5 group-hover:text-blue-200 transition-colors">{{ pill.title }}</h3>
+                <p class="text-sm text-white/70 line-clamp-2">{{ pill.description }}</p>
+              </div>
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    {%- if n_stub > 0 -%}
+    <div class="{% if n_live > 0 %}mt-8{% endif %}">
+      {%- if n_live > 0 -%}
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-4">{{ more_label }}</p>
+      {%- endif -%}
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {%- for pair in site.data.pillars[lang] -%}
+          {%- assign pkey = pair[0] -%}
+          {%- assign pmeta = pair[1] -%}
+          {%- if pmeta.section == section.key -%}
+            {%- assign pill = pillar_pages | where: "pillar_key", pkey | first -%}
+            {%- unless pill.image -%}
+              {%- assign dest = pill.url | default: pmeta.url -%}
+              {%- assign ptitle = pill.title | default: pmeta.title -%}
+              {%- assign pdesc = pill.description | default: pmeta.summary -%}
+              <a href="{{ dest | relative_url }}" class="group p-5 rounded-2xl border border-dashed border-gray-300 dark:border-white/15 bg-white/40 dark:bg-white/[0.02] hover:border-brand-blue/40 hover:bg-white dark:hover:bg-white/5 transition-all">
+                <span class="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400 mb-2">{{ soon_label }}</span>
+                <h3 class="font-bold mb-1 group-hover:text-brand-blue transition-colors">{{ ptitle }}</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{{ pdesc }}</p>
+              </a>
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      {%- if n_live == 0 -%}
+      <p class="mt-4 text-xs text-gray-400">{{ ghost_note }}</p>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+  </div>
+{%- endfor -%}

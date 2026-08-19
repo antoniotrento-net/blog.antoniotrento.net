@@ -6,33 +6,10 @@ layout: default
 
 {% include home-hero.html lang=lang posts=posts %}
 
-<!-- Directory tematica: sezioni -> pillar -->
-<section id="guide" class="px-6 py-16 bg-brand-surface dark:bg-neutral-900/40 transition-colors">
-  <div class="max-w-6xl mx-auto space-y-14">
-    {%- for section in site.data.sections -%}
-      {%- if lang == 'it' -%}{%- assign sinfo = section.it -%}{%- else -%}{%- assign sinfo = section.en -%}{%- endif -%}
-      <div class="reveal">
-        <div class="mb-6 max-w-3xl">
-          <h2 class="text-2xl md:text-3xl font-black tracking-tight mb-2">{{ sinfo.title }}</h2>
-          <p class="text-gray-500 dark:text-gray-400">{{ sinfo.summary }}</p>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {%- for pair in site.data.pillars[lang] -%}
-            {%- assign pill = pair[1] -%}
-            {%- if pill.section == section.key -%}
-            <a href="{{ pill.url | relative_url }}"
-              class="group p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-100 dark:border-white/10 hover:border-brand-blue/40 hover:shadow-lg transition-all">
-              <h3 class="font-bold mb-1 group-hover:text-brand-blue transition-colors flex items-center gap-2">
-                {{ pill.title }}
-                <i class="fas fa-arrow-right text-xs opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
-              </h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{{ pill.summary }}</p>
-            </a>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-      </div>
-    {%- endfor -%}
+<!-- Directory tematica: stesse card vive/ghost dell'indice Guide -->
+<section id="guide" class="px-6 py-20 bg-brand-surface dark:bg-neutral-950 transition-colors">
+  <div class="max-w-6xl mx-auto space-y-24">
+    {% include guides-directory.html lang=lang %}
   </div>
 </section>
 
