@@ -1,0 +1,29 @@
+{%- comment -%}
+  Back di fine/inizio articolo: prima la guida (pillar), poi tutti gli articoli.
+  Uso: {% include post-back.html lang=lang %}
+{%- endcomment -%}
+{%- assign lang = include.lang | default: page.lang | default: site.default_lang -%}
+{%- if lang == 'it' -%}
+  {%- assign home_url = '/it/' -%}
+  {%- assign all_label = "Tutti gli articoli" -%}
+{%- else -%}
+  {%- assign home_url = '/en/' -%}
+  {%- assign all_label = "All articles" -%}
+{%- endif -%}
+{%- assign pillar = nil -%}
+{%- if page.pillar -%}
+  {%- assign pillar = site.data.pillars[lang][page.pillar] -%}
+{%- endif -%}
+
+<nav class="flex flex-wrap items-center gap-x-5 gap-y-2 {{ include.class }}" aria-label="{% if lang == 'it' %}Navigazione articolo{% else %}Article navigation{% endif %}">
+  {%- if pillar -%}
+  <a href="{{ pillar.url | relative_url }}" class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:underline">
+    <i class="fas fa-arrow-left text-xs"></i>
+    {{ pillar.title }}
+  </a>
+  {%- endif -%}
+  <a href="{{ home_url | relative_url }}" class="inline-flex items-center gap-2 text-sm font-bold {% if pillar %}text-gray-400 hover:text-brand-blue{% else %}text-gray-500 hover:text-brand-blue{% endif %} transition-colors">
+    {%- unless pillar -%}<i class="fas fa-arrow-left text-xs"></i>{%- endunless -%}
+    {{ all_label }}
+  </a>
+</nav>
