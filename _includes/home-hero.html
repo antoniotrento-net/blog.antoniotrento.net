@@ -102,7 +102,8 @@
           class="px-7 py-4 rounded-full bg-white text-brand-black font-bold text-base hover:bg-brand-blue hover:text-white hover:scale-[1.03] transition-all duration-300 shadow-[0_20px_50px_-12px_rgba(66,133,244,0.55)]">
           {{ cta_read }}
         </a>
-        <a href="#guide"
+        {%- if lang == 'it' -%}{%- assign guides_href = '/it/guide/' -%}{%- else -%}{%- assign guides_href = '/en/guides/' -%}{%- endif -%}
+        <a href="{{ guides_href | relative_url }}"
           class="px-7 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md font-bold text-base hover:border-white/60 hover:bg-white/10 transition-all flex items-center gap-2 group">
           {{ cta_guides }}
           <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>

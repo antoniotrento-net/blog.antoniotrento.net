@@ -26,6 +26,11 @@
         <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
           <li><a href="{{ '/it/' | relative_url }}" class="hover:text-brand-black dark:hover:text-white transition-colors">Italiano</a></li>
           <li><a href="{{ '/en/' | relative_url }}" class="hover:text-brand-black dark:hover:text-white transition-colors">English</a></li>
+          {%- if lang == 'it' -%}
+          <li><a href="{{ '/it/guide/' | relative_url }}" class="hover:text-brand-black dark:hover:text-white transition-colors">Guide</a></li>
+          {%- else -%}
+          <li><a href="{{ '/en/guides/' | relative_url }}" class="hover:text-brand-black dark:hover:text-white transition-colors">Guides</a></li>
+          {%- endif -%}
         </ul>
       </div>
       <div>

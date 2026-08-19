@@ -121,6 +121,9 @@
         @keyframes heroSpin {
             to { transform: rotate(360deg); }
         }
+        .guide-orbit { animation: heroSpin 48s linear infinite; }
+        .guide-orbit-rev { animation: heroSpin 36s linear infinite reverse; }
+        .guide-orbit-slow { animation: heroSpin 64s linear infinite; }
         .hero-aurora {
             background: conic-gradient(from 0deg, #4285F4, #EA4335, #FBBC04, #34A853, #4285F4);
             filter: blur(22px);
@@ -183,7 +186,8 @@
             .hero-blob, .hero-marquee, .hero-shimmer, .hero-scroll-line,
             .animate-float, .animate-float-delayed, .animate-ping,
             .hero-aurora, .hero-wire, .hero-spark, .hero-core, .hero-core-rim,
-            .hero-node-pulse, .hero-float-a, .hero-float-b, .hero-float-c, .hero-phone {
+            .hero-node-pulse, .hero-float-a, .hero-float-b, .hero-float-c, .hero-phone,
+            .guide-orbit, .guide-orbit-rev, .guide-orbit-slow {
                 animation: none !important;
             }
             .hero-packets { display: none; }

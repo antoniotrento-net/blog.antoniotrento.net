@@ -8,7 +8,10 @@ layout: default
   {%- assign sec = site.data.sections | where: "key", page.section | first -%}
   {%- if lang == 'it' -%}{%- assign sname = sec.it.title -%}{%- else -%}{%- assign sname = sec.en.title -%}{%- endif -%}
   <div class="max-w-4xl mx-auto text-center reveal">
-    <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-4">{{ sname | default: 'Guida' }}</p>
+    {%- if lang == 'it' -%}{%- assign guides_index = '/it/guide/' -%}{%- else -%}{%- assign guides_index = '/en/guides/' -%}{%- endif -%}
+    <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-4">
+      <a href="{{ guides_index | relative_url }}" class="hover:underline">{{ sname | default: 'Guida' }}</a>
+    </p>
     <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">{{ page.title }}</h1>
     {% if page.description %}<p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">{{ page.description }}</p>{% endif %}
   </div>

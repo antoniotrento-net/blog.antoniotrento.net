@@ -28,6 +28,9 @@
         {% else %}
         {% assign is_active = false %}
         {% if page.url == item.url %}{% assign is_active = true %}{% endif %}
+        {% if item.url contains '/guide' %}
+          {% if page.layout == 'guides' or page.layout == 'pillar' %}{% assign is_active = true %}{% endif %}
+        {% endif %}
         <a href="{{ item_href }}"
           class="text-sm font-bold uppercase tracking-wide transition-colors relative group {% if is_active %}text-brand-blue{% else %}hover:text-brand-blue{% endif %}">
           {{ item.title }}
