@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/credit-dossier-portal/
 alt_url: /it/blog/portale-dossier-credito/
 title: "Credit dossiers and files traveling by email: the portal that closes deals (instead of chasing attachments)"
-date: 2026-12-29 07:30:00 +0200
+date: 2026-07-15 07:30:00 +0200
 author: "Antonio Trento"
 description: "An attachment is always missing, the file stalls, days pass and the margin shrinks. Here is the portal with checklist, upload and status that gets the file approved — with the right boundary for AI and why the shared Drive is negligence."
 keywords: ["credit dossier portal", "documentary software", "customer attachments", "financing application status", "document upload area"]

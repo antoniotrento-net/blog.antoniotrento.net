@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/dashboards-nobody-uses/
 alt_url: /it/blog/dashboard-che-non-si-usano/
 title: "You have the data. You don't have the questions. Why dashboards don't make you money"
-date: 2027-02-02 07:30:00 +0200
+date: 2026-08-17 07:30:00 +0200
 author: "Antonio Trento"
 description: "You spent on dashboards and nobody opens them? The problem isn't the data, it's the questions. Why self-service BI fails and how to turn numbers into a product people actually use."
 keywords: ["dashboards nobody uses", "company data product", "business questions", "analyst who builds product", "self-service bi fails"]

@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/hiring-a-data-analyst-is-not-enough/
 alt_url: /it/blog/data-analyst-non-basta/
 title: "Hiring a data analyst doesn't fix the sources: why KPIs stay a fight (and you need a pipeline, not one person)"
-date: 2026-10-06 07:30:00 +0200
+date: 2026-03-27 07:30:00 +0200
 author: "Antonio Trento"
 description: "About to hire a data analyst to tidy up the numbers? Here's why one person isn't enough if the sources are dirty, and what you actually need before you open a role."
 keywords: ["hiring a data analyst is not enough", "company data pipeline", "dirty data sources", "misaligned kpis", "sme data team"]

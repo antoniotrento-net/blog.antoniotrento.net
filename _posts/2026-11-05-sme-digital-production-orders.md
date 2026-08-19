@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/sme-digital-production-orders/
 alt_url: /it/blog/ordini-produzione-digitale-pmi/
 title: "Production orders still on paper: the small manufacturer who doesn't know if they're late (until the customer calls)"
-date: 2026-11-05 07:30:00 +0200
+date: 2026-05-21 07:30:00 +0200
 author: "Antonio Trento"
 description: "If the workshop works on paper sheets and the office on an Excel, you don't know if an order is late until the customer calls. Here is digital order tracking for small manufacturing — without a SAP."
 keywords: ["sme digital production orders", "small manufacturing mes", "order tracking", "workshop software", "production delays"]

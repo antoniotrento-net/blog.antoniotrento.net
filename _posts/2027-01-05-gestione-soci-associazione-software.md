@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/gestione-soci-associazione-software/
 alt_url: /en/blog/association-management-software/
 title: "Soci, rinnovi, comunicazioni: l'associazione che vive di Excel e perde quote ogni anno"
-date: 2027-01-05 07:30:00 +0200
+date: 2026-08-06 07:30:00 +0200
 author: "Antonio Trento"
 description: "Il tesoriere tiene i soci su un foglio, i rinnovi si dimenticano, le quote si perdono. Ecco come si gestiscono soci, rinnovi e comunicazioni senza spam — e l'onestà su quando ti basta un tool da 10€ al mese e quando serve davvero il su misura."
 keywords: ["gestione soci associazione software", "rinnovo quote associative", "anagrafica soci", "comunicazioni soci", "software asd no profit"]

@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/kpi-sbagliati-azienda/
 alt_url: /en/blog/wrong-kpis/
 title: "Stai ottimizzando la metrica sbagliata: il KPI che ti fa perdere soldi (mentre la dashboard è 'verde')"
-date: 2026-11-26 07:30:00 +0200
+date: 2026-06-23 07:30:00 +0200
 author: "Antonio Trento"
 description: "La dashboard è tutta verde ma il conto in banca non cresce? Probabilmente stai ottimizzando KPI sbagliati. Ecco le vanity metrics che ingannano e come scegliere i pochi numeri che contano davvero."
 keywords: ["kpi sbagliati azienda", "vanity metrics", "dashboard fuorviante", "indicatori titolare", "ottimizzare metrica sbagliata"]

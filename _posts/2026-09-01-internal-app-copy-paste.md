@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/internal-app-copy-paste/
 alt_url: /it/blog/app-interna-aziendale-copia-incolla/
 title: "200 copy-pastes a day: the real cost of 'Maria handles it' (and the internal app she'll hate if you build it badly)"
-date: 2026-09-01 07:30:00 +0200
+date: 2026-02-11 07:30:00 +0200
 author: "Antonio Trento"
 description: "'Maria handles it' — but what does daily copy-paste between Excel, email and the ERP really cost? And why a badly built internal app makes things worse. The euro math and how to do it right."
 keywords: ["internal business app copy paste", "custom operations software", "data entry automation", "admin hours cost", "internal tool ux"]

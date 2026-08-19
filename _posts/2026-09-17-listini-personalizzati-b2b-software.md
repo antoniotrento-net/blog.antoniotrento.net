@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/listini-personalizzati-b2b-software/
 alt_url: /en/blog/custom-b2b-price-lists-software/
 title: "8.000 SKU e un prezzo diverso per ogni cliente: il listino PDF è una perdita di margine"
-date: 2026-09-17 07:30:00 +0200
+date: 2026-03-05 07:30:00 +0200
 author: "Antonio Trento"
 description: "Sconti a voce che non tornano in fattura, PDF che invecchiano, agenti che sbagliano il prezzo davanti al cliente. Con migliaia di codici e un listino per cliente, il PDF ti mangia il margine. Ecco il motore di prezzo che lo ferma."
 keywords: ["listini personalizzati b2b software", "prezzi per cliente gestionale", "catalogo 8000 sku", "configuratore prezzi", "app listini agenti"]

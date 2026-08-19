@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/owner-dashboard/
 alt_url: /it/blog/cruscotto-aziendale-titolare/
 title: "You're deciding by gut because the numbers live in 6 tools: what it costs (and how to get ONE dashboard you actually open)"
-date: 2026-08-18 07:30:00 +0200
+date: 2026-01-20 07:30:00 +0200
 author: "Antonio Trento"
 description: "Your company's numbers live in six different tools and nobody can answer in twenty seconds. What that really costs, and how to get a business dashboard the owner opens every morning."
 keywords: ["business dashboard for owners", "sme sales dashboard", "data in too many tools", "small business intelligence", "yesterday's numbers"]

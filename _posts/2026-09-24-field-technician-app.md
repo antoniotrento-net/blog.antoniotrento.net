@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/field-technician-app/
 alt_url: /it/blog/app-tecnici-sul-campo/
 title: "Your technician in the field loses two jobs a day: the phone app you (haven't) given him"
-date: 2026-09-24 07:30:00 +0200
+date: 2026-03-16 07:30:00 +0200
 author: "Antonio Trento"
 description: "If your technicians work from phone calls, PDFs and paper, they lose jobs every day and the data vanishes. What a field service app must actually do — in four taps — and ROI in extra jobs, not 'digital transformation'."
 keywords: ["field technician app", "field service software", "service job mobile app", "mobile work orders", "paperless technician"]

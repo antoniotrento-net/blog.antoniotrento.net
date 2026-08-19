@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/custom-client-area/
 alt_url: /it/blog/area-riservata-clienti-su-misura/
 title: "You already have the customers: you're missing the customer area (courses, files, renewals) and you're leaving money to Teachable and company"
-date: 2026-11-10 07:30:00 +0200
+date: 2026-06-01 07:30:00 +0200
 author: "Antonio Trento"
 description: "You sell courses, content or subscriptions on an American platform that takes a cut and holds your customers and data hostage. Here is when a custom customer area makes sense, the margin comparison and how to migrate without losing accounts."
 keywords: ["custom customer area", "website membership", "corporate academy", "sell courses without US saas", "existing customer portal"]

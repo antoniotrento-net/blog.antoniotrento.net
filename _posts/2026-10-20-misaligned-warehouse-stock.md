@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/misaligned-warehouse-stock/
 alt_url: /it/blog/giacenze-magazzino-disallineate/
 title: "Three warehouses, one e-commerce, the reps: three 'truths' about remaining stock and orders you can't fulfill"
-date: 2026-10-20 07:30:00 +0200
+date: 2026-04-18 07:30:00 +0200
 author: "Antonio Trento"
 description: "If the site, the ERP and the reps state three different stock levels, you sell what you don't have and block what is there. Here's how to build a single truth on stock, with honest availability in every channel."
 keywords: ["misaligned warehouse stock", "multichannel ecommerce stock", "wrong inventory levels", "sme warehouse software", "product availability"]

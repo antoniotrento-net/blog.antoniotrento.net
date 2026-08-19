@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/software-locale-ristorazione-magazzino/
 alt_url: /en/blog/local-software-restaurant-inventory/
 title: "Comande, magazzino e fatture: il locale che perde margine tra sala e amministrazione"
-date: 2026-12-31 07:30:00 +0200
+date: 2026-07-26 07:30:00 +0200
 author: "Antonio Trento"
 description: "Nel tuo locale lo scontrino c'è ma il food cost no: tra sala, cucina, magazzino e commercialista il margine si perde. Ecco il filo ricetta-scarico-fattura che ti dice quale piatto perde — senza rifare la cassa."
 keywords: ["software locale ristorazione magazzino", "costo del venduto ristorante", "giacenze cucina", "integrazione cassa fatture", "food cost"]

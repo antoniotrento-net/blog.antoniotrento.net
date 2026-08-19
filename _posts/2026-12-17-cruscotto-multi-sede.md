@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/cruscotto-multi-sede/
 alt_url: /en/blog/multi-location-dashboard/
 title: "Multi-sede: 3 filiali, 3 Excel, un titolare che non sa quale punto vende. Il cruscotto di gruppo che manca"
-date: 2026-12-17 07:30:00 +0200
+date: 2026-07-04 07:30:00 +0200
 author: "Antonio Trento"
 description: "Con più filiali e ogni sede col suo Excel, confrontare i punti vendita è impossibile e nessuno vede il quadro di gruppo. Ecco come si costruisce un cruscotto multi-sede con consolidato, definizioni comuni e permessi per sede."
 keywords: ["cruscotto multi sede", "filiali dati unificati", "report catena negozi", "confronto punti vendita", "direzione rete"]

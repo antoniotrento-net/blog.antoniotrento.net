@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/multi-location-dashboard/
 alt_url: /it/blog/cruscotto-multi-sede/
 title: "Multi-location: 3 branches, 3 spreadsheets, an owner who doesn't know which site sells. The group dashboard you're missing"
-date: 2026-12-17 07:30:00 +0200
+date: 2026-07-04 07:30:00 +0200
 author: "Antonio Trento"
 description: "With several branches and each site on its own spreadsheet, comparing locations is impossible and nobody sees the group picture. How to build a multi-location dashboard with a real consolidation, shared definitions and per-site permissions."
 keywords: ["multi-location dashboard", "unified branch data", "retail chain reporting", "compare store performance", "network management"]

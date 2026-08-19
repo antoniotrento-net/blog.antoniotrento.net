@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/b2b-customer-portal/
 alt_url: /it/blog/portale-b2b-clienti/
 title: "The customer asks for a B2B portal and you send them an Excel: how much revenue you are leaving on the table"
-date: 2026-09-03 07:30:00 +0200
+date: 2026-02-22 07:30:00 +0200
 author: "Antonio Trento"
 description: "Your best customer wants to order on their own, at night, with their prices. You send them an Excel «don't forward it». Here is how much it costs you in revenue and how to build a B2B portal that takes orders while you sleep."
 keywords: ["b2b customer portal", "reseller restricted area", "custom price lists", "custom b2b ecommerce", "order self service"]

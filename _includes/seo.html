@@ -1,9 +1,20 @@
-{%- comment -%} SEO + Open Graph + hreflang multilingua {%- endcomment -%}
+{%- comment -%} SEO + Open Graph + hreflang + JSON-LD. hreflang solo se il twin esiste. {%- endcomment -%}
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- assign seo_noindex = false -%}
+{%- if page.layout == 'pillar' -%}
+  {%- unless page.image -%}{%- assign seo_noindex = true -%}{%- endunless -%}
+{%- endif -%}
+{%- if page.layout == 'post' and page.date > site.time -%}
+  {%- assign seo_noindex = true -%}
+{%- endif -%}
 <meta name="description" content="{{ page.description | default: site.description }}">
 {%- if page.keywords %}
 <meta name="keywords" content="{{ page.keywords | join: ',' }}">
 {%- endif %}
 <meta name="author" content="{{ page.author | default: site.author.name }}">
+{%- if seo_noindex %}
+<meta name="robots" content="noindex, follow">
+{%- endif %}
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
 <meta property="og:site_name" content="{{ site.title }}">
@@ -12,25 +23,119 @@
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="{{ page.image | default: site.og_image | absolute_url }}">
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-<meta property="og:locale" content="{% if page.lang == 'en' %}en_US{% else %}it_IT{% endif %}">
+<meta property="og:locale" content="{% if lang == 'en' %}en_US{% else %}it_IT{% endif %}">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.title | default: site.title }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description }}">
 <meta name="twitter:image" content="{{ page.image | default: site.og_image | absolute_url }}">
 
-{%- comment -%} hreflang: link alla versione nell'altra lingua {%- endcomment -%}
-{%- if page.lang %}
-  {%- if page.lang == 'it' -%}
-    {%- assign this_url = page.url -%}
-    {%- assign alt_url = page.alt_url | default: page.url | replace: '/it/', '/en/' -%}
-    {%- assign alt_lang = 'en' -%}
-  {%- else -%}
-    {%- assign this_url = page.url -%}
-    {%- assign alt_url = page.alt_url | default: page.url | replace: '/en/', '/it/' -%}
-    {%- assign alt_lang = 'it' -%}
+{%- if page.lang -%}
+  {%- assign this_url = page.url -%}
+  {%- assign alt_url = page.alt_url -%}
+  {%- assign alt_lang = 'en' -%}
+  {%- if lang == 'en' -%}{%- assign alt_lang = 'it' -%}{%- endif -%}
+  {%- assign alt_hit = nil -%}
+  {%- if alt_url -%}
+    {%- assign alt_hit = site.posts | where: "url", alt_url | first -%}
+    {%- unless alt_hit -%}{%- assign alt_hit = site.pages | where: "url", alt_url | first -%}{%- endunless -%}
   {%- endif -%}
-  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ this_url | absolute_url }}">
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ this_url | absolute_url }}">
+  {%- if alt_hit -%}
   <link rel="alternate" hreflang="{{ alt_lang }}" href="{{ alt_url | absolute_url }}">
+  <meta property="og:locale:alternate" content="{% if alt_lang == 'en' %}en_US{% else %}it_IT{% endif %}">
+  {%- endif -%}
   <link rel="alternate" hreflang="x-default" href="{{ '/it/' | absolute_url }}">
+{%- endif %}
+
+{%- if page.layout == 'post' -%}
+  {%- assign pillar = site.data.pillars[lang][page.pillar] -%}
+  {%- if lang == 'it' -%}{%- assign home_crumb = '/it/' -%}{%- assign home_name = 'Blog' -%}
+  {%- else -%}{%- assign home_crumb = '/en/' -%}{%- assign home_name = 'Blog' -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | default: "" | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+      "inLanguage": {% if lang == 'en' %}"en-US"{% else %}"it-IT"{% endif %},
+      "author": {
+        "@type": "Person",
+        "name": {{ page.author | default: site.author.name | jsonify }},
+        "url": "https://antoniotrento.net/biografia/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Antonio Trento",
+        "url": "https://antoniotrento.net/"
+      },
+      "image": {{ page.image | default: site.og_image | absolute_url | jsonify }},
+      "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ home_name | jsonify }},
+          "item": {{ home_crumb | absolute_url | jsonify }}
+        }{% if pillar %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ pillar.title | jsonify }},
+          "item": {{ pillar.url | absolute_url | jsonify }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ page.title | jsonify }},
+          "item": {{ page.url | absolute_url | jsonify }}
+        }{% else %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.title | jsonify }},
+          "item": {{ page.url | absolute_url | jsonify }}
+        }{% endif %}
+      ]
+    }
+  ]
+}
+</script>
+{%- elsif page.layout == 'pillar' and page.image -%}
+  {%- if lang == 'it' -%}{%- assign guides_index = '/it/guide/' -%}{%- assign guides_name = 'Guide' -%}
+  {%- else -%}{%- assign guides_index = '/en/guides/' -%}{%- assign guides_name = 'Guides' -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | default: "" | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "inLanguage": {% if lang == 'en' %}"en-US"{% else %}"it-IT"{% endif %},
+  "isPartOf": {{ guides_index | absolute_url | jsonify }}
+}
+</script>
+{%- elsif page.layout == 'home' or page.layout == 'guides' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | jsonify }},
+  "url": {% if lang == 'en' %}{{ '/en/' | absolute_url | jsonify }}{% else %}{{ '/it/' | absolute_url | jsonify }}{% endif %},
+  "inLanguage": {% if lang == 'en' %}"en-US"{% else %}"it-IT"{% endif %},
+  "publisher": {
+    "@type": "Person",
+    "name": "Antonio Trento",
+    "url": "https://antoniotrento.net/"
+  }
+}
+</script>
 {%- endif %}

@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/custom-b2b-price-lists-software/
 alt_url: /it/blog/listini-personalizzati-b2b-software/
 title: "8,000 SKUs and a different price for each customer: the PDF price list is a margin loss"
-date: 2026-09-17 07:30:00 +0200
+date: 2026-03-05 07:30:00 +0200
 author: "Antonio Trento"
 description: "Spoken discounts that don't match the invoice, PDFs that age, agents who get the price wrong in front of the customer. With thousands of codes and a price list per customer, the PDF eats your margin. Here is the pricing engine that stops it."
 keywords: ["custom b2b price lists software", "customer prices erp", "8000 sku catalog", "price configurator", "agent price list app"]

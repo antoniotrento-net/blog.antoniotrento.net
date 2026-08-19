@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/late-sales-report/
 alt_url: /it/blog/report-vendite-in-ritardo/
 title: "The report arrives on the 20th: how to get yesterday's numbers without hiring a data team"
-date: 2026-08-20 07:30:00 +0200
+date: 2026-01-31 07:30:00 +0200
 author: "Antonio Trento"
 description: "If the sales report is always late, you're deciding on the past. Why it's not a people problem, and how to get yesterday's numbers without hiring a data office."
 keywords: ["late sales report", "automated business reporting", "external data analyst", "monthly sme report", "daily kpis"]

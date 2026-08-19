@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/area-riservata-clienti-su-misura/
 alt_url: /en/blog/custom-client-area/
 title: "Hai già i clienti: ti manca l'area riservata (corsi, file, rinnovi) e stai lasciando soldi a Teachable e compagnia"
-date: 2026-11-10 07:30:00 +0200
+date: 2026-06-01 07:30:00 +0200
 author: "Antonio Trento"
 description: "Vendi corsi, contenuti o abbonamenti su una piattaforma americana che si prende una fetta e ti tiene in ostaggio clienti e dati. Ecco quando conviene un'area riservata su misura, il confronto sul margine e come si migra senza perdere gli account."
 keywords: ["area riservata clienti su misura", "membership sito", "accademia aziendale", "vendere corsi senza saas usa", "portale clienti esistente"]

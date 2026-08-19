@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/quanto-abbiamo-venduto-ieri/
 alt_url: /en/blog/how-much-did-we-sell-yesterday/
 title: "Il titolare chiede «quanto abbiamo venduto ieri» e in 10 minuti nessuno risponde: questo è il tuo vero software mancante"
-date: 2026-10-15 07:30:00 +0200
+date: 2026-04-07 07:30:00 +0200
 author: "Antonio Trento"
 description: "«Quanto abbiamo venduto ieri?» dovrebbe essere la domanda più facile dell'azienda, e invece nessuno risponde in fretta. Ecco perché, cosa entra davvero nella definizione di venduto, e la schermata che risponde in venti secondi."
 keywords: ["quanto abbiamo venduto ieri", "vendite giornaliere pmi", "cruscotto titolare", "dati in tempo reale piccola impresa", "report vendite quotidiano"]

@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/app-ferie-turni-pmi/
 alt_url: /en/blog/sme-holidays-shifts-app/
 title: "Ferie, turni e presenze ancora su WhatsApp: l'app HR minima che toglie il caos (senza un software da multinazionale)"
-date: 2026-10-22 07:30:00 +0200
+date: 2026-04-29 07:30:00 +0200
 author: "Antonio Trento"
 description: "Ferie richieste su WhatsApp, turni su un foglio, presenze a memoria: il caos costa straordinari e liti. Ecco l'app HR minima che serve davvero a una PMI — e cosa NON ti serve."
 keywords: ["app ferie turni pmi", "gestione presenze piccola impresa", "sostituzioni turni", "software hr semplice", "richiesta ferie app"]

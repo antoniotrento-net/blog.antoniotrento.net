@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/association-management-software/
 alt_url: /it/blog/gestione-soci-associazione-software/
 title: "Members, renewals, communications: the association that lives on Excel and loses dues every year"
-date: 2027-01-05 07:30:00 +0200
+date: 2026-08-06 07:30:00 +0200
 author: "Antonio Trento"
 description: "The treasurer keeps members on a spreadsheet, renewals get forgotten, dues disappear. How to run members, renewals and communications without spam — and the honest line on when a €10/month tool is enough and when custom work is actually needed."
 keywords: ["association management software", "membership renewal", "member registry", "member communications", "sports club nonprofit software"]

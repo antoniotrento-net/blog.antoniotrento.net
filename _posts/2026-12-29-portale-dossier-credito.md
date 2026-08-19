@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/portale-dossier-credito/
 alt_url: /en/blog/credit-dossier-portal/
 title: "Dossier di credito e pratiche che viaggiano per email: il portale che fa chiudere (invece di inseguire allegati)"
-date: 2026-12-29 07:30:00 +0200
+date: 2026-07-15 07:30:00 +0200
 author: "Antonio Trento"
 description: "Manca sempre un allegato, la pratica si ferma, i giorni passano e il margine si assottiglia. Ecco il portale con checklist, upload e stato che fa chiudere l'istruttoria — con il confine giusto per l'AI e perché il Drive condiviso è negligenza."
 keywords: ["portale dossier credito", "istruttoria documentale software", "allegati clienti", "pratica finanziamento stato", "area upload documenti"]

@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/cruscotto-aziendale-titolare/
 alt_url: /en/blog/owner-dashboard/
 title: "Stai decidendo a naso perché i numeri sono in 6 software: quanto ti costa (e come avere UN cruscotto che apri davvero)"
-date: 2026-08-18 07:30:00 +0200
+date: 2026-01-20 07:30:00 +0200
 author: "Antonio Trento"
 description: "I numeri della tua azienda vivono in sei software diversi e nessuno risponde in venti secondi. Ecco quanto ti costa davvero e come avere un cruscotto aziendale che il titolare apre ogni mattina."
 keywords: ["cruscotto aziendale titolare", "dashboard vendite pmi", "dati in tanti software", "business intelligence piccola impresa", "numeri del giorno prima"]

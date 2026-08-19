@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/customer-care-ticket-ripetuti/
 alt_url: /en/blog/repeated-customer-care-tickets/
 title: "40 ticket uguali al giorno: il customer care che non ha una knowledge (e l'AI che copia le risposte sbagliate)"
-date: 2026-10-27 07:30:00 +0200
+date: 2026-05-10 07:30:00 +0200
 author: "Antonio Trento"
 description: "Se il tuo customer care risponde 40 volte alle stesse domande copiando risposte vecchie, il problema non è la mancanza di AI: è la mancanza di una knowledge. Ecco come si costruisce, e perché l'AI senza citazione è pericolosa."
 keywords: ["customer care ticket ripetuti", "knowledge base assistenza", "ai helpdesk rischi", "software ticket pmi", "risposte standard clienti"]

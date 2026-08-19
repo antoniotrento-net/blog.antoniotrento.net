@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/how-much-did-we-sell-yesterday/
 alt_url: /it/blog/quanto-abbiamo-venduto-ieri/
 title: "The owner asks 'how much did we sell yesterday' and nobody answers in 10 minutes: this is the real software you're missing"
-date: 2026-10-15 07:30:00 +0200
+date: 2026-04-07 07:30:00 +0200
 author: "Antonio Trento"
 description: "'How much did we sell yesterday?' should be the easiest question in the company — and nobody answers quickly. Why, what actually counts as sold, and the screen that answers in twenty seconds."
 keywords: ["how much did we sell yesterday", "daily sme sales", "owner dashboard", "real-time data small business", "daily sales report"]

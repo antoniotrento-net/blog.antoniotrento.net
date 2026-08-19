@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- assign lang = page.lang | default: site.default_lang -%}
-{%- assign posts = site.posts | where: "lang", lang -%}
+{%- assign posts = site.posts | where: "lang", lang | where_exp: "p", "p.date <= site.time" -%}
 
 {% include home-hero.html lang=lang posts=posts %}
 

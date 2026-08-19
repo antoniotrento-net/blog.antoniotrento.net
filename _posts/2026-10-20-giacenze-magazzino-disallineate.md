@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/giacenze-magazzino-disallineate/
 alt_url: /en/blog/misaligned-warehouse-stock/
 title: "Tre magazzini, un e-commerce, i rappresentanti: tre «verità» sul residuo e ordini che non puoi evadere"
-date: 2026-10-20 07:30:00 +0200
+date: 2026-04-18 07:30:00 +0200
 author: "Antonio Trento"
 description: "Se il sito, il gestionale e i rappresentanti dicono tre giacenze diverse, vendi quello che non hai e blocchi quello che c'è. Ecco come si costruisce una verità unica sullo stock, con la disponibilità onesta in ogni canale."
 keywords: ["giacenze magazzino disallineate", "multimagazzino ecommerce", "scorte errate", "software magazzino pmi", "disponibilità prodotti"]

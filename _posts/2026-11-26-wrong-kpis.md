@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/wrong-kpis/
 alt_url: /it/blog/kpi-sbagliati-azienda/
 title: "You're optimising the wrong metric: the KPI that loses you money (while the dashboard is 'green')"
-date: 2026-11-26 07:30:00 +0200
+date: 2026-06-23 07:30:00 +0200
 author: "Antonio Trento"
 description: "Dashboard all green but the bank account isn't growing? You're probably chasing the wrong KPIs. The vanity metrics that fool you, and how to pick the few numbers that actually matter."
 keywords: ["wrong kpis", "vanity metrics", "misleading dashboard", "owner metrics", "optimising the wrong metric"]

@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/sme-holidays-shifts-app/
 alt_url: /it/blog/app-ferie-turni-pmi/
 title: "Holidays, shifts and attendance still on WhatsApp: the minimum HR app that removes the chaos (without enterprise software)"
-date: 2026-10-22 07:30:00 +0200
+date: 2026-04-29 07:30:00 +0200
 author: "Antonio Trento"
 description: "Holidays requested on WhatsApp, shifts on a spreadsheet, attendance by memory: the chaos costs overtime and arguments. Here's the minimum HR app an SME really needs — and what you DO NOT need."
 keywords: ["sme holidays shifts app", "small business attendance management", "shift replacements", "simple hr software", "leave request app"]

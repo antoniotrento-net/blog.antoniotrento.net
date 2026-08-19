@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/pubblicare-annunci-immobiliari-automatico/
 alt_url: /en/blog/auto-publish-real-estate-listings/
 title: "Schede immobile su 5 portali a mano: l'agenzia immobiliare che lavora per gli annunci, non per le visite"
-date: 2026-11-19 07:30:00 +0200
+date: 2026-06-12 07:30:00 +0200
 author: "Antonio Trento"
 description: "I tuoi agenti passano le giornate a ricopiare lo stesso immobile su cinque portali, invece di fare visite e chiudere. Ecco la scheda unica che pubblica in automatico, il CRM delle visite che conta davvero, e quando un SaaS verticale ti basta."
 keywords: ["pubblicare annunci immobiliari automatico", "software agenzia immobiliare", "multilisting", "scheda immobile unica", "crm visite immobiliari"]

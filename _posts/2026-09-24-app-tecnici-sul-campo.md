@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/app-tecnici-sul-campo/
 alt_url: /en/blog/field-technician-app/
 title: "Il tecnico in giro perde due interventi al giorno: l'app sul telefono che (non) gli hai dato"
-date: 2026-09-24 07:30:00 +0200
+date: 2026-03-16 07:30:00 +0200
 author: "Antonio Trento"
 description: "Se i tuoi tecnici lavorano con telefonate, PDF e fogli, perdono interventi ogni giorno e i dati spariscono. Ecco cosa deve fare davvero un'app per il field service — in quattro tap — e il ROI in interventi, non in 'digitalizzazione'."
 keywords: ["app tecnici sul campo", "field service software", "interventi assistenza app", "ordini di lavoro mobile", "tecnico senza carta"]

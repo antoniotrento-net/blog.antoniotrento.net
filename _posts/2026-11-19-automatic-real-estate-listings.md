@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/auto-publish-real-estate-listings/
 alt_url: /it/blog/pubblicare-annunci-immobiliari-automatico/
 title: "Property cards on 5 portals by hand: the real estate agency that works for the listings, not for the visits"
-date: 2026-11-19 07:30:00 +0200
+date: 2026-06-12 07:30:00 +0200
 author: "Antonio Trento"
 description: "Your agents spend their days copying the same property onto five portals, instead of doing visits and closing. Here is the single card that publishes automatically, the visit CRM that really counts, and when a vertical SaaS is enough for you."
 keywords: ["auto publish real estate listings", "real estate agency software", "multilisting", "single property card", "real estate visit crm"]

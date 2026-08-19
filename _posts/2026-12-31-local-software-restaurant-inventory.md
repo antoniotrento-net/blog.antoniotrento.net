@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/local-software-restaurant-inventory/
 alt_url: /it/blog/software-locale-ristorazione-magazzino/
 title: "Orders, inventory and invoices: the venue losing margin between dining room and administration"
-date: 2026-12-31 07:30:00 +0200
+date: 2026-07-26 07:30:00 +0200
 author: "Antonio Trento"
 description: "In your venue the receipt is there but the food cost isn't: between dining room, kitchen, inventory and accountant the margin is lost. Here is the recipe-deduction-invoice thread that tells you which dish loses — without replacing the till."
 keywords: ["local restaurant inventory software", "restaurant cost of goods sold", "kitchen stock", "till invoice integration", "food cost"]

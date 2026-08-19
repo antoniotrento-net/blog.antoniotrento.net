@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/portale-b2b-clienti/
 alt_url: /en/blog/b2b-customer-portal/
 title: "Il cliente chiede un portale B2B e tu gli mandi un Excel: quanto fatturato stai lasciando sul tavolo"
-date: 2026-09-03 07:30:00 +0200
+date: 2026-02-22 07:30:00 +0200
 author: "Antonio Trento"
 description: "Il tuo miglior cliente vuole ordinare da solo, di sera, coi suoi prezzi. Tu gli mandi un Excel «non girarlo». Ecco quanto ti costa in fatturato e come si costruisce un portale B2B che fa ordini mentre dormi."
 keywords: ["portale b2b clienti", "area riservata rivenditori", "listini per cliente", "ecommerce b2b su misura", "self service ordini"]
