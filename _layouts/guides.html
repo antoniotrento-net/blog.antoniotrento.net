@@ -54,7 +54,7 @@ layout: default
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#07080a]"></div>
   </div>
 
-  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-32 pb-16 lg:pt-28 lg:pb-20 grid lg:grid-cols-[1.28fr_1fr] gap-12 lg:gap-10 items-center flex-1">
+  <div class="relative z-10 w-full max-w-[90rem] mx-auto px-6 pt-32 pb-16 lg:pt-28 lg:pb-20 grid lg:grid-cols-[minmax(0,1.85fr)_minmax(15rem,0.55fr)] gap-10 lg:gap-6 items-center flex-1">
     <div class="relative z-20 min-w-0 reveal active">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-md text-[11px] font-bold uppercase tracking-[0.22em] text-blue-300 mb-8">
         <span class="relative flex h-2 w-2">
@@ -66,15 +66,15 @@ layout: default
 
       <p class="text-sm font-bold uppercase tracking-[0.28em] text-white/50 mb-5">{{ kicker }}</p>
 
-      <h1 class="font-black tracking-[-0.05em] leading-[0.92] mb-7">
-        <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-[4.55rem] xl:text-[5.15rem] text-white">{{ h1 }}</span>
+      <h1 class="font-black tracking-[-0.045em] leading-[0.95] mb-7">
+        <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-[clamp(2.6rem,3.6vw+0.55rem,4.85rem)] text-white lg:whitespace-nowrap">{{ h1 }}</span>
         {%- if h2 -%}
-        <span class="block mt-2 text-5xl sm:text-6xl md:text-7xl lg:text-[4.55rem] xl:text-[5.15rem] text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-[#8ab4f8] to-brand-yellow hero-shimmer">{{ h2 }}</span>
+        <span class="block mt-2 text-5xl sm:text-6xl md:text-7xl lg:text-[clamp(2.6rem,3.6vw+0.55rem,4.85rem)] text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-[#8ab4f8] to-brand-yellow hero-shimmer lg:whitespace-nowrap">{{ h2 }}</span>
         {%- endif -%}
       </h1>
 
       {% if page.description %}
-      <p class="text-lg md:text-xl text-white/65 max-w-xl lg:max-w-2xl leading-relaxed font-light mb-10 lg:mb-7">{{ page.description }}</p>
+      <p class="text-lg md:text-xl text-white/65 max-w-xl lg:max-w-3xl leading-relaxed font-light mb-10 lg:mb-7">{{ page.description }}</p>
       {% endif %}
 
       <div class="flex flex-wrap gap-3 mb-10">
@@ -84,6 +84,7 @@ layout: default
         </a>
       </div>
 
+      {%- assign n_sections = site.data.sections.size -%}
       <div class="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
         <div>
           <div class="text-2xl font-black tabular-nums">{{ stat_live }}</div>
@@ -96,25 +97,25 @@ layout: default
         </div>
         <div class="w-px h-10 bg-white/15 hidden sm:block"></div>
         <div>
-          <div class="text-2xl font-black">3</div>
+          <div class="text-2xl font-black tabular-nums">{{ n_sections }}</div>
           <div class="text-white/40 text-xs uppercase tracking-widest mt-0.5">{% if lang == 'it' %}sezioni{% else %}sections{% endif %}</div>
         </div>
       </div>
     </div>
 
-    <!-- Decorative constellation: 3 rings = 3 editorial sections. Labels stay still. -->
-    <div class="relative hidden md:flex flex-col items-center justify-center min-h-[420px] lg:min-h-[500px] reveal delay-200 select-none" aria-hidden="true">
-      <div class="relative w-full max-w-[22rem] mx-auto aspect-square">
+    <!-- Orbits are decorative. The number and legend count real live/stub pillars. -->
+    <div class="relative hidden lg:flex flex-col items-stretch justify-center w-full max-w-[17rem] ml-auto reveal delay-200 select-none" aria-hidden="true">
+      <div class="relative w-[15.25rem] mx-auto aspect-square">
         <div class="absolute inset-[8%] rounded-full hero-aurora opacity-40 blur-2xl"></div>
 
         <div class="absolute inset-0 rounded-full border border-white/15 guide-orbit">
-          <span class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-brand-yellow shadow-[0_0_18px_#FBBC04]"></span>
+          <span class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-brand-yellow shadow-[0_0_18px_#FBBC04]"></span>
         </div>
         <div class="absolute inset-[14%] rounded-full border border-dashed border-white/12 guide-orbit-rev">
-          <span class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-brand-red shadow-[0_0_16px_#EA4335]"></span>
+          <span class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-red shadow-[0_0_16px_#EA4335]"></span>
         </div>
         <div class="absolute inset-[28%] rounded-full border border-white/15 guide-orbit-slow">
-          <span class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-brand-blue shadow-[0_0_16px_#4285F4]"></span>
+          <span class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-blue shadow-[0_0_16px_#4285F4]"></span>
         </div>
         <div class="absolute inset-[42%] rounded-full bg-white/5 border border-white/10 backdrop-blur-md flex flex-col items-center justify-center text-center px-3">
           <span class="text-4xl font-black tabular-nums leading-none">{{ n_guides }}</span>
@@ -122,14 +123,27 @@ layout: default
         </div>
       </div>
 
-      <ul class="mt-8 space-y-2 text-sm text-white/70">
+      <ul class="mt-6 grid grid-cols-2 gap-x-3 gap-y-3 text-[11px] leading-snug text-white/70">
+        {%- assign section_dots = "bg-brand-blue,bg-brand-red,bg-brand-yellow,bg-brand-green" | split: "," -%}
         {%- for section in site.data.sections -%}
           {%- if lang == 'it' -%}{%- assign sinfo = section.it -%}{%- else -%}{%- assign sinfo = section.en -%}{%- endif -%}
-          <li class="flex items-center gap-2.5">
-            {%- if forloop.index == 1 -%}<span class="w-2 h-2 rounded-full bg-brand-blue shrink-0"></span>
-            {%- elsif forloop.index == 2 -%}<span class="w-2 h-2 rounded-full bg-brand-red shrink-0"></span>
-            {%- else -%}<span class="w-2 h-2 rounded-full bg-brand-yellow shrink-0"></span>{%- endif -%}
-            {{ sinfo.title }}
+          {%- assign n_sec_live = 0 -%}
+          {%- assign n_sec_all = 0 -%}
+          {%- for pair in site.data.pillars[lang] -%}
+            {%- assign pmeta = pair[1] -%}
+            {%- if pmeta.section == section.key -%}
+              {%- assign n_sec_all = n_sec_all | plus: 1 -%}
+              {%- assign pill = pillar_pages | where: "pillar_key", pair[0] | first -%}
+              {%- if pill.image -%}{%- assign n_sec_live = n_sec_live | plus: 1 -%}{%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- assign dot_i = forloop.index0 | modulo: 4 -%}
+          <li class="flex items-start gap-1.5 min-w-0">
+            <span class="w-1.5 h-1.5 rounded-full mt-[0.3rem] shrink-0 {{ section_dots[dot_i] }}"></span>
+            <span class="min-w-0">
+              <span class="block">{{ sinfo.title }}</span>
+              <span class="tabular-nums text-white/40">{{ n_sec_live }}/{{ n_sec_all }}</span>
+            </span>
           </li>
         {%- endfor -%}
       </ul>
