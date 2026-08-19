@@ -1,7 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/software-locale-ristorazione-magazzino/
-alt_url: /en/
+alt_url: /en/blog/local-software-restaurant-inventory/
 title: "Comande, magazzino e fatture: il locale che perde margine tra sala e amministrazione"
 date: 2026-12-31 07:30:00 +0200
 author: "Antonio Trento"

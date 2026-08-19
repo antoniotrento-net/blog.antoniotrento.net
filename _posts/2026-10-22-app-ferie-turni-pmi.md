@@ -1,7 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/app-ferie-turni-pmi/
-alt_url: /en/
+alt_url: /en/blog/sme-holidays-shifts-app/
 title: "Ferie, turni e presenze ancora su WhatsApp: l'app HR minima che toglie il caos (senza un software da multinazionale)"
 date: 2026-10-22 07:30:00 +0200
 author: "Antonio Trento"

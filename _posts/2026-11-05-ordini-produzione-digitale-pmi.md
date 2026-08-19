@@ -1,7 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/ordini-produzione-digitale-pmi/
-alt_url: /en/
+alt_url: /en/blog/sme-digital-production-orders/
 title: "Ordini di produzione ancora su carta: la piccola manifattura che non sa se è in ritardo (finché il cliente chiama)"
 date: 2026-11-05 07:30:00 +0200
 author: "Antonio Trento"

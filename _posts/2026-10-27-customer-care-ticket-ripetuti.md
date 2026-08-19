@@ -1,7 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/customer-care-ticket-ripetuti/
-alt_url: /en/
+alt_url: /en/blog/repeated-customer-care-tickets/
 title: "40 ticket uguali al giorno: il customer care che non ha una knowledge (e l'AI che copia le risposte sbagliate)"
 date: 2026-10-27 07:30:00 +0200
 author: "Antonio Trento"

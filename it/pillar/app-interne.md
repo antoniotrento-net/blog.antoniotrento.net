@@ -24,11 +24,11 @@ Ogni azienda arriva a questo tema da un dolore operativo diverso. I più comuni:
 
 - **«200 copia-incolla al giorno, tanto lo fa Maria»** — il costo vero delle ore amministrative sprecate, e l'app interna che Maria userà *se* è fatta bene. È il pezzo che apre la guida: [il costo del «tanto lo fa Maria»]({{ '/it/blog/app-interna-aziendale-copia-incolla/' | relative_url }}).
 - **«Il tecnico in strada perde due interventi al giorno»** — l'app sul telefono che fa in quattro tap ciò che oggi si perde tra telefonate e PDF: [l'app per i tecnici sul campo]({{ '/it/blog/app-tecnici-sul-campo/' | relative_url }}).
-- **«Tre magazzini, un e-commerce, tre verità sul residuo»** — le giacenze disallineate che ti fanno vendere ciò che non c'è, e la disponibilità onesta in ogni canale.
-- **«Ferie e turni ancora su WhatsApp»** — l'app HR minima (richiesta, approvazione, calendario, saldo) senza un software da multinazionale.
-- **«40 ticket uguali al giorno»** — il customer care senza knowledge, e l'AI che se non ha una procedura da citare inventa il rimborso.
-- **«Ordini di produzione ancora su carta»** — l'avanzamento commessa che il capo reparto e il titolare vedono, così il commerciale smette di over-promettere.
-- **«Comande, magazzino e fatture nel locale»** — il food cost che non torna tra sala, cucina e amministrazione.
+- **«Tre magazzini, un e-commerce, tre verità sul residuo»** — [le giacenze disallineate che ti fanno vendere ciò che non c'è, e la disponibilità onesta in ogni canale]({{ '/it/blog/giacenze-magazzino-disallineate/' | relative_url }}).
+- **«Ferie e turni ancora su WhatsApp»** — [l'app HR minima (richiesta, approvazione, calendario, saldo) senza un software da multinazionale]({{ '/it/blog/app-ferie-turni-pmi/' | relative_url }}).
+- **«40 ticket uguali al giorno»** — [il customer care senza knowledge, e l'AI che se non ha una procedura da citare inventa il rimborso]({{ '/it/blog/customer-care-ticket-ripetuti/' | relative_url }}).
+- **«Ordini di produzione ancora su carta»** — [l'avanzamento commessa che il capo reparto e il titolare vedono, così il commerciale smette di over-promettere]({{ '/it/blog/ordini-produzione-digitale-pmi/' | relative_url }}).
+- **«Comande, magazzino e fatture nel locale»** — [il food cost che non torna tra sala, cucina e amministrazione]({{ '/it/blog/software-locale-ristorazione-magazzino/' | relative_url }}).
 
 Man mano che gli articoli escono, li trovi elencati in fondo a questa pagina.
 

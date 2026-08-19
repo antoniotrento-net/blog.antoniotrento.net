@@ -1,7 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/giacenze-magazzino-disallineate/
-alt_url: /en/
+alt_url: /en/blog/misaligned-warehouse-stock/
 title: "Tre magazzini, un e-commerce, i rappresentanti: tre «verità» sul residuo e ordini che non puoi evadere"
 date: 2026-10-20 07:30:00 +0200
 author: "Antonio Trento"

@@ -24,11 +24,11 @@ Every company arrives at this topic from a different operational pain. The most 
 
 - **«200 copy-pastes a day, Maria does it anyway»** — the real cost of wasted admin hours, and the internal app Maria will use *if* it's done well. It's the piece that opens the guide: [the cost of «Maria does it anyway»]({{ '/en/blog/internal-app-copy-paste/' | relative_url }}).
 - **«The technician on the road loses two callouts a day»** — the phone app that does in four taps what today gets lost between phone calls and PDFs: [the field technician app]({{ '/en/blog/field-technician-app/' | relative_url }}).
-- **«Three warehouses, one e-commerce, three truths about remaining stock»** — misaligned stock levels that make you sell what isn't there, and honest availability on every channel.
-- **«Holidays and shifts still on WhatsApp»** — the minimum HR app (request, approval, calendar, balance) without enterprise software.
-- **«40 identical tickets a day»** — customer care with no knowledge base, and the AI that, if it has no procedure to cite, invents the refund.
-- **«Production orders still on paper»** — job progress that the shop-floor manager and the owner can see, so sales stop over-promising.
-- **«Order tickets, stock and invoices in the venue»** — the food cost that doesn't add up between front of house, kitchen and accounts.
+- **«Three warehouses, one e-commerce, three truths about remaining stock»** — [misaligned stock levels that make you sell what isn't there, and honest availability on every channel]({{ '/en/blog/misaligned-warehouse-stock/' | relative_url }}).
+- **«Holidays and shifts still on WhatsApp»** — [the minimum HR app (request, approval, calendar, balance) without enterprise software]({{ '/en/blog/sme-holidays-shifts-app/' | relative_url }}).
+- **«40 identical tickets a day»** — [customer care with no knowledge base, and the AI that, if it has no procedure to cite, invents the refund]({{ '/en/blog/repeated-customer-care-tickets/' | relative_url }}).
+- **«Production orders still on paper»** — [job progress that the shop-floor manager and the owner can see, so sales stop over-promising]({{ '/en/blog/sme-digital-production-orders/' | relative_url }}).
+- **«Order tickets, stock and invoices in the venue»** — [the food cost that doesn't add up between front of house, kitchen and accounts]({{ '/en/blog/local-software-restaurant-inventory/' | relative_url }}).
 
 As the articles come out, you'll find them listed at the bottom of this page.
 
