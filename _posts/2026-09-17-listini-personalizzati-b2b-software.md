@@ -1,7 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/listini-personalizzati-b2b-software/
-alt_url: /en/blog/custom-b2b-price-lists/
+alt_url: /en/blog/custom-b2b-price-lists-software/
 title: "8.000 SKU e un prezzo diverso per ogni cliente: il listino PDF è una perdita di margine"
 date: 2026-09-17 07:30:00 +0200
 author: "Antonio Trento"

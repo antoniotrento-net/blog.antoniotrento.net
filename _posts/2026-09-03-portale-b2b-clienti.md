@@ -1,7 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/portale-b2b-clienti/
-alt_url: /en/blog/b2b-client-portal/
+alt_url: /en/blog/b2b-customer-portal/
 title: "Il cliente chiede un portale B2B e tu gli mandi un Excel: quanto fatturato stai lasciando sul tavolo"
 date: 2026-09-03 07:30:00 +0200
 author: "Antonio Trento"
