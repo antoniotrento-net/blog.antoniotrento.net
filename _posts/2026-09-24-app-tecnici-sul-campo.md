@@ -102,7 +102,7 @@ Per questo un'app per tecnici seria deve funzionare **offline**: il tecnico apre
 
 Un'app per i tecnici che vive isolata è solo mezza soluzione. Il valore pieno arriva quando si collega a due cose: il **magazzino** e il **gestionale**.
 
-Con il magazzino: quando il tecnico usa un ricambio, quello si scala — dal magazzino del furgone e da quello centrale. Così sai sempre cosa c'è su ogni mezzo, ti accorgi quando un ricambio sta finendo, e smetti di scoprire che manca il pezzo quando il tecnico è già dal cliente. È strettamente legato al tema delle giacenze e delle operations che tratto nella [guida alle app interne]({{ '/it/pillar/app-interne/' | relative_url }}): il furgone di ogni tecnico è, a tutti gli effetti, un magazzino in movimento, e se non lo tracci hai un buco nelle scorte.
+Con il magazzino: quando il tecnico usa un ricambio, quello si scala — dal magazzino del furgone e da quello centrale. Così sai sempre cosa c'è su ogni mezzo, ti accorgi quando un ricambio sta finendo, e smetti di scoprire che manca il pezzo quando il tecnico è già dal cliente. È strettamente legato al tema delle [giacenze che non tornano tra più magazzini]({{ '/it/blog/giacenze-magazzino-disallineate/' | relative_url }}): il furgone di ogni tecnico è, a tutti gli effetti, un magazzino in movimento, e se non lo tracci hai un buco nelle scorte.
 
 Con il gestionale: quando l'intervento è chiuso, i dati (ore, ricambi, prova di esecuzione) sono pronti per diventare una fattura, senza che nessuno ritrascriva niente. Questo chiude il cerchio che oggi perde soldi: il lavoro fatto sul campo diventa fatturato in ufficio, in automatico e per intero, invece di passare da una ricostruzione a memoria che dimentica pezzi.
 
