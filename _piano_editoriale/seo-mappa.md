@@ -40,13 +40,21 @@ IT e EN dello stesso pezzo hanno la **stessa** data pubblicata.
 
 Nuovo articolo: `date:` ≤ oggi. Se vuoi programmarlo, `date:` futura + `future: false` (resta fuori da sito e sitemap finché non passa il giorno **e** c’è un rebuild: GitHub Pages non pubblica da solo a mezzanotte, serve un push o un Action).
 
-CSV piano (`piano-editoriale-2026-clienti.csv`) e `_data/editorial_plan.yml` (serie A) usano le **stesse** date `date:`.
+I **tre** CSV stanno in `antoniotrento-net.github.io/_piano_editoriale/` e sono tutti in `_data/editorial_plan.yml`. Prima era aggiornata solo la serie A.
+
+| Serie | File | Pezzi | Finestra `date` | Online oggi |
+|---|---|---|---|---|
+| A clienti | `piano-editoriale-2026-clienti.csv` | 49 | 20 gen → 17 ago (live) + 19–23 ago (da scrivere) | 20 coppie IT+EN |
+| B stack | `piano-editoriale-2026-livello2-stack.csv` | 49 | 21 gen → 1 ago, ogni 4 giorni | nessuno |
+| C PMI ops | `piano-editoriale-2026-livello3-pmi-ops.csv` | 49 | 23 gen → 3 ago, ogni 4 giorni | nessuno |
+
+B e C **non** vanno scaricati su questa settimana: 98 URL in 5 giorni è il caso da evitare (contenuto scalato). Le date CSV sono calendario; il giorno reale di `date:` nel markdown è il giorno in cui fai push.
 
 `date_file` sui pezzi già online resta il nome file originale (`2026-08-18-…`). Sui pezzi di questa settimana `date_file` = giorno di pubblicazione (19–23 agosto), da usare quando crei il file.
 
 ### Questa settimana (ancora da scrivere / pubblicare)
 
-29 pezzi restanti della serie clienti, in ordine di piano, 5–6 al giorno. Quando li pubblichi, `date:` nel post = questa data (non oltre il 23 agosto).
+29 pezzi restanti della **serie A (clienti)**, in ordine di piano, 5–6 al giorno **nel calendario**. Non è un obbligo SEO: meglio `date:` = giorno in cui il pezzo va davvero online (anche 1–2 al giorno). Non pubblicare B o C in blocco insieme ad A.
 
 | Giorno | Keyword |
 |---|---|
@@ -55,8 +63,6 @@ CSV piano (`piano-editoriale-2026-clienti.csv`) e `_data/editorial_plan.yml` (se
 | 2026-08-21 | limiti no code azienda; costo non digitalizzare processi; lead che non vengono lavorati; software rinnovi scadenze clienti; abbandono prenotazione carrello; calendario professionale multi operatore |
 | 2026-08-22 | frontend per software house; prima di sviluppare un app; cosa include software su misura; manutenzione software dopo go live; dal preventivo alla fattura software; piattaforma formazione interna |
 | 2026-08-23 | white label software agenzia; rfi software come rispondere; passare da consulenza a prodotto; feature promessa non esiste; software studio professionale completo |
-
-Serie B (stack) e C (PMI ops) nei CSV livello 2/3 **non** sono state toccate: non sono i post già online.
 
 ---
 
@@ -117,9 +123,9 @@ Serie B (stack) e C (PMI ops) nei CSV livello 2/3 **non** sono state toccate: no
 
 ---
 
-## AI / spam
+## Più articoli nello stesso giorno
 
-Non è un accorgimento tecnico. Regola: un problema, numeri, «è per te / non è per te», link interni alla pillar. Non aprire GSC il giorno in cui pubblichi 40 URL se le date fossero ancora future (ora non lo sono).
+Google **non** vieta 2–3 URL lo stesso giorno su un sito piccolo. Il rischio non è una penalità automatica: è **contenuto scalato** (stesso scheletro, stesso tono, keyword vicine) che non sale. 5–6 pezzi A nello stesso giorno è packing del calendario, non una regola SEO. Data ogni articolo il giorno in cui lo pubblichi davvero. Non scaricare B+C su questa settimana.
 
 ---
 
