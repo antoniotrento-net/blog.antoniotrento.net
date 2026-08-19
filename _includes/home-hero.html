@@ -56,7 +56,7 @@
   {%- assign n6 = "Pipeline" -%}
 {%- endif -%}
 
-<section id="blog-hero" class="relative min-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#07080a] text-white">
+<section id="blog-hero" class="relative min-h-[100svh] lg:h-[100svh] lg:max-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#07080a] text-white">
 
   <!-- Atmosphere -->
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -69,10 +69,10 @@
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#07080a]"></div>
   </div>
 
-  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-32 pb-8 lg:pt-36 lg:pb-10 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-8 items-center flex-1">
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-32 pb-8 lg:pt-24 lg:pb-4 grid lg:grid-cols-[minmax(0,1.62fr)_minmax(0,0.68fr)] gap-12 lg:gap-4 items-center flex-1 min-h-0">
 
     <!-- Copy -->
-    <div class="reveal active">
+    <div class="relative z-20 min-w-0 reveal active">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-md text-[11px] font-bold uppercase tracking-[0.22em] text-blue-300 mb-8">
         <span class="relative flex h-2 w-2">
           <span class="absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75 animate-ping"></span>
@@ -84,14 +84,14 @@
       <p class="text-sm font-bold uppercase tracking-[0.28em] text-white/50 mb-5">{{ kicker }}</p>
 
       <h1 class="font-black tracking-[-0.05em] leading-[0.92] mb-7">
-        <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-[5.6rem] text-white">{{ h1 }}</span>
+        <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-[4.55rem] xl:text-[5.15rem] text-white">{{ h1 }}</span>
         {%- if h2 -%}
-        <span class="block mt-2 text-5xl sm:text-6xl md:text-7xl lg:text-[5.6rem] text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-[#8ab4f8] to-brand-yellow hero-shimmer">{{ h2 }}</span>
+        <span class="block mt-2 text-5xl sm:text-6xl md:text-7xl lg:text-[4.55rem] xl:text-[5.15rem] text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-[#8ab4f8] to-brand-yellow hero-shimmer">{{ h2 }}</span>
         {%- endif -%}
       </h1>
 
       {% if page.description %}
-      <p class="text-lg md:text-xl text-white/65 max-w-xl leading-relaxed font-light mb-10">{{ page.description }}</p>
+      <p class="text-lg md:text-xl text-white/65 max-w-xl lg:max-w-2xl leading-relaxed font-light mb-10 lg:mb-7">{{ page.description }}</p>
       {% endif %}
 
       <div class="flex flex-wrap gap-3 mb-10">
@@ -125,7 +125,9 @@
     </div>
 
     <!-- System: six live sources collapse into one product the owner opens at 8am -->
-    <div class="relative h-[440px] sm:h-[540px] lg:h-[620px] reveal delay-200 select-none" style="perspective: 1800px;" aria-hidden="true">
+    <div class="relative h-[440px] sm:h-[540px] lg:h-full lg:min-h-0 overflow-hidden reveal delay-200 select-none" style="perspective: 1800px;" aria-hidden="true">
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-24 z-30 hidden lg:block bg-gradient-to-r from-[#07080a] to-transparent"></div>
+      <div class="absolute inset-0 lg:translate-x-[24%] xl:translate-x-[28%] lg:scale-[1.08] origin-center">
       <div id="hero-stage" class="absolute inset-0 hero-stack-3d will-change-transform" style="transform-style: preserve-3d;">
 
         <div class="absolute left-1/2 top-[46%] w-[min(108%,38rem)] aspect-square pointer-events-none" style="transform: translate(-50%, -50%)">
@@ -256,6 +258,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
