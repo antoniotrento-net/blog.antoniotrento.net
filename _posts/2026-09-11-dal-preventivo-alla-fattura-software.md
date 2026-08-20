@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/dal-preventivo-alla-fattura-software/
+alt_url: /en/blog/quote-to-invoice-software/
 title: "Catalogo, preventivo, ordine, fattura: il buco tra commerciale e amministrazione che ti mangia il margine"
 date: 2026-09-11 07:30:00 +0200
 author: "Antonio Trento"

@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/rfi-software-come-rispondere/
+alt_url: /en/blog/how-to-answer-software-rfi/
 title: "L'RFI del cliente grosso: cosa deve saper fare il tuo software (e come non firmare un suicidio in 40 pagine)"
 date: 2026-09-14 07:30:00 +0200
 author: "Antonio Trento"

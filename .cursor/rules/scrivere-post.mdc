@@ -12,3 +12,5 @@ Prima di creare o toccare `_posts/*.md`, leggi `_piano_editoriale/COME-SCRIVERE-
 - `alt_url` solo se il twin esiste. Copertina unica: `assets/images/posts/{slug-it}.jpg`.
 - Non `git add -A` se un altro agente scrive in parallelo.
 - Non lanciare Drip publish a ogni articolo.
+- Drip **non** accende le pillar. Dopo un lotto / a fine cluster: stub o index? Playbook sezione 9. Non mettere `image:` su uno stub da un paragrafo.
+- Coda Sez. 1: togli `sitemap: false` (IT+EN) da documenti-flussi il **2026-09-12**, web-prodotto **09-13**, comprare-software **09-16**, prenotazioni-agenda **09-17**. Spunta la tabella in sez. 9.

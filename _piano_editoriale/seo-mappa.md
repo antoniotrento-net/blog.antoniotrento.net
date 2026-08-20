@@ -135,10 +135,14 @@ Questa settimana: **scrivi** i file. `date:` e nome file = data del piano (futur
 
 ## Quando una guida stub diventa indicizzabile
 
+**Non aspettare che te lo chiedano.** Drip non accende le pillar. Dopo ogni lotto di post (e a fine cluster) apri `it/pillar/{chiave}` e il twin EN: ha `image:`? ha ancora `sitemap: false`? Il corpo è una guida o un paragrafo? Procedura, “quando sì / quando no” e **coda date Sezione 1**: playbook **sezione 9**.
+
 1. Scrivi il corpo (non un paragrafo).
 2. Metti `image: /assets/images/pillars/<slug>.jpg`.
-3. **Togli** `sitemap: false` dal front matter.
-4. Push. `seo.html` toglie il `noindex` da solo se c’è `image:`.
+3. **Togli** `sitemap: false` dal front matter **solo quando il cluster è tutto live** (altrimenti l’hub in index punta a 404). Finché c’è `sitemap: false`, `seo.html` tiene `noindex, follow` anche con copertina.
+4. Push.
+
+Coda già scritta, da accendere alle date del playbook sez. 9: documenti-flussi 12 set 2026, web-prodotto 13 set, comprare-software 16 set, prenotazioni-agenda 17 set.
 
 ---
 

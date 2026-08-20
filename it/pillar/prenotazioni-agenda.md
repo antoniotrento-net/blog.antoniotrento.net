@@ -8,6 +8,7 @@ title: "Agenda, prenotazioni e servizi a tempo"
 description: "No-show, overbooking e calendari condivisi: chi vende tempo ha bisogno di uno scheduling che fattura, non di un Google Calendar."
 image: /assets/images/pillars/prenotazioni-agenda.jpg
 alt_url: /en/pillar/booking-scheduling/
+# Togli sitemap: false dal 2026-09-17 (cluster live). Playbook sez. 9, spunta la tabella.
 sitemap: false
 ---
 

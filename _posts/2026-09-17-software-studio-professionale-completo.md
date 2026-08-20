@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/software-studio-professionale-completo/
+alt_url: /en/blog/complete-professional-practice-software/
 title: "Area appuntamenti + pagamenti + fascicolo: lo studio (medico, tecnico, legale) che sembra un'azienda del 1998"
 date: 2026-09-17 07:30:00 +0200
 author: "Antonio Trento"

@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/passare-da-consulenza-a-prodotto/
+alt_url: /en/blog/from-consulting-to-product/
 title: "Da vendere ore a vendere un prodotto: quando il freelancer (o la piccola software house) deve smettere di fatturare giornate"
 date: 2026-09-15 07:30:00 +0200
 author: "Antonio Trento"

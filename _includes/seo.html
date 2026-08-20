@@ -4,6 +4,9 @@
 {%- if page.layout == 'pillar' -%}
   {%- unless page.image -%}{%- assign seo_noindex = true -%}{%- endunless -%}
 {%- endif -%}
+{%- if page.sitemap == false -%}
+  {%- assign seo_noindex = true -%}
+{%- endif -%}
 {%- if page.layout == 'post' and page.date > site.time -%}
   {%- assign seo_noindex = true -%}
 {%- endif -%}

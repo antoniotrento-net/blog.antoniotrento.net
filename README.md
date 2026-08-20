@@ -13,7 +13,8 @@ Palette Google-brand, Inter; cartelle `/it/` e `/en/`.
 |---|---|---|
 | **Questo indice + Search Console** | `README.md` (qui) | Sempre, all’inizio della chat |
 | **Come scrivere un post** (date, Drip publish, front matter, qualità, checklist) | [`_piano_editoriale/COME-SCRIVERE-I-POST.md`](_piano_editoriale/COME-SCRIVERE-I-POST.md) | Prima di creare/modificare `_posts/` |
-| **Mappa SEO** (regole tecniche, stub pillar, hreflang) | [`_piano_editoriale/seo-mappa.md`](_piano_editoriale/seo-mappa.md) | SEO, date live, guide stub |
+| **Pillar stub vs index** (non si accendono da sole) | stesso playbook, **sezione 9** | Dopo ogni lotto di post e a fine cluster: ha corpo? va in sitemap? |
+| **Mappa SEO** (regole tecniche, stub pillar, hreflang) | [`_piano_editoriale/seo-mappa.md`](_piano_editoriale/seo-mappa.md) | SEO, date live, come si accende uno stub |
 | Calendario id / slug / `date_file` / status | [`_data/editorial_plan.yml`](_data/editorial_plan.yml) | Scegliere il prossimo pezzo `planned` |
 | Piano A — clienti (prompt, keyword, copertina) | [`_piano_editoriale/piano-editoriale-2026-clienti.csv`](_piano_editoriale/piano-editoriale-2026-clienti.csv) | Scrivere un pezzo serie A |
 | Piano B — stack sovrano | [`_piano_editoriale/piano-editoriale-2026-livello2-stack.csv`](_piano_editoriale/piano-editoriale-2026-livello2-stack.csv) | Serie B |
@@ -124,7 +125,7 @@ _config.yml            url, future: false, testi marketing per lingua
 _data/
   editorial_plan.yml   calendario A/B/C
   navigation_it.yml / navigation_en.yml
-  pillars.yml          cluster; live oggi: prodotti-dati, app-interne, portali-b2b
+  pillars.yml          cluster; in index: prodotti-dati, app-interne, portali-b2b. Hubs scritti + cover, ancora sitemap:false: comprare-software, web-prodotto, documenti-flussi, prenotazioni-agenda
   site_links.yml
 _layouts/              default, home, post, pillar, guides
 _includes/             seo.html (noindex stub + hreflang se twin esiste)

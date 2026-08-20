@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/feature-promessa-non-esiste/
+alt_url: /en/blog/promised-feature-does-not-exist/
 title: "Il commerciale promette una feature che il software non ha: come chiudere il buco prima che ti costi un cliente"
 date: 2026-09-16 07:30:00 +0200
 author: "Antonio Trento"

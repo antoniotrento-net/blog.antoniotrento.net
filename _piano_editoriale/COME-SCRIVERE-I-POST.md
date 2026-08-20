@@ -6,6 +6,8 @@ Non improvvisare date, permalink o “pubblico tutto oggi”.
 SEO di contesto (Search Console, noindex archivio vecchio): `_piano_editoriale/seo-mappa.md`.
 Questo file è il **manuale di produzione**.
 
+Le pillar **non** si accendono da sole. Dopo un lotto di post (e a fine cluster) **controlla** se quella guida è ancora stub o va messa in index: sezione 9.
+
 Repo: `blog.antoniotrento.net`. Sito live: `https://blog.antoniotrento.net`.
 Oggi, quando è stato scritto il playbook: **19 agosto 2026**.
 
@@ -245,6 +247,7 @@ Dopo il corpo: il layout aggiunge da solo back-link, correlati, CTA, popup. Non 
 8. Non ho datato un lotto di pezzi diversi tutti a oggi.
 9. Aggiorno nel YAML `status: written` su quell’`id` quando IT (e EN) sono nel repo.
 10. Commit mirato (`git add` dei file del pezzo + copertina + riga YAML). **Non** `git add -A` se un altro agente sta scrivendo in parallelo.
+11. Ho aperto `it/pillar/{pillar_key}` (e twin EN): è stub o viva? Se il cluster ha abbastanza pezzi scritti, non lasciare la guida noindex “per dopo” — vedi sezione 9.
 
 Push su `main` → Pages build. Se `date:` è futura, il post **non** compare comunque fino al giorno + drip (o un build in quel giorno).
 
@@ -261,18 +264,53 @@ Push su `main` → Pages build. Se `date:` è futura, il post **non** compare co
 
 ---
 
-## 9. Guide pillar (solo se ti chiedono di “accendere” una guida)
+## 9. Guide pillar — controllale, o ci perdiamo
 
-Live oggi (hanno `image:`): `prodotti-dati`, `app-interne`, `portali-b2b` (+ twin EN).
+I post escono a goccia. Le pillar **no**. Drip publish ricostruisce Pages, **non** accende una guida. Se nessuno le rivede, restano `noindex` per mesi anche quando il cluster è pieno di articoli buoni: spreco di hub, non penalità. **Non aspettare** che Antonio dica “accendi questa guida”.
 
-Per rendere indicizzabile uno stub:
+### Cosa fare dopo ogni lotto (e a fine serie di un cluster)
 
-1. Corpo vero.
-2. `image: /assets/images/pillars/{slug}.jpg`.
-3. Togliere `sitemap: false` dal front matter.
-4. Push. `seo.html` toglie il `noindex` se c’è `image:`.
+Apri il file della pillar del pezzo che hai appena scritto (IT **e** twin EN):
 
-Un post può avere `pillar: web-prodotto` anche se quella guida è ancora stub.
+| File | Esempio |
+|---|---|
+| IT | `it/pillar/{pillar_key}.md` o `.html` |
+| EN | permalink in `alt_url:` / `_data/pillars.yml` |
+
+Due stati, basta il front matter:
+
+| | Stub (fuori index) | Viva (in index) |
+|---|---|---|
+| Copertina | **niente** `image:` | `image: /assets/images/pillars/{slug-it}.jpg` |
+| Sitemap | `sitemap: false` | riga **tolta** |
+| Google | `noindex, follow` (`seo.html` se manca `image:`) | indicizzabile |
+| Corpo | un paragrafo / “in arrivo” | guida vera + link agli articoli del cluster |
+
+Live in index oggi (hanno `image:` **e** niente `sitemap: false`): `prodotti-dati`, `app-interne`, `portali-b2b` (+ twin EN).
+
+### Coda accensione — Sezione 1 (tracciata, non a memoria)
+
+Quattro hub hanno **già** corpo + copertina + twin EN. Restano `sitemap: false` **di proposito**: i body linkano articoli ancora in drip, e un hub in index verso URL non uscite è un 404. `seo.html` emette `noindex, follow` se `sitemap: false` (anche con `image:`).
+
+**L’agente che tocca il blog in un giorno ≥ la data sotto DEVE togliere `sitemap: false` da IT e EN di quell’hub, nello stesso commit, e pushare.** Non aspettare Antonio. Spunta la riga quando è fatto.
+
+| Hub IT (`it/pillar/`) | Twin EN (`en/pillar/`) | Togli `sitemap: false` dal (cluster tutto live) | Fatto? |
+|---|---|---|---|
+| `documenti-flussi.md` | `documents-workflows.md` | **2026-09-12** (dopo A43) | [ ] |
+| `web-prodotto.md` | `web-ux-product.md` | **2026-09-13** (dopo A44) | [ ] |
+| `comprare-software.md` | `buying-custom-software.md` | **2026-09-16** (dopo A47) | [ ] |
+| `prenotazioni-agenda.md` | `booking-scheduling.md` | **2026-09-17** (dopo A48) | [ ] |
+
+Le altre coppie sono stub (niente `image:`).
+
+### Quando metterla in index
+
+- **Non** al primo post del cluster. Lo stub va bene: i pezzi si indicizzano da soli, la pagina “Prossimamente” non deve stare in Google.
+- **Sì** quando in quel cluster hai abbastanza articoli `written` (o la serie di quella pillar è chiusa) da poter scrivere una guida che **cambia una decisione**, con link interni ai post — non un placeholder. Per i quattro hub sopra la data è già fissata: non “quando ti ricordi”.
+- Accendere = corpo vero (IT+EN) + copertina JPG + **togliere** `sitemap: false` + push. Finché c’è `sitemap: false`, `seo.html` tiene il noindex anche se c’è `image:`.
+- **Non** mettere `image:` su uno stub da un paragrafo: quella è la leva che la fa comparire come mappa viva in `/it/guide/`.
+
+Un post può (e deve) avere `pillar: web-prodotto` anche se quella guida è ancora stub. I back-link nel layout restano; l’URL della guida non cambia quando la accendi.
 
 ---
 

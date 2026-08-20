@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/white-label-software-agenzia/
+alt_url: /en/blog/agency-white-label-software/
 title: "White-label per la tua agenzia: vendi AI e software ai clienti senza rimontare tutto ogni volta"
 date: 2026-09-13 07:30:00 +0200
 author: "Antonio Trento"

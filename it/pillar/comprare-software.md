@@ -8,6 +8,7 @@ title: "Comprare e gestire software su misura"
 description: "Cosa stai comprando davvero quando firmi uno sviluppo: MVP onesti, no-code che si blocca, manutenzione, e come non farti fregare."
 image: /assets/images/pillars/comprare-software.jpg
 alt_url: /en/pillar/buying-custom-software/
+# Togli sitemap: false dal 2026-09-16 (cluster live). Playbook sez. 9, spunta la tabella.
 sitemap: false
 ---
 

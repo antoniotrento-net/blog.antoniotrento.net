@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/piattaforma-formazione-interna/
+alt_url: /en/blog/internal-training-platform/
 title: "Formazione interna: i video e i PDF che nessuno trova (e i nuovi assunti che chiedono sempre le stesse cose)"
 date: 2026-09-12 07:30:00 +0200
 author: "Antonio Trento"

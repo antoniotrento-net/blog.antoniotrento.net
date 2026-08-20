@@ -8,6 +8,7 @@ title: "Documenti, pratiche e flussi amministrativi"
 description: "Pratiche ferme in una casella, PDF che nessuno trova, preventivi che non tornano in fattura: i flussi che fanno muovere i dossier."
 image: /assets/images/pillars/documenti-flussi.jpg
 alt_url: /en/pillar/documents-workflows/
+# Togli sitemap: false dal 2026-09-12 (cluster live). Playbook sez. 9, spunta la tabella.
 sitemap: false
 ---
 
