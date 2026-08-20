@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/calendario-professionale-multi-operatore/
+alt_url: /en/blog/multi-operator-calendar/
 title: "Chi vende tempo (consulenti, cliniche, saloni): il calendario è il tuo ERP. Se è un Google Calendar condiviso, stai improvvisando"
 date: 2026-09-06 07:30:00 +0200
 author: "Antonio Trento"

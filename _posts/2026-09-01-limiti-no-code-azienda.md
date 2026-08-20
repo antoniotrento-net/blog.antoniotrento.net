@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/limiti-no-code-azienda/
+alt_url: /en/blog/no-code-limits-company/
 title: "No-code ti porta all'80% e poi ti blocca: quando (e come) chiamare chi sviluppa sul serio"
 date: 2026-09-01 07:30:00 +0200
 author: "Antonio Trento"

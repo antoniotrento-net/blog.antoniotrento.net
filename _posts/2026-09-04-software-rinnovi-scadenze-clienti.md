@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/software-rinnovi-scadenze-clienti/
+alt_url: /en/blog/client-renewals-deadlines/
 title: "Rinnovi, scadenze e 'chi non ha pagato': il software che ti ricorda i soldi (non un altro foglio scadenziario)"
 date: 2026-09-04 07:30:00 +0200
 author: "Antonio Trento"

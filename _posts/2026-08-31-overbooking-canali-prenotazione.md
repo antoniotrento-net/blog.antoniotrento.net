@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/overbooking-canali-prenotazione/
+alt_url: /en/blog/overbooking-booking-channels/
 title: "Overbooking e canali che non si parlano: l'ospitalità perde soldi tra Booking, sito e telefono"
 date: 2026-08-31 07:30:00 +0200
 author: "Antonio Trento"

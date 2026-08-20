@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/costo-non-digitalizzare-processi/
+alt_url: /en/blog/cost-of-not-digitizing/
 title: "Il costo di NON avere l'app: ore, errori, clienti persi — una stima che puoi fare lunedì mattina"
 date: 2026-09-02 07:30:00 +0200
 author: "Antonio Trento"

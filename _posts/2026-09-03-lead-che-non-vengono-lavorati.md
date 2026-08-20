@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/lead-che-non-vengono-lavorati/
+alt_url: /en/blog/leads-that-die/
 title: "Lead che arrivano e muoiono in 48 ore: ti manca il cruscotto, non «più ads»"
 date: 2026-09-03 07:30:00 +0200
 author: "Antonio Trento"

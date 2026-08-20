@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/prima-di-sviluppare-un-app/
+alt_url: /en/blog/before-building-an-app/
 title: "Hai un'idea di app e stai per bruciare il budget sul prototipo sbagliato: le 8 domande prima di spendere"
 date: 2026-09-08 07:30:00 +0200
 author: "Antonio Trento"

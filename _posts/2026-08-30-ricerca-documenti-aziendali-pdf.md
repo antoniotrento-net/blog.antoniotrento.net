@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/ricerca-documenti-aziendali-pdf/
+alt_url: /en/blog/company-pdf-search/
 title: "2.000 PDF in una cartella e zero ricerca: stai pagando l'affitto della conoscenza che non usi"
 date: 2026-08-30 07:30:00 +0200
 author: "Antonio Trento"

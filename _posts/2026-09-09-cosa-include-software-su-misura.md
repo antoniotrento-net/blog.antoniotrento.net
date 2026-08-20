@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/cosa-include-software-su-misura/
+alt_url: /en/blog/what-custom-software-includes/
 title: "Cosa stai comprando quando firmi uno sviluppo su misura (e perché non è 'un sito da 3.000 euro')"
 date: 2026-09-09 07:30:00 +0200
 author: "Antonio Trento"

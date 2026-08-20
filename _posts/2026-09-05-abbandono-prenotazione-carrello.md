@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/abbandono-prenotazione-carrello/
+alt_url: /en/blog/booking-cart-abandonment/
 title: "UX che fa abbandonare la prenotazione (o il carrello): non ti serve 'più traffico', ti serve un flusso che si chiude"
 date: 2026-09-05 07:30:00 +0200
 author: "Antonio Trento"

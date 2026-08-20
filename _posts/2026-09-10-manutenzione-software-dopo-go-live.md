@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/manutenzione-software-dopo-go-live/
+alt_url: /en/blog/software-maintenance-after-go-live/
 title: "Il progetto 'finito' che muore in sei mesi: manutenzione, piccole modifiche e perché il fornitore sparisce"
 date: 2026-09-10 07:30:00 +0200
 author: "Antonio Trento"

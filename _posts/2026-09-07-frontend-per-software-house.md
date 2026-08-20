@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/frontend-per-software-house/
+alt_url: /en/blog/frontend-for-software-houses/
 title: "Software house senza frontend: stai consegnando API e il cliente vede un deserto. Perché ti serve qualcuno che chiude il prodotto"
 date: 2026-09-07 07:30:00 +0200
 author: "Antonio Trento"
