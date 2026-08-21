@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/mcp-salesforce-agente-produzione/
+alt_url: /en/blog/salesforce-mcp-production-agent/
 title: "MCP su Salesforce: perché un chatbot sul CRM non basta e come far eseguire l'agente senza bruciare i governor limits"
 date: 2026-09-20 07:30:00 +0200
 author: "Antonio Trento"

@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/rag-pgvector-fattura-elettronica/
+alt_url: /en/blog/pgvector-rag-electronic-invoices/
 title: "RAG su PostgreSQL con pgvector: interrogare 10.000 fatture elettroniche italiane senza Pinecone e senza cloud"
 date: 2026-09-19 07:30:00 +0200
 author: "Antonio Trento"

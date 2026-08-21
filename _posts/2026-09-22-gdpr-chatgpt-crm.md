@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/gdpr-chatgpt-crm/
+alt_url: /en/blog/gdpr-chatgpt-crm/
 title: "Mettere ChatGPT nel CRM è un data leak: cosa dice il GDPR (e l'AI Act) se i prompt contengono clienti italiani"
 date: 2026-09-22 07:30:00 +0200
 author: "Antonio Trento"

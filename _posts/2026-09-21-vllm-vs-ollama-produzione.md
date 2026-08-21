@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/vllm-vs-ollama-produzione/
+alt_url: /en/blog/vllm-vs-ollama-in-production/
 title: "Ollama in produzione è una trappola: quando serve vLLM (e come scegliere la GPU usata senza bruciare il budget)"
 date: 2026-09-21 07:30:00 +0200
 author: "Antonio Trento"

@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/n8n-self-hosted-openai-privacy/
+alt_url: /en/blog/self-hosted-n8n-openai-privacy/
 title: "Perché il tuo workflow n8n con GPT-4o sta inviando i dati dei clienti a OpenAI (e come chiuderlo in Docker in 90 minuti)"
 date: 2026-09-18 07:30:00 +0200
 author: "Antonio Trento"
