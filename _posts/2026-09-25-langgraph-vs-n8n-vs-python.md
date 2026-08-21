@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/langgraph-vs-n8n-vs-python/
+alt_url: /en/blog/langgraph-vs-n8n-vs-python/
 title: "LangGraph o n8n o uno script Python: quale orchestratore per un agente che deve davvero eseguire (non chiacchierare)"
 date: 2026-09-25 07:30:00 +0200
 author: "Antonio Trento"

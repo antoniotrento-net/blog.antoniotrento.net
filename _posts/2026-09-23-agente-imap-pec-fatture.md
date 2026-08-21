@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/agente-imap-pec-fatture/
+alt_url: /en/blog/imap-pec-invoice-agent/
 title: "Come costruire un agente IMAP che classifica PEC e fatture (senza Gmail API e senza dare la password a un SaaS)"
 date: 2026-09-23 07:30:00 +0200
 author: "Antonio Trento"

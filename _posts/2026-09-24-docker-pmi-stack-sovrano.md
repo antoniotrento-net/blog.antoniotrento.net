@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/docker-pmi-stack-sovrano/
+alt_url: /en/blog/docker-sme-sovereign-stack/
 title: "Stack Docker sovrano per PMI: ERP, BI e agenti AI sulla stessa compose (senza Microsoft 365 che ti tiene in ostaggio)"
 date: 2026-09-24 07:30:00 +0200
 author: "Antonio Trento"
