@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/chunking-contratti-italiani-rag/
+alt_url: /en/blog/chunking-italian-contracts-rag/
 title: "Chunking di contratti italiani: perché spezzare ogni 500 token ti fa perdere clausole vessatorie e fori competenti"
 date: 2026-09-28 07:30:00 +0200
 author: "Antonio Trento"

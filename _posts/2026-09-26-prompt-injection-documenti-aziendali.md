@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/prompt-injection-documenti-aziendali/
+alt_url: /en/blog/prompt-injection-company-documents/
 title: "Prompt injection in produzione: come un fornitore ti fa pagare due volte infilando istruzioni in una fattura PDF"
 date: 2026-09-26 07:30:00 +0200
 author: "Antonio Trento"

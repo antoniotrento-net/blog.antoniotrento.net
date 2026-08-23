@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/cloudflare-tunnel-raspberry-pi-n8n/
+alt_url: /en/blog/cloudflare-tunnel-raspberry-pi-n8n/
 title: "Cloudflare Tunnel su Raspberry Pi: esporre n8n e la dashboard senza aprire una porta (e senza farsi bannare l'IP di casa)"
 date: 2026-09-30 07:30:00 +0200
 author: "Antonio Trento"

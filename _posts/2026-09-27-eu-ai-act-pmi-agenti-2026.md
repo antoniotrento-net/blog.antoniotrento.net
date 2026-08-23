@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/eu-ai-act-pmi-agenti-2026/
+alt_url: /en/blog/eu-ai-act-sme-agents-2026/
 title: "EU AI Act per chi monta agenti in PMI nel 2026: sei ad alto rischio o stai solo automatizzando l'inbox?"
 date: 2026-09-27 07:30:00 +0200
 author: "Antonio Trento"

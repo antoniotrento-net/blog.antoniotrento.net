@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/kill-switch-agente-salesforce/
+alt_url: /en/blog/salesforce-agent-kill-switch/
 title: "Kill switch per agenti che scrivono su Salesforce: dry-run, coda di approvazione e perché \"conferma in chat\" non è un controllo"
 date: 2026-09-29 07:30:00 +0200
 author: "Antonio Trento"
