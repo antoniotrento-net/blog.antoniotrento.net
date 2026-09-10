@@ -1,0 +1,59 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+Autore: {{ site.author.name }} — {{ site.author.bio }}. Sito principale: {{ site.main_site }}
+Lingue: italiano ({{ '/it/' | absolute_url }}) · English ({{ '/en/' | absolute_url }})
+Ultimo aggiornamento: {{ site.time | date: "%Y-%m-%d" }}
+
+Questo file elenca gli articoli pubblicati del blog, raggruppati per lingua e sezione, con il link alla guida completa (pillar) di ogni cluster. I contenuti sono guide tecniche approfondite su integrazione di sistemi, stack AI self-hosted e automazione per PMI — non tutorial astratti. Una versione con più metadati per ogni articolo è in {{ '/llms-full.txt' | absolute_url }}.
+
+## Italiano
+{%- assign pillars_it = site.data.pillars.it -%}
+{%- for sec in site.data.sections %}
+
+### {{ sec.it.title }}
+{{ sec.it.summary }}
+{%- for pil in pillars_it -%}
+  {%- if pil[1].section == sec.key -%}
+    {%- assign plist = site.posts | where: "lang", "it" | where: "pillar", pil[0] | sort: "date" -%}
+    {%- if plist.size > 0 %}
+
+#### {{ pil[1].title }}
+Guida completa: {{ pil[1].url | absolute_url }}
+    {%- for p in plist %}
+- [{{ p.title }}]({{ p.url | absolute_url }}): {{ p.description }}
+    {%- endfor %}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- endfor %}
+
+## English
+{%- assign pillars_en = site.data.pillars.en -%}
+{%- for sec in site.data.sections %}
+
+### {{ sec.en.title }}
+{{ sec.en.summary }}
+{%- for pil in pillars_en -%}
+  {%- if pil[1].section == sec.key -%}
+    {%- assign plist = site.posts | where: "lang", "en" | where: "pillar", pil[0] | sort: "date" -%}
+    {%- if plist.size > 0 %}
+
+#### {{ pil[1].title }}
+Full guide: {{ pil[1].url | absolute_url }}
+    {%- for p in plist %}
+- [{{ p.title }}]({{ p.url | absolute_url }}): {{ p.description }}
+    {%- endfor %}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- endfor %}
+
+---
+Sito principale (portfolio, servizi, biografia): {{ site.main_site }} — indice AI: {{ site.main_site }}/llms.txt

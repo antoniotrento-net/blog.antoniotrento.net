@@ -1,0 +1,73 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
+# {{ site.title }} — indice completo dei contenuti
+
+> {{ site.description }}
+> Autore: {{ site.author.name }} ({{ site.author.bio }}). Sito principale: {{ site.main_site }}
+> Ultimo aggiornamento: {{ site.time | date: "%Y-%m-%d %H:%M" }} · Articoli pubblicati: {{ site.posts | where: "lang", "it" | size }} IT / {{ site.posts | where: "lang", "en" | size }} EN
+
+Ogni voce riporta titolo, URL, sezione, pillar (guida completa), data, descrizione e keyword. Il testo integrale di ciascun articolo è al rispettivo URL. Solo gli articoli già pubblicati compaiono qui (quelli con data futura restano esclusi finché non escono).
+
+## Italiano
+{%- assign pillars_it = site.data.pillars.it -%}
+{%- for sec in site.data.sections %}
+
+### {{ sec.it.title }}
+{{ sec.it.summary }}
+{%- for pil in pillars_it -%}
+  {%- if pil[1].section == sec.key -%}
+    {%- assign plist = site.posts | where: "lang", "it" | where: "pillar", pil[0] | sort: "date" -%}
+    {%- if plist.size > 0 %}
+
+Pillar: {{ pil[1].title }} — guida completa: {{ pil[1].url | absolute_url }}
+{{ pil[1].summary }}
+      {%- for p in plist %}
+
+#### {{ p.title }}
+- URL: {{ p.url | absolute_url }}
+- Sezione: {{ sec.it.title }}
+- Data: {{ p.date | date: "%Y-%m-%d" }}
+- Descrizione: {{ p.description }}
+        {%- if p.keywords %}
+- Keyword: {{ p.keywords | join: ", " }}
+        {%- endif %}
+      {%- endfor %}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- endfor %}
+
+## English
+{%- assign pillars_en = site.data.pillars.en -%}
+{%- for sec in site.data.sections %}
+
+### {{ sec.en.title }}
+{{ sec.en.summary }}
+{%- for pil in pillars_en -%}
+  {%- if pil[1].section == sec.key -%}
+    {%- assign plist = site.posts | where: "lang", "en" | where: "pillar", pil[0] | sort: "date" -%}
+    {%- if plist.size > 0 %}
+
+Pillar: {{ pil[1].title }} — full guide: {{ pil[1].url | absolute_url }}
+{{ pil[1].summary }}
+      {%- for p in plist %}
+
+#### {{ p.title }}
+- URL: {{ p.url | absolute_url }}
+- Section: {{ sec.en.title }}
+- Date: {{ p.date | date: "%Y-%m-%d" }}
+- Description: {{ p.description }}
+        {%- if p.keywords %}
+- Keywords: {{ p.keywords | join: ", " }}
+        {%- endif %}
+      {%- endfor %}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- endfor %}
+
+---
+Sito principale: {{ site.main_site }} (indice AI: {{ site.main_site }}/llms.txt). Contenuti in italiano e inglese. Consulenza e sviluppo su misura.
