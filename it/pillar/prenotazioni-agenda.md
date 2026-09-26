@@ -8,8 +8,6 @@ title: "Agenda, prenotazioni e servizi a tempo"
 description: "No-show, overbooking e calendari condivisi: chi vende tempo ha bisogno di uno scheduling che fattura, non di un Google Calendar."
 image: /assets/images/pillars/prenotazioni-agenda.jpg
 alt_url: /en/pillar/booking-scheduling/
-# Togli sitemap: false dal 2026-09-17 (cluster live). Playbook sez. 9, spunta la tabella.
-sitemap: false
 ---
 
 Se vivi di appuntamenti — sei un professionista, gestisci uno studio, una clinica, un salone, una struttura ricettiva — la tua agenda non è un accessorio: è dove nasce o si perde il fatturato. Ogni slot pieno è un incasso, ogni slot vuoto che poteva essere pieno è denaro che non torna, perché il tempo di ieri non lo rivendi domani. Eppure la maggior parte di chi vende tempo gestisce tutto questo con un Google Calendar condiviso, un quaderno, o tre canali di prenotazione che non si parlano. Questa guida raccoglie gli articoli su come lo scheduling diventa uno strumento che **fattura**: niente no-show che svuotano il calendario, niente doppioni tra canali, niente incastri improvvisati.

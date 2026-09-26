@@ -296,10 +296,10 @@ Quattro hub hanno **già** corpo + copertina + twin EN. Restano `sitemap: false`
 
 | Hub IT (`it/pillar/`) | Twin EN (`en/pillar/`) | Togli `sitemap: false` dal (cluster tutto live) | Fatto? |
 |---|---|---|---|
-| `documenti-flussi.md` | `documents-workflows.md` | **2026-09-12** (dopo A43) | [ ] |
-| `web-prodotto.md` | `web-ux-product.md` | **2026-09-13** (dopo A44) | [ ] |
-| `comprare-software.md` | `buying-custom-software.md` | **2026-09-16** (dopo A47) | [ ] |
-| `prenotazioni-agenda.md` | `booking-scheduling.md` | **2026-09-17** (dopo A48) | [ ] |
+| `documenti-flussi.md` | `documents-workflows.md` | **2026-09-12** (dopo A43) | [x] fatto 2026-09-26 |
+| `web-prodotto.md` | `web-ux-product.md` | **2026-09-13** (dopo A44) | [x] fatto 2026-09-26 |
+| `comprare-software.md` | `buying-custom-software.md` | **2026-09-16** (dopo A47) | [x] fatto 2026-09-26 |
+| `prenotazioni-agenda.md` | `booking-scheduling.md` | **2026-09-17** (dopo A48) | [x] fatto 2026-09-26 |
 
 Le altre coppie sono stub (niente `image:`).
 

@@ -8,8 +8,6 @@ title: "Comprare e gestire software su misura"
 description: "Cosa stai comprando davvero quando firmi uno sviluppo: MVP onesti, no-code che si blocca, manutenzione, e come non farti fregare."
 image: /assets/images/pillars/comprare-software.jpg
 alt_url: /en/pillar/buying-custom-software/
-# Togli sitemap: false dal 2026-09-16 (cluster live). Playbook sez. 9, spunta la tabella.
-sitemap: false
 ---
 
 Comprare software su misura è una delle spese meno trasparenti che un'azienda affronti. Non vedi cosa compri finché non ce l'hai, i preventivi variano di dieci volte per "lo stesso lavoro", e il momento in cui firmi è anche il momento in cui sai di meno. Il risultato è che tanti ci si fanno male: budget bruciati sul prototipo sbagliato, no-code che si blocca all'80%, progetti "finiti" che muoiono in sei mesi, fornitori che spariscono col codice sul loro PC. Questa guida raccoglie gli articoli che ti danno il **metro**: cosa stai davvero comprando, quando conviene costruire e quando comprare pronto, come non farti fregare, e cosa serve perché il software resti vivo dopo il lancio.

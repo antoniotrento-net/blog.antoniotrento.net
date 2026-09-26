@@ -8,8 +8,6 @@ title: "Web, UX e prodotto che converte"
 description: "Siti belli che al secondo click si rompono e demo che non si fatturano: il frontend serio, legato a un backend vero, che chiude il flusso."
 image: /assets/images/pillars/web-prodotto.jpg
 alt_url: /en/pillar/web-ux-product/
-# Togli sitemap: false dal 2026-09-13 (cluster live). Playbook sez. 9, spunta la tabella.
-sitemap: false
 ---
 
 Un sito bello non è un prodotto. È la trappola più comune del digitale: l'agenzia consegna una vetrina splendida, tu paghi le ads per portarci la gente, e al secondo click — quando l'utente prova a *fare* qualcosa — la cosa si rompe, si impantana, o semplicemente non fa niente. Perché sotto la vernice non c'è un motore. Questa guida raccoglie gli articoli su come si passa dal sito-vetrina al **prodotto digitale che converte**: un frontend serio, legato a un backend vero, che fa fare a chi arriva la cosa per cui è arrivato — e la fa fare fino in fondo.

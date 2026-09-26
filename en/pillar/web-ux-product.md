@@ -8,8 +8,6 @@ title: "Web, UX & products that convert"
 description: "Pretty sites that break on the second click and demos that don't bill: serious frontend, tied to a real backend, that closes the flow."
 image: /assets/images/pillars/web-prodotto.jpg
 alt_url: /it/pillar/web-prodotto/
-# Remove sitemap: false from 2026-09-13 (cluster live). Playbook §9, tick the table.
-sitemap: false
 ---
 
 A pretty site isn't a product. It's the most common trap in digital: the agency delivers a splendid showcase, you pay ads to bring people there, and on the second click — when the user tries to *do* something — the thing breaks, stalls, or simply does nothing. Because under the varnish there is no engine. This guide collects the articles on how you move from the showcase site to the **digital product that converts**: a serious frontend, tied to a real backend, that makes whoever arrives do the thing they arrived for — and do it all the way.

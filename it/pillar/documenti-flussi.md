@@ -8,8 +8,6 @@ title: "Documenti, pratiche e flussi amministrativi"
 description: "Pratiche ferme in una casella, PDF che nessuno trova, preventivi che non tornano in fattura: i flussi che fanno muovere i dossier."
 image: /assets/images/pillars/documenti-flussi.jpg
 alt_url: /en/pillar/documents-workflows/
-# Togli sitemap: false dal 2026-09-12 (cluster live). Playbook sez. 9, spunta la tabella.
-sitemap: false
 ---
 
 In ogni azienda ci sono documenti che si muovono — o che dovrebbero muoversi. Una pratica che passa da una persona all'altra, un preventivo che diventa ordine e poi fattura, un contratto che scade, un referto che va trovato al volo. E in troppe aziende questi flussi sono fatti di caselle email, cartelle condivise, fogli Excel e memoria delle persone: la pratica ferma tre settimane perché nessuno sapeva che toccava a lui, il PDF introvabile in mezzo a duemila altri, il margine perso nel travaso tra preventivo e fattura. Questa guida raccoglie gli articoli su come si fanno **muovere i documenti e i flussi**: dossier che avanzano invece di impantanarsi, informazioni che si trovano invece di cercarle, dati che stanno su un filo solo invece che in cassetti separati.

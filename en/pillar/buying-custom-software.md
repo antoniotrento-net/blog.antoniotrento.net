@@ -8,8 +8,6 @@ title: "Buying & running custom software"
 description: "What you're actually buying when you sign a build: honest MVPs, no-code walls, maintenance, and how not to get burned."
 image: /assets/images/pillars/comprare-software.jpg
 alt_url: /it/pillar/comprare-software/
-# Remove sitemap: false from 2026-09-16 (cluster live). Playbook §9, tick the table.
-sitemap: false
 ---
 
 Buying custom software is one of the least transparent expenses a company faces. You don't see what you're buying until you have it, quotes vary by a factor of ten for "the same job", and the moment you sign is also the moment you know the least. The result is that a lot of people get hurt: budgets burned on the wrong prototype, no-code that stalls at 80%, "finished" projects that die in six months, vendors who disappear with the code on their laptop. This guide collects the articles that give you the **metre**: what you're really buying, when it's worth building and when it's worth buying ready-made, how not to get burned, and what it takes for the software to stay alive after launch.

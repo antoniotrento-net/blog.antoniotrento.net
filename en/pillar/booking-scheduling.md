@@ -8,8 +8,6 @@ title: "Booking, scheduling & time-based services"
 description: "No-shows, overbooking and shared calendars: if you sell time you need scheduling that bills, not a shared Google Calendar."
 image: /assets/images/pillars/prenotazioni-agenda.jpg
 alt_url: /it/pillar/prenotazioni-agenda/
-# Remove sitemap: false from 2026-09-17 (cluster live). Playbook §9, tick the table.
-sitemap: false
 ---
 
 If you live off appointments — you're a professional, you run a practice, a clinic, a salon, a hospitality business — your calendar isn't an accessory: it's where revenue is born or lost. Every full slot is a collection, every empty slot that could have been full is money that doesn't come back, because yesterday's time isn't resold tomorrow. And yet most people who sell time manage all of this with a shared Google Calendar, a notebook, or three booking channels that don't talk to each other. This guide collects the articles on how scheduling becomes a tool that **bills**: no no-shows emptying the calendar, no doubles between channels, no improvised jigsaw.

@@ -8,8 +8,6 @@ title: "Documents, cases & admin workflows"
 description: "Cases stuck in an inbox, PDFs nobody finds, quotes that don't match the invoice: the workflows that make dossiers move."
 image: /assets/images/pillars/documenti-flussi.jpg
 alt_url: /it/pillar/documenti-flussi/
-# Remove sitemap: false from 2026-09-12 (cluster live). Playbook §9, tick the table.
-sitemap: false
 ---
 
 In every company there are documents that move — or that should move. A case that passes from one person to another, a quote that becomes an order and then an invoice, a contract that expires, a report that has to be found on the spot. And in too many companies these flows are made of email inboxes, shared folders, Excel sheets and people's memory: the case stuck for three weeks because nobody knew it was their turn, the PDF unfindable among two thousand others, the margin lost in the transfer between quote and invoice. This guide collects the articles on how you make **documents and workflows move**: dossiers that advance instead of bogging down, information that gets found instead of hunted, data that sits on a single thread instead of in separate drawers.
