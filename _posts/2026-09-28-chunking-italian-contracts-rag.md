@@ -34,7 +34,7 @@ A blog article is linear: you read it top to bottom, each paragraph almost stand
 
 Anyone doing **NLP on Italian legal text** has to treat this structure as primary data, not noise to flatten. The right chunk for a contract is not "a block of N tokens": it is a **unit of legal meaning** — typically an *articolo* or a *comma* — with its boundaries and its cross-references preserved.
 
-This is the same principle I used for electronic-invoice ingest: respect the document structure instead of treating it as flat text. In the piece on how I index {{ '/en/blog/pgvector-rag-electronic-invoices/' | relative_url }} the constraint was FatturaPA XML; here it is the *articolo*/*comma* structure. The format changes, the principle does not: **structure is information; throwing it away is losing quality.**
+This is the same principle I used for electronic-invoice ingest: respect the document structure instead of treating it as flat text. In the piece on how I index [electronic invoices in a pgvector RAG]({{ '/en/blog/pgvector-rag-electronic-invoices/' | relative_url }}) the constraint was FatturaPA XML; here it is the *articolo*/*comma* structure. The format changes, the principle does not: **structure is information; throwing it away is losing quality.**
 
 ## The naive splitter's mistakes (and why they look harmless)
 
@@ -250,7 +250,7 @@ Here is the full pipeline, with the boundaries drawn where they belong. Note the
 - It does not **decide** (sign, withdraw, challenge). It proposes where to look.
 - It does not send contracts out to uncontrolled external services.
 
-This setup — a model that retrieves and cites, a human who interprets and decides — is the same security and compliance philosophy I described for the {{ '/en/blog/eu-ai-act-sme-agents-2026/' | relative_url }}: the AI proposes, the expert disposes. In a legal setting the boundary is even sharper, because an interpretation error has real contractual consequences.
+This setup — a model that retrieves and cites, a human who interprets and decides — is the same security and compliance philosophy I described for the [EU AI Act for SMEs running agents]({{ '/en/blog/eu-ai-act-sme-agents-2026/' | relative_url }}): the AI proposes, the expert disposes. In a legal setting the boundary is even sharper, because an interpretation error has real contractual consequences.
 
 ## Implementation path, step by step
 
@@ -373,7 +373,7 @@ Stated estimates, for a corpus of a few thousand contracts (SME, firm, in-house 
 
 - **Pipeline development** (structural parser + chunking + metadata + two-step retrieval + OCR): as an order of magnitude **1–3 person-weeks**; the OCR part and post-OCR normalisation are the most expensive if you have many scans.
 - **Corpus embedding:** with a self-hosted embedding model, thousands of contracts are hours of compute on a mid-range GPU, once. If you use an embedding API, a few tens of euros for the whole corpus (estimate, depends on token count).
-- **VRAM:** a good embedding model runs in **8–16 GB**; the generative model for answers depends on the choices (self-hosted 7–14B in 16–24 GB, or API). I compared the self-hosted options for serving in production in the piece on {{ '/en/pillar/models-cost-privacy/' | relative_url }}.
+- **VRAM:** a good embedding model runs in **8–16 GB**; the generative model for answers depends on the choices (self-hosted 7–14B in 16–24 GB, or API). I compared the self-hosted options for serving in production in the guide on [models, cost and privacy]({{ '/en/pillar/models-cost-privacy/' | relative_url }}).
 - **Cost per query:** retrieval is cheap (vector query on pgvector, milliseconds). The cost is generation: a few cents per answer with a self-hosted model, a bit more with an EU cloud API.
 - **Gold-set cost:** the lawyer's time to build and validate 30–50 cases. It is an investment, not an accessory expense: without a gold set you do not know whether the system works.
 

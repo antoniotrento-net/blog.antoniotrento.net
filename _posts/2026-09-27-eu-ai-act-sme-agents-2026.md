@@ -112,7 +112,7 @@ def open_conversation(channel: str) -> str:
 
 Note the `log_event`: it is not enough to give the transparency, you have to be able to **prove** you gave it. A log with timestamp and disclaimer version is the proof that, on date X, whoever wrote knew they were talking to a bot. It looks pedantic; it is exactly what an auditor asks for.
 
-If your agent writes into the CRM or handles personal data, AI Act transparency stacks on top of GDPR obligations — notice, legal basis, minimisation. I covered that side in {{ '/en/blog/gdpr-chatgpt-crm/' | relative_url }}: the two regulations do not replace each other, they add up, and they have to be tackled together.
+If your agent writes into the CRM or handles personal data, AI Act transparency stacks on top of GDPR obligations — notice, legal basis, minimisation. I covered that side in [GDPR, ChatGPT and CRM data]({{ '/en/blog/gdpr-chatgpt-crm/' | relative_url }}): the two regulations do not replace each other, they add up, and they have to be tackled together.
 
 ## Reference architecture of a "defensible" agent
 
@@ -148,7 +148,7 @@ The boundaries that make the system defensible, and that you write in the dossie
 - **What the agent NEVER touches:** decisions on people (hiring, dismissal, granting credit), irreversible actions without confirmation, modification of its own rules. Those stay with a human or with deterministic code.
 - **Who oversees:** a named human role, with real power to correct and stop — not a "supervisor" who clicks "approve" with their eyes closed.
 
-This split between "the AI proposes, the human disposes" is the same one I use for the operational safety of agents: kill switch, approval queue, decision logs. I described it in {{ '/en/blog/salesforce-mcp-production-agent/' | relative_url }}, and that is not an accident: **what makes an agent safe is also what makes it compliant.** Human oversight is not a bureaucratic add-on stuck on top; it is architecture.
+This split between "the AI proposes, the human disposes" is the same one I use for the operational safety of agents: kill switch, approval queue, decision logs. I described it in the piece on [a Salesforce MCP agent in production]({{ '/en/blog/salesforce-mcp-production-agent/' | relative_url }}), and that is not an accident: **what makes an agent safe is also what makes it compliant.** Human oversight is not a bureaucratic add-on stuck on top; it is architecture.
 
 ## Minimum technical documentation an auditor can understand
 
@@ -178,7 +178,7 @@ A misunderstanding that generates useless panic: the AI Act obligations on **tra
 What do you do, instead? **RAG.** You retrieve your documents and you give them to the model as context. That is not "training": it is retrieval at runtime. But watch it — a practical constraint stays yours:
 
 - **RAG quality is your responsibility.** If your index contains wrong, stale or discriminatory data, the answers will be too. It is not "training-data quality" within the meaning of Annex IV, but it is still part of your duty to make the system work correctly and not harmfully.
-- **Personal data in the RAG** are subject to GDPR: minimisation, legal basis, right to erasure (which must be able to remove a document from the index). I covered that building the {{ '/en/pillar/models-cost-privacy/' | relative_url }} on the privacy side: RAG retains, and what it retains has to be governed.
+- **Personal data in the RAG** are subject to GDPR: minimisation, legal basis, right to erasure (which must be able to remove a document from the index). I cover the privacy side in the guide on [models, cost and privacy]({{ '/en/pillar/models-cost-privacy/' | relative_url }}): RAG retains, and what it retains has to be governed.
 
 The distinction to put in the dossier (point 4): *"We do not train or fine-tune models. We use model [X] via [API/self-hosted]. Our data are used only at runtime via RAG, not for training, and they do not leave the [EU/self-hosted] infrastructure."* A sentence like that closes half of an auditor's questions.
 

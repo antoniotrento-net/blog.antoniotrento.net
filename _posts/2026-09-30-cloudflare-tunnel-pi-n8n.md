@@ -20,7 +20,7 @@ There is a rite of passage for anyone who puts n8n on a Raspberry Pi in the offi
 
 This is a concrete ops guide, for the lab and the small office: `cloudflared` in Docker on the Pi, public hostnames vs those protected by Access, what you must *never* tunnel, the lesson — learned the hard way by many — about **residential IPs that eat 403s**, and the maintenance nobody tells you about until the SD card dies. With copy-paste config fragments.
 
-It is part of the path on how to build a sovereign stack on your own hardware, which I started with {{ '/en/blog/self-hosted-n8n-openai-privacy/' | relative_url }} and with the {{ '/en/blog/docker-sme-sovereign-stack/' | relative_url }}. Here we tackle the network piece: how to let the world in, in a controlled way, without throwing the door wide open.
+It is part of the path on how to build a sovereign stack on your own hardware, which I started with [self-hosted n8n with OpenAI and privacy]({{ '/en/blog/self-hosted-n8n-openai-privacy/' | relative_url }}) and with the [sovereign Docker stack for SMEs]({{ '/en/blog/docker-sme-sovereign-stack/' | relative_url }}). Here we tackle the network piece: how to let the world in, in a controlled way, without throwing the door wide open.
 
 ## Why port forwarding on the modem is a terrible idea
 

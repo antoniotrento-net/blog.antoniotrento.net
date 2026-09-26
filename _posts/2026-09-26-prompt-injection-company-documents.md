@@ -34,7 +34,7 @@ The operational difference is huge. Against direct injection you can, in part, f
 
 The point that knocks down every naive defense is this: **an LLM has no separate channel for "data" and "instructions".** Everything is text in the same context window. When you paste a PDF's content next to your system prompt, the model sees a single stream of language. If the PDF says "now do X", to the model that is as legitimate a request as yours. Classical security separates code and data (think SQL injection and prepared statements). With LLMs that separation **does not exist at the model level**. You have to recreate it yourself, around the model.
 
-Anyone designing agents that execute actions — not just chat — has to start from here. If you care about the orchestration and guardrail side of agents, I covered it in the guide on {{ '/en/pillar/agents-that-act/' | relative_url }} and in the piece on how I put {{ '/en/blog/salesforce-mcp-production-agent/' | relative_url }} in production with a kill switch and an approval queue.
+Anyone designing agents that execute actions — not just chat — has to start from here. If you care about the orchestration and guardrail side of agents, I covered it in the guide on [agents that act]({{ '/en/pillar/agents-that-act/' | relative_url }}) and in the piece on how I put [a Salesforce MCP agent]({{ '/en/blog/salesforce-mcp-production-agent/' | relative_url }}) in production with a kill switch and an approval queue.
 
 ## The cases I actually see: IBAN change, "ignore the policies", exfiltration
 
@@ -119,7 +119,7 @@ The boundaries that matter:
 - **Document data enters marked as untrusted** and is never promoted to "system instructions".
 - **What the agent NEVER touches:** executing the transfer, writing the IBAN in the supplier master, sending data to domains outside the allowlist, changing its own policies. Those sit in deterministic, versioned, tested code, out of the model's reach.
 
-This split between "the brain that proposes" and "the hands that execute under rules" is the same philosophy I used for orchestration in {{ '/en/blog/langgraph-vs-n8n-vs-python/' | relative_url }}: whichever tool you use to orchestrate, the security boundary is in the code, not in the prompt.
+This split between "the brain that proposes" and "the hands that execute under rules" is the same philosophy I used for orchestration in [LangGraph vs n8n vs Python]({{ '/en/blog/langgraph-vs-n8n-vs-python/' | relative_url }}): whichever tool you use to orchestrate, the security boundary is in the code, not in the prompt.
 
 ## Separating "context to cite" from "executable instructions"
 
@@ -301,7 +301,7 @@ def scan_pdf(path: str) -> dict:
 
 What do you do with the flags? You do not block everything (you would have too many false positives). You use the flags as **input to the policy engine**: a document with `pdf_javascript` or `unicode_zero_width` does not enter the automatic path, it goes to the human queue regardless of amount. The flag raises the required control level; it does not slam the door on the honest supplier who simply has a weird PDF.
 
-This scanner is a cousin of the sanitisation you need when you index fiscal documents; in the piece on how I built {{ '/en/blog/pgvector-rag-electronic-invoices/' | relative_url }} I covered ingest and text normalisation — there the focus is retrieval quality, here it is security, but the front door is the same and you should guard it once.
+This scanner is a cousin of the sanitisation you need when you index fiscal documents; in the piece on how I built [a pgvector RAG for electronic invoices]({{ '/en/blog/pgvector-rag-electronic-invoices/' | relative_url }}) I covered ingest and text normalisation — there the focus is retrieval quality, here it is security, but the front door is the same and you should guard it once.
 
 ## The PDF control list (intake checklist)
 
@@ -370,7 +370,7 @@ The general rule: **log the decision, not only the action.** You do not need to 
 
 Assume the worst: a payload got through, the agent executed an action (transfer sent, IBAN changed, data sent). What you do, in order.
 
-1. **Immediate kill switch.** You need a switch that stops *all* of the agent's executive actions with one command, without a deploy. A flag in a config file or a table, that the policy engine checks before every action. If you do not have it, it is the first thing to build. I cover it, together with the approval queue, in the piece on {{ '/en/blog/salesforce-mcp-production-agent/' | relative_url }}.
+1. **Immediate kill switch.** You need a switch that stops *all* of the agent's executive actions with one command, without a deploy. A flag in a config file or a table, that the policy engine checks before every action. If you do not have it, it is the first thing to build. I cover it, together with the approval queue, in the piece on [a Salesforce MCP agent in production]({{ '/en/blog/salesforce-mcp-production-agent/' | relative_url }}).
 2. **Freeze the source document.** Do not delete it: it is the evidence. Mark it, isolate it from the RAG, keep it for analysis. If you already indexed it, **remove it from the index** (otherwise it goes off again on every query).
 3. **Rebuild the chain from the logs.** Which document, which missing flag, which rule yielded, which actions went out. Thanks to the decision logs (above) this is fast.
 4. **Contain the real damage.** Transfer: contact the bank to attempt a recall (the first hours count). IBAN changed: restore from the historical master. Data exfiltrated: assess the duty to notify the **Garante within 72 hours** if they are personal data (it is a potential data breach).
