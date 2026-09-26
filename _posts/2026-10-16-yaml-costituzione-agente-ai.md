@@ -222,6 +222,7 @@ Nota che lo schema non controlla solo i tipi: **codifica regole di governance**.
 
 La pipeline di CI, per esempio con GitHub Actions (ma lo stesso vale per GitLab CI o una pipeline self-hosted):
 
+{% raw %}
 ```yaml
 # .github/workflows/constitution.yml
 name: constitution-check
@@ -265,6 +266,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with: { name: prompt-diff, path: build/prompt_diff.md }
 ```
+{% endraw %}
 
 I sette passi hanno ciascuno un motivo:
 
