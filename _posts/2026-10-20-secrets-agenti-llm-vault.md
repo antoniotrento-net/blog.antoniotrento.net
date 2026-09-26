@@ -60,7 +60,7 @@ L'architettura che lo impedisce è di **separare chi usa le credenziali da chi r
 - Gli **errori vengono sanitizzati** prima di tornare al modello: codice di errore, messaggio generico, mai la richiesta completa.
 - Gli strumenti che leggono file o eseguono comandi hanno **allowlist di percorsi e comandi**; i file di configurazione e le cartelle dei segreti non ci sono.
 
-Questo è lo stesso principio della costituzione dell'agente in YAML che ho descritto nel pezzo sulla {{ '/it/blog/yaml-costituzione-agente-ai/' | relative_url }}: la configurazione nomina una credenziale (`credential_ref: crm_readonly`), il runtime la risolve, il modello non la vede mai.
+Questo è lo stesso principio della costituzione dell'agente in YAML che ho descritto nel pezzo sulla [costituzione dell'agente in YAML]({{ '/it/blog/yaml-costituzione-agente-ai/' | relative_url }}): la configurazione nomina una credenziale (`credential_ref: crm_readonly`), il runtime la risolve, il modello non la vede mai.
 
 ## Docker secrets, systemd, vault: a confronto
 
@@ -148,7 +148,7 @@ La mia raccomandazione pragmatica: **per uno stack piccolo, parti da Docker secr
 
 Un segreto che non ruoti mai è un segreto che, prima o poi, sarà compromesso senza che tu lo sappia. La rotazione è il modo per limitare la durata del danno. Negli stack agentici, due tipi di segreti meritano attenzione particolare.
 
-**Chiavi di firma (JWT).** Se un agente si autentica verso un CRM con il flusso JWT Bearer — come ho descritto per l'{{ '/it/blog/salesforce-jwt-export-csv-docker/' | relative_url }} — la chiave privata che firma i token è il segreto più prezioso dell'integrazione. La rotazione si fa **senza interruzione** così:
+**Chiavi di firma (JWT).** Se un agente si autentica verso un CRM con il flusso JWT Bearer — come ho descritto per l'[export notturno da Salesforce con JWT]({{ '/it/blog/salesforce-jwt-export-csv-docker/' | relative_url }}) — la chiave privata che firma i token è il segreto più prezioso dell'integrazione. La rotazione si fa **senza interruzione** così:
 
 1. Generi una nuova coppia di chiavi e carichi il nuovo certificato sul lato che verifica (per esempio la Connected App), **accanto** a quello vecchio se la piattaforma lo consente, o in una finestra concordata.
 2. Aggiorni il segreto nel vault; i servizi iniziano a firmare con la nuova chiave.
@@ -230,7 +230,7 @@ Dove applicare la redaction, in ordine di importanza:
 - **Sui messaggi degli utenti**, prima che entrino in memoria persistente (con un avviso all'utente: "hai incollato quello che sembra un token; non verrà salvato, e ti consiglio di rigenerarlo").
 - **Sui report di errore** inviati a strumenti di error tracking.
 
-La redaction per i dati personali nei trace segue la stessa logica e l'ho trattata nel pezzo sull'{{ '/it/blog/osservabilita-llm-produzione/' | relative_url }}: stessa pipeline, stesso punto di applicazione, cataloghi diversi.
+La redaction per i dati personali nei trace segue la stessa logica e l'ho trattata nel pezzo sull'[osservabilità degli LLM in produzione]({{ '/it/blog/osservabilita-llm-produzione/' | relative_url }}): stessa pipeline, stesso punto di applicazione, cataloghi diversi.
 
 ## L'architettura di riferimento
 

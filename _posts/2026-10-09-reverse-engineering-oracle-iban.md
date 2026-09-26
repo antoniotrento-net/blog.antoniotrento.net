@@ -19,7 +19,7 @@ Questo è il **reverse engineering su Oracle** per trovare l'IBAN (o qualsiasi a
 
 Vedremo perché i legacy non hanno un ERD aggiornato, perché si esplora **solo** su una read replica o con un utente SELECT-only (mai toccare prod), come interrogare il **data dictionary di Oracle** (`all_tab_columns`, i commenti, i constraint) per ricostruire lo schema, come cercare l'IBAN per nome *e* per pattern dei dati (attenzione ai nomi legacy italiani: ABI, CAB, CIN), perché si lavora da REPL e script versionati e non a colpi di click su una GUI, come non esportare otto milioni di clienti "per provare", come documentare ciò che trovi, e — soprattutto — quando fermarsi e chiamare il DBA.
 
-È lo stesso rispetto per i dati e per i sistemi di produzione della ricetta di export che ho descritto per {{ '/it/blog/salesforce-jwt-export-csv-docker/' | relative_url }}: privilegio minimo, sola lettura, niente sorprese. Qui il sistema è più vecchio e più fragile, quindi la cautela è ancora maggiore.
+È lo stesso rispetto per i dati e per i sistemi di produzione della ricetta di export che ho descritto per l'[export notturno da Salesforce con JWT]({{ '/it/blog/salesforce-jwt-export-csv-docker/' | relative_url }}): privilegio minimo, sola lettura, niente sorprese. Qui il sistema è più vecchio e più fragile, quindi la cautela è ancora maggiore.
 
 ## Perché i legacy non hanno un ERD aggiornato
 

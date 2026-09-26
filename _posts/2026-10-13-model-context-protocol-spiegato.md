@@ -17,7 +17,7 @@ Da quando è uscito, il Model Context Protocol si è preso l'etichetta di "USB-C
 
 Questo pezzo è il **Model Context Protocol spiegato senza hype**: cosa risolve davvero e cosa no, l'anatomia reale (tools, resources, prompts), i due transport (stdio vs HTTP/SSE) con i loro modelli di rischio, l'auth e "chi può invocare cosa", la minaccia del **tool poisoning** (istruzioni nascoste nelle descrizioni dei tool), un server minimo read-only come esempio, come testarlo senza un client magico, e — la parte che di solito manca — **quando restare sul function calling classico** invece di tirare su MCP. Con l'elenco delle capability e lo scheletro di un server.
 
-L'angolo è tecnico e onesto: protocollo, rischi, implementazione minima. Se ti interessa MCP *in produzione* con guardrail veri (kill switch, coda di approvazione, governor limit), ne ho scritto separatamente mostrando come ho messo {{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}. Qui si sta un passo prima: capire il protocollo e i suoi rischi *prima* di connetterci qualcosa che esegue.
+L'angolo è tecnico e onesto: protocollo, rischi, implementazione minima. Se ti interessa MCP *in produzione* con guardrail veri (kill switch, coda di approvazione, governor limit), ne ho scritto separatamente mostrando come ho messo [un agente MCP su Salesforce in produzione]({{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}). Qui si sta un passo prima: capire il protocollo e i suoi rischi *prima* di connetterci qualcosa che esegue.
 
 ## Cosa risolve MCP e cosa no
 
@@ -223,7 +223,7 @@ La tabella di scelta:
 | Consumare server di terzi | MCP (con cautela sicurezza) |
 | Massima semplicità e controllo | function calling classico |
 
-La regola: **MCP è per l'interoperabilità e il riuso, non un obbligo.** Se non hai il problema del riuso su più host, il function calling classico ti dà lo stesso risultato con meno pezzi. Adottare MCP "perché è il futuro" su una singola app è complessità che non ripaga. Sul contratto dati e la validazione dei tool — che valgono sia per MCP sia per il function calling — ho scritto separatamente a proposito di come impedire al modello di inventare valori in {{ '/it/blog/json-schema-tool-calling-iban/' | relative_url }}: quel rigore serve comunque, qualunque sia il canale.
+La regola: **MCP è per l'interoperabilità e il riuso, non un obbligo.** Se non hai il problema del riuso su più host, il function calling classico ti dà lo stesso risultato con meno pezzi. Adottare MCP "perché è il futuro" su una singola app è complessità che non ripaga. Sul contratto dati e la validazione dei tool — che valgono sia per MCP sia per il function calling — ho scritto separatamente a proposito di come impedire al modello di inventare valori in [JSON Schema e tool calling contro l'IBAN inventato]({{ '/it/blog/json-schema-tool-calling-iban/' | relative_url }}): quel rigore serve comunque, qualunque sia il canale.
 
 ## Percorso di implementazione, a step
 

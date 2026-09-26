@@ -19,7 +19,7 @@ Il tema è la scelta tra **fine-tuning vs RAG per le FAQ aziendali in italiano**
 
 Questo pezzo è una guida di metodo, con esempi concreti di policy HR/IT italiane: perché il fine-tune è "già marcio" per i fatti mutevoli, cosa il RAG davvero **non** sa fare (tono, formato, "siamo una banca"), cosa serve per una LoRA fatta bene (dati, licenze, eval, GPU), l'ibrido raro e onesto (retrieval + un filo di adattamento di stile), la trappola del dataset (ticket veri vs PDF ufficiali), il rischio serio che il modello "ricordi" uno stipendio, la metrica giusta (citazione esatta della policy), e il default che raccomando a una PMI. Con albero decisionale, esempio di domanda che il RAG deve saper citare, e costi come ordine di grandezza.
 
-È il complemento naturale di come ho costruito un {{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }} (il lato retrieval) e di come si dimensiona il self-hosting dei modelli in {{ '/it/blog/vllm-vs-ollama-produzione/' | relative_url }} (il lato costi/GPU, che pesa moltissimo qui).
+È il complemento naturale di come ho costruito un [RAG con pgvector sulla fattura elettronica]({{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }}) (il lato retrieval) e di come si dimensiona il self-hosting dei modelli nel confronto [vLLM vs Ollama in produzione]({{ '/it/blog/vllm-vs-ollama-produzione/' | relative_url }}) (il lato costi/GPU, che pesa moltissimo qui).
 
 ## Retrieval vs weights: dove vive la conoscenza
 

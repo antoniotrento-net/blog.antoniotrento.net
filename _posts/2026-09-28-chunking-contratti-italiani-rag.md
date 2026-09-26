@@ -34,7 +34,7 @@ Un articolo di blog è lineare: lo leggi dall'alto in basso, ogni paragrafo si c
 
 Chi fa **NLP su testi giuridici italiani** deve trattare questa struttura come dato primario, non come rumore da appiattire. Il chunk giusto per un contratto non è "un blocco di N token": è **un'unità di senso giuridico** — tipicamente un articolo o un comma — con i suoi confini e i suoi rinvii preservati.
 
-Questo è lo stesso principio con cui ho costruito l'ingest della fattura elettronica: rispettare la struttura del documento invece di trattarlo come testo piatto. Nel pezzo su come indicizzo il {{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }} il vincolo era l'XML FatturaPA; qui è la struttura articolo/comma. Cambia il formato, non il principio: **la struttura è informazione, buttarla è perdere qualità.**
+Questo è lo stesso principio con cui ho costruito l'ingest della fattura elettronica: rispettare la struttura del documento invece di trattarlo come testo piatto. Nel pezzo su come indicizzo il [RAG con pgvector sulla fattura elettronica]({{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }}) il vincolo era l'XML FatturaPA; qui è la struttura articolo/comma. Cambia il formato, non il principio: **la struttura è informazione, buttarla è perdere qualità.**
 
 ## Gli errori dello splitter naive (e perché sembrano innocui)
 
@@ -250,7 +250,7 @@ Ecco la pipeline completa, con i confini disegnati dove servono. Nota il vincolo
 - Non **decide** (firmare, recedere, contestare). Propone dove guardare.
 - Non fa uscire i contratti verso servizi esterni non controllati.
 
-Questa impostazione — modello che recupera e cita, umano che interpreta e decide — è la stessa filosofia di sicurezza e conformità che ho descritto per il {{ '/it/blog/eu-ai-act-pmi-agenti-2026/' | relative_url }}: l'AI propone, l'esperto dispone. In ambito legale il confine è ancora più netto, perché un errore d'interpretazione ha conseguenze contrattuali reali.
+Questa impostazione — modello che recupera e cita, umano che interpreta e decide — è la stessa filosofia di sicurezza e conformità che ho descritto per l'[EU AI Act applicato alle PMI che montano agenti]({{ '/it/blog/eu-ai-act-pmi-agenti-2026/' | relative_url }}): l'AI propone, l'esperto dispone. In ambito legale il confine è ancora più netto, perché un errore d'interpretazione ha conseguenze contrattuali reali.
 
 ## Percorso di implementazione, a step
 
@@ -373,7 +373,7 @@ Stime dichiarate, per un corpus di qualche migliaio di contratti (PMI, studio, u
 
 - **Sviluppo pipeline** (parser strutturale + chunking + metadata + retrieval a due passi + OCR): come ordine di grandezza **1–3 settimane/uomo**, la parte OCR e la normalizzazione post-OCR sono le più costose se hai molti scansiti.
 - **Embedding del corpus:** con un modello di embedding self-hosted, migliaia di contratti sono ore di calcolo su una GPU media, una tantum. Se usi un'API di embedding, qualche decina di euro per l'intero corpus (stima, dipende dal numero di token).
-- **VRAM:** un buon modello di embedding gira in **8–16 GB**; il generativo per le risposte dipende dalle scelte (self-hosted 7–14B in 16–24 GB, o API). Ho confrontato le opzioni self-hosted per il servire in produzione nel pezzo su {{ '/it/pillar/modelli-costi-privacy/' | relative_url }}.
+- **VRAM:** un buon modello di embedding gira in **8–16 GB**; il generativo per le risposte dipende dalle scelte (self-hosted 7–14B in 16–24 GB, o API). Ho confrontato le opzioni self-hosted per il servire in produzione nella guida su [modelli, costi e privacy]({{ '/it/pillar/modelli-costi-privacy/' | relative_url }}).
 - **Costo per query:** retrieval è economico (query vettoriale su pgvector, millisecondi). Il costo è la generazione: qualche centesimo per risposta con un modello self-hosted, un po' di più con API cloud EU.
 - **Costo del gold set:** il tempo dell'avvocato per costruire e validare 30–50 casi. È un investimento, non una spesa accessoria: senza gold set non sai se il sistema funziona.
 

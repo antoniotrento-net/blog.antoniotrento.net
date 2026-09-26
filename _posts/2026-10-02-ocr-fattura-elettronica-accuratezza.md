@@ -19,7 +19,7 @@ Questo pezzo è sull'**accuratezza dell'OCR sulla fattura elettronica**, ma sopr
 
 Vediamo il metodo completo: perché l'**XML FatturaPA batte il PDF**, quali campi fanno danni se sbagliati, come costruire un gold set serio con 200 documenti e l'accordo tra annotatori, quali metriche usare davvero (exact match, bilanci, checksum della partita IVA), quando la **AI vision sui documenti** è giustificata e quando no, e come mandare in revisione umana solo ciò che è incerto. Con il codice per farlo.
 
-È il complemento naturale del pezzo su come ho costruito il {{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }}: lì il tema era recuperare e interrogare le fatture, qui è estrarne i dati con accuratezza misurata. Stesso formato, stessa fonte, obiettivo diverso.
+È il complemento naturale del pezzo su come ho costruito il [RAG con pgvector sulla fattura elettronica]({{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }}): lì il tema era recuperare e interrogare le fatture, qui è estrarne i dati con accuratezza misurata. Stesso formato, stessa fonte, obiettivo diverso.
 
 ## L'XML è la fonte; il PDF è un fallback sporco
 
@@ -104,7 +104,7 @@ Come lo costruisco, con i vincoli veri:
 - **Accordo tra annotatori (inter-annotator agreement).** Fai etichettare una parte dei documenti a **due** persone indipendenti e confronta. Se non sono d'accordo, o il campo è ambiguo o le istruzioni non sono chiare. Un gold set costruito da una persona sola, senza controllo, eredita i suoi errori e le sue interpretazioni. L'accordo tra annotatori è la misura di quanto ti puoi fidare del tuo stesso metro.
 - **Congela il gold set e versionalo.** È un artefatto stabile contro cui misuri a ogni modifica. Se lo cambi, sai che i numeri prima/dopo non sono confrontabili.
 
-Il gold set è un investimento di tempo di persone che conoscono il dominio. È la voce di costo dominante di un progetto di estrazione serio, ed è giusto così: **è ciò che trasforma "secondo me funziona" in "misurato sul nostro gold set, l'accuratezza sulla partita IVA è 99,4%".** La stessa logica del gold set legale che ho descritto per il {{ '/it/blog/chunking-contratti-italiani-rag/' | relative_url }}: cambia il dominio, non il principio.
+Il gold set è un investimento di tempo di persone che conoscono il dominio. È la voce di costo dominante di un progetto di estrazione serio, ed è giusto così: **è ciò che trasforma "secondo me funziona" in "misurato sul nostro gold set, l'accuratezza sulla partita IVA è 99,4%".** La stessa logica del gold set legale che ho descritto per il [chunking dei contratti italiani per il RAG]({{ '/it/blog/chunking-contratti-italiani-rag/' | relative_url }}): cambia il dominio, non il principio.
 
 ## Metriche: exact match, quadratura, checksum
 

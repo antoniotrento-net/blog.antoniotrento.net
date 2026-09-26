@@ -112,7 +112,7 @@ def apri_conversazione(canale: str) -> str:
 
 Nota il `log_evento`: la trasparenza non basta darla, devi poter **dimostrare** di averla data. Un log con timestamp e versione del disclaimer è la prova che, alla data X, chi scriveva sapeva di parlare con un bot. Sembra pignoleria; è esattamente ciò che un auditor chiede.
 
-Se il tuo agente scrive nel CRM o gestisce dati personali, la trasparenza dell'AI Act si somma agli obblighi GDPR — informativa, base giuridica, minimizzazione. Ho trattato quel lato nel pezzo su {{ '/it/blog/gdpr-chatgpt-crm/' | relative_url }}: i due regolamenti non si sostituiscono, si sommano, e vanno affrontati insieme.
+Se il tuo agente scrive nel CRM o gestisce dati personali, la trasparenza dell'AI Act si somma agli obblighi GDPR — informativa, base giuridica, minimizzazione. Ho trattato quel lato nel pezzo su [GDPR, ChatGPT e dati del CRM]({{ '/it/blog/gdpr-chatgpt-crm/' | relative_url }}): i due regolamenti non si sostituiscono, si sommano, e vanno affrontati insieme.
 
 ## L'architettura di riferimento di un agente "difendibile"
 
@@ -147,7 +147,7 @@ I confini che rendono il sistema difendibile, e che scrivi nel dossier:
 - **Cosa NON tocca mai l'agente:** decisioni su persone (assunzione, licenziamento, concessione credito), azioni irreversibili senza conferma, modifica delle proprie regole. Queste restano a un umano o a codice deterministico.
 - **Chi sorveglia:** un ruolo umano nominato, con potere reale di correggere e fermare — non un "supervisore" che clicca "approva" a occhi chiusi.
 
-Questa separazione tra "l'AI propone, l'umano dispone" è la stessa che uso per la sicurezza operativa degli agenti: kill switch, coda di approvazione, log delle decisioni. L'ho descritta in {{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}, e non è un caso: **ciò che rende un agente sicuro è anche ciò che lo rende conforme.** La sorveglianza umana non è un adempimento burocratico appiccicato sopra; è architettura.
+Questa separazione tra "l'AI propone, l'umano dispone" è la stessa che uso per la sicurezza operativa degli agenti: kill switch, coda di approvazione, log delle decisioni. L'ho descritta nel pezzo su [un agente MCP su Salesforce in produzione]({{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}), e non è un caso: **ciò che rende un agente sicuro è anche ciò che lo rende conforme.** La sorveglianza umana non è un adempimento burocratico appiccicato sopra; è architettura.
 
 ## Documentazione tecnica minima che un auditor può capire
 
@@ -177,7 +177,7 @@ Un equivoco che genera panico inutile: gli obblighi dell'AI Act sulla **qualità
 Cosa fai tu, invece? **RAG.** Recuperi i tuoi documenti e li dai in contesto al modello. Questo non è "training": è retrieval a runtime. Ma attenzione, un vincolo pratico resta tuo:
 
 - **La qualità del RAG è responsabilità tua.** Se il tuo indice contiene dati errati, obsoleti o discriminatori, le risposte lo saranno. Non è "qualità dei dati di training" ai sensi dell'Allegato IV, ma è comunque parte del tuo dovere di far funzionare il sistema in modo corretto e non lesivo.
-- **I dati personali nel RAG** sono soggetti al GDPR: minimizzazione, base giuridica, diritto alla cancellazione (che deve poter rimuovere un documento dall'indice). Ne ho parlato costruendo il {{ '/it/pillar/modelli-costi-privacy/' | relative_url }} lato privacy: il RAG conserva, e ciò che conserva va governato.
+- **I dati personali nel RAG** sono soggetti al GDPR: minimizzazione, base giuridica, diritto alla cancellazione (che deve poter rimuovere un documento dall'indice). Il lato privacy lo affronto nella guida su [modelli, costi e privacy]({{ '/it/pillar/modelli-costi-privacy/' | relative_url }}): il RAG conserva, e ciò che conserva va governato.
 
 La distinzione da mettere nel dossier (punto 4): *"Non addestriamo né mettiamo a punto modelli. Utilizziamo il modello [X] tramite [API/self-hosted]. I nostri dati sono usati solo a runtime via RAG, non per l'addestramento, e non lasciano l'infrastruttura [UE/self-hosted]."* Una frase così chiude metà delle domande di un auditor.
 

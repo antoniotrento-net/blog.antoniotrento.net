@@ -19,7 +19,7 @@ Nove volte su dieci, la causa è che stai girando in **queue mode** senza averne
 
 Questo pezzo è ops n8n avanzato: come funziona davvero il queue mode (main vs worker, Redis/Bull, Postgres), perché le run spariscono, come si dimensionano i worker (e la differenza enorme tra carico CPU-bound e I/O-bound quando ci sono chiamate LLM di mezzo), il pruning delle executions che altrimenti gonfiano il DB, la persistenza di Redis e cosa perdi se lo perdi, l'idempotenza dei webhook, l'upgrade senza buttare la coda, e l'alerting. Con le variabili d'ambiente rilevanti, le query di pruning e la checklist "non parte".
 
-È il seguito operativo di come ho montato n8n self-hosted in {{ '/it/blog/n8n-self-hosted-openai-privacy/' | relative_url }}: lì il setup base, qui cosa succede quando quel setup deve scalare e regge il traffico vero.
+È il seguito operativo di come ho montato [n8n self-hosted con attenzione alla privacy]({{ '/it/blog/n8n-self-hosted-openai-privacy/' | relative_url }}): lì il setup base, qui cosa succede quando quel setup deve scalare e regge il traffico vero.
 
 ## Main vs worker: chi fa cosa (e perché conta)
 

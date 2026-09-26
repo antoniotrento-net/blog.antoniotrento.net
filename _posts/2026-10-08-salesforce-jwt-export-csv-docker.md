@@ -19,7 +19,7 @@ Quello non è un processo: è un rito che dipende da un umano e da una macchina.
 
 Questo pezzo è la ricetta di quell'exporter, con l'onestà di un'integrazione batch reale — **niente AI qui, è integrazione pura, verticale CRM.** Vedremo il JWT Bearer flow (e perché l'orologio e l'audience ti fregano), l'utente di integrazione con permessi per oggetto (e perché usare l'"Administrator" è una bomba), la paginazione con la Bulk API per non farti throttlare alle tre di notte, il mapping dei formati italiani (date, valuta, booleani), il CSV fatto bene (encoding, separatore, escaping, PII), Docker più cron con lock file e alert, e l'audit di chi ha scaricato cosa. Con gli scheletri copiabili.
 
-È lo stesso rigore d'integrazione con cui ho costruito l'{{ '/it/blog/agente-imap-pec-fatture/' | relative_url }}: autenticazione robusta, permessi minimi, idempotenza, alert. Cambia la sorgente (Salesforce invece della PEC), non la disciplina.
+È lo stesso rigore d'integrazione con cui ho costruito l'[agente IMAP per PEC e fatture]({{ '/it/blog/agente-imap-pec-fatture/' | relative_url }}): autenticazione robusta, permessi minimi, idempotenza, alert. Cambia la sorgente (Salesforce invece della PEC), non la disciplina.
 
 ## JWT Bearer: rotazione, orologio, audience
 
@@ -255,7 +255,7 @@ Ecco come dispongo l'exporter, con i confini. Nota: nessuna AI, è integrazione 
 - Il CSV con PII va **solo** alla destinazione controllata (storage cifrato), non su cartelle aperte.
 - Non gira **due volte in parallelo**: il lock file lo impedisce.
 
-Questa impostazione — credenziale a privilegio minimo, sola lettura, secret fuori dall'immagine, audit — è la stessa disciplina d'integrazione del pezzo su come scrive un {{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}: là l'agente *scrive* con controlli fortissimi, qui l'exporter *legge* con permessi minimi. In entrambi i casi, il raggio del danno da una credenziale compromessa è ridotto al minimo per progetto.
+Questa impostazione — credenziale a privilegio minimo, sola lettura, secret fuori dall'immagine, audit — è la stessa disciplina d'integrazione del pezzo su come scrive un [agente MCP su Salesforce in produzione]({{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}): là l'agente *scrive* con controlli fortissimi, qui l'exporter *legge* con permessi minimi. In entrambi i casi, il raggio del danno da una credenziale compromessa è ridotto al minimo per progetto.
 
 ## Docker + cron: lock file e alert su fallimento
 

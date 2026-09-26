@@ -17,7 +17,7 @@ Un consulente del lavoro scrive nel motore di ricerca interno dello studio: **"a
 
 Non è un bug del modello di embedding: è il suo funzionamento normale. Un embedding comprime il significato di un testo in un vettore, e in quello spazio "articolo 18" e "articolo 19" sono quasi identici: stessa struttura, stesso dominio, numeri che il modello tratta come dettagli. Il **cosine vince sempre**, perché misura la somiglianza di argomento, non l'identità di un riferimento. E nei documenti giuridici, fiscali e tecnici italiani, il riferimento esatto — un numero di articolo, un decreto, un numero di fattura, un codice prodotto — è spesso *tutta* la domanda.
 
-Questo pezzo è sulla **hybrid search, BM25 più embedding, sull'italiano**: combinare una ricerca lessicale (che trova le parole e i numeri esatti) con una ricerca vettoriale (che trova il significato), in modo che nessuna delle due domini l'altra. Nel pezzo sul {{ '/it/blog/pgvector-vs-qdrant-vs-pinecone/' | relative_url }} ho mostrato la versione base di una fusione in Postgres; qui entriamo nei dettagli che fanno la differenza sull'italiano: i limiti dello stemmer, le stopword che cancellano la negazione, gli apostrofi, le abbreviazioni come "art." e "n.", i numeri con la barra, e soprattutto come **misurare** se la ricerca funziona invece di giudicarla a sensazione.
+Questo pezzo è sulla **hybrid search, BM25 più embedding, sull'italiano**: combinare una ricerca lessicale (che trova le parole e i numeri esatti) con una ricerca vettoriale (che trova il significato), in modo che nessuna delle due domini l'altra. Nel pezzo sul [confronto pgvector vs Qdrant vs Pinecone]({{ '/it/blog/pgvector-vs-qdrant-vs-pinecone/' | relative_url }}) ho mostrato la versione base di una fusione in Postgres; qui entriamo nei dettagli che fanno la differenza sull'italiano: i limiti dello stemmer, le stopword che cancellano la negazione, gli apostrofi, le abbreviazioni come "art." e "n.", i numeri con la barra, e soprattutto come **misurare** se la ricerca funziona invece di giudicarla a sensazione.
 
 Le query che mettono in crisi gli embedding hanno tratti precisi:
 
@@ -104,7 +104,7 @@ Le strategie per evitarlo:
 - **Aumentare il numero di candidati** esplorati (parametri come `ef_search`) per le query con filtri selettivi, accettando un po' di latenza in più.
 - **Filtri identici sui due rami**: la ricerca lessicale e quella vettoriale devono applicare **gli stessi filtri**, altrimenti la fusione mescola documenti che l'utente non doveva vedere o che non rispettano il perimetro richiesto.
 
-I filtri di **permesso** meritano una nota a parte: non sono un'ottimizzazione, sono sicurezza. Un documento che l'utente non può vedere non deve entrare nella lista dei candidati, in nessuno dei due rami. È lo stesso principio che applico nel chunking dei contratti: la struttura e i metadati si decidono in indicizzazione, non si rattoppano in risposta — ne ho parlato nel pezzo sul {{ '/it/blog/chunking-contratti-italiani-rag/' | relative_url }}.
+I filtri di **permesso** meritano una nota a parte: non sono un'ottimizzazione, sono sicurezza. Un documento che l'utente non può vedere non deve entrare nella lista dei candidati, in nessuno dei due rami. È lo stesso principio che applico nel chunking dei contratti: la struttura e i metadati si decidono in indicizzazione, non si rattoppano in risposta — ne ho parlato nel pezzo sul [chunking dei contratti italiani per il RAG]({{ '/it/blog/chunking-contratti-italiani-rag/' | relative_url }}).
 
 ## L'architettura di riferimento
 

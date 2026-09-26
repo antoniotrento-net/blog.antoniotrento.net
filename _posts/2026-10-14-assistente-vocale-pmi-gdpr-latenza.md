@@ -21,7 +21,7 @@ Le piattaforme ospitate come Vapi o Retell hanno reso facilissimo fare una demo:
 
 In questo pezzo smontiamo la catena da ingegneri: dove si perdono i millisecondi tra STT, LLM e TTS (con un budget di latenza in tabella), cosa spegnere quando l'umano interrompe, dove transita l'audio e con quali regioni e retention, perché una prenotazione va modellata come **macchina a stati** e non lasciata all'improvvisazione di un agente, il fallback umano, gli obblighi di informativa sulla chiamata, e l'MVP onesto che ha senso mettere in produzione: FAQ + prenotazioni, niente diagnosi.
 
-È il seguito naturale del lavoro sulla voce offline che ho descritto per la {{ '/it/blog/trascrizione-audio-offline-windows/' | relative_url }}: là si trascriveva un file registrato, con tutto il tempo del mondo; qui si trascrive una persona che sta aspettando una risposta. Cambia tutto.
+È il seguito naturale del lavoro sulla voce offline che ho descritto per la [trascrizione audio offline su Windows]({{ '/it/blog/trascrizione-audio-offline-windows/' | relative_url }}): là si trascriveva un file registrato, con tutto il tempo del mondo; qui si trascrive una persona che sta aspettando una risposta. Cambia tutto.
 
 ## Catena STT → LLM → TTS: dove perdi i millisecondi
 
@@ -293,10 +293,10 @@ Perché questa struttura vince sull'agente libero:
 - **Nessuna scrittura senza conferma esplicita.** Il calendario si tocca in un solo stato, dopo il riepilogo e un "sì" riconosciuto.
 - **Il modello non inventa servizi o slot.** Estrae da una lista chiusa (il listino) e propone solo slot che il calendario ha restituito davvero.
 - **Idempotenza.** Se la chiamata cade e il cliente richiama, o ripete "confermo" due volte, la chiave di prenotazione impedisce il doppio appuntamento. È lo stesso principio che applico a ogni tool con effetti collaterali.
-- **Limiti espliciti.** Tre giri di proposte e poi umano: niente loop infiniti di "e venerdì? e sabato?". Il tema dei loop negli agenti lo tratto in dettaglio in {{ '/it/blog/tool-calling-loop-infinito/' | relative_url }}, e al telefono è ancora più grave perché il cliente è lì, in linea, ad aspettare.
+- **Limiti espliciti.** Tre giri di proposte e poi umano: niente loop infiniti di "e venerdì? e sabato?". Il tema dei loop negli agenti lo tratto in dettaglio nel pezzo sugli [agenti che girano in loop sulle tool call]({{ '/it/blog/tool-calling-loop-infinito/' | relative_url }}), e al telefono è ancora più grave perché il cliente è lì, in linea, ad aspettare.
 - **È testabile.** Puoi scrivere test per ogni transizione. Un prompt libero lo puoi solo "provare e sperare".
 
-Se lo studio usa un calendario con più operatori, sale e risorse, la complessità vera sta nel motore di disponibilità, non nella voce: ne ho parlato nel pezzo sul {{ '/it/blog/calendario-professionale-multi-operatore/' | relative_url }}. L'agente vocale è solo un'altra interfaccia su quel motore — e non deve mai reinventarlo.
+Se lo studio usa un calendario con più operatori, sale e risorse, la complessità vera sta nel motore di disponibilità, non nella voce: ne ho parlato nel pezzo sul [calendario professionale multi-operatore]({{ '/it/blog/calendario-professionale-multi-operatore/' | relative_url }}). L'agente vocale è solo un'altra interfaccia su quel motore — e non deve mai reinventarlo.
 
 ## Percorso di implementazione, a step
 

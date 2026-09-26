@@ -150,7 +150,7 @@ Qui c'è il concetto che separa una costituzione seria da un prompt formattato i
 
 La conseguenza pratica è che la costituzione **viene compilata in due cose diverse**:
 
-1. **Configurazione del runtime**: allowlist dei tool, limiti, orari, budget, filtri. Questa parte il modello non la vede nemmeno: la applica il codice attorno al modello. È la stessa filosofia dei controlli che ho descritto per il {{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}: le leve pericolose stanno fuori dalla portata del modello.
+1. **Configurazione del runtime**: allowlist dei tool, limiti, orari, budget, filtri. Questa parte il modello non la vede nemmeno: la applica il codice attorno al modello. È la stessa filosofia dei controlli che ho descritto per il [kill switch per agenti che scrivono su Salesforce]({{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}): le leve pericolose stanno fuori dalla portata del modello.
 2. **Sezione del prompt di sistema**: identità, tono, descrizione dei divieti con le risposte standard. Questa parte guida il modello, e per le regole critiche va affiancata da un **controllo sull'output** (un classificatore o un secondo passaggio che verifica la risposta prima di inviarla).
 
 Se una regola è critica e può essere spostata nel codice, **spostala nel codice**. "Non inviare più di due email al giorno" scritto nel prompt è un auspicio; scritto come contatore nel runtime è una garanzia. Il modello può essere convinto, confuso o manipolato — anche da un documento o una mail che legge, come ho mostrato parlando di prompt injection. Un contatore no.
@@ -159,7 +159,7 @@ Se una regola è critica e può essere spostata nel codice, **spostala nel codic
 
 Un file YAML che nessuno valida è solo un prompt con più indentazione. La costituzione ha uno **schema**: quali campi sono obbligatori, quali valori sono ammessi, quali riferimenti devono esistere. E la pipeline di CI la rifiuta se non lo rispetta.
 
-Lo schema, espresso con un modello Pydantic (stesso approccio del data contract tra modello e tool che ho descritto in {{ '/it/blog/json-schema-tool-calling-iban/' | relative_url }}):
+Lo schema, espresso con un modello Pydantic (stesso approccio del data contract tra modello e tool che ho descritto in [JSON Schema e tool calling contro l'IBAN inventato]({{ '/it/blog/json-schema-tool-calling-iban/' | relative_url }})):
 
 ```python
 # constitution/schema.py
@@ -399,7 +399,7 @@ Tre regole sui test:
 - **Sui divieti critici la soglia è zero.** Non "95% di rifiuti corretti": zero violazioni sulla batteria. Se c'è una violazione, la PR non passa.
 - **La batteria cresce con gli incidenti.** Ogni volta che in produzione emerge un modo nuovo di aggirare un divieto, diventa un caso di test. È lo stesso principio del postmortem: nessun errore due volte.
 
-Per sapere cosa succede in produzione tra un test e l'altro, ogni conversazione logga la **versione della costituzione** e gli eventi dei divieti; il resto dell'osservabilità (tracce, costi, allarmi) lo tratto nel pezzo sull'{{ '/it/blog/osservabilita-llm-produzione/' | relative_url }}.
+Per sapere cosa succede in produzione tra un test e l'altro, ogni conversazione logga la **versione della costituzione** e gli eventi dei divieti; il resto dell'osservabilità (tracce, costi, allarmi) lo tratto nel pezzo sull'[osservabilità degli LLM in produzione]({{ '/it/blog/osservabilita-llm-produzione/' | relative_url }}).
 
 ## L'architettura di riferimento
 

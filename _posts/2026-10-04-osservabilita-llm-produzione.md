@@ -165,7 +165,7 @@ Ecco come dispongo il livello di osservabilità. Il confine chiave: **il layer d
 - Non altera la logica dell'agente: osserva, non decide (tranne l'enforcement del budget, che è un controllo deterministico separato).
 - Non manda le tracce a un servizio esterno non controllato: store self-hosted, dati in UE.
 
-Nota che l'**enforcement** (budget/kill, allarmi) è un componente a parte che *usa* i dati di osservabilità ma è deterministico — la stessa filosofia del kill switch che ho descritto per {{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}: il controllo sta nel codice, non nel modello.
+Nota che l'**enforcement** (budget/kill, allarmi) è un componente a parte che *usa* i dati di osservabilità ma è deterministico — la stessa filosofia del kill switch che ho descritto per gli [agenti che scrivono su Salesforce]({{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}): il controllo sta nel codice, non nel modello.
 
 ## Lo schema della tabella runs
 
@@ -240,7 +240,7 @@ FROM runs WHERE started_at >= now() - interval '7 days'
 GROUP BY agent;
 ```
 
-La metrica che sottolineo, perché è la più trascurata, è il **costo dei token per agente**. Senza `process` nel record, sai solo "l'AI ci costa X al mese" — inutile. Con l'attribuzione per agente e processo, sai *quale* agente e *quale* cliente/flusso consuma, e puoi intervenire dove serve. È la differenza tra una bolletta indistinta e un centro di costo governabile. Sul costo del modello sottostante e sulle scelte self-hosted vale quanto ho scritto confrontando {{ '/it/blog/vllm-vs-ollama-produzione/' | relative_url }}: l'osservabilità è ciò che ti dice se quelle scelte stanno pagando.
+La metrica che sottolineo, perché è la più trascurata, è il **costo dei token per agente**. Senza `process` nel record, sai solo "l'AI ci costa X al mese" — inutile. Con l'attribuzione per agente e processo, sai *quale* agente e *quale* cliente/flusso consuma, e puoi intervenire dove serve. È la differenza tra una bolletta indistinta e un centro di costo governabile. Sul costo del modello sottostante e sulle scelte self-hosted vale quanto ho scritto confrontando [vLLM vs Ollama in produzione]({{ '/it/blog/vllm-vs-ollama-produzione/' | relative_url }}): l'osservabilità è ciò che ti dice se quelle scelte stanno pagando.
 
 ## Budget per agente e kill sullo sforamento
 

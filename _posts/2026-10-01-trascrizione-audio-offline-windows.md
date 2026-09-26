@@ -29,7 +29,7 @@ Prima di parlare di modelli, mettiamo a fuoco *cosa* stai processando, perché �
 
 Mandare tutto questo a un vendor esterno non è "usare un tool": è un **trasferimento di dati** verso un terzo, spesso extra-UE, con tutte le implicazioni di riservatezza e compliance. E la comodità non compensa il rischio quando il rischio è "la strategia dell'azienda in mano a un fornitore fuori dal tuo controllo".
 
-Il principio che applico, e che è il cuore di questo blog: **i dati sensibili restano dove li controlli tu.** Per l'audio delle riunioni questo significa trascrizione in locale, sul tuo hardware, in UE, senza che un byte esca. Non per ideologia: per la stessa ragione per cui non pubblichi il budget su Twitter. È lo stesso ragionamento che ho fatto costruendo l'{{ '/it/blog/agente-imap-pec-fatture/' | relative_url }}: i documenti fiscali e le riunioni sono dati che non escono, punto.
+Il principio che applico, e che è il cuore di questo blog: **i dati sensibili restano dove li controlli tu.** Per l'audio delle riunioni questo significa trascrizione in locale, sul tuo hardware, in UE, senza che un byte esca. Non per ideologia: per la stessa ragione per cui non pubblichi il budget su Twitter. È lo stesso ragionamento che ho fatto costruendo l'[agente IMAP per PEC e fatture]({{ '/it/blog/agente-imap-pec-fatture/' | relative_url }}): i documenti fiscali e le riunioni sono dati che non escono, punto.
 
 ## Whisper API: prezzo per ora, retry e retention
 
@@ -79,7 +79,7 @@ Numeri come ordine di grandezza, dichiarati come stime:
 | Whisper.cpp (quantizzato) | CPU / poca VRAM | lento su CPU, ok su hardware modesto |
 | Parakeet/NeMo | dipende dal modello | pensati per GPU NVIDIA, inglese |
 
-Una GPU consumer con 12 GB (una scheda di fascia media, anche usata) copre tranquillamente `large-v3` in int8 con margine per la diarizzazione. Non serve un data center. Serve la GPU che probabilmente hai già in una workstation, o che compri usata a poche centinaia di euro. Sul dimensionamento GPU per il self-hosting ho scritto in dettaglio confrontando {{ '/it/blog/vllm-vs-ollama-produzione/' | relative_url }}: gli stessi principi di VRAM e quantizzazione valgono qui.
+Una GPU consumer con 12 GB (una scheda di fascia media, anche usata) copre tranquillamente `large-v3` in int8 con margine per la diarizzazione. Non serve un data center. Serve la GPU che probabilmente hai già in una workstation, o che compri usata a poche centinaia di euro. Sul dimensionamento GPU per il self-hosting ho scritto in dettaglio confrontando [vLLM vs Ollama in produzione]({{ '/it/blog/vllm-vs-ollama-produzione/' | relative_url }}): gli stessi principi di VRAM e quantizzazione valgono qui.
 
 ## Diarizzazione e parlato sovrapposto in italiano
 

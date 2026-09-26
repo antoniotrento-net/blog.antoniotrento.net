@@ -20,7 +20,7 @@ Il **Cloudflare Tunnel su Raspberry Pi per n8n** risolve esattamente questo: esp
 
 Questa è una guida ops concreta, da laboratorio e da ufficio piccolo: `cloudflared` in Docker sul Pi, gli hostname pubblici vs quelli protetti da Access, cosa non devi *mai* tunnelare, la lezione — imparata a caro prezzo da molti — sugli **IP residenziali che si beccano i 403**, e la manutenzione che nessuno ti racconta finché la SD card non muore. Con i frammenti di configurazione copiabili.
 
-Fa parte del percorso su come costruire uno stack sovrano su hardware tuo, che ho iniziato con {{ '/it/blog/n8n-self-hosted-openai-privacy/' | relative_url }} e con lo {{ '/it/blog/docker-pmi-stack-sovrano/' | relative_url }}. Qui affrontiamo il pezzo di rete: come far entrare il mondo, in modo controllato, senza spalancare la porta.
+Fa parte del percorso su come costruire uno stack sovrano su hardware tuo, che ho iniziato con [n8n self-hosted con OpenAI e privacy]({{ '/it/blog/n8n-self-hosted-openai-privacy/' | relative_url }}) e con lo [stack sovrano in Docker per PMI]({{ '/it/blog/docker-pmi-stack-sovrano/' | relative_url }}). Qui affrontiamo il pezzo di rete: come far entrare il mondo, in modo controllato, senza spalancare la porta.
 
 ## Perché il port forwarding sul modem è una pessima idea
 

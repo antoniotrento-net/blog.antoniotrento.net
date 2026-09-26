@@ -19,7 +19,7 @@ Questo pezzo parla di un mestiere che il mondo delle demo AI sottovaluta sistema
 
 L'angolo è dichiarato: **shipping, non demo Colab.** Vediamo cosa mettere nel processo Electron e cosa in un processo nativo separato, se il modello va incluso nell'installer o scaricato al primo avvio, le trappole di Windows che nessuno ti dice (il limite di 260 caratteri, gli spazi e gli accenti nei percorsi, gli utenti non amministratori, OneDrive), GPU NVIDIA con fallback CPU, firma del codice e SmartScreen, la policy di aggiornamento, e le due regole di privacy che separano un'app offline seria da una che finge di esserlo: **niente telemetria di default** e **crash report che non spediscono i file dell'utente**.
 
-Se vieni dal pezzo sulla {{ '/it/blog/trascrizione-audio-offline-windows/' | relative_url }}, questo è il passo successivo: là facevamo girare faster-whisper su un PC Windows configurato da noi; qui lo mettiamo in mano a qualcuno che non sa cosa sia CUDA e non deve saperlo.
+Se vieni dal pezzo sulla [trascrizione audio offline su Windows]({{ '/it/blog/trascrizione-audio-offline-windows/' | relative_url }}), questo è il passo successivo: là facevamo girare faster-whisper su un PC Windows configurato da noi; qui lo mettiamo in mano a qualcuno che non sa cosa sia CUDA e non deve saperlo.
 
 ## Perché il prototipo non sopravvive al primo cliente
 

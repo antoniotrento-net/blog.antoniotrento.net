@@ -210,7 +210,7 @@ Un sistema di trading automatico serio separa nettamente la ricerca, la simulazi
       WATCHDOG ESTERNO (kill switch) ◄── riconciliazione posizioni · log · allarmi
 ```
 
-**Cosa non tocca la strategia**: gli ordini veri (produce intenzioni, non ordini), i limiti di rischio (li applica un modulo separato che la strategia non può modificare), le credenziali di prelievo (la chiave API non le ha proprio). È lo stesso principio che ho applicato agli agenti che scrivono su sistemi aziendali, con dry-run e coda di approvazione: il componente "intelligente" propone, un componente deterministico dispone. Ne ho parlato in dettaglio nel pezzo sul {{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}.
+**Cosa non tocca la strategia**: gli ordini veri (produce intenzioni, non ordini), i limiti di rischio (li applica un modulo separato che la strategia non può modificare), le credenziali di prelievo (la chiave API non le ha proprio). È lo stesso principio che ho applicato agli agenti che scrivono su sistemi aziendali, con dry-run e coda di approvazione: il componente "intelligente" propone, un componente deterministico dispone. Ne ho parlato in dettaglio nel pezzo sul [kill switch per agenti che scrivono su Salesforce]({{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}).
 
 ## Risk protocol: cap, kill switch, niente martingala
 
@@ -281,7 +281,7 @@ Per ogni decisione e ogni ordine:
 
 E ogni settimana il confronto che conta: **backtest vs paper sullo stesso periodo**. Fai girare il backtest esattamente sulle stesse settimane del paper trading e confronta operazione per operazione. Le differenze ti dicono dove il backtest mente: slippage reale più alto di quello modellato, segnali che in tempo reale arrivano tardi, dati che in diretta hanno buchi che lo storico non ha. Se paper e backtest divergono molto, non passare al live: correggi il modello.
 
-Durata: abbastanza da vedere un numero sensato di operazioni e almeno un cambio di condizioni di mercato. Per una strategia che opera poche volte a settimana, significa **mesi**, non giorni. Sui principi di log e metriche (tracce, costo per esecuzione, allarmi su anomalie) vale quanto ho scritto sull'{{ '/it/blog/osservabilita-llm-produzione/' | relative_url }}: cambia il dominio, non la disciplina.
+Durata: abbastanza da vedere un numero sensato di operazioni e almeno un cambio di condizioni di mercato. Per una strategia che opera poche volte a settimana, significa **mesi**, non giorni. Sui principi di log e metriche (tracce, costo per esecuzione, allarmi su anomalie) vale quanto ho scritto sull'[osservabilità degli LLM in produzione]({{ '/it/blog/osservabilita-llm-produzione/' | relative_url }}): cambia il dominio, non la disciplina.
 
 ## Percorso di implementazione, a step
 

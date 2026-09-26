@@ -19,7 +19,7 @@ Questo pezzo è un confronto **Traefik vs Caddy vs Cloudflare Tunnel** dal punto
 
 Vedremo cosa deve fare davvero il fronte (TLS, auth, log, limiti), i tre approcci con i loro compromessi onesti, perché il **Basic auth non basta** e cosa mettere al suo posto, il blast radius di una misconfigurazione, i log con la questione GDPR degli indirizzi IP, gli errori di certificato più comuni, e la matrice finale. Con un Caddyfile completo e le label Traefik equivalenti.
 
-Il Cloudflare Tunnel l'ho già sviscerato nel dettaglio per esporre n8n senza aprire porte in {{ '/it/blog/cloudflare-tunnel-raspberry-pi-n8n/' | relative_url }}: qui lo metto a confronto con le altre due opzioni, senza ripetere la guida. E il contesto dello stack Docker sovrano è quello di {{ '/it/blog/docker-pmi-stack-sovrano/' | relative_url }}.
+Il Cloudflare Tunnel l'ho già sviscerato nel dettaglio per esporre n8n senza aprire porte in [Cloudflare Tunnel su Raspberry Pi]({{ '/it/blog/cloudflare-tunnel-raspberry-pi-n8n/' | relative_url }}): qui lo metto a confronto con le altre due opzioni, senza ripetere la guida. E il contesto dello stack Docker sovrano è quello del pezzo sullo [stack sovrano in Docker per PMI]({{ '/it/blog/docker-pmi-stack-sovrano/' | relative_url }}).
 
 ## Cosa deve fare davvero il fronte: TLS, auth, log, limiti
 

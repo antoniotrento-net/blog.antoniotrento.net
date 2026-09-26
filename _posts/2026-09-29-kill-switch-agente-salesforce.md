@@ -20,7 +20,7 @@ Perché non è un controllo? Perché il "SÌ" arriva **sullo stesso canale non f
 
 Questo pezzo è sul **kill switch per agenti che scrivono su Salesforce**, e il punto di vista è preciso: **control theory applicata ai side effect, non UX del bot.** Non mi interessa quanto è carina la conversazione. Mi interessa che ogni scrittura verso il CRM passi per un controllo *reale* — un controllo che regge anche quando il modello viene ingannato, anche quando qualcuno digita SÌ senza guardare, anche quando devi fermare tutto alle tre di notte.
 
-Costruiamolo pezzo per pezzo: dry-run, coda di approvazione con link firmati, soglie, freeze globale, rollback dove possibile, separazione dei ruoli, e — la parte che quasi tutti dimenticano — come **testare** che il kill switch funzioni davvero. Questo articolo è il seguito operativo di quando ho descritto come mettere {{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}: lì l'architettura generale, qui il meccanismo di controllo in dettaglio.
+Costruiamolo pezzo per pezzo: dry-run, coda di approvazione con link firmati, soglie, freeze globale, rollback dove possibile, separazione dei ruoli, e — la parte che quasi tutti dimenticano — come **testare** che il kill switch funzioni davvero. Questo articolo è il seguito operativo di quando ho descritto come mettere [un agente MCP su Salesforce in produzione]({{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}): lì l'architettura generale, qui il meccanismo di controllo in dettaglio.
 
 ## Side effect: la chat non è un log di audit
 
@@ -287,7 +287,7 @@ Da qui due principi:
 1. **Idempotenza sempre.** Ogni azione ha un `action_id`; l'esecutore rifiuta di eseguire due volte lo stesso ID. Così un replay (dopo un crash, un retry) non raddoppia i side effect. È l'unico modo per rendere sicuro il retry.
 2. **Lo snapshot prima della scrittura, sempre.** Anche se il rollback non sarà sempre possibile, lo stato precedente ti serve per capire cosa è cambiato e per ripristinare ciò che è ripristinabile. Costa poco spazio, vale tantissimo in un incidente.
 
-E il vincolo tecnico di Salesforce da non ignorare: i **governor limit** e la Bulk API. Un update su 340 record non si fa con 340 chiamate singole (esaurisci i limiti e sei lento): si usa la Bulk API in batch. Ma la Bulk API rende il rollback più complesso, perché un batch può fallire parzialmente. L'esecutore deve gestire i risultati per-record e sapere esattamente quali scritture sono andate a buon fine, per uno snapshot coerente. Ne ho parlato tra i vincoli di {{ '/it/pillar/agenti-esecuzione/' | relative_url }}: i limiti della piattaforma non sono un dettaglio, sono parte del design.
+E il vincolo tecnico di Salesforce da non ignorare: i **governor limit** e la Bulk API. Un update su 340 record non si fa con 340 chiamate singole (esaurisci i limiti e sei lento): si usa la Bulk API in batch. Ma la Bulk API rende il rollback più complesso, perché un batch può fallire parzialmente. L'esecutore deve gestire i risultati per-record e sapere esattamente quali scritture sono andate a buon fine, per uno snapshot coerente. Ne ho parlato tra i vincoli di [agenti che eseguono]({{ '/it/pillar/agenti-esecuzione/' | relative_url }}): i limiti della piattaforma non sono un dettaglio, sono parte del design.
 
 ## Chi approva: separazione dei ruoli
 

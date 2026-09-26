@@ -17,7 +17,7 @@ L'incident type che spaventa di più chi ha un agente in produzione non è il cr
 
 Questo è il **tool calling loop infinito**, il *runaway agent*: un agente che entra in un ciclo di chiamate senza convergere, bruciando token, CPU ed euro finché qualcuno non se ne accorge o finché non si esaurisce un limite esterno. È uno degli incident più costosi e più prevenibili degli agenti in produzione, ed è il tema di oggi — raccontato come si racconta un incident vero: sintomi, cause, e i meccanismi per spezzarlo **senza spegnere tutta la piattaforma per tutti**.
 
-Vedremo come riconoscerlo dai log, perché "max iterations a 25 è già tanto", il circuit breaker per tool con error budget, la deduplicazione delle chiamate identiche, e — il pezzo che quasi tutti dimenticano — il **watchdog esterno al grafo**, perché non puoi affidare a ciò-che-sta-andando-in-loop il compito di fermarsi da solo. Con contatore di step, allarme su tool/minuto e checklist di incident. È il seguito operativo dell'{{ '/it/blog/osservabilita-llm-produzione/' | relative_url }} (che ti dà gli occhi per vedere il loop) e del {{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }} (che ti dà il freno).
+Vedremo come riconoscerlo dai log, perché "max iterations a 25 è già tanto", il circuit breaker per tool con error budget, la deduplicazione delle chiamate identiche, e — il pezzo che quasi tutti dimenticano — il **watchdog esterno al grafo**, perché non puoi affidare a ciò-che-sta-andando-in-loop il compito di fermarsi da solo. Con contatore di step, allarme su tool/minuto e checklist di incident. È il seguito operativo dell'[osservabilità degli LLM in produzione]({{ '/it/blog/osservabilita-llm-produzione/' | relative_url }}) (che ti dà gli occhi per vedere il loop) e del [kill switch per agenti che scrivono su Salesforce]({{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}) (che ti dà il freno).
 
 ## I sintomi: come si presenta il runaway agent
 
@@ -37,7 +37,7 @@ Capire le cause serve a prevenirle, non solo a spegnerle. Nella mia esperienza, 
 
 ### Schema rotto (il modello produce ciò che il tool rifiuta)
 
-L'agente chiama un tool con un payload che non rispetta lo schema (un IBAN malformato, un campo mancante). Il tool rifiuta. Il modello riceve l'errore, "corregge", ma produce di nuovo un payload che il tool rifiuta — magari lo stesso. Ciclo. È il legame diretto con il data contract: senza validazione e senza una policy di reject che a un certo punto *si arrende* invece di ritentare, lo schema rotto diventa un loop. (Ne ho parlato costruendo il {{ '/it/blog/json-schema-tool-calling-iban/' | relative_url }}: il retry-finché-passa è proprio uno dei modi in cui si innesca.)
+L'agente chiama un tool con un payload che non rispetta lo schema (un IBAN malformato, un campo mancante). Il tool rifiuta. Il modello riceve l'errore, "corregge", ma produce di nuovo un payload che il tool rifiuta — magari lo stesso. Ciclo. È il legame diretto con il data contract: senza validazione e senza una policy di reject che a un certo punto *si arrende* invece di ritentare, lo schema rotto diventa un loop. (Ne ho parlato nel pezzo su [JSON Schema e tool calling contro l'IBAN inventato]({{ '/it/blog/json-schema-tool-calling-iban/' | relative_url }}): il retry-finché-passa è proprio uno dei modi in cui si innesca.)
 
 ### Tool che restituisce 500 (errore che sembra transitorio)
 
@@ -232,7 +232,7 @@ Ecco come dispongo le difese, a strati, dal ciclo interno al guardiano esterno.
 - Non "spegne tutto" a ogni loop: uccide il run e il tool colpevoli, con granularità.
 - Non nasconde il loop: ogni intervento (max step, breaker aperto, kill) è loggato e allarmato.
 
-Le tracce che alimentano osservabilità e watchdog sono le stesse dell'{{ '/it/blog/osservabilita-llm-produzione/' | relative_url }}: step per run, chiamate al minuto, costo per run. Il loop è, prima di tutto, una cosa che *vedi* nelle metriche; poi una cosa che *fermi* coi controlli.
+Le tracce che alimentano osservabilità e watchdog sono le stesse dell'[osservabilità degli LLM in produzione]({{ '/it/blog/osservabilita-llm-produzione/' | relative_url }}): step per run, chiamate al minuto, costo per run. Il loop è, prima di tutto, una cosa che *vedi* nelle metriche; poi una cosa che *fermi* coi controlli.
 
 ## L'allarme su N tool/minuto
 

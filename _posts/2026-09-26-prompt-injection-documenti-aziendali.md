@@ -34,7 +34,7 @@ La differenza operativa è enorme. Contro l'injection diretta puoi in parte filt
 
 Il punto che fa cadere tutte le difese ingenue è questo: **un LLM non ha un canale separato per "dati" e "istruzioni".** Tutto è testo nella stessa finestra di contesto. Quando incolli il contenuto di un PDF accanto al tuo system prompt, il modello vede un unico flusso di linguaggio. Se il PDF dice "ora fai X", per il modello è una richiesta legittima quanto la tua. La sicurezza classica separa codice e dati (pensa alle SQL injection e ai prepared statement). Con gli LLM quella separazione **a livello di modello non esiste**. Devi ricrearla tu, attorno al modello.
 
-Chi progetta agenti che eseguono azioni — non solo che chiacchierano — deve partire da qui. Se ti interessa la parte di orchestrazione e guardrail degli agenti, ne ho parlato nella guida su {{ '/it/pillar/agenti-esecuzione/' | relative_url }} e nel pezzo su come ho messo {{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }} con kill switch e coda di approvazione.
+Chi progetta agenti che eseguono azioni — non solo che chiacchierano — deve partire da qui. Se ti interessa la parte di orchestrazione e guardrail degli agenti, ne ho parlato nella guida su [agenti che eseguono]({{ '/it/pillar/agenti-esecuzione/' | relative_url }}) e nel pezzo su come ho messo [un agente MCP su Salesforce in produzione]({{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}) con kill switch e coda di approvazione.
 
 ## I casi che vedo davvero: cambio IBAN, "ignora le policy", esfiltrazione
 
@@ -119,7 +119,7 @@ I confini che contano:
 - **I dati dei documenti entrano marcati come non fidati** e non vengono mai promossi a "istruzioni di sistema".
 - **Cosa NON tocca l'agente, mai:** l'esecuzione del bonifico, la scrittura dell'IBAN in anagrafica, l'invio di dati verso domini fuori allowlist, la modifica delle proprie policy. Queste stanno nel codice deterministico, versionato, testato, fuori dalla portata del modello.
 
-Questa separazione tra "cervello che propone" e "mani che eseguono sotto regole" è la stessa filosofia con cui ho descritto l'orchestrazione in {{ '/it/blog/langgraph-vs-n8n-vs-python/' | relative_url }}: qualunque strumento usi per orchestrare, il confine di sicurezza è nel codice, non nel prompt.
+Questa separazione tra "cervello che propone" e "mani che eseguono sotto regole" è la stessa filosofia con cui ho descritto l'orchestrazione in [LangGraph vs n8n vs Python]({{ '/it/blog/langgraph-vs-n8n-vs-python/' | relative_url }}): qualunque strumento usi per orchestrare, il confine di sicurezza è nel codice, non nel prompt.
 
 ## Separare "contesto da citare" da "istruzioni eseguibili"
 
@@ -301,7 +301,7 @@ def scan_pdf(path: str) -> dict:
 
 Cosa fai con i flag? Non blocchi tutto (avresti troppi falsi positivi). Usi i flag come **input al policy engine**: un documento con `pdf_javascript` o `unicode_zero_width` non entra nel percorso automatico, va in coda umana a prescindere dall'importo. Il flag alza il livello di controllo richiesto, non chiude la porta in faccia al fornitore onesto che ha semplicemente un PDF strano.
 
-Questo scanner è cugino della sanitizzazione che serve quando indicizzi documenti fiscali; nel pezzo su come ho costruito il {{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }} ho trattato l'ingest e la normalizzazione del testo — lì il focus è la qualità del retrieval, qui è la sicurezza, ma la porta d'ingresso è la stessa e va presidiata una volta sola.
+Questo scanner è cugino della sanitizzazione che serve quando indicizzi documenti fiscali; nel pezzo su come ho costruito il [RAG con pgvector sulla fattura elettronica]({{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }}) ho trattato l'ingest e la normalizzazione del testo — lì il focus è la qualità del retrieval, qui è la sicurezza, ma la porta d'ingresso è la stessa e va presidiata una volta sola.
 
 ## La lista di controlli sul PDF (checklist d'ingresso)
 
@@ -370,7 +370,7 @@ La regola generale: **logga la decisione, non solo l'azione.** Non ti serve sape
 
 Assumiamo il peggio: un payload è passato, l'agente ha eseguito un'azione (bonifico partito, IBAN modificato, dati inviati). Cosa fai, in ordine.
 
-1. **Kill switch immediato.** Devi avere un interruttore che ferma *tutte* le azioni esecutive dell'agente con un comando, senza deploy. Una flag in un file di config o in una tabella, che il policy engine controlla prima di ogni azione. Se non ce l'hai, è la prima cosa da costruire. Ne parlo, insieme alla coda di approvazione, nel pezzo su {{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}.
+1. **Kill switch immediato.** Devi avere un interruttore che ferma *tutte* le azioni esecutive dell'agente con un comando, senza deploy. Una flag in un file di config o in una tabella, che il policy engine controlla prima di ogni azione. Se non ce l'hai, è la prima cosa da costruire. Ne parlo, insieme alla coda di approvazione, nel pezzo su [un agente MCP su Salesforce in produzione]({{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}).
 2. **Congela il documento sorgente.** Non cancellarlo: è la prova. Marcalo, isolalo dal RAG, conservalo per l'analisi. Se l'hai già indicizzato, **rimuovilo dall'indice** (altrimenti riesplode a ogni query).
 3. **Ricostruisci la catena dai log.** Quale documento, quale flag mancante, quale regola ha ceduto, quali azioni sono partite. Grazie ai log di decisione (sopra) questo è veloce.
 4. **Contieni il danno reale.** Bonifico: contatta la banca per tentare il richiamo (le prime ore contano). IBAN modificato: ripristina dall'anagrafica storica. Dati esfiltrati: valuta l'obbligo di notifica **entro 72 ore** al Garante se sono dati personali (è un potenziale data breach).

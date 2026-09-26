@@ -19,7 +19,7 @@ Questo pezzo è un confronto **pgvector vs Qdrant vs Pinecone** dal punto di vis
 
 Anticipo il verdetto, perché non amo tenerti sulle spine: **per la maggior parte delle PMI, la risposta è Postgres con pgvector.** Non perché sia il più veloce in assoluto, ma perché è un sistema in meno da gestire, i backup li fai già, i dati restano tuoi, e copre bene la scala reale. Qdrant self-hosted entra quando il carico di query esplode davvero. Pinecone, per una PMI sovrana, è quasi sempre un anti-pattern. Vediamo perché, con onestà.
 
-Questo è il seguito naturale di come ho costruito il {{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }}: lì il "come" tecnico su pgvector, qui il "quale scegliere e perché" dal lato costi e lock-in.
+Questo è il seguito naturale di come ho costruito il [RAG con pgvector sulla fattura elettronica]({{ '/it/blog/rag-pgvector-fattura-elettronica/' | relative_url }}): lì il "come" tecnico su pgvector, qui il "quale scegliere e perché" dal lato costi e lock-in.
 
 ## Cosa stai comprando davvero: ANN, filtri, SLA, dati
 
@@ -326,7 +326,7 @@ Stime dichiarate, a complemento del TCO sopra.
 - **pgvector:** costo marginale se Postgres c'è già; altrimenti un piccolo VPS in UE (pochi/decine di euro al mese). L'indice vive in RAM: dimensiona la memoria sul numero di vettori. Elettricità/calcolo trascurabili per una PMI.
 - **Qdrant self-host:** un server/VPS con RAM adeguata all'indice (per 1M vettori bastano pochi GB; cresce con scala e quantizzazione che la riduce). Decine di euro al mese, sotto il tuo controllo.
 - **Pinecone:** canone a unità che parte contenuto e cresce con vettori, dimensioni e QPS. Il costo vero però è il **lock-in**: la stima di uscita (ri-embedding + re-integrazione) va messa nel conto fin dall'inizio.
-- **Embedding (una tantum):** self-hosted = ore di GPU, spiccioli di corrente; via API = decine di euro per 1M chunk, una volta. Sul dimensionamento GPU per i modelli self-hosted vale quanto ho scritto confrontando {{ '/it/blog/vllm-vs-ollama-produzione/' | relative_url }}.
+- **Embedding (una tantum):** self-hosted = ore di GPU, spiccioli di corrente; via API = decine di euro per 1M chunk, una volta. Sul dimensionamento GPU per i modelli self-hosted vale quanto ho scritto confrontando [vLLM vs Ollama in produzione]({{ '/it/blog/vllm-vs-ollama-produzione/' | relative_url }}).
 - **Costo del non pianificare l'uscita:** se scegli un gestito proprietario senza tenere i vettori grezzi, il giorno che devi migrare paghi il ri-embedding di tutto e la riscrittura dell'integrazione. Molto più caro di aver fatto le cose portabili dal giorno uno.
 
 ## Quando NON farlo (in ciascuna direzione)

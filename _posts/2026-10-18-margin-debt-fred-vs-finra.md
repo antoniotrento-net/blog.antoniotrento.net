@@ -263,7 +263,7 @@ La tentazione, quando una fonte non ha un'API comoda, è scrivere uno scraper pe
 
 - **Termini d'uso.** Molti siti di dati finanziari vietano esplicitamente lo scraping o il riuso automatico, anche quando la pagina è pubblica. Il fatto che tu riesca a leggerla non significa che tu possa ripubblicarla o incorporarla in un prodotto.
 - **Protezioni anti-bot.** Siti con protezioni rispondono con errori 403, challenge JavaScript o limiti di frequenza. Lo scraper funziona per una settimana, poi inizia a fallire in modo intermittente — e un dato che fallisce in silenzio diventa un dato stale.
-- **IP residenziale.** Se lo scraper gira da casa o dall'ufficio, sul collegamento residenziale, gli errori ripetuti possono far finire il tuo IP in una lista nera, con effetti anche sulla navigazione normale. È la stessa lezione che ho raccontato parlando di come esporre servizi da un {{ '/it/blog/cloudflare-tunnel-raspberry-pi-n8n/' | relative_url }}: un IP residenziale non è un'infrastruttura per fare richieste automatiche a terzi.
+- **IP residenziale.** Se lo scraper gira da casa o dall'ufficio, sul collegamento residenziale, gli errori ripetuti possono far finire il tuo IP in una lista nera, con effetti anche sulla navigazione normale. È la stessa lezione che ho raccontato parlando di come esporre servizi da un [Raspberry Pi con Cloudflare Tunnel]({{ '/it/blog/cloudflare-tunnel-raspberry-pi-n8n/' | relative_url }}): un IP residenziale non è un'infrastruttura per fare richieste automatiche a terzi.
 
 Cosa fare invece:
 

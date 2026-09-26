@@ -22,7 +22,7 @@ Ci sono azioni che un agente può sbagliare e tu puoi correggere: un campo aggio
 
 Quando un agente AI inizia a preparare queste azioni — e sta succedendo: agenti che gestiscono la PEC, che preparano i pagamenti delle fatture, che pubblicano contenuti — la domanda non è se l'agente sbaglierà, ma **cosa si frappone tra il suo errore e il mondo reale**. La risposta seria si chiama **human-in-the-loop con dual control**, e non ha niente a che fare con l'agente che ti chiede "confermi? scrivi OK".
 
-Questo pezzo è sulla progettazione di quella barriera, con l'**angolo delle operazioni irreversibili in Italia**: la coda di approvazione con record immutabile e hash del payload, la separazione tra chi propone e chi approva, cosa succede quando nessuno clicca, l'approvazione dal telefono senza farsi rubare il consenso con un phishing, e cosa conservare per anni come evidenza. È il seguito naturale del pezzo sul {{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}, dove ho descritto dry-run e coda per le scritture su un CRM: qui la posta è più alta, perché l'errore non si corregge con un altro aggiornamento.
+Questo pezzo è sulla progettazione di quella barriera, con l'**angolo delle operazioni irreversibili in Italia**: la coda di approvazione con record immutabile e hash del payload, la separazione tra chi propone e chi approva, cosa succede quando nessuno clicca, l'approvazione dal telefono senza farsi rubare il consenso con un phishing, e cosa conservare per anni come evidenza. È il seguito naturale del pezzo sul [kill switch per agenti che scrivono su Salesforce]({{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}), dove ho descritto dry-run e coda per le scritture su un CRM: qui la posta è più alta, perché l'errore non si corregge con un altro aggiornamento.
 
 ## Perché il messaggio in chat non è dual control
 
@@ -168,7 +168,7 @@ Un approvatore stanco di proposte sbagliate inizia ad approvare senza guardare. 
 - **Destinatari PEC**: il destinatario è in rubrica, è l'indirizzo PEC ufficiale della controparte? Gli allegati contengono solo documenti di quel cliente?
 - **Soglie e orari**: sopra soglia, doppia approvazione; fuori orario, niente esecuzioni automatiche.
 
-Se l'agente lavora sulle fatture passive che arrivano via PEC — come nel pezzo sull'{{ '/it/blog/agente-imap-pec-fatture/' | relative_url }} — il validatore è il punto in cui il pagamento proposto viene riconciliato con la fattura e con l'anagrafica, prima che un umano debba farlo a occhio.
+Se l'agente lavora sulle fatture passive che arrivano via PEC — come nel pezzo sull'[agente IMAP per PEC e fatture]({{ '/it/blog/agente-imap-pec-fatture/' | relative_url }}) — il validatore è il punto in cui il pagamento proposto viene riconciliato con la fattura e con l'anagrafica, prima che un umano debba farlo a occhio.
 
 ## Ruoli: proponente vs approvatore
 

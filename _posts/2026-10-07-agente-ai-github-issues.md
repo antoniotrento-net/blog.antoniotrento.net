@@ -19,7 +19,7 @@ La soluzione non è "un prompt migliore": è mettere i task dove i task vivono, 
 
 La tesi in una riga: **la chat non ha stato, assignee e SLA; l'issue sì.** Un task che conta va in un sistema che ha un ciclo di vita, non in un flusso di messaggi che scorre via. Vediamo come costruirlo, con i confini giusti — perché un agente che apre issue è, a tutti gli effetti, un agente che esegue azioni, con i rischi che ne derivano.
 
-È lo stesso principio di controllo che ho descritto mettendo {{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}: l'agente scrive su un sistema esterno tramite API, con privilegi minimi e idempotenza. Cambia il sistema (un tracker invece di un CRM), non la disciplina.
+È lo stesso principio di controllo che ho descritto mettendo [un agente MCP su Salesforce in produzione]({{ '/it/blog/mcp-salesforce-agente-produzione/' | relative_url }}): l'agente scrive su un sistema esterno tramite API, con privilegi minimi e idempotenza. Cambia il sistema (un tracker invece di un CRM), non la disciplina.
 
 ## La chat non ha stato, assignee, SLA
 

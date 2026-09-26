@@ -19,7 +19,7 @@ Questa è l'**allucinazione strutturata**, ed è più pericolosa del testo liber
 
 Il tema di oggi è il **data contract tra LLM e tool**, con l'esempio dell'**IBAN nel JSON Schema del tool calling**: come impedire al modello di infilare un valore plausibile-ma-sbagliato in un campo critico. La tesi in una riga: **lo schema vincola la forma, non la correttezza — e su forma e correttezza servono due strati diversi.** Più un terzo principio, il più importante: su un identificativo critico che *hai già* in una fonte affidabile, l'LLM non deve nemmeno generarlo.
 
-Vediamo tutto, con lo schema, i validatori di dominio (IBAN, codice fiscale, partita IVA, BIC), la policy di abort, e il modo giusto di testarli. È il pezzo che chiude il cerchio con il {{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }} (il controllo dei side effect) e con l'{{ '/it/blog/ocr-fattura-elettronica-accuratezza/' | relative_url }} (i checksum come rete di sicurezza).
+Vediamo tutto, con lo schema, i validatori di dominio (IBAN, codice fiscale, partita IVA, BIC), la policy di abort, e il modo giusto di testarli. È il pezzo che chiude il cerchio con il [kill switch per agenti che scrivono su Salesforce]({{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}) (il controllo dei side effect) e con l'[accuratezza dell'OCR sulla fattura elettronica]({{ '/it/blog/ocr-fattura-elettronica-accuratezza/' | relative_url }}) (i checksum come rete di sicurezza).
 
 ## Allucinazione strutturata: perché è peggio del testo libero
 
@@ -226,13 +226,13 @@ Ecco come dispongo il contratto tra modello e tool. Il confine chiave: **un valo
 - Non ritenta all'infinito su un campo critico: una chance, poi umano/abort.
 - **Non fa generare all'LLM un identificativo critico che esiste già in una fonte affidabile:** lo copia da lì.
 
-Questo è il legame diretto con il controllo dei side effect: il payload che arriva al tool di scrittura o pagamento — quello che nel {{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }} finisce in coda di approvazione — deve prima aver superato il data contract. Schema e validazione sono il primo cancello; la coda di approvazione è il secondo. Difesa a strati.
+Questo è il legame diretto con il controllo dei side effect: il payload che arriva al tool di scrittura o pagamento — quello che nel [kill switch per agenti che scrivono su Salesforce]({{ '/it/blog/kill-switch-agente-salesforce/' | relative_url }}) finisce in coda di approvazione — deve prima aver superato il data contract. Schema e validazione sono il primo cancello; la coda di approvazione è il secondo. Difesa a strati.
 
 ## Quando NON usare l'LLM: copia dall'XML già parsato
 
 Questo è il principio che risolve il problema alla radice, ed è quello che i progetti "AI-first" dimenticano. **Se il dato critico esiste già in una fonte strutturata affidabile, non chiedere all'LLM di estrarlo: copialo.**
 
-L'esempio è la fattura elettronica. L'IBAN, la partita IVA, il totale stanno **nell'XML FatturaPA**, in campi etichettati, esatti. Se il tuo agente deve preparare un bonifico da una fattura elettronica, l'IBAN lo prende dal parser XML (deterministico, 100% corretto), **non** lo fa "estrarre" all'LLM dal PDF renderizzato. Far generare all'LLM un IBAN che hai già esatto nell'XML è creare un rischio di allucinazione su un dato che era certo. È l'autogol che ho descritto parlando dell'{{ '/it/blog/ocr-fattura-elettronica-accuratezza/' | relative_url }}: leggere l'XML, non "vederlo".
+L'esempio è la fattura elettronica. L'IBAN, la partita IVA, il totale stanno **nell'XML FatturaPA**, in campi etichettati, esatti. Se il tuo agente deve preparare un bonifico da una fattura elettronica, l'IBAN lo prende dal parser XML (deterministico, 100% corretto), **non** lo fa "estrarre" all'LLM dal PDF renderizzato. Far generare all'LLM un IBAN che hai già esatto nell'XML è creare un rischio di allucinazione su un dato che era certo. È l'autogol che ho descritto parlando dell'[accuratezza dell'OCR sulla fattura elettronica]({{ '/it/blog/ocr-fattura-elettronica-accuratezza/' | relative_url }}): leggere l'XML, non "vederlo".
 
 La gerarchia di fiducia per un campo critico, dall'alto in basso:
 
