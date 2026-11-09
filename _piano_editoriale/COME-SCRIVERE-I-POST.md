@@ -106,8 +106,11 @@ I 127 `planned` escono **uno al giorno**:
 | Serie | Id | Uscita |
 |---|---|---|
 | A restante | 29 pezzi `planned` in ordine di piano | 20 ago 2026 → 17 set 2026 |
-| B stack | B01–B49 | 18 set 2026 → 5 nov 2026 |
-| C PMI ops | C01–C49 | 6 nov 2026 → 24 dic 2026 |
+| B stack | B01–B42 | 18 set 2026 → 29 ott 2026 |
+| B stack | B43–B49 | 10 nov 2026 → 16 nov 2026 (slittati +11 gg il 9 nov 2026) |
+| C PMI ops | C01–C49 | 17 nov 2026 → 4 gen 2027 (slittati +11 gg il 9 nov 2026) |
+
+**Slittamento 9 nov 2026:** la coda di post scritti si era esaurita il 29 ott e i pezzi dal 30 ott in poi non esistevano. Invece di pubblicarli retrodatati tutti insieme, tutti i `planned` sono stati spostati di +11 giorni. Fa fede sempre `editorial_plan.yml`, non questa tabella.
 
 IT e EN dello **stesso** pezzo: **stessa** `date:` e stesso prefisso file (`date_file`). Due URL lo stesso giorno vanno bene (hreflang). Due pezzi **diversi** lo stesso giorno no.
 
