@@ -3,7 +3,7 @@ lang: en
 permalink: /en/blog/ai-agent-spid-pec-limits/
 alt_url: /it/blog/agente-ai-spid-pec-limiti/
 title: "SPID, PEC and the agent: what not to automate (and how to prepare the data for a human who actually signs)"
-date: 2026-11-10 07:30:00 +0200
+date: 2026-11-09 07:30:00 +0200
 author: "Antonio Trento"
 description: "Where an AI agent's job ends and a person's begins: SPID is someone's identity, PEC certified email has legal value, a signature binds whoever signs. Automatable/not-automatable matrix, dossier with hashes and manifest, a UI for the signer, retention, risks and architecture."
 keywords: ["ai agent spid pec limits", "spid automation forbidden", "pec legal value", "human signature workflow", "italian digital identity", "digital signature dossier"]

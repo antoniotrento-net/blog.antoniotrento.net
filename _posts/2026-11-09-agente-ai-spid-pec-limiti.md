@@ -3,7 +3,7 @@ lang: it
 permalink: /it/blog/agente-ai-spid-pec-limiti/
 alt_url: /en/blog/ai-agent-spid-pec-limits/
 title: "SPID, PEC e l'agente: cosa non automatizzare (e come preparare i dati per un umano che firma davvero)"
-date: 2026-11-10 07:30:00 +0200
+date: 2026-11-09 07:30:00 +0200
 author: "Antonio Trento"
 description: "Il confine tra ciò che un agente AI può preparare e ciò che resta a una persona: SPID è l'identità di qualcuno, la PEC ha valore legale, la firma impegna chi firma. Matrice automatizzabile/non, dossier con hash e manifest, interfaccia per chi firma, conservazione, rischi e architettura."
 keywords: ["agente ai spid pec limiti", "spid automazione vietata", "pec valore legale", "human signature workflow", "identità digitale italia", "dossier firma digitale"]
