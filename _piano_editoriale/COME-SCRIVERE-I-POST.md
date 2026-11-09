@@ -289,7 +289,7 @@ Due stati, basta il front matter:
 | Google | `noindex, follow` (`seo.html` se manca `image:`) | indicizzabile |
 | Corpo | un paragrafo / “in arrivo” | guida vera + link agli articoli del cluster |
 
-Live in index oggi (hanno `image:` **e** niente `sitemap: false`): `prodotti-dati`, `app-interne`, `portali-b2b` (+ twin EN).
+Live in index (hanno `image:` **e** niente `sitemap: false`): le 7 guide della Sezione 1 — `prodotti-dati`, `app-interne`, `portali-b2b`, `documenti-flussi`, `web-prodotto`, `comprare-software`, `prenotazioni-agenda` (+ twin EN).
 
 ### Coda accensione — Sezione 1 (tracciata, non a memoria)
 
@@ -303,6 +303,18 @@ Quattro hub hanno **già** corpo + copertina + twin EN. Restano `sitemap: false`
 | `web-prodotto.md` | `web-ux-product.md` | **2026-09-13** (dopo A44) | [x] fatto 2026-09-26 |
 | `comprare-software.md` | `buying-custom-software.md` | **2026-09-16** (dopo A47) | [x] fatto 2026-09-26 |
 | `prenotazioni-agenda.md` | `booking-scheduling.md` | **2026-09-17** (dopo A48) | [x] fatto 2026-09-26 |
+
+### Coda accensione — Sezione 2 (corpo IT scritto il 9 nov 2026)
+
+Gli hub IT della Sezione 2 sono `.md` con corpo vero e mesh verso tutti gli articoli del cluster, ma restano `sitemap: false` finché il cluster non è tutto uscito. Copertine in `assets/images/pillars/{slug-it}.jpg`. **Per accendere manca il twin EN** (corsia di Antonio: oggi gli EN sono stub `.html`): IT ed EN si accendono insieme, stesso giorno, push.
+
+| Hub IT (`it/pillar/`) | Twin EN (`en/pillar/`) | Togli `sitemap: false` dal (cluster tutto live) | Fatto? |
+|---|---|---|---|
+| `integrazioni-dati.md` | `integrations-legacy-data` | **2026-11-10** (dopo B43) | [ ] |
+| `modelli-costi-privacy.md` | `models-cost-privacy` | **2026-11-12** (dopo B45) | [ ] |
+| `agenti-esecuzione.md` | `agents-that-act` | **2026-11-13** (dopo B46) | [ ] |
+| `rag-documenti.md` | `rag-documents` | **2026-11-15** (dopo B48) | [ ] |
+| `stack-sovrano.md` | `sovereign-stack` | **2026-11-16** (dopo B49) | [ ] |
 
 Le altre coppie sono stub (niente `image:`).
 
