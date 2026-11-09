@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/chatbot-sito-web-non-converte/
+alt_url: /en/blog/website-chatbot-not-converting/
 title: "Perché il chatbot sul sito non porta appuntamenti (e cosa mettere al posto delle FAQ infinite)"
 date: 2026-11-19 07:30:00 +0200
 author: "Antonio Trento"

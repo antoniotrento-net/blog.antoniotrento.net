@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/chatgpt-dati-aziendali-gdpr/
+alt_url: /en/blog/chatgpt-company-data-gdpr/
 title: "I tuoi dipendenti usano ChatGPT sui clienti: cosa rischi in Italia e come dargli un'alternativa interna (senza divieti inutili)"
 date: 2026-11-17 07:30:00 +0200
 author: "Antonio Trento"

@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/chatgpt-privato-self-hosted-pmi/
+alt_url: /en/blog/private-chatgpt-self-hosted-sme/
 title: "Come montare un \"ChatGPT privato\" su due GPU usate: modelli, coda, rete interna e cosa dire ai dipendenti al posto del divieto inutile"
 date: 2026-11-12 07:30:00 +0200
 author: "Antonio Trento"

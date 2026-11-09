@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/accuratezza-estrazione-documenti-campi/
+alt_url: /en/blog/document-extraction-field-accuracy/
 title: "Come misuri il 95% di accuratezza sull'estrazione documenti (e come ti accorgi che è un 95% sugli header e un 60% sugli importi)"
 date: 2026-11-14 07:30:00 +0200
 author: "Antonio Trento"

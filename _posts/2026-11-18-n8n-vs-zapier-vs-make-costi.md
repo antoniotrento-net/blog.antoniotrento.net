@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/n8n-vs-zapier-vs-make-costi/
+alt_url: /en/blog/n8n-vs-zapier-vs-make-cost/
 title: "Zapier o Make a 400€ al mese: quando n8n self-hosted conviene (e quando stai solo spostando il problema sull'IT)"
 date: 2026-11-18 07:30:00 +0200
 author: "Antonio Trento"

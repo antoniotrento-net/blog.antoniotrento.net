@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/validazione-iban-codice-fiscale-partita-iva/
+alt_url: /en/blog/iban-tax-code-vat-validation/
 title: "IBAN, codice fiscale e partita IVA: validatori prima dell'LLM (checksum, e il divieto di \"completare\" un identificativo mancante)"
 date: 2026-11-15 07:30:00 +0200
 author: "Antonio Trento"

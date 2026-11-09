@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/agente-ai-spid-pec-limiti/
+alt_url: /en/blog/ai-agent-spid-pec-limits/
 title: "SPID, PEC e l'agente: cosa non automatizzare (e come preparare i dati per un umano che firma davvero)"
 date: 2026-11-10 07:30:00 +0200
 author: "Antonio Trento"

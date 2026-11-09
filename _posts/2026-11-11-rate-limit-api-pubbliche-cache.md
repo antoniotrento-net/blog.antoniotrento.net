@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/rate-limit-api-pubbliche-cache/
+alt_url: /en/blog/public-api-rate-limit-cache/
 title: "Rate limit delle API pubbliche (FRED, SEC, RSS): jitter, cache 24h e perché --force in loop dal PC di casa ti brucia l'IP"
 date: 2026-11-11 07:30:00 +0200
 author: "Antonio Trento"

@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/salesforce-flow-vs-agente-mcp/
+alt_url: /en/blog/salesforce-flow-vs-mcp-agent/
 title: "Salesforce Flow vs agente MCP: quando il clic automatico di Flow è più sicuro (e quando l'LLM serve davvero a leggere il disordine)"
 date: 2026-11-13 07:30:00 +0200
 author: "Antonio Trento"

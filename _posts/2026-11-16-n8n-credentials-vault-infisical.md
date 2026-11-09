@@ -1,6 +1,7 @@
 ---
 lang: it
 permalink: /it/blog/n8n-credentials-vault-infisical/
+alt_url: /en/blog/n8n-credentials-vault-infisical/
 title: "n8n credentials vs Infisical/Vault: quando il database delle credenziali di n8n diventa il tuo unico punto di fallimento"
 date: 2026-11-16 07:30:00 +0200
 author: "Antonio Trento"
