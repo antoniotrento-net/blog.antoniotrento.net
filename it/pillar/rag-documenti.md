@@ -6,6 +6,7 @@ pillar_key: rag-documenti
 section: stack-sovrano-ai
 title: "RAG e documenti italiani"
 description: "FatturaPA, contratti, OCR e vector DB: come interrogare 10.000 documenti italiani con citazioni corrette, senza Pinecone e senza cloud."
+image: /assets/images/pillars/rag-documenti.jpg
 alt_url: /en/pillar/rag-documents/
 sitemap: false
 

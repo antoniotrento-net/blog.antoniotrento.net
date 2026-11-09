@@ -6,6 +6,7 @@ pillar_key: stack-sovrano
 section: stack-sovrano-ai
 title: "Stack sovrano & DevOps"
 description: "Docker, reverse proxy, backup, secret e n8n in produzione: l'ecosistema self-hosted che tiene i dati in casa e non ti tradisce alle 3 di notte."
+image: /assets/images/pillars/stack-sovrano.jpg
 alt_url: /en/pillar/sovereign-stack/
 sitemap: false
 
