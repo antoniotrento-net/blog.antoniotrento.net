@@ -35,17 +35,16 @@ Spuntale in [`_piano_editoriale/seo-mappa.md`](_piano_editoriale/seo-mappa.md) q
 
 ### A. Blog nuovo — `https://blog.antoniotrento.net/`
 
-1. Aggiungi proprietà **Prefisso URL** `https://blog.antoniotrento.net/`
-2. Verifica (DNS o file HTML)
-3. Invia sitemap: `https://blog.antoniotrento.net/sitemap.xml` (generata al build, **non** c’è nel repo)
-4. Ispeziona **solo 4 URL**, non 80 e non tutto il piano:
-   - `https://blog.antoniotrento.net/it/`
-   - `https://blog.antoniotrento.net/it/guide/`
-   - un pillar vivo, es. `https://blog.antoniotrento.net/it/pillar/prodotti-dati/`
-   - un post, es. `https://blog.antoniotrento.net/it/blog/dashboard-che-non-si-usano/`
-5. Se un’ispezione dice «trovato ma non indicizzato», **Richiedi indicizzazione** su quelle 4. Stop.
+**Stato 12 ott 2026.** Sitemap inviata ok. **10 indicizzate** (snapshot 9 ott) + **100+ rilevate ma non indicizzate**. Probe 4/4 ok. Log, tabella URL e **next step**: [`_piano_editoriale/seo-mappa.md`](_piano_editoriale/seo-mappa.md) sez. 1 / **1b**. **Non** bombardare altre richieste.
+
+1. [x] Proprietà **Prefisso URL** `https://blog.antoniotrento.net/`
+2. [x] Verifica
+3. [x] Sitemap inviata: `https://blog.antoniotrento.net/sitemap.xml` (generata al build, **non** c’è nel repo) — 100+ URL rilevate
+4. [x] Ispeziona **solo 4 URL** (`/it/`, `/it/guide/`, `/it/pillar/prodotti-dati/`, `/it/blog/dashboard-che-non-si-usano/`)
+5. [x] **Richiedi indicizzazione** su quelle 4. Stop.
 6. I post con data futura **non** sono in sitemap: non chiedere l’indicizzazione di URL che Drip non ha ancora pubblicato.
-7. Non bombardare «richiedi indicizzazione» su 29 o 127 URL il giorno in cui Claude scrive i file.
+7. Non bombardare «richiedi indicizzazione» su 29, 100 o 127 URL.
+8. Next GSC: **Performance** (baseline sulle 10). Link già ok (19 esterni da antoniotrento.net, 13 interni nel sottografo indicizzato) — log sez. **1c**. Rilettura Pagine ogni 2–4 settimane. Max 1–2 ispezioni extra, non ora. Non dump di link dal principale.
 
 ### B. Fattoria vecchia — `https://antoniotrento.net/` (delistare)
 

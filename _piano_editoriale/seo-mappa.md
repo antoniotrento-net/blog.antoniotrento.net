@@ -2,7 +2,7 @@
 
 Fonte di verità SEO. Produzione articoli (date + **Drip publish**): **`COME-SCRIVERE-I-POST.md`** in questa cartella. Claude e gli altri agenti partono da lì.
 
-Stato al 19 agosto 2026.
+Stato SEO tecnico: 19 agosto 2026. **GSC blog nuovo, 12 ott 2026:** sitemap ok; 10 in index; 100+ rilevate; 19 esterni da antoniotrento.net. Probe chiuso. **Aspettare.** Niente altre richieste di indicizzazione, niente dump di link. Rilettura Pagine tra 2–4 settimane. Dettaglio sez. 1 / 1b / 1c.
 
 ---
 
@@ -12,11 +12,81 @@ Farle in quest’ordine. Spuntale qui quando sono fatte. Copia anche in `README.
 
 ### 1. Search Console — blog nuovo (subito, dopo il deploy Pages)
 
-- [ ] Aggiungi la proprietà **Prefisso URL** `https://blog.antoniotrento.net/`
-- [ ] Verifica (DNS o file HTML, come preferisci)
-- [ ] Invia la sitemap: `https://blog.antoniotrento.net/sitemap.xml`
-- [ ] Ispeziona **solo 4 URL**, non 80: `https://blog.antoniotrento.net/it/` · `/it/guide/` · un pillar vivo (`/it/pillar/prodotti-dati/` o app-interne o portali-b2b) · un post (es. `/it/blog/dashboard-che-non-si-usano/`)
-- [ ] Se l’ispezione dice «trovato ma non indicizzato», «richiedi indicizzazione» su quelle 4. Stop.
+- [x] Aggiungi la proprietà **Prefisso URL** `https://blog.antoniotrento.net/`
+- [x] Verifica (DNS o file HTML, come preferisci)
+- [x] Invia la sitemap: `https://blog.antoniotrento.net/sitemap.xml` — **inviata correttamente** (Antonio, 12 ott 2026). Google ha rilevato **100 e passa** URL dalla sitemap.
+- [x] Ispeziona **solo 4 URL**, non 80: `https://blog.antoniotrento.net/it/` · `/it/guide/` · un pillar vivo (`/it/pillar/prodotti-dati/` o app-interne o portali-b2b) · un post (es. `/it/blog/dashboard-che-non-si-usano/`)
+- [x] Se l’ispezione dice «trovato ma non indicizzato», «richiedi indicizzazione» su quelle 4. Stop.
+
+**Esito 12 ott 2026 (GSC proprietà `https://blog.antoniotrento.net/`):**
+
+| Cosa | Stato |
+|---|---|
+| Sitemap `sitemap.xml` | Inviata, ok |
+| URL rilevate dalla sitemap | 100+ (ordine di grandezza atteso: home IT/EN, guide, pillar vive, post drip già usciti, twin) |
+| Pagine **indicizzate** (snapshot 9 ott) | **10** — tabella sotto |
+| Pagine **rilevate ma non indicizzate** | **100+** — Google le conosce, non le ha ancora messe in index. Normale su proprietà nuova. **Non** è un errore di sitemap. |
+| Probe 4 URL | **4/4 in index.** Altre 6 scoperte da Google senza richiesta. |
+
+Le 4 del test ci sono tutte. **Non** chiedere indicizzazione di massa sulle 100+. Quota GSC + dominio nuovo: sembra spam di crawl, non SEO.
+
+| URL | Ultima scansione | Note |
+|---|---|---|
+| `/it/` | 28 set 2026 | seed del test |
+| `/it/guide/` | 19 ago 2026 | seed del test |
+| `/it/pillar/prodotti-dati/` | 19 ago 2026 | seed del test; unica pillar in index |
+| `/it/blog/dashboard-che-non-si-usano/` | 15 set 2026 | seed del test |
+| `/en/guides/` | 23 ago 2026 | twin del seed, non richiesto |
+| `/en/blog/dashboards-nobody-uses/` | 15 set 2026 | twin del seed, non richiesto |
+| `/it/blog/rag-pgvector-fattura-elettronica/` | 26 set 2026 | scoperta, non seed |
+| `/it/blog/mcp-salesforce-agente-produzione/` | 26 set 2026 | scoperta, non seed |
+| `/it/blog/agente-imap-pec-fatture/` | 26 set 2026 | scoperta, non seed |
+| `/it/blog/langgraph-vs-n8n-vs-python/` | 26 set 2026 | scoperta, non seed |
+
+Fuori da queste 10 (e quindi **non** da richiedere a raffica): home `/en/`, le altre pillar vive Sez. 1, quasi tutta la serie A gennaio–agosto, il resto del drip.
+
+#### 1b. Next step GSC (blog nuovo) — da qui in poi
+
+Ordine. Niente altro «Richiedi indicizzazione» a raffica.
+
+1. **Pagine → Perché le pagine non sono indicizzate.** Apri i bucket, non le 100 URL una a una.
+   - **Rilevata / scoperta, attualmente non indicizzata** = atteso (le 100+). Google ha la sitemap, non ha dato crawl. Aspettare.
+   - **Scansionata, attualmente non indicizzata** = ha visto la pagina e l’ha scartata. Annota quanti e 2–3 esempi. Se esplode, allora si guarda qualità/duplicati, non si richiede di nuovo.
+   - **Esclusa dal tag noindex** = ok per stub pillar, root `/`, post con `date` futura (non devono stare in sitemap). Se un post **già uscito** è qui, è un bug in `seo.html`.
+   - **Pagina duplicata / canonica scelta da Google**, **soft 404**, **errore 404**, **reindirizzamento**: se compaiono, 2–3 URL di esempio e si sistema nel codice. Non si richiede index.
+2. **Performance** — prossimo giro GSC (ultime 3 mesi). Impressioni/click/query sulle 10 già in index. Zero o quasi, all’inizio, è normale. Serve come baseline.
+3. **Link** → [x] fatto 12 ott 2026. Snapshot sez. **1c**. `antoniotrento.net` è agganciato. Non aggiungere 100 link dal sito principale.
+4. **Facoltativo, massimo 1–2 URL, non questa settimana e non 100.** Solo se un hub vivo resta «rilevata» per **molte settimane** dopo i seed: es. `/en/` o un’altra pillar Sez. 1 già in index (`app-interne`, `portali-b2b`). Una ispezione; richiedi **solo** se dice «trovata ma non indicizzata». Poi stop di nuovo.
+5. **Rilettura GSC ogni 2–4 settimane**, stesso report Pagine. Segno buono: le 10 salgono piano (20, 30…) senza richieste. Segno cattivo: le 10 ferme **e** cresce «scansionata non indicizzata». Allora se ne riparla. Non a ogni articolo.
+6. **Non fare in GSC:** richiedere le 100+; ispezionare il piano intero; chiedere URL con data futura (non sono live); Removals sul blog nuovo; dump di link dal sito principale verso ogni post.
+
+Cosa fa salire «rilevata» → «indicizzata» **fuori** da GSC: drip; link interni dalle 10 già in index; i 19 link da antoniotrento.net (già visti); pillar stub **non** in sitemap. Il tasto «Richiedi» non scala un dominio nuovo.
+
+#### 1c. Link GSC (12 ott 2026)
+
+**Esterni — totale 19, tutti da `antoniotrento.net`.** Google ha agganciato il sito principale al blog. Ok.
+
+| Destinazione | Link | Cosa è nel codice |
+|---|---|---|
+| `/it/` | 18 | nav «Blog», footer, CTA «Vedi tutti gli articoli», banner sui post vecchi («Gli articoli nuovi sono sul blog») |
+| `/it/blog/dashboard-che-non-si-usano/` | 1 | card homepage sito principale |
+
+Anchor più frequenti: «gli articoli nuovi sono sul blog» · «blog» · il teaser dashboard («hai i dati…»).
+
+Le altre due card in home (`gestione-soci-associazione-software`, `software-locale-ristorazione-magazzino`) **ci sono nel HTML** ma GSC non le ha ancora contate come destinazione. È il recrawl della home del principale, non un buco da tappettare con «Richiedi». **Non** spargere link dal principale verso le 100+ URL (sembra doorway, e l’archivio vecchio è noindex).
+
+**Interni — totale 13** (sottografo che Google ha già visto, non il grafo vero del sito):
+
+| Destinazione | Link interni visti da Google |
+|---|---|
+| `/it/` | 8 |
+| `/it/blog/dashboard-che-non-si-usano/` | 2 |
+| `/it/blog/mcp-salesforce-agente-produzione/` | 2 |
+| `/it/blog/rag-pgvector-fattura-elettronica/` | 1 |
+
+Nav, related, back-to-pillar esistono già. GSC ne vede 13 perché conta i link **tra pagine che ha già scansionato**. Quando le 10 salgono, questo numero sale da solo. Non è un «mancano i link interni».
+
+Lettura: i 19 esterni spiegano perché `/it/` e il post dashboard sono in index. Le 100+ restano «rilevate» perché la sitemap le ha dette e i link (per ora) no. Aspettare. Prossimo dato utile in GSC: **Performance**, non altri link.
 
 ### 2. Search Console — sito principale (stesso giro)
 
@@ -125,8 +195,8 @@ Questa settimana: **scrivi** i file. `date:` e nome file = data del piano (futur
 
 | # | Cosa | Perché non è automatico |
 |---|---|---|
-| A | Search Console + sitemap `https://blog.antoniotrento.net/sitemap.xml` | Lo fai tu, dopo che Pages ha buildato queste date |
-| B | Ispezione 4 URL: `/it/`, `/it/guide/`, un pillar vivo, un post | Non bombardare «richiedi indicizzazione» su 80 URL |
+| A | GSC blog: proprietà, verifica, sitemap | Fatto 12 ott 2026. Sitemap ok. 100+ rilevate, 10 in index |
+| B | Probe 4 URL + Link GSC | Fatto 4/4. 19 esterni da antoniotrento.net (sez. **1c**). Next: **Performance**; rilettura Pagine 2–4 sett. |
 | D | FAQPage JSON-LD | Serve `faq:` in front matter, non si estrae dal markdown in modo sicuro |
 | E | Rebuild goccia-a-goccia | Fatto: Action `drip-publish.yml`. Lanciala a mano una volta. |
 | F | Copertina + corpo su uno stub → togliere `sitemap: false` e l’assenza di `image:` lo fa indicizzare | Checklist sotto |
