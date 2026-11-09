@@ -109,7 +109,7 @@ I 127 `planned` escono **uno al giorno**:
 | B stack | B01–B42 | 18 set 2026 → 29 ott 2026 |
 | B stack | B43–B49 | 10 nov 2026 → 16 nov 2026 (slittati +11 gg il 9 nov 2026) |
 | C PMI ops | C01–C03 | 17 nov 2026 → 19 nov 2026 |
-| C PMI ops | C04–C49 | 21 nov 2026 → 31 mar 2027, **uno ogni 2–3 giorni** (decisione Antonio, 9 nov 2026) |
+| C PMI ops | C04–C49 | 21 nov 2026 → 31 mag 2027, **uno ogni 4–5 giorni** (decisione Antonio, 9 nov 2026) |
 
 **Slittamento 9 nov 2026:** la coda di post scritti si era esaurita il 29 ott e i pezzi dal 30 ott in poi non esistevano. Invece di pubblicarli retrodatati tutti insieme, tutti i `planned` sono stati spostati di +11 giorni. Fa fede sempre `editorial_plan.yml`, non questa tabella.
 
